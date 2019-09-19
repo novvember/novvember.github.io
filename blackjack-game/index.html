@@ -10,26 +10,33 @@
 			
 	<p>Пришли в казино с тысячей, а тут стол с блэкджеком. Надо сыграть.</p>
 
-	<h2 id="balance">Деньги: 1000 &#8381;</h2><br>		
+	<p><h2 id="balance">Деньги: 1000 &#8381;</h2></p>	
 	
-	<h2 id="dealer">Крупье:</h2><br>
-	<i id="textDealer" style="display: none;"></i><br>
-	<a class="smallbutton" href="#/" onclick="dealerOpenButton();" id="dealerOpenButton" style="display: none;">Открыть карты крупье</a>
-	<a class="smallbutton" href="#/" onclick="dealerNextButton();" id="dealerNextButton" style="display: none;">Ход крупье</a><br>
+	<p>
+		<h2 id="dealer">Крупье:</h2><br>
+		<i id="textDealer" style="display: none;"></i><br>
+		<a class="smallbutton" href="#/" onclick="dealerOpenButton();" id="dealerOpenButton" style="display: none;">Открыть карты крупье</a>
+		<a class="smallbutton" href="#/" onclick="dealerNextButton();" id="dealerNextButton" style="display: none;">Ход крупье</a>
+	</p>
 
-	<input type="number" id="bet" placeholder="Ставка" style="width: 200px;" min="1">
-	<a class="smallbutton" href="#/" onclick="makeBetButton();" id="makeBet">Сделать ставку</a><br>
-	<i id="textBet" style="display: none;">Ставка сделана!</i><br>
-				
-	<h2 id="player">Игрок:</h2><br>
-	<i id="textPlayer" style="display: none;"></i><br>
+	<p>
+		<input type="number" id="bet" placeholder="Ставка" style="width: 200px;" min="1">
+		<a class="smallbutton" href="#/" onclick="makeBetButton();" id="makeBet">Сделать ставку</a>
+		<i id="textBet" style="display: none;">Ставка сделана!</i>
+	</p>
 
-	<a class="smallbutton" href="#/" onclick="getCardsButton();" id="getCards" style="display: none;">Раздать карты</a>
-	<a class="smallbutton" href="#/" onclick="takeInsuranceButton();" id="takeInsuranceButton" style="display: none;">Досрочный выигрыш 1:1</a>
-	<a class="smallbutton" href="#/" onclick="addButton();" id="addButton" style="display: none;">Ещё карту</a>
-	<a class="smallbutton" href="#/" onclick="stopButton();" id="stopButton" style="display: none;">Хватит</a><br><br>
+	<p>
+		<h2 id="player">Игрок:</h2><br>
+		<i id="textPlayer" style="display: none;"></i><br>
+		<a class="smallbutton" href="#/" onclick="getCardsButton();" id="getCards" style="display: none;">Раздать карты</a>
+		<a class="smallbutton" href="#/" onclick="takeInsuranceButton();" id="takeInsuranceButton" style="display: none;">Досрочный выигрыш 1:1</a>
+		<a class="smallbutton" href="#/" onclick="addButton();" id="addButton" style="display: none;">Ещё карту</a>
+		<a class="smallbutton" href="#/" onclick="stopButton();" id="stopButton" style="display: none;">Хватит</a> 
+	</p>
 
-	<a class="button" href="#/" onclick="newGameButton();" id="newGame">Закончить розыгрыш</a>
+	<p>
+		<a class="button" href="#/" onclick="newGameButton();" id="newGame">Закончить розыгрыш</a>
+	</p>
 </main>
 
 <script type="text/javascript" src="blackjack.js"></script>
