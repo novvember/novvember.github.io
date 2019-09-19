@@ -10,29 +10,24 @@
 			
 	<p>Пришли в казино с тысячей, а тут стол с блэкджеком. Надо сыграть.</p>
 
-	<h2 id="balance">Деньги: 1000 &#8381;<br></h2><br>
-				
-	<p><b id="dealer">Крупье:</b></p>
-
-	<i id="textDealer" style="display: none;"></i><br><br>
-
+	<h2 id="balance">Деньги: 1000 &#8381;</h2><br>		
+	
+	<h2 id="dealer">Крупье:</h2><br>
+	<i id="textDealer" style="display: none;"></i><br>
 	<a class="smallbutton" href="#/" onclick="dealerOpenButton();" id="dealerOpenButton" style="display: none;">Открыть карты крупье</a>
-	<a class="smallbutton" href="#/" onclick="dealerNextButton();" id="dealerNextButton" style="display: none;">Ход крупье</a><br><br>
+	<a class="smallbutton" href="#/" onclick="dealerNextButton();" id="dealerNextButton" style="display: none;">Ход крупье</a><br>
 
 	<input type="number" id="bet" placeholder="Ставка" style="width: 200px;" min="1">
+	<a class="smallbutton" href="#/" onclick="makeBetButton();" id="makeBet">Сделать ставку</a><br>
+	<i id="textBet" style="display: none;">Ставка сделана!</i><br>
 				
-	<a class="smallbutton" href="#/" onclick="makeBetButton();" id="makeBet">Сделать ставку</a> 
+	<h2 id="player">Игрок:</h2><br>
+	<i id="textPlayer" style="display: none;"></i><br>
 
-	<i id="textBet" style="display: none;">Ставка сделана!</i><br><br>
-				
-	<p><b id="player">Игрок:</b></p>
-				
-	<i id="textPlayer" style="display: none;"></i><br><br>
-				
 	<a class="smallbutton" href="#/" onclick="getCardsButton();" id="getCards" style="display: none;">Раздать карты</a>
 	<a class="smallbutton" href="#/" onclick="takeInsuranceButton();" id="takeInsuranceButton" style="display: none;">Досрочный выигрыш 1:1</a>
 	<a class="smallbutton" href="#/" onclick="addButton();" id="addButton" style="display: none;">Ещё карту</a>
-	<a class="smallbutton" href="#/" onclick="stopButton();" id="stopButton" style="display: none;">Хватит</a><br>
+	<a class="smallbutton" href="#/" onclick="stopButton();" id="stopButton" style="display: none;">Хватит</a><br><br>
 
 	<a class="button" href="#/" onclick="newGameButton();" id="newGame">Закончить розыгрыш</a>
 </main>
