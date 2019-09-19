@@ -1,7 +1,8 @@
 <!DOCTYPE html>
-<html>
+<html lang="ru-ru">
 <head>
 	<title>Игра Блэкджек - Novvember</title>
+	<meta charset="utf-8">
 </head>
 <body>
 
@@ -10,10 +11,10 @@
 			
 	<p>Пришли в казино с тысячей, а тут стол с блэкджеком. Надо сыграть.</p>
 
-	<p><h2 id="balance">Деньги: 1000 &#8381;</h2></p>	
+	<h2 id="balance">Деньги: 1000 &#8381;</h2><br>
 	
+	<h2 id="dealer">Крупье:</h2>
 	<p>
-		<h2 id="dealer">Крупье:</h2><br>
 		<i id="textDealer" style="display: none;"></i><br>
 		<a class="smallbutton" href="#/" onclick="dealerOpenButton();" id="dealerOpenButton" style="display: none;">Открыть карты крупье</a>
 		<a class="smallbutton" href="#/" onclick="dealerNextButton();" id="dealerNextButton" style="display: none;">Ход крупье</a>
@@ -25,8 +26,9 @@
 		<i id="textBet" style="display: none;">Ставка сделана!</i>
 	</p>
 
+	<h2 id="player">Игрок:</h2>
+	
 	<p>
-		<h2 id="player">Игрок:</h2><br>
 		<i id="textPlayer" style="display: none;"></i><br>
 		<a class="smallbutton" href="#/" onclick="getCardsButton();" id="getCards" style="display: none;">Раздать карты</a>
 		<a class="smallbutton" href="#/" onclick="takeInsuranceButton();" id="takeInsuranceButton" style="display: none;">Досрочный выигрыш 1:1</a>
@@ -39,6 +41,6 @@
 	</p>
 </main>
 
-<script type="text/javascript" src="blackjack.js"></script>
+<script src="blackjack.js"></script>
 </body>
 </html>
