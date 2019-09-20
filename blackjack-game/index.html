@@ -3,6 +3,8 @@
 <head>
 	<title>Игра Блэкджек - Novvember</title>
 	<meta charset="utf-8">
+	<link href="https://fonts.googleapis.com/css?family=Merriweather&display=swap" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="../styles/style.css">
 </head>
 <body>
 
@@ -11,29 +13,29 @@
 			
 	<p>Пришли в казино с тысячей, а тут стол с блэкджеком. Надо сыграть.</p>
 
-	<h2 id="balance">Деньги: 1000 &#8381;</h2><br>
+	<h2 id="balance">Деньги: 1000 &#8381;</h2>
 	
 	<h2 id="dealer">Крупье:</h2>
 	<p>
-		<i id="textDealer" style="display: none;"></i><br>
-		<a class="smallbutton" href="#/" onclick="dealerOpenButton();" id="dealerOpenButton" style="display: none;">Открыть карты крупье</a>
-		<a class="smallbutton" href="#/" onclick="dealerNextButton();" id="dealerNextButton" style="display: none;">Ход крупье</a>
+		<i id="textDealer" style="visibility: hidden;"></i><br>
+		<a class="smallbutton" href="#/" onclick="dealerOpenButton();" id="dealerOpenButton" style="visibility: hidden;">Открыть карты крупье</a>
+		<a class="smallbutton" href="#/" onclick="dealerNextButton();" id="dealerNextButton" style="visibility: hidden;">Ход крупье</a>
 	</p>
 
 	<p>
 		<input type="number" id="bet" placeholder="Ставка" style="width: 200px;" min="1">
 		<a class="smallbutton" href="#/" onclick="makeBetButton();" id="makeBet">Сделать ставку</a>
-		<i id="textBet" style="display: none;">Ставка сделана!</i>
+		<i id="textBet" style="visibility: hidden;">Ставка сделана!</i>
 	</p>
 
 	<h2 id="player">Игрок:</h2>
 	
 	<p>
-		<i id="textPlayer" style="display: none;"></i><br>
-		<a class="smallbutton" href="#/" onclick="getCardsButton();" id="getCards" style="display: none;">Раздать карты</a>
-		<a class="smallbutton" href="#/" onclick="takeInsuranceButton();" id="takeInsuranceButton" style="display: none;">Досрочный выигрыш 1:1</a>
-		<a class="smallbutton" href="#/" onclick="addButton();" id="addButton" style="display: none;">Ещё карту</a>
-		<a class="smallbutton" href="#/" onclick="stopButton();" id="stopButton" style="display: none;">Хватит</a> 
+		<i id="textPlayer" style="visibility: hidden;"></i><br>
+		<a class="smallbutton" href="#/" onclick="getCardsButton();" id="getCards" style="visibility: hidden;">Раздать карты</a>
+		<a class="smallbutton" href="#/" onclick="addButton();" id="addButton" style="visibility: hidden;">Ещё карту</a>
+		<a class="smallbutton" href="#/" onclick="stopButton();" id="stopButton" style="visibility: hidden;">Хватит</a>
+		<a class="smallbutton" href="#/" onclick="takeInsuranceButton();" id="takeInsuranceButton" style="visibility: hidden;">Досрочный выигрыш 1:1</a> 
 	</p>
 
 	<p>

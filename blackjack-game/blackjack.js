@@ -432,14 +432,14 @@
 		}
 
 		function hide (id) {
-			document.getElementById(id).style.display = 'none';
+			document.getElementById(id).style.visibility = 'hidden';
 		}
 
 		function showText (id, msg) {
-			document.getElementById(id).style.display = 'inline';
+			document.getElementById(id).style.visibility = 'visible';
 			document.getElementById(id).innerHTML = msg;
 		}
 
 		function showButton (id, msg) {
-			document.getElementById(id).style.display = 'inline';
+			document.getElementById(id).style.visibility = 'visible';
 		}
