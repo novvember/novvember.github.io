@@ -1,3 +1,36 @@
 html {
 	font-family: 'Merriweather', serif;
 }
+
+nav, footer {
+	color: grey;
+}
+
+h1 {
+	text-align: center;
+}
+
+h1 img {
+	width: 32px;
+	height: 32px;
+	border-radius: 50%;
+	vertical-align: middle;
+}
+
+dt {
+	font-weight: bold;
+	margin-top: 5px;
+}
+
+.date {
+	font-style: italic;
+}
+
+a {
+	color: inherit;
+}
+
+a:hover {
+	color: white;
+	background-color: grey;
+}
