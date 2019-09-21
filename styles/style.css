@@ -1,11 +1,17 @@
+/* Общее */
 html {
 	font-family: 'Merriweather', serif;
+}
+
+body {
+	padding: 0 10%;
 }
 
 nav, footer {
 	color: dimgray;
 }
 
+/* Заголовок */ 
 h1 {
 	text-align: center;
 }
@@ -17,6 +23,7 @@ h1 img {
 	vertical-align: middle;
 }
 
+/* Список курсов */
 dt {
 	font-weight: bold;
 	margin-top: 5px;
@@ -30,6 +37,7 @@ dt {
 	font-style: italic;
 }
 
+/* Ссылки */
 a {
 	color: inherit;
 }
