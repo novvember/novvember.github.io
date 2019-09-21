@@ -3,7 +3,7 @@ html {
 }
 
 nav, footer {
-	color: grey;
+	color: dimgray;
 }
 
 h1 {
@@ -22,6 +22,10 @@ dt {
 	margin-top: 5px;
 }
 
+.current {
+	background-color: gold;
+}
+
 .date {
 	font-style: italic;
 }
@@ -32,5 +36,5 @@ a {
 
 a:hover {
 	color: white;
-	background-color: grey;
+	background-color: dimgray;
 }
