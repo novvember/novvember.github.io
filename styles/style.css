@@ -7,8 +7,9 @@ body {
 	padding: 0 10%;
 }
 
-nav, footer {
-	color: dimgray;
+/* Меню */
+nav {
+	color: black;
 }
 
 /* Заголовок */ 
@@ -17,8 +18,8 @@ h1 {
 }
 
 h1 img {
-	width: 32px;
-	height: 32px;
+	width: 2ex;
+	height: 2ex;
 	border-radius: 50%;
 	vertical-align: middle;
 }
@@ -26,11 +27,12 @@ h1 img {
 /* Список курсов */
 dt {
 	font-weight: bold;
-	margin-top: 5px;
+	margin-top: 0.3em;
 }
 
-.current {
+.highlighter {
 	background-color: gold;
+	padding: 0 0.3em;
 }
 
 .date {
@@ -45,4 +47,25 @@ a {
 a:hover {
 	color: white;
 	background-color: dimgray;
+}
+
+/* Футер */
+footer {
+	color: #696969;
+	margin-top: 10em;
+	text-align: center;
+}
+
+footer address {
+	font-style: normal;
+}
+
+footer ul, ol {
+	list-style-type: none;
+	padding: 0;
+}
+
+footer li {
+	display: inline-block;
+	margin-right: 1em;
 }
