@@ -199,7 +199,7 @@
 			}
 			
 			// Если у крупье блэкджек
-			if (dealerCards.length == 2 && getScore(dealerScore) == 21) {
+			if (dealerCards.length == 2 && getScore(dealerScore) == 21 && dealerScore [2] != 0) {
 				prize = bet * (-1);
 				showText ('textDealer', 'У крупье блэкджек! <b>Вы проиграли</b> ' + prize + ' &#8381');
 				hide ('dealerOpenButton');
