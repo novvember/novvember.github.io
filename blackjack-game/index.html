@@ -17,29 +17,29 @@
 	
 	<h2 id="dealer">Крупье:</h2>
 	<p>
-		<i id="textDealer" style="visibility: hidden;"></i><br>
-		<a class="smallbutton" href="#/" onclick="dealerOpenButton();" id="dealerOpenButton" style="visibility: hidden;">Открыть карты крупье</a>
-		<a class="smallbutton" href="#/" onclick="dealerNextButton();" id="dealerNextButton" style="visibility: hidden;">Ход крупье</a>
+		<i id="textDealer" style="display: none;"></i><br>
+	
+		<button type="button" class="smallbutton" onclick="dealerOpenButton();" id="dealerOpenButton" style="display: none;">Открыть карты крупье</button>
+		<button type="button" class="smallbutton" onclick="dealerNextButton();" id="dealerNextButton" style="display: none;">Ход крупье</button>
 	</p>
 
 	<p>
 		<input type="number" id="bet" placeholder="Ставка" style="width: 200px;" min="1">
-		<a class="smallbutton" href="#/" onclick="makeBetButton();" id="makeBet">Сделать ставку</a>
-		<i id="textBet" style="visibility: hidden;">Ставка сделана!</i>
+		<button type="button" class="smallbutton" onclick="makeBetButton();" id="makeBet">Сделать ставку</button>
+		<i id="textBet" style="display: none;">Ставка сделана!</i>
 	</p>
 
 	<h2 id="player">Игрок:</h2>
-	
 	<p>
-		<i id="textPlayer" style="visibility: hidden;"></i><br>
-		<a class="smallbutton" href="#/" onclick="getCardsButton();" id="getCards" style="visibility: hidden;">Раздать карты</a>
-		<a class="smallbutton" href="#/" onclick="addButton();" id="addButton" style="visibility: hidden;">Ещё карту</a>
-		<a class="smallbutton" href="#/" onclick="stopButton();" id="stopButton" style="visibility: hidden;">Хватит</a>
-		<a class="smallbutton" href="#/" onclick="takeInsuranceButton();" id="takeInsuranceButton" style="visibility: hidden;">Досрочный выигрыш 1:1</a> 
+		<i id="textPlayer" style="display: none;"></i><br>
+		<button type="button" class="smallbutton" onclick="getCardsButton();" id="getCards" style="display: none;">Раздать карты</button>
+		<button type="button" class="smallbutton" onclick="addButton();" id="addButton" style="display: none;">Ещё карту</button>
+		<button type="button" class="smallbutton" onclick="stopButton();" id="stopButton" style="display: none;">Хватит</button>
+		<button type="button" class="smallbutton" onclick="takeInsuranceButton();" id="takeInsuranceButton" style="display: none;">Досрочный выигрыш 1:1</button> 
 	</p>
 
 	<p>
-		<a class="button" href="#/" onclick="newGameButton();" id="newGame">Закончить розыгрыш</a>
+		<button type="button" class="button" onclick="newGameButton();" id="newGame">Закончить розыгрыш</button>
 	</p>
 </main>
 

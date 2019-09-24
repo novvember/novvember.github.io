@@ -6,7 +6,7 @@
 
 		let dealerCards = [];
 		let dealerText = 'Крупье: ';
-		let dealerTextHide = 'Крупье: <span style="color: LimeGreen; border: 1px solid green;">&nbsp;?&nbsp;</span> ';
+		let dealerTextHide = 'Крупье: <span style="background: MediumSeaGreen; color: white;">&nbsp;?&nbsp;</span> ';
 		let dealerScore = [0, 0, 0];
 
 		let playerCards = [];
@@ -276,7 +276,7 @@
 			prize = 0;
 			dealerCards = [];
 			dealerText = 'Крупье: ';
-			dealerTextHide = 'Крупье: <span style="color: LimeGreen; border: 1px solid green;">&nbsp;?&nbsp;</span> ';
+			dealerTextHide = 'Крупье: <span style="background: MediumSeaGreen; color: white;">&nbsp;?&nbsp;</span> ';
 			dealerScore = [0, 0, 0];
 			playerCards = [];
 			playerText = 'Игрок: ';
@@ -432,14 +432,14 @@
 		}
 
 		function hide (id) {
-			document.getElementById(id).style.visibility = 'hidden';
+			document.getElementById(id).style.display = 'none';
 		}
 
 		function showText (id, msg) {
-			document.getElementById(id).style.visibility = 'visible';
+			document.getElementById(id).style.display = '';
 			document.getElementById(id).innerHTML = msg;
 		}
 
 		function showButton (id, msg) {
-			document.getElementById(id).style.visibility = 'visible';
+			document.getElementById(id).style.display = '';
 		}

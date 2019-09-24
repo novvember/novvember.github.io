@@ -174,7 +174,7 @@
 
 			// Сбрасываем оформление
 			for (i = 0; i < bets.length; i++) {
-				document.getElementById(bets [i][0]).style.borderColor = '#a0a0a0';
+				document.getElementById(bets [i][0]).style.background = '';
 			}
 
 
@@ -184,9 +184,9 @@
 			// Ставки
 			for (i = 0; i < bets.length; i++) {
 				if (betsResult [i] * bets [i][1] > 0) {
-					document.getElementById(bets [i][0]).style.borderColor = 'green';
+					document.getElementById(bets [i][0]).style.background = 'PaleGreen';
 				} else if (betsResult [i] * bets [i][1] < 0) {
-					document.getElementById(bets [i][0]).style.borderColor = 'red';
+					document.getElementById(bets [i][0]).style.background = 'LightCoral';
 				}
 			}
 		
