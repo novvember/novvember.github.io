@@ -119,7 +119,7 @@
 			prize = bet;
 			hide ('stopButton');
 			hide ('takeInsuranceButton');
-			showText ('textPlayer', 'Вы забрали <b>досрочный выигрыш</b> 1:1 (' + prize + ' &#8381;), не открывая карты крупье.');
+			showText ('textPlayer', 'Вы забрали <strong>досрочный выигрыш</strong> 1:1 (' + prize + ' &#8381;), не открывая карты крупье.');
 		}
 
 		function getScore (personScore) {
@@ -155,27 +155,27 @@
 			// Блэкджек у игрока
 			if (playerScore [2] == 1000 && dealerScore [2] == 0) {
 				if (dealerCards [1][3] == 10) { // У крупье может быть блекджек
-					showText ('textPlayer', '<b>Блэкджек!</b> Ого! Но у крупье тоже может быть блэкджек.');
+					showText ('textPlayer', '<strong>Блэкджек!</strong> Ого! Но у крупье тоже может быть блэкджек.');
 					showButton ('dealerOpenButton');
 					return;
 				} else if (dealerCards [1][3] == 11) { // У крупье открыт туз
-					showText ('textPlayer', '<b>Блэкджек!</b> Ого! Но у крупье тоже возможен блэкджек. Можете взять обычный выигрыш 1:1 (вместо повышенного 3:2) либо продолжить и открыть карты крупье.');
+					showText ('textPlayer', '<strong>Блэкджек!</strong> Ого! Но у крупье тоже возможен блэкджек. Можете взять обычный выигрыш 1:1 (вместо повышенного 3:2) либо продолжить и открыть карты крупье.');
 					showButton ('stopButton');
 					showButton ('takeInsuranceButton');
 					return;
 				} else {
 					prize = bet *1.5;
-					showText ('textPlayer', '<b>Блэкджек!</b> Ого! Ваш повышенный выигрыш 3:2 (' + prize + ' &#8381;)');
+					showText ('textPlayer', '<strong>Блэкджек!</strong> Ого! Ваш повышенный выигрыш 3:2 (' + prize + ' &#8381;)');
 					return;
 				}
 			} else if (playerScore [2] == 1000 && dealerScore [2] == 21) {
-				showText ('textDealer', 'У крупье тоже блэкджек. <b>Ничья!</b> Вы остаетесь при своей ставке.');
+				showText ('textDealer', 'У крупье тоже блэкджек. <strong>Ничья!</strong> Вы остаетесь при своей ставке.');
 				prize = 0;
 				hide ('dealerOpenButton');
 				return;
 			} else if (playerScore [2] == 1000 && dealerScore [2] < 21) {
 				prize = bet * 1.5;
-				showText ('textDealer', 'У крупье нет блэкджека, а у вас есть. <b>Ваш повышенный выигрыш</b> 3:2 (' + prize + ' &#8381)');
+				showText ('textDealer', 'У крупье нет блэкджека, а у вас есть. <strong>Ваш повышенный выигрыш</strong> 3:2 (' + prize + ' &#8381)');
 				hide ('dealerOpenButton');
 				return;
 			}
@@ -185,7 +185,7 @@
 				prize = bet * (-1);
 				hide ('stopButton');
 				hide ('addButton');
-				showText ('textPlayer', '<b>Много!</b> Число очков ' + getMinScore (playerScore) + '. <b>Вы проиграли</b> вашу ставку ' + prize + ' &#8381');
+				showText ('textPlayer', '<strong>Много!</strong> Число очков ' + getMinScore (playerScore) + '. <strong>Вы проиграли</strong> вашу ставку ' + prize + ' &#8381');
 				return;
 			}
 
@@ -201,7 +201,7 @@
 			// Если у крупье блэкджек
 			if (dealerCards.length == 2 && getScore(dealerScore) == 21 && dealerScore [2] != 0) {
 				prize = bet * (-1);
-				showText ('textDealer', 'У крупье блэкджек! <b>Вы проиграли</b> ' + prize + ' &#8381');
+				showText ('textDealer', 'У крупье блэкджек! <strong>Вы проиграли</strong> ' + prize + ' &#8381');
 				hide ('dealerOpenButton');
 				return;
 			}
@@ -209,7 +209,7 @@
 			// Перебор у крупье
 			if (dealerScore [2] > 21) {
 				prize = bet;
-				showText ('textDealer', '<b>Много!</b> Число очков ' + dealerScore [2] + '. <b>Вы выиграли.</b> Выигрыш 1:1 (' + prize + ' &#8381)');
+				showText ('textDealer', '<strong>Много!</strong> Число очков ' + dealerScore [2] + '. <strong>Вы выиграли.</strong> Выигрыш 1:1 (' + prize + ' &#8381)');
 				hide ('dealerNextButton');
 				return;
 			}
@@ -222,17 +222,17 @@
 			// Обычное определение победителя, у кого больше очков
 			if (playerScore [2] > dealerScore [2]) {
 				prize = bet;
-				showText ('textDealer', 'Число очков ' + dealerScore [2] + '. <b>Вы выиграли!</b> Выигрыш 1:1 (' + prize + ' &#8381)');
+				showText ('textDealer', 'Число очков ' + dealerScore [2] + '. <strong>Вы выиграли!</strong> Выигрыш 1:1 (' + prize + ' &#8381)');
 				hide ('dealerOpenButton');
 				hide ('dealerNextButton');
 			} else if (playerScore [2] < dealerScore [2]) {
 				prize = bet * (-1);
-				showText ('textDealer', 'Число очков ' + dealerScore [2] + '. <b>Вы проиграли :(</b> и потеряли вашу ставку ' + prize + ' &#8381');
+				showText ('textDealer', 'Число очков ' + dealerScore [2] + '. <strong>Вы проиграли :(</strong> и потеряли вашу ставку ' + prize + ' &#8381');
 				hide ('dealerOpenButton');
 				hide ('dealerNextButton');
 			} else if (playerScore [2] == dealerScore [2]) {
 				prize = 0;
-				showText ('textDealer', 'Число очков ' + dealerScore [2] + '. <b>Ничья!</b> Вы остаетесь при своей ставке.');
+				showText ('textDealer', 'Число очков ' + dealerScore [2] + '. <strong>Ровно!</strong> Вы остаетесь при своей ставке.');
 				hide ('dealerOpenButton');
 				hide ('dealerNextButton');
 			}

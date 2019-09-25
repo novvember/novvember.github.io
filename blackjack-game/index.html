@@ -5,6 +5,11 @@
 	<meta charset="utf-8">
 	<link href="https://fonts.googleapis.com/css?family=Merriweather&display=swap" rel="stylesheet">
 	<link rel="stylesheet" type="text/css" href="../styles/style.css">
+	<style type="text/css">
+		h2 {
+			display: inline;
+		}
+	</style>
 </head>
 <body>
 
@@ -13,33 +18,38 @@
 			
 	<p>Пришли в казино с тысячей, а тут стол с блэкджеком. Надо сыграть.</p>
 
-	<h2 id="balance">Деньги: 1000 &#8381;</h2>
+	<p><h2 id="balance">Деньги: 1000 &#8381;</h2></p>
 	
-	<h2 id="dealer">Крупье:</h2>
-	<p>
-		<i id="textDealer" style="display: none;"></i><br>
-	
-		<button type="button" class="smallbutton" onclick="dealerOpenButton();" id="dealerOpenButton" style="display: none;">Открыть карты крупье</button>
-		<button type="button" class="smallbutton" onclick="dealerNextButton();" id="dealerNextButton" style="display: none;">Ход крупье</button>
-	</p>
+	<div>
+		<h2 id="dealer">Крупье:</h2>
+		<button type="button" onclick="dealerOpenButton();" id="dealerOpenButton" style="display: none;">Открыть карты крупье</button>
+		<button type="button" onclick="dealerNextButton();" id="dealerNextButton" style="display: none;">Ход крупье <img src="waiting.svg"></button>
+	</div>
+
+	<div>
+		<em><span id="textDealer" style="display: none;"></span></em>
+	</div>
 
 	<p>
 		<input type="number" id="bet" placeholder="Ставка" style="width: 200px;" min="1">
-		<button type="button" class="smallbutton" onclick="makeBetButton();" id="makeBet">Сделать ставку</button>
+		<button type="button" onclick="makeBetButton();" id="makeBet">Сделать ставку</button>
 		<i id="textBet" style="display: none;">Ставка сделана!</i>
 	</p>
 
-	<h2 id="player">Игрок:</h2>
-	<p>
-		<i id="textPlayer" style="display: none;"></i><br>
-		<button type="button" class="smallbutton" onclick="getCardsButton();" id="getCards" style="display: none;">Раздать карты</button>
-		<button type="button" class="smallbutton" onclick="addButton();" id="addButton" style="display: none;">Ещё карту</button>
-		<button type="button" class="smallbutton" onclick="stopButton();" id="stopButton" style="display: none;">Хватит</button>
-		<button type="button" class="smallbutton" onclick="takeInsuranceButton();" id="takeInsuranceButton" style="display: none;">Досрочный выигрыш 1:1</button> 
-	</p>
+	<div>
+		<h2 id="player">Игрок:</h2>
+		<button type="button" onclick="getCardsButton();" id="getCards" style="display: none;">Раздать карты</button>
+		<button type="button" onclick="addButton();" id="addButton" style="display: none;">Ещё карту</button>
+		<button type="button" onclick="stopButton();" id="stopButton" style="display: none;">Хватит</button>
+		<button type="button" onclick="takeInsuranceButton();" id="takeInsuranceButton" style="display: none;">Досрочный выигрыш 1:1</button>
+	</div>
+
+	<div>
+		<em><span id="textPlayer" style="display: none;"></span></em>
+	</div>
 
 	<p>
-		<button type="button" class="button" onclick="newGameButton();" id="newGame">Закончить розыгрыш</button>
+		<button type="button" onclick="newGameButton();" id="newGame"><strong>Закончить розыгрыш</strong></button>
 	</p>
 </main>
 
