@@ -11,34 +11,37 @@
 <main>
 	<h1>Игра Рулетка</h1>
 			
-	<p>Пришли в казино с тысячей, а тут рулетка.<br>
-	Настоящая рулетка с 36 цифровыми ячейками и одним «зеро». Можно ставить на конкретное число (так выигрыш больше), а можно, например, на черное (так проще угадать).</p>
+	<p>Пришли в казино с тысячей, а тут рулетка.</p>
+	<p>Настоящая рулетка с 36 цифровыми ячейками и одним «зеро». Можно ставить на конкретное число (так выигрыш больше), а можно, например, на черное (так проще угадать).</p>
+	<p><em>Делайте ваши ставки!</em></p>
+	<h2 id="balance">Деньги: 1000 &#8381;</h2>
 
-	<p><i>Делайте ваши ставки!</i></p>
 
-	<h2 id="balance">Деньги: 1000 &#8381;</h2><br>
-
-	<input type="number" id="betRed" placeholder="Красное" min="0">
-	<input type="number" id="betBlack" placeholder="Чёрное" min="0">
-	Выплата 1:1<br>
+	<h3>Ставка на группу (выигрыш 1:1)</h3>
+	<p>
+		<input type="number" id="betRed" placeholder="Красное" min="0" max="10000"> / 
+		<input type="number" id="betBlack" placeholder="Чёрное" min="0" max="10000">
+		<br>
 	
-	<input type="number" id="betEven" placeholder="Чётное" min="0">
-	<input type="number" id="betOdd" placeholder="Нечётное" min="0">
-	Выплата 1:1<br>
+		<input type="number" id="betEven" placeholder="Чётное" min="0" max="10000"> / 
+		<input type="number" id="betOdd" placeholder="Нечётное" min="0" max="10000">
+		<br>
 	
-	<input type="number" id="betSmall" placeholder="Малое (1-18)" min="0">
-	<input type="number" id="betBig" placeholder="Большое (19-36)" min="0">
-	Выплата 1:1<br><br>
+		<input type="number" id="betSmall" placeholder="(1-18)" min="0" max="10000"> / 
+		<input type="number" id="betBig" placeholder="(19-36)" min="0" max="10000">
+	</p>
 	
-	<input type="number" id="betTheNumber" placeholder="Число (0-36)" min="0" max="36">
-	<input type="number" id="betNumber" placeholder="Сумма на это число (руб.)" min="0">
-	Выплата 35:1<br>
+	<h3>Ставка на одно число (выигрыш 35:1)</h3>
+	<p>
+		<input type="number" id="betTheNumber" placeholder="Число" min="0" max="36">
+		<input type="number" id="betNumber" placeholder="Ставка" min="0" max="10000">
+	</p>
 	
-	<p><i id="text">Ставки сделаны, ставок больше нет!</i></p>
+	<p><em><span id="text">Ставки сделаны, ставок больше нет!</span></em></p>
 	
 	<h2 id="ball"></h2>
 	
-	<button type="button" class="button" onclick="goRoulette();" id="button">Играть</button>
+	<button type="button" onclick="goRoulette();" id="button">Играть</button>
 </main>
 
 
