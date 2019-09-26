@@ -24,20 +24,39 @@
 		]
 		let betTheNumber = '';
 
-
-		function goRoulette() {
+		function makeBets () {
 			// Записываем ставки и проверям
 			if (readBets() == false) {
 				document.getElementById('text').innerHTML = 'Ошибка в ставках!';
 				return;
 			} else {
 				document.getElementById('text').innerHTML = 'Ставки сделаны, ставок больше нет!';
-			}
+				
+				// Сбрасываем оформление ставок
+				for (i = 0; i < bets.length; i++) {
+					document.getElementById(bets [i][0]).style.borderColor = '';
+				}
 
+				// Меняем кнопки
+				document.getElementById('makeBetsButton').disabled = true;
+				document.getElementById('resetButton').disabled = true;
+				document.getElementById('goRouletteButton').disabled = false;
+			}
+		}
+
+		function goRoulette() {
+			
 			runBall ();
 			bildBetsResult ();
 			getReward ();
 			showResults ();
+
+			// Меняем кнопки
+			document.getElementById('makeBetsButton').disabled = false;
+			document.getElementById('resetButton').disabled = false;
+			document.getElementById('goRouletteButton').disabled = true;
+
+			document.getElementById('text').innerHTML = '';
 		}
 
 
@@ -172,21 +191,24 @@
 
 		function showResults () {
 
-			// Сбрасываем оформление
+			// Сбрасываем оформление ставок
 			for (i = 0; i < bets.length; i++) {
-				document.getElementById(bets [i][0]).style.background = '';
+				document.getElementById(bets [i][0]).style.borderColor = '';
 			}
 
 
-			// Баланс
-			document.getElementById('balance').innerHTML = 'Деньги: ' + balance + ' &#8381; (' + reward + ' &#8381; в этом ' + lap +'-м раунде)';
+			// Обновляем баланс
+			document.getElementById('balance').innerHTML = 'Деньги: ' + balance + ' &#8381;';
+
+			// Показывем выигрыш
+			document.getElementById('textRoulette').innerHTML = reward + ' &#8381; в этом ' + lap +'-м раунде';
 
 			// Ставки
 			for (i = 0; i < bets.length; i++) {
 				if (betsResult [i] * bets [i][1] > 0) {
-					document.getElementById(bets [i][0]).style.background = 'PaleGreen';
+					document.getElementById(bets [i][0]).style.borderColor = 'PaleGreen';
 				} else if (betsResult [i] * bets [i][1] < 0) {
-					document.getElementById(bets [i][0]).style.background = 'LightCoral';
+					document.getElementById(bets [i][0]).style.borderColor = 'LightCoral';
 				}
 			}
 		
