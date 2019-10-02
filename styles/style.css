@@ -71,3 +71,14 @@ footer li {
 	display: inline-block;
 	margin-right: 1em;
 }
+
+footer .github:before {
+	content: '';
+	display: inline-block;
+	height: 1em;
+	width: 1em;
+	margin-right: 0.1em;
+	background-image: url('../img/github.svg');
+	background-repeat: no-repeat;
+	background-size: cover;
+}
