@@ -248,6 +248,7 @@
 				showText ('textDealer', 'Число очков ' + dealerScore [2]);
 				hide ('dealerOpenButton');
 				showButton ('dealerNextButton');
+				setTimeout (clickButton, 2000, 'dealerNextButton');
 			}
 		}
 
@@ -261,6 +262,7 @@
 				showText ('textDealer', 'Число очков ' + dealerScore [2]);
 				hide ('dealerOpenButton');
 				showButton ('dealerNextButton');
+				setTimeout (clickButton, 2000, 'dealerNextButton');
 			}
 		}
 
@@ -442,4 +444,10 @@
 
 		function showButton (id, msg) {
 			document.getElementById(id).style.display = '';
+		}
+
+		function clickButton (id) {
+			if (document.getElementById(id).style.display == '') {
+				document.getElementById(id).click();
+			}
 		}
