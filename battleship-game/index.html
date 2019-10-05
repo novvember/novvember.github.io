@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ru-ru">
+<head>
+	<title>Игра Морской бой - Novvember</title>
+	<meta charset="utf-8">
+	<link href="https://fonts.googleapis.com/css?family=Merriweather&display=swap" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="../styles/style.css">
+	<style type="text/css">
+
+		#playerField table {
+			border: 1px dotted grey;
+			border-collapse: collapse;
+		}
+
+		.playerField tbody {
+			text-align: center;
+			font-size: 12px;
+			font-style: italic;
+		}
+
+		td {
+			width: 20px;
+			height: 20px;
+			border: 1px dotted grey;
+			padding: 0;
+			margin: 0;
+		}
+	</style>
+</head>
+<body>
+
+<main>
+	<h1>Игра Морской бой</h1>
+			
+	<p>Классическая русская версия игры «Морской бой» в тетради в клеточку, но с противником-компьютером.</p>
+
+	<div class="playground">
+		<div id="playerField"></div>
+	</div>
+
+	<p>
+		<button type="button" onclick="drawField('playerField', 12, 12, 'player')">Нарисовать поле</button>
+		<button type="button" onclick="markField ('playerField', 10, 10, 'Игрок')">Разметить поле</button>
+	</p>
+
+	
+</main>
+
+<script src="battleship.js"></script>
+</body>
+</html>
