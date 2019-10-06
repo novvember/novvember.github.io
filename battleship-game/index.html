@@ -7,6 +7,11 @@
 	<link rel="stylesheet" type="text/css" href="../styles/style.css">
 	<style type="text/css">
 
+		p.under-consrtuction {
+			background-color: Cornsilk;
+			padding: 0.5em;
+		}
+
 		#playground {
 			min-width: 725px;
 		}
@@ -57,6 +62,7 @@
 			background-position: center;
 		}
 
+
 	</style>
 </head>
 <body>
@@ -66,7 +72,9 @@
 			
 	<p>Классическая русская версия игры «Морской бой» в тетради в клеточку, но с противником-компьютером.</p>
 
-	<p>
+	<p class="under-consrtuction"><em>Игра еще далеко не готова, потому что я еще многое не знаю, как делать. Так что играть нельзя, но можно тыкать на кнопочки и видеть, какие элементы игры уже реализованы.</em>
+		<br>
+		<br>
 		<button type="button" onclick="drawCells()">Нарисовать страницу</button>
 		<button type="button" onclick="markField ()">Разметить страницу</button>
 		<button type="button" onclick="generateShips ('player')">Расставить корабли игроку</button>
