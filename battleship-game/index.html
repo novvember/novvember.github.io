@@ -7,15 +7,17 @@
 	<link rel="stylesheet" type="text/css" href="../styles/style.css">
 	<style type="text/css">
 
-		#playerField table {
-			border: 1px dotted grey;
-			border-collapse: collapse;
+		#playground {
+			min-width: 725px;
 		}
 
-		.playerField tbody {
-			text-align: center;
-			font-size: 12px;
-			font-style: italic;
+		#playground div {
+			display: inline-block;
+		}
+
+		table {
+			border-top: 1px dotted grey;
+			border-collapse: collapse;
 		}
 
 		td {
@@ -24,6 +26,19 @@
 			border: 1px dotted grey;
 			padding: 0;
 			margin: 0;
+			box-sizing: border-box;
+			text-align: center;
+			font-size: 10px;
+			font-style: italic;
+		}
+
+		td:hover {
+			background-color: gold;
+		}
+
+		#filler1 td, #filler2 td {
+			border-left-style: none;
+			border-right-style: none;
 		}
 	</style>
 </head>
@@ -34,13 +49,13 @@
 			
 	<p>Классическая русская версия игры «Морской бой» в тетради в клеточку, но с противником-компьютером.</p>
 
-	<div class="playground">
-		<div id="playerField"></div>
+	<div id="playground">
+		<div id="playerField"></div><div id="filler1"></div><div id="enemyField"></div><div id="filler2"></div><div id="margin"></div>
 	</div>
 
 	<p>
-		<button type="button" onclick="drawField('playerField', 12, 12, 'player')">Нарисовать поле</button>
-		<button type="button" onclick="markField ('playerField', 10, 10, 'Игрок')">Разметить поле</button>
+		<button type="button" onclick="drawCells()">Нарисовать страницу</button>
+		<button type="button" onclick="markField ()">Разметить страницу</button>
 	</p>
 
 	
