@@ -40,6 +40,23 @@
 			border-left-style: none;
 			border-right-style: none;
 		}
+
+		#playerField td.ship {
+			background-color: #90CAF9;
+		}
+
+		#enemyField td.ship {
+			background-color: #EF9A9A;
+		}
+
+		td.margin {
+
+			background-image: url(dot-empty.svg);
+			background-size: 6px;
+			background-repeat: no-repeat;
+			background-position: center;
+		}
+
 	</style>
 </head>
 <body>
@@ -49,14 +66,18 @@
 			
 	<p>Классическая русская версия игры «Морской бой» в тетради в клеточку, но с противником-компьютером.</p>
 
+	<p>
+		<button type="button" onclick="drawCells()">Нарисовать страницу</button>
+		<button type="button" onclick="markField ()">Разметить страницу</button>
+		<button type="button" onclick="generateShips ('player')">Расставить корабли игроку</button>
+		<button type="button" onclick="generateShips ('enemy')">Расставить корабли противнику</button>
+	</p>
+
 	<div id="playground">
 		<div id="playerField"></div><div id="filler1"></div><div id="enemyField"></div><div id="filler2"></div><div id="margin"></div>
 	</div>
 
-	<p>
-		<button type="button" onclick="drawCells()">Нарисовать страницу</button>
-		<button type="button" onclick="markField ()">Разметить страницу</button>
-	</p>
+	
 
 	
 </main>
