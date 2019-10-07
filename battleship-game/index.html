@@ -8,12 +8,16 @@
 	<style type="text/css">
 
 		p.under-consrtuction {
-			background-color: Cornsilk;
-			padding: 0.5em;
+			margin: 5em 0;
+			padding: 1em;
+			border: 1px dotted grey;
+			border-radius: 1em;
+			font-size: small;
 		}
 
-		#playground {
+		#battleship-game {
 			min-width: 725px;
+			min-height: 500px;
 		}
 
 		#playground div {
@@ -62,6 +66,40 @@
 			background-position: center;
 		}
 
+		#gamestart {
+			text-align: center;
+		}
+		#gamestart > img{
+			height: 200px;
+		}
+
+		button img {
+			height: 1em;
+		}
+
+		#playerInfo, #enemyInfo {
+			width: 240px;
+			display: inline-block;
+			vertical-align: top;
+		}
+
+		#playerInfo > div{
+			display: none;
+		}
+
+		#playerInfo > div, #enemyInfo > div {
+			padding: 0.5em;
+			margin: 0.5em;
+			text-align: center;
+			font-size: smaller;
+
+		}
+
+		.info-need-action {
+			background-color: Moccasin;
+			border: 2px dotted white;
+		}
+
 
 	</style>
 </head>
@@ -71,6 +109,37 @@
 	<h1>Игра Морской бой</h1>
 			
 	<p>Классическая русская версия игры «Морской бой» в тетради в клеточку, но с противником-компьютером.</p>
+	
+	<div id="battleship-game">
+		<section id="gamestart">
+			<img src="ship-sailing.gif"><br>
+			<button type="button" id="newGameButton" onclick="newGameButton()">Новая игра <img src="click.svg"></button>
+		</section>
+
+		<section id="playground">
+			<div id="playerField"></div><div id="filler1"></div><div id="enemyField"></div><div id="filler2"></div><div id="margin"></div>
+		</section>
+
+		<section id="gameinfo">
+			<div id="playerInfo">
+				<div id="buidShipsDiv" class="info-need-action">
+					<p>
+						Для начала разместите корабли в своем поле
+					</p>
+					<div><button onclick="generateShips ('player')">Расставить автоматически</button></div>
+					<div><button disabled title="Пока не реализовано">Расставить самому</button></div>
+					<p><button disabled>Сохранить</button></p>
+				</div>
+
+			</div>
+
+			<div id="enemyInfo">
+				
+
+			</div>
+		</section>
+
+	</div>
 
 	<p class="under-consrtuction"><em>Игра еще далеко не готова, потому что я еще многое не знаю, как делать. Так что играть нельзя, но можно тыкать на кнопочки и видеть, какие элементы игры уже реализованы.</em>
 		<br>
@@ -80,10 +149,6 @@
 		<button type="button" onclick="generateShips ('player')">Расставить корабли игроку</button>
 		<button type="button" onclick="generateShips ('enemy')">Расставить корабли противнику</button>
 	</p>
-
-	<div id="playground">
-		<div id="playerField"></div><div id="filler1"></div><div id="enemyField"></div><div id="filler2"></div><div id="margin"></div>
-	</div>
 
 	
 

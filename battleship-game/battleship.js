@@ -18,93 +18,108 @@ generateClearMask (maskEnemyFieldHits, (xLength + 1), (yLength + 1));
 let maskNewShip = []; // Временно хранит корабль
 generateClearMask (maskNewShip, (xLength + 1), (yLength + 1));
 
-// Нарисовать страницу
-function drawCells () {
-	drawField ('playerField', 12, 12, 'player');
-	drawField ('filler1', 1, 12, '');
-	drawField ('enemyField', 12, 12, 'enemy');
-	drawField ('filler2', 1, 12, '');
-	drawField ('margin', 8, 12, 'margin');
+let standardTimeout = 1000;
+
+// Начать игру
+function newGameButton () {
+
+	// Строим поле
+	drawCells (); // Поле из клеточек
+	markField (); // Нанести разметку
+
+	hide ('gamestart'); // Убрать кнопку новой игры
+
+	// Переходим к следующему этапу (расстановка кораблей)
+	setTimeout (showElement, standardTimeout, 'buidShipsDiv', 'block');
 }
 
-// Нарисовать одно поле
-function drawField (id, x, y, person) {
-	let parent = document.getElementById (id);
-	let html ='';
+	// Нарисовать поле из клеточек
+	function drawCells () {
+		drawField ('playerField', 12, 12, 'player');
+		drawField ('filler1', 1, 12, '');
+		drawField ('enemyField', 11, 12, 'enemy');
+		drawField ('filler2', 1, 12, '');
+		drawField ('margin', 10, 12, 'margin');
+	}
 
-	/* Начало таблицы */
-	html += '<table><caption>&nbsp;</caption><tbody>'
+	// Нарисовать одно поле
+	function drawField (id, x, y, person) {
+		let parent = document.getElementById (id);
+		let html ='';
 
-	/* Строки */
-	for (let i = 0; i < y; i++) {
-		html += '<tr>';
+		/* Начало таблицы */
+		html += '<table><caption>&nbsp;</caption><tbody>'
 
-		/* Ячейки */ 
-		for (let j = 0; j < x; j++) {
-			html += ('<td id="' + person + j + '-' + i + '"></td>');
+		/* Строки */
+		for (let i = 0; i < y; i++) {
+			html += '<tr>';
+
+			/* Ячейки */ 
+			for (let j = 0; j < x; j++) {
+				html += ('<td id="' + person + j + '-' + i + '"></td>');
+			}
+
+			html += '</tr>';
 		}
 
-		html += '</tr>';
+		// Закрываем таблицу
+		html += '</tbody></table>';
+
+		// Вставляем в дом
+		parent.insertAdjacentHTML('afterbegin', html);
 	}
 
-	// Закрываем таблицу
-	html += '</tbody></table>';
+	// Разметить страницу
+	function markField () {
+		drawVerticalBorder ('margin', 5, 0, 5, 11, colorMarginBorder);
 
-	// Вставляем в дом
-	parent.insertAdjacentHTML('afterbegin', html);
-}
+		drawBorders ('player', 1, 1, xLength, yLength, colorFieldBorder);
+		drawBorders ('enemy', 1, 1, xLength, yLength, colorFieldBorder);
 
-// Разметить страницу
-function markField () {
-	drawVerticalBorder ('margin', 3, 0, 3, 11, colorMarginBorder);
+		drawCellNames ('player', symbolsCol, 1, 0, xLength, 0);
+		drawCellNames ('player', symbolsRow, 0, 1, 0, yLength);
+		drawCellNames ('enemy', symbolsCol, 1, 0, xLength, 0);
+		drawCellNames ('enemy', symbolsRow, 0, 1, 0, yLength);
 
-	drawBorders ('player', 1, 1, xLength, yLength, colorFieldBorder);
-	drawBorders ('enemy', 1, 1, xLength, yLength, colorFieldBorder);
-
-	drawCellNames ('player', symbolsCol, 1, 0, xLength, 0);
-	drawCellNames ('player', symbolsRow, 0, 1, 0, yLength);
-	drawCellNames ('enemy', symbolsCol, 1, 0, xLength, 0);
-	drawCellNames ('enemy', symbolsRow, 0, 1, 0, yLength);
-
-	document.querySelector('#playerField caption').innerHTML = 'Игрок';
-	document.querySelector('#enemyField caption').innerHTML = 'Противник';
-}
-
-// Обвести клетки границей
-function drawBorders (id, x0, y0, x1, y1, style) {
-	for (let i = x0; i <= x1; i++) {
-		document.getElementById(id + i + '-' + y0).style.borderTop = style;
+		document.querySelector('#playerField caption').innerHTML = 'Игрок';
+		document.querySelector('#enemyField caption').innerHTML = 'Противник';
 	}
-	for (let i = y0; i <= y1; i++) {
-		document.getElementById(id + x1 + '-' + i).style.borderRight = style;
-	}
-	for (let i = x0; i <= x1; i++) {
-		document.getElementById(id + i + '-' + y1).style.borderBottom = style;
-	}
-	for (let i = y0; i <= y1; i++) {
-		document.getElementById(id + x0 + '-' + i).style.borderLeft = style;
-	}
-}
 
-// Нарисовать красное поле у края страницы
-function drawVerticalBorder (id, x0, y0, x1, y1, style) {
-	for (let i = y0; i <= y1; i++) {
-		document.getElementById(id + x0 + '-' + i).style.borderRight = style;
-	}
-}
-
-function drawCellNames (id, symbols, x0, y0, x1, y1) {
-	// Горизонтальная надпись
-	if (y0 == y1) {
-		for (let i = 0; i <= (x1 - x0); i++) {
-			document.getElementById(id + (x0 + i) + '-' + y0).innerHTML = symbols [i];
+	// Обвести клетки границей
+	function drawBorders (id, x0, y0, x1, y1, style) {
+		for (let i = x0; i <= x1; i++) {
+			document.getElementById(id + i + '-' + y0).style.borderTop = style;
 		}
-	} else if (x0 == x1) { // Вертикальная надпись
-		for (let i = 0; i <= (y1 - y0); i++) {
-			document.getElementById(id + x0 + '-' + (y0 + i)).innerHTML = symbols [i];
+		for (let i = y0; i <= y1; i++) {
+			document.getElementById(id + x1 + '-' + i).style.borderRight = style;
+		}
+		for (let i = x0; i <= x1; i++) {
+			document.getElementById(id + i + '-' + y1).style.borderBottom = style;
+		}
+		for (let i = y0; i <= y1; i++) {
+			document.getElementById(id + x0 + '-' + i).style.borderLeft = style;
 		}
 	}
-}
+
+	// Нарисовать красное поле у края страницы
+	function drawVerticalBorder (id, x0, y0, x1, y1, style) {
+		for (let i = y0; i <= y1; i++) {
+			document.getElementById(id + x0 + '-' + i).style.borderRight = style;
+		}
+	}
+
+	function drawCellNames (id, symbols, x0, y0, x1, y1) {
+		// Горизонтальная надпись
+		if (y0 == y1) {
+			for (let i = 0; i <= (x1 - x0); i++) {
+				document.getElementById(id + (x0 + i) + '-' + y0).innerHTML = symbols [i];
+			}
+		} else if (x0 == x1) { // Вертикальная надпись
+			for (let i = 0; i <= (y1 - y0); i++) {
+				document.getElementById(id + x0 + '-' + (y0 + i)).innerHTML = symbols [i];
+			}
+		}
+	}
 
 function generateShips (person) {
 	
@@ -180,7 +195,7 @@ function generateShip (person, shipLength) {
 		}
 
 		everythingOk = true;
-		// Провереям помещается ли корабль в поле
+		// Проверяем помещается ли корабль в поле
 		for (let i=0; i <= (yLength + 1); i++) {
 			if (maskNewShip [i] [0] >= 1 || maskNewShip [i] [xLength + 1] >= 1) {
 				everythingOk = false;
@@ -223,9 +238,8 @@ function generateShip (person, shipLength) {
 	}
 }
 
-// Изначальная генерация масок поля с нулями
+// Создание пустого двухмерного массива нужного размера
 function generateClearMask (array, maxX, maxY) {
-
 	for (let i = 0; i <= maxY; i++) {
 		array [i] = [];
 		for (let j = 0; j <= maxX; j++) {
@@ -234,11 +248,13 @@ function generateClearMask (array, maxX, maxY) {
 	}
 }
 
+// Случайное целое число
 function generateRandomNumber (min, max) {
 	let rand = min + Math.random() * (max + 1 - min);
   	return Math.floor(rand);
 }
 
+// Добавить в матрицу клетки 0,5 вокруг корабля (по первой клетке)
 function generateCellMargin (field, x, y, value) {
 	if ( (x > xLength) || (y > yLength) ) {
 		return;
@@ -253,6 +269,7 @@ function generateCellMargin (field, x, y, value) {
 	}
 }
 
+// Нарисовать корабли из матрицы в нужное поле
 function drawShips (person) {
 	let maskShips;
 	if (person == 'player') {maskShips = maskPlayerFieldShips}
@@ -268,6 +285,17 @@ function drawShips (person) {
 			}
 		}
 	}
-
 }
 
+function hide (id) {
+	document.getElementById(id).style.display = 'none';
+}
+
+function showText (id, msg) {
+	document.getElementById(id).style.display = '';
+	document.getElementById(id).innerHTML = msg;
+}
+
+function showElement (id, style) {
+	document.getElementById(id).style.display = style;
+}
