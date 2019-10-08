@@ -100,6 +100,10 @@
 			border: 2px dotted white;
 		}
 
+		img.arrow {
+			height: 2.5em;
+		}
+
 
 	</style>
 </head>
@@ -124,11 +128,16 @@
 			<div id="playerInfo">
 				<div id="buidShipsDiv" class="info-need-action">
 					<p>
+						<img class="arrow" src="arrow-up.svg"><br>
 						Для начала разместите корабли в своем поле
 					</p>
 					<div><button onclick="generateShips ('player')">Расставить автоматически</button></div>
 					<div><button disabled title="Пока не реализовано">Расставить самому</button></div>
-					<p><button disabled>Сохранить</button></p>
+					<p>
+						<button id="saveShipsButton" onclick="saveShipsButton()">Сохранить</button>
+						<em id="saveShipsButtonText"></em>
+					</p>
+					
 				</div>
 
 			</div>
@@ -146,8 +155,8 @@
 		<br>
 		<button type="button" onclick="drawCells()">Нарисовать страницу</button>
 		<button type="button" onclick="markField ()">Разметить страницу</button>
-		<button type="button" onclick="generateShips ('player')">Расставить корабли игроку</button>
-		<button type="button" onclick="generateShips ('enemy')">Расставить корабли противнику</button>
+		<button type="button" onclick="generateShips ('player', true)">Расставить корабли игроку</button>
+		<button type="button" onclick="generateShips ('enemy', true)">Расставить корабли противнику</button>
 	</p>
 
 	

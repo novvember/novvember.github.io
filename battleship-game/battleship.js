@@ -19,6 +19,7 @@ let maskNewShip = []; // Временно хранит корабль
 generateClearMask (maskNewShip, (xLength + 1), (yLength + 1));
 
 let standardTimeout = 1000;
+let shipsSetOk = false;
 
 // Начать игру
 function newGameButton () {
@@ -108,6 +109,7 @@ function newGameButton () {
 		}
 	}
 
+	// Добавить подписи столбцов и строчек
 	function drawCellNames (id, symbols, x0, y0, x1, y1) {
 		// Горизонтальная надпись
 		if (y0 == y1) {
@@ -121,56 +123,91 @@ function newGameButton () {
 		}
 	}
 
-function generateShips (person) {
+// Расставить корабли в случайном порядке
+function generateShips (person, needMarginToDraw) {
 	
 	// Очищаем поле кораблей
 	let personShips;
-	if (person == 'player') {personShips = maskPlayerFieldShips}
-		else if (person == 'enemy') {personShips = maskEnemyFieldShips};
+	if (person == 'player') {
+		personShips = maskPlayerFieldShips;
+		shipsSetOk = true;
+	} else if (person == 'enemy') {personShips = maskEnemyFieldShips};
 
 	generateClearMask (personShips, (xLength + 1), (yLength + 1));
 
 	// Один четурехпалубный
 	for (let i = 0; i < 1; i++) {
-		generateShip (person, 4);
-		drawShips (person);
+		generateOneShip (person, 4);
+		drawShips (person, needMarginToDraw);
 	}
 	
 	// Два трехпалубных
 	for (let i = 0; i < 2; i++) {
-		generateShip (person, 3);
-		drawShips (person);
+		generateOneShip (person, 3);
+		drawShips (person, needMarginToDraw);
 	}
 
 	// Три двухпалубных
 	for (let i = 0; i < 3; i++) {
-		generateShip (person, 2);
-		drawShips (person);
+		generateOneShip (person, 2);
+		drawShips (person, needMarginToDraw);
 	}
 
 	// Четыре однопалубных
 	for (let i = 0; i < 4; i++) {
-		generateShip (person, 1);
-		drawShips (person);
+		generateOneShip (person, 1);
+		drawShips (person, needMarginToDraw);
 	}
 }
 
-function generateShip (person, shipLength) {
-	let startX = 0;
-	let startY = 0;
-	let x = 0;
-	let y = 0;
-	let startVector = 0;
+// Создание одного корабля
+function generateOneShip (person, shipLength) {
+
 	let maskShips;
 	if (person == 'player') {maskShips = maskPlayerFieldShips}
 		else if (person == 'enemy') {maskShips = maskEnemyFieldShips};
+	
 	let everythingOk = true;
 
 	do {
 		// Очищаем временное поле
 		generateClearMask (maskNewShip, (xLength + 1), (yLength + 1));
 
-		// Генерируем корабль во временную маску
+		// Генерируем случайный корабль во временную маску
+		addRandomShipToMask (shipLength, maskNewShip);
+
+		everythingOk = true;
+
+		// Проверяем помещается ли корабль в поле
+		everythingOk = checkShipIsInside (maskNewShip);
+
+		// Проверяем на пересечения с другими кораблями
+		if (everythingOk == true) {
+			everythingOk = checkShipNotCrossingOtherShips (maskNewShip, maskShips);
+		}
+		
+
+	} while (everythingOk == false);
+
+	// Добавляем корабль в массив
+	for (let i = 0; i < maskShips.length; i++) {
+		for (let j = 0; j < maskShips.length; j++) {
+			if (maskShips [i][j] == maskNewShip [i][j]) {
+				maskShips [i][j] = maskNewShip [i][j];
+			} else {
+				maskShips [i][j] += maskNewShip [i][j];
+			}
+		}
+	}
+}
+
+	function addRandomShipToMask (shipLength, mask) {
+		let startX = 0;
+		let startY = 0;
+		let x = 0;
+		let y = 0;
+		let startVector = 0;
+
 		for (let i = 0; i < shipLength; i++) {
 			if (i == 0) {
 				startX = generateRandomNumber (1, xLength);
@@ -189,54 +226,39 @@ function generateShip (person, shipLength) {
 			if ( (x > (xLength + 1)) || (y > (yLength + 1)) ) {
 				break;
 			} else {
-				maskNewShip [y] [x] = shipLength;
-				generateCellMargin (maskNewShip, x, y, 0.5);
-			}
-		}
-
-		everythingOk = true;
-		// Проверяем помещается ли корабль в поле
-		for (let i=0; i <= (yLength + 1); i++) {
-			if (maskNewShip [i] [0] >= 1 || maskNewShip [i] [xLength + 1] >= 1) {
-				everythingOk = false;
-				break;
-			}
-		}
-		for (let i=0; i <= (xLength + 1); i++) {
-			if (everythingOk == false) break;
-
-			if (maskNewShip [0] [i] >= 1 || maskNewShip [yLength + 1] [i] >= 1) {
-				everythingOk = false;
-				break;
-			}
-		}
-
-		// Проверяем на пересечения с другими кораблями
-		for (let i = 0; i < maskShips.length; i++) {
-			for (let j = 0; j < maskShips.length; j++) {
-				if (everythingOk == false) break;
-
-				if ( (maskNewShip[i][j]>=1) && (maskShips[i][j]>=0.5) ) {
-				everythingOk = false;
-				break;
-				}
-			}
-			if (everythingOk == false) break;
-		}
-
-	} while (everythingOk == false);
-
-	// Добавляем корабль в массив
-	for (let i = 0; i < maskShips.length; i++) {
-		for (let j = 0; j < maskShips.length; j++) {
-			if (maskShips [i][j] == maskNewShip [i][j]) {
-				maskShips [i][j] = maskNewShip [i][j];
-			} else {
-				maskShips [i][j] += maskNewShip [i][j];
+				mask [y] [x] = shipLength;
+				generateCellMargin (mask, x, y, 0.5);
 			}
 		}
 	}
-}
+
+	function checkShipIsInside (mask) {
+		for (let i=0; i <= (yLength + 1); i++) {
+			if ((mask [i] [0] >= 1) || (mask [i] [xLength + 1] >= 1)) {
+				return false;
+			}
+		}
+		for (let i=0; i <= (xLength + 1); i++) {
+			if ((mask [0] [i] >= 1) || (mask [yLength + 1] [i] >= 1)) {
+				return false;
+			}
+		}
+		return true;
+	}
+
+	function checkShipNotCrossingOtherShips (maskNew, maskOther) {
+		for (let i = 0; i < maskOther.length; i++) {
+			for (let j = 0; j < maskOther.length; j++) {
+				if ( (maskNew [i][j]>=1) && (maskOther [i][j]>=0.5) ) {
+				return false;
+				}
+			}
+		}
+		return true;
+	}
+
+
+
 
 // Создание пустого двухмерного массива нужного размера
 function generateClearMask (array, maxX, maxY) {
@@ -270,7 +292,7 @@ function generateCellMargin (field, x, y, value) {
 }
 
 // Нарисовать корабли из матрицы в нужное поле
-function drawShips (person) {
+function drawShips (person, needMarginToDraw) {
 	let maskShips;
 	if (person == 'player') {maskShips = maskPlayerFieldShips}
 		else if (person == 'enemy') {maskShips = maskEnemyFieldShips};
@@ -280,19 +302,45 @@ function drawShips (person) {
 			document.getElementById(person + j + '-' + i).removeAttribute('class');
 			if (maskShips [i][j] >= 1) {
 				document.getElementById(person + j + '-' + i).classList.add ('ship');
-			} else if (maskShips [i][j] == 0.5) {
+			} else if ((maskShips [i][j] == 0.5) && (needMarginToDraw == true)) {
 				document.getElementById(person + j + '-' + i).classList.add ('margin');
 			}
 		}
 	}
 }
 
+function saveShipsButton () {
+
+	// Проверка правильности расстановки кораблей
+	if (!shipsSetOk) {
+		showText ('saveShipsButtonText', 'Что-то не так!');
+		hide ('saveShipsButton');
+
+		setTimeout (function () {
+			showElement ('saveShipsButton', 'inline');
+			showText ('saveShipsButtonText', '');
+		}, standardTimeout);
+		
+	} else {
+		// Вывести сообщение о сохранении
+	hide ('saveShipsButton');
+	showText ('saveShipsButtonText', 'Сохранено!');
+
+	// Убрать окно
+	setTimeout (hide, standardTimeout, 'buidShipsDiv');
+
+	// Запустить игру
+	}
+}
+
+
+
 function hide (id) {
 	document.getElementById(id).style.display = 'none';
 }
 
 function showText (id, msg) {
-	document.getElementById(id).style.display = '';
+	//document.getElementById(id).style.display = '';
 	document.getElementById(id).innerHTML = msg;
 }
 
