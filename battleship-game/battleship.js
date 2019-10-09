@@ -322,14 +322,18 @@ function saveShipsButton () {
 		}, standardTimeout);
 		
 	} else {
+	
 		// Вывести сообщение о сохранении
-	hide ('saveShipsButton');
-	showText ('saveShipsButtonText', 'Сохранено!');
+		changeVisibility ('generateShipsButton', 'hidden');
+		changeVisibility ('buildOwnShipsButton', 'hidden');
 
-	// Убрать окно
-	setTimeout (hide, standardTimeout, 'buidShipsDiv');
+		hide ('saveShipsButton');
+		showText ('saveShipsButtonText', 'Сохранено!');
 
-	// Запустить игру
+		// Убрать окно
+		setTimeout (hide, standardTimeout, 'buidShipsDiv');
+
+		// Запустить игру
 	}
 }
 
@@ -346,4 +350,8 @@ function showText (id, msg) {
 
 function showElement (id, style) {
 	document.getElementById(id).style.display = style;
+}
+
+function changeVisibility (id, param) {
+	document.getElementById(id).style.visibility = param;
 }

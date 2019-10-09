@@ -21,9 +21,52 @@ nav ul {
 	padding: 0;
 }
 
-nav li:hover {
-	list-style-image: url(../img/right-arrow.svg);
+nav li {
+	padding-right: 1.3em;
+	padding-left: 1.3em;
 }
+
+nav li:hover {
+	padding-right: 0em;
+	padding-left: 0em;
+}
+
+
+nav li:hover:before {
+	content: '';
+	display: inline-block;
+	height: 1em;
+	width: 1em;
+	margin-right: 0.3em;
+	background-image: url('../img/tag-opened.svg');
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+nav li:hover:after {
+	content: '';
+	display: inline-block;
+	height: 1em;
+	width: 1em;
+	margin-left: 0.3em;
+	background-image: url('../img/tag-closed.svg');
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+nav span.home:before {
+	content: '';
+	display: inline-block;
+	height: 1em;
+	width: 1em;
+	margin-right: 0em;
+	background-image: url('../img/home.svg');
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+
+
 
 /* Заголовок */ 
 h1 {
@@ -55,11 +98,12 @@ dt {
 /* Ссылки */
 a {
 	color: inherit;
+	text-decoration: underline;
 }
 
 a:hover {
-	color: white;
-	background-color: dimgray;
+	text-decoration: none;
+	color: dimgrey;
 }
 
 /* Футер */
@@ -93,3 +137,5 @@ footer .github:before {
 	background-repeat: no-repeat;
 	background-size: cover;
 }
+
+

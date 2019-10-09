@@ -109,6 +109,12 @@
 </head>
 <body>
 
+<nav>
+	<ul>
+		<li><a href="../"><span class="home" title="Главная страница"></span></a></li>
+	</ul>
+</nav>
+
 <main>
 	<h1>Игра Морской бой</h1>
 			
@@ -131,8 +137,8 @@
 						<img class="arrow" src="arrow-up.svg"><br>
 						Для начала разместите корабли в своем поле
 					</p>
-					<div><button onclick="generateShips ('player')">Расставить автоматически</button></div>
-					<div><button disabled title="Пока не реализовано">Расставить самому</button></div>
+					<div><button id="generateShipsButton" onclick="generateShips ('player')">Расставить автоматически</button></div>
+					<div><button id="buildOwnShipsButton" disabled title="Пока не реализовано">Расставить самому</button></div>
 					<p>
 						<button id="saveShipsButton" onclick="saveShipsButton()">Сохранить</button>
 						<em id="saveShipsButtonText"></em>
