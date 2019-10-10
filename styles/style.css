@@ -33,27 +33,24 @@ nav li:hover {
 	padding-left: 0em;
 }
 
-
-nav li:hover:before {
+nav li:hover:before, nav li:hover:after {
 	content: '';
 	display: inline-block;
 	height: 1em;
 	width: 1em;
-	margin-right: 0.3em;
-	background-image: url('../img/tag-opened.svg');
 	background-repeat: no-repeat;
 	background-size: cover;
+	vertical-align: -0.1em;
+}
+
+nav li:hover:before {
+	margin-right: 0.3em;
+	background-image: url('../img/tag-opened.svg');
 }
 
 nav li:hover:after {
-	content: '';
-	display: inline-block;
-	height: 1em;
-	width: 1em;
 	margin-left: 0.3em;
 	background-image: url('../img/tag-closed.svg');
-	background-repeat: no-repeat;
-	background-size: cover;
 }
 
 nav span.home:before {
@@ -82,10 +79,30 @@ h1 img {
 	vertical-align: middle;
 }
 
-/* Список курсов */
+
+/* Хронология */
 dt {
 	font-weight: bold;
 	margin-top: 0.5rem;
+}
+
+dt[class]:before {
+	content: '';
+	display: inline-block;
+	height: 1em;
+	width: 1em;
+	margin-right: 0.3em;
+	background-repeat: no-repeat;
+	background-size: cover;
+	vertical-align: -0.1em;
+}
+
+dt.code:before {
+	background-image: url('../img/code.svg');
+}
+
+dt.study:before {
+	background-image: url('../img/study.svg');
 }
 
 .highlighter {
@@ -138,6 +155,7 @@ footer address a:before {
 	margin-right: 0.2em;
 	background-repeat: no-repeat;
 	background-size: cover;
+	vertical-align: -0.1em;
 }
 
 footer address a[href*="github.com"]:before {
@@ -145,7 +163,7 @@ footer address a[href*="github.com"]:before {
 }
 
 footer address a[href*="mailto:"]:before {
-	background-image: url('');
+	background-image: url('../img/email.svg');
 }
 
 

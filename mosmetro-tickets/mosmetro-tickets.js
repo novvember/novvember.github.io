@@ -109,7 +109,7 @@ function drawTicketTypesForm () {
 		+ tickets[i][1]
 		+'" value="'
 		+ tickets[i][1]
-		+ '"><label for="'
+		+ '" disabled><label for="'
 		+ tickets[i][1]
 		+ '">'
 		+ tickets[i][0]
