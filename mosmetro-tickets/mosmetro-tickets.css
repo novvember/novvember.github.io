@@ -1,0 +1,82 @@
+/* Служебное сообщение*/
+p.under-construction {
+	margin: 5em 0;
+	padding: 1em;
+	border: 1px dotted grey;
+	border-radius: 1em;
+	font-size: small;
+}
+
+section {
+	display: inline-block;
+	vertical-align: top;
+}
+
+
+section.table {
+	width: 550px;
+}
+
+section.aside {
+	width: 200px;
+}
+
+section.aside form {
+	font-size: smaller;
+}
+
+div.ticket-group {
+	margin-bottom: 1em;
+	background-color: white;
+}
+
+span.price {
+	font-weight: bold;
+}
+
+label[for*="60-trip"] {
+	background-color: Salmon;
+}
+
+label[for*="ed-30-day"] {
+	background-color: Salmon;
+}
+
+label[for*="90-day"] {
+	background-color: Salmon;
+}
+
+label[for*="365-day"] {
+	background-color: Salmon;
+}
+
+label[for*="troika"] {
+	background-color: MediumTurquoise;
+}
+
+label[for*="tat-30-day"] {
+	background-color: SkyBlue;
+}
+
+
+
+
+/* Разметка поля*/
+table {
+	border-collapse: collapse;
+	border: 1px dotted grey;
+}
+
+td {
+	width: 7px;
+	height: 7px;
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+	text-align: center;
+	font-size: 1px;
+}
+
+td:hover {
+	border: 1px solid gold;
+}

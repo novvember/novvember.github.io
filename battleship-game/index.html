@@ -5,107 +5,7 @@
 	<meta charset="utf-8">
 	<link href="https://fonts.googleapis.com/css?family=Merriweather&display=swap" rel="stylesheet">
 	<link rel="stylesheet" type="text/css" href="../styles/style.css">
-	<style type="text/css">
-
-		p.under-consrtuction {
-			margin: 5em 0;
-			padding: 1em;
-			border: 1px dotted grey;
-			border-radius: 1em;
-			font-size: small;
-		}
-
-		#battleship-game {
-			min-width: 725px;
-			min-height: 500px;
-		}
-
-		#playground div {
-			display: inline-block;
-		}
-
-		table {
-			border-top: 1px dotted grey;
-			border-collapse: collapse;
-		}
-
-		td {
-			width: 20px;
-			height: 20px;
-			border: 1px dotted grey;
-			padding: 0;
-			margin: 0;
-			box-sizing: border-box;
-			text-align: center;
-			font-size: 10px;
-			font-style: italic;
-		}
-
-		td:hover {
-			background-color: gold;
-		}
-
-		#filler1 td, #filler2 td {
-			border-left-style: none;
-			border-right-style: none;
-		}
-
-		#playerField td.ship {
-			background-color: #90CAF9;
-		}
-
-		#enemyField td.ship {
-			background-color: #EF9A9A;
-		}
-
-		td.margin {
-
-			background-image: url(dot-empty.svg);
-			background-size: 6px;
-			background-repeat: no-repeat;
-			background-position: center;
-		}
-
-		#gamestart {
-			text-align: center;
-		}
-		#gamestart > img{
-			height: 200px;
-		}
-
-		button img {
-			height: 1em;
-		}
-
-		#playerInfo, #enemyInfo {
-			width: 240px;
-			display: inline-block;
-			vertical-align: top;
-		}
-
-		#playerInfo > div{
-			display: none;
-		}
-
-		#playerInfo > div, #enemyInfo > div {
-			padding: 0.5em;
-			margin: 0.5em;
-			text-align: center;
-			font-size: smaller;
-
-		}
-
-		.info-need-action {
-			background-color: Moccasin;
-			border: 2px dotted white;
-		}
-
-		img.arrow {
-			height: 2.5em;
-		}
-
-
-	</style>
+	<link rel="stylesheet" type="text/css" href="battleship-style.css">
 </head>
 <body>
 
@@ -163,6 +63,7 @@
 		<button type="button" onclick="markField ()">Разметить страницу</button>
 		<button type="button" onclick="generateShips ('player', true)">Расставить корабли игроку</button>
 		<button type="button" onclick="generateShips ('enemy', true)">Расставить корабли противнику</button>
+		<button type="button" onclick="yourMove ()">Ход</button>
 	</p>
 
 	

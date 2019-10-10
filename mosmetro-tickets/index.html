@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ru-ru">
+<head>
+	<title>Стоимость билетов на транспорт в Москве - Novvember</title>
+	<meta charset="utf-8">
+	<link href="https://fonts.googleapis.com/css?family=Merriweather&display=swap" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="../styles/style.css">
+	<link rel="stylesheet" type="text/css" href="mosmetro-tickets.css">
+</head>
+<body>
+
+<nav>
+	<ul>
+		<li><a href="../"><span class="home" title="Главная страница"></span></a></li>
+	</ul>
+</nav>
+
+<main>
+	<h1>Стоимость билетов на транспорт в Москве</h1>
+
+	<p><em>Данные на 2019 год.</em></p>
+			
+	<p>Визуальный анализ цен на общественном транспорте в Москве. Можно увидеть, какие билеты выгодные в определенной ситуации, какие нет. Можно выбрать подходящий, зная свое количество поездок в месяц: на метро (по горизонтали) и на наземном транспорте (по вертикали).</p>
+
+	<section class="table">
+		<h2>Выбрать билет по количеству поездок</h2>
+		<div id="table"></div>
+	
+	</section><section class="aside">
+		<h2>Виды билетов</h2>
+		<form id="ticket-types"></form>
+	</section>
+
+	<p class="under-construction">
+		<button onclick="drawCells ()">Нарисовать таблицу</button>
+		<button onclick="drawTicketTypesForm ()">Создать билеты</button>
+	</p>
+	
+	
+	
+</main>
+
+<script src="mosmetro-tickets.js"></script>
+</body>
+</html>

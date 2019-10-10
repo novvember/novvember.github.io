@@ -15,11 +15,14 @@ let maskPlayerFieldHits =[]; // Хранит выстрелы
 generateClearMask (maskPlayerFieldHits, (xLength + 1), (yLength + 1));
 let maskEnemyFieldHits =[];
 generateClearMask (maskEnemyFieldHits, (xLength + 1), (yLength + 1));
-let maskNewShip = []; // Временно хранит корабль
+let maskNewShip = []; // Временно хранит создаваемый корабль
 generateClearMask (maskNewShip, (xLength + 1), (yLength + 1));
 
 let standardTimeout = 1000;
 let shipsSetOk = false;
+
+let currentClick = ''; // Хранит id нажатого элемента
+let currentTurn = 'player'; // Кто сейчас ходит
 
 // Начать игру
 function newGameButton () {
@@ -334,6 +337,7 @@ function saveShipsButton () {
 		setTimeout (hide, standardTimeout, 'buidShipsDiv');
 
 		// Запустить игру
+
 	}
 }
 
@@ -354,4 +358,13 @@ function showElement (id, style) {
 
 function changeVisibility (id, param) {
 	document.getElementById(id).style.visibility = param;
+}
+
+
+function yourMove () {
+	currentClick = document.getElementById('enemyField').addEventListener('click',e => {
+		return e.target.id;
+	})
+	alert (currentClick);
+	
 }
