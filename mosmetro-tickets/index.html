@@ -21,21 +21,28 @@
 
 	<p><em>Данные на 2019 год.</em></p>
 			
-	<p>Визуальный анализ цен на общественном транспорте в Москве. Можно увидеть, какие билеты выгодные в определенной ситуации, какие нет. Можно выбрать подходящий, зная свое количество поездок в месяц: на метро (по горизонтали) и на наземном транспорте (по вертикали).</p>
+	<p>Визуальный анализ цен на общественном транспорте в Москве. Дает общее представление о стоимости транспорта при разных вариантах его использования: и при редких поездках, и при частых. Можно увидеть, какие билеты выгодные в определенной ситуации, какие нет.</p>
+
+	<p>Можно выбрать подходящий билет, зная свое количество поездок в месяц на метро (по горизонтали) и на наземном транспорте (по вертикали). Например, тем, кто ездит только на метро, будет интересна только верхняя строка (ноль поездок на наземном транспорте).</p>
 
 	<section class="table">
 		<h2>Выбрать билет по количеству поездок</h2>
-		<div id="table"></div>
+		<div id="table-container"></div>
 	
 	</section><section class="aside">
 		<h2>Виды билетов</h2>
-		<form id="ticket-types"></form>
+		<form id="ticket-types">
+			<div>
+				<div><input type="radio" name="switch" id="switch0" value="switch0" checked disabled> <label for="switch0">Нет пересадок</label></div>
+				<div><input type="radio" name="switch" id="switch1" value="switch1" disabled> <label for="switch1">Пересадка: метро + 1 ТАТ</label></div>
+				<div><input type="radio" name="switch" id="switch2" value="switch2" disabled> <label for="switch2">Пересадка: метро + 2 ТАТ</label></div>
+			</div>
+		</form>
 		<button type="button" disabled>Обновить график</button>
 	</section>
 
 	<p class="under-construction">
-		<button onclick="drawCells ()">Нарисовать таблицу</button>
-		<button onclick="drawTicketTypesForm ()">Создать билеты</button>
+		<button onclick="generateTable ()">Составить таблицу</button>
 	</p>
 	
 	

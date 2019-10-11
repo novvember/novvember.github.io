@@ -28,6 +28,7 @@ nav li {
 	padding-left: 1.3em;
 }
 
+
 nav li:hover {
 	padding-right: 0em;
 	padding-left: 0em;
@@ -166,4 +167,7 @@ footer address a[href*="mailto:"]:before {
 	background-image: url('../img/email.svg');
 }
 
+footer address a[href*="t.me"]:before {
+	background-image: url('../img/telegram.svg');
+}
 

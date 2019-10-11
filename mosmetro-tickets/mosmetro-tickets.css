@@ -34,7 +34,7 @@ span.price {
 	font-weight: bold;
 }
 
-label[for*="60-trip"] {
+label[for*="60-trip"], td.ed-60-trip {
 	background-color: Salmon;
 }
 
@@ -64,19 +64,65 @@ label[for*="tat-30-day"] {
 /* Разметка поля*/
 table {
 	border-collapse: collapse;
-	border: 1px dotted grey;
+	/*border: 1px dotted grey;*/
 }
 
 td {
-	width: 7px;
-	height: 7px;
 	padding: 0;
 	margin: 0;
 	box-sizing: border-box;
 	text-align: center;
 	font-size: 1px;
+	/*border: 1px dotted grey;*/
 }
 
-td:hover {
-	border: 1px solid gold;
+#tat-trip-label div{
+transform: rotate(-90deg);
+transform-origin: left top 0;
+float: left;
+height:14px;
+width:14px;
+white-space: nowrap;
+}
+
+#tat-trip-label {
+	vertical-align: top;
+	padding-top: 265px;
+}
+
+
+#tat-trip-label, #metro-trip-label {
+font-size: 12px;
+}
+
+#metro-trip-label {
+	text-align: left;
+	padding-left: 14px;
+}
+
+#table-container td {
+	width: 14px;
+	height: 14px;
+	box-sizing: border-box;
+}
+
+#table-container td[scope="col"] {
+	text-align: left;
+	border-bottom: 1px solid grey;
+	font-size: 9px;
+}
+
+#table-container td[scope="row"] {
+	vertical-align: top;
+	border-right: 1px solid grey;
+	font-size: 9px;
+}
+
+#table td[id] {
+	width: 7px;
+	height: 7px;
+}
+
+#table td:hover {
+	border: 1px solid white;
 }
