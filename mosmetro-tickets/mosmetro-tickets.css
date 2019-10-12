@@ -64,25 +64,25 @@ label[for*="tat-30-day"] {
 /* Разметка поля*/
 table {
 	border-collapse: collapse;
+	box-sizing: border-box;
 	/*border: 1px dotted grey;*/
 }
 
 td {
 	padding: 0;
 	margin: 0;
-	box-sizing: border-box;
 	text-align: center;
 	font-size: 1px;
 	/*border: 1px dotted grey;*/
 }
 
 #tat-trip-label div{
-transform: rotate(-90deg);
-transform-origin: left top 0;
-float: left;
-height:14px;
-width:14px;
-white-space: nowrap;
+	transform: rotate(-90deg);
+	transform-origin: left top 0;
+	float: left;
+	height: 14px;
+	width: 14px;
+	white-space: nowrap;	
 }
 
 #tat-trip-label {
@@ -92,7 +92,7 @@ white-space: nowrap;
 
 
 #tat-trip-label, #metro-trip-label {
-font-size: 12px;
+	font-size: 12px;
 }
 
 #metro-trip-label {
@@ -118,11 +118,23 @@ font-size: 12px;
 	font-size: 9px;
 }
 
-#table td[id] {
+#table td {
 	width: 7px;
 	height: 7px;
 }
 
 #table td:hover {
-	border: 1px solid white;
+	background-image: url(dot.svg);
+	background-size: 5px;
+	background-repeat: no-repeat;
+	background-position: center;*/
+}
+
+#table, #table table {
+	width: 504px;
+	height: 504px;
+}
+
+#table {
+	vertical-align: top;
 }

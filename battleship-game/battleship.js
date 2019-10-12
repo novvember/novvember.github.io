@@ -21,8 +21,8 @@ generateClearMask (maskNewShip, (xLength + 1), (yLength + 1));
 let standardTimeout = 1000;
 let shipsSetOk = false;
 
-let currentClick = ''; // Хранит id нажатого элемента
-let currentTurn = 'player'; // Кто сейчас ходит
+let currentClick = []; // Хранит id нажатого элемента
+let currentTurn = ''; // Кто сейчас ходит
 
 // Начать игру
 function newGameButton () {
@@ -337,11 +337,10 @@ function saveShipsButton () {
 		setTimeout (hide, standardTimeout, 'buidShipsDiv');
 
 		// Запустить игру
-
+		currentTurn = 'player';
+		generateShips ('enemy');
 	}
 }
-
-
 
 function hide (id) {
 	document.getElementById(id).style.display = 'none';
@@ -367,4 +366,25 @@ function yourMove () {
 	})
 	alert (currentClick);
 	
+}
+
+// Обработчик нажатий на поле врага
+document.getElementById('enemyField').addEventListener('click', e => getClick(e));
+
+function getClick (e) {
+	if (currentTurn != 'player') return;
+	alert (e.target.id);
+
+	// Получить координаты клика
+	//for (let i = 5)
+
+	// Проверить на вхождение в поле
+
+	// Проверить на старые выстрелы
+
+	// Запустить отрисовку клетки выстрела
+}
+
+function changeTurn () {
+
 }
