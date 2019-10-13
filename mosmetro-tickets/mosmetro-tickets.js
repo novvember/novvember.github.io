@@ -216,6 +216,10 @@ function drawTableContent () {
 	}
 }
 
+// Всплывающая подсказка в таблице
+function getTooltipText (metro, tat, ticket, price) {
+
+}
 
 
 

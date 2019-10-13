@@ -59,6 +59,20 @@ td.margin {
 	background-position: center;
 }
 
+td.hit {
+	background-image: url(cross-black.svg);
+	background-size: 14px;
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
+td.miss {
+	background-image: url(dot-black.svg);
+	background-size: 6px;
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
 /* Экран новой игры*/
 #gamestart {
 	text-align: center;

@@ -11,10 +11,10 @@ let maskPlayerFieldShips = []; // Хранит корабли
 generateClearMask (maskPlayerFieldShips, (xLength + 1), (yLength + 1));
 let maskEnemyFieldShips = [];
 generateClearMask (maskEnemyFieldShips, (xLength + 1), (yLength + 1));
-let maskPlayerFieldHits =[]; // Хранит выстрелы
-generateClearMask (maskPlayerFieldHits, (xLength + 1), (yLength + 1));
-let maskEnemyFieldHits =[];
-generateClearMask (maskEnemyFieldHits, (xLength + 1), (yLength + 1));
+let maskPlayerShots =[]; // Хранит выстрелы
+generateClearMask (maskPlayerShots, (xLength + 1), (yLength + 1));
+let maskEnemyShots =[];
+generateClearMask (maskEnemyShots, (xLength + 1), (yLength + 1));
 let maskNewShip = []; // Временно хранит создаваемый корабль
 generateClearMask (maskNewShip, (xLength + 1), (yLength + 1));
 
@@ -141,24 +141,24 @@ function generateShips (person, needMarginToDraw) {
 	// Один четурехпалубный
 	for (let i = 0; i < 1; i++) {
 		generateOneShip (person, 4);
-		drawShips (person, needMarginToDraw);
 	}
 	
 	// Два трехпалубных
 	for (let i = 0; i < 2; i++) {
 		generateOneShip (person, 3);
-		drawShips (person, needMarginToDraw);
 	}
 
 	// Три двухпалубных
 	for (let i = 0; i < 3; i++) {
 		generateOneShip (person, 2);
-		drawShips (person, needMarginToDraw);
 	}
 
 	// Четыре однопалубных
 	for (let i = 0; i < 4; i++) {
 		generateOneShip (person, 1);
+	}
+
+	if (person == 'player') {
 		drawShips (person, needMarginToDraw);
 	}
 }
@@ -302,7 +302,10 @@ function drawShips (person, needMarginToDraw) {
 
 	for (let i = 1; i <= yLength; i++) {
 		for (let j = 1; j <= xLength; j++) {
-			document.getElementById(person + j + '-' + i).removeAttribute('class');
+			// document.getElementById(person + j + '-' + i).removeAttribute('class');
+			document.getElementById(person + j + '-' + i).classList.remove ('ship');
+			document.getElementById(person + j + '-' + i).classList.remove ('margin');
+
 			if (maskShips [i][j] >= 1) {
 				document.getElementById(person + j + '-' + i).classList.add ('ship');
 			} else if ((maskShips [i][j] == 0.5) && (needMarginToDraw == true)) {
@@ -360,31 +363,70 @@ function changeVisibility (id, param) {
 }
 
 
-function yourMove () {
-	currentClick = document.getElementById('enemyField').addEventListener('click',e => {
-		return e.target.id;
-	})
-	alert (currentClick);
-	
-}
-
 // Обработчик нажатий на поле врага
 document.getElementById('enemyField').addEventListener('click', e => getClick(e));
 
 function getClick (e) {
 	if (currentTurn != 'player') return;
-	alert (e.target.id);
 
 	// Получить координаты клика
-	//for (let i = 5)
+	let x = getXYFromId (e.target.id) [0];
+	let y = getXYFromId (e.target.id) [1];
 
 	// Проверить на вхождение в поле
+	if (!checkXYIsInside (x,y)) return;
 
 	// Проверить на старые выстрелы
+	if (!checkXYNotRepeat (currentTurn, x,y)) return;
 
 	// Запустить отрисовку клетки выстрела
+	drawShot (currentTurn, x, y);
 }
 
-function changeTurn () {
+function getXYFromId (id) {
+	let x = parseInt( id.slice (5, id.indexOf ('-') ) );
+	let y = parseInt( id.slice (id.indexOf ('-') + 1) );
+	return [x, y];
+}
+
+function changeTurn (player) {
+	if (currentTurn == 'player') currentTurn = 'enemy';
+	if (player != undefined) currentTurn = player;
+}
+
+function checkXYIsInside (x, y) {
+	if ((x>=1) && (x<=10) && (y>=1) && (y<= 10)) {
+		return true;
+	} else {
+		return false;
+	}
+}
+
+function checkXYNotRepeat (person, x, y) {
+	let shots;
+	if (person == 'player') {shots = maskPlayerShots}
+		else if (person == 'enemy') {shots = maskEnemyShots};
+
+	if (shots [y][x] != 0) return false;
+
+	return true;
+}
+
+function drawShot (person, x, y) {
+	let ships;
+	if (person == 'player') {
+		ships = maskEnemyFieldShips;
+		person = 'enemy';
+	} else if (person == 'enemy') {
+		ships = maskPlayerFieldShips;
+		person = 'player';
+	};
+
+	if (ships [y][x] < 1) {
+		document.getElementById(person + x + '-' + y).classList.add ('miss');
+	} else {
+		document.getElementById(person + x + '-' + y).classList.add ('hit');
+		document.getElementById(person + x + '-' + y).classList.add ('ship');
+	}
 
 }
