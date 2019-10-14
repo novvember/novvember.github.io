@@ -171,3 +171,25 @@ footer address a[href*="t.me"]:before {
 	background-image: url('../img/telegram.svg');
 }
 
+
+/* Служебное сообщение*/
+div.under-construction {
+	margin: 5em 0;
+	padding: 1em;
+	border-radius: 2em;
+	font-size: small;
+	color: DimGrey;
+	background-image: url(../img/stripes-pattern.gif);
+}
+
+div.under-construction ul {
+	padding-left: 1.5em;
+}
+
+div.under-construction li {
+	list-style-image: url(../img/checkbox-empty.svg);
+}
+
+div.under-construction li.done {
+	list-style-image: url(../img/checkbox-done.svg);
+}

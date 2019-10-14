@@ -1,11 +1,3 @@
-/* Служебное сообщение*/
-p.under-construction {
-	margin: 5em 0;
-	padding: 1em;
-	border: 1px dotted grey;
-	border-radius: 1em;
-	font-size: small;
-}
 
 section {
 	display: inline-block;
@@ -35,27 +27,27 @@ span.price {
 }
 
 label[for*="60-trip"], td.ed-60-trip {
-	background-color: Salmon;
+	background-color: #e55c60;
 }
 
-label[for*="ed-30-day"] {
-	background-color: Salmon;
+label[for*="ed-30-day"], td.ed-30-day {
+	background-color: #e57377;
 }
 
-label[for*="90-day"] {
-	background-color: Salmon;
+label[for*="90-day"], td.ed-90-day {
+	background-color: #e58a8d;
 }
 
-label[for*="365-day"] {
-	background-color: Salmon;
+label[for*="365-day"], td.ed-365-day {
+	background-color: #e5a1a3;
 }
 
-label[for*="troika"] {
-	background-color: MediumTurquoise;
+label[for*="troika"], td.troika {
+	background-color: #73d4e5;
 }
 
 label[for*="tat-30-day"] {
-	background-color: SkyBlue;
+	background-color: #18aaf2;
 }
 
 

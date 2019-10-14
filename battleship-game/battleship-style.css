@@ -1,11 +1,4 @@
-/* Служебное сообщение*/
-p.under-consrtuction {
-	margin: 5em 0;
-	padding: 1em;
-	border: 1px dotted grey;
-	border-radius: 1em;
-	font-size: small;
-}
+
 
 /* Основные поля игры*/
 #battleship-game {
@@ -77,8 +70,10 @@ td.miss {
 #gamestart {
 	text-align: center;
 }
-#gamestart > img{
-	height: 200px;
+#gamestart > img {
+	height: 134px;
+	width: 300px;
+	margin: 3em 0;
 }
 
 button img {
