@@ -1,180 +1,436 @@
-// Автоматическое выполнение построения при открытии страницы
+
+
+// СПИСОК БИЛЕТОВ С ПАРАМЕТРАМИ
 let tickets = []; // Информация по параметрам всех билетов
-let table = []; // Итоговая номограмма со стоимостями
+generateTickets ();
 
-let matrixTicketEd60Trip = []; // Единый 60 поездок
-
-let matrixTicketEd1Day = []; // Единый 1 сутки
-let matrixTicketEd3Day = []; // Единый 3 суток
-let matrixTicketEd30Day = []; // Единый 30 дней
-let matrixTicketEd90Day = []; // Единый 90 дней
-let matrixTicketEd365Day = []; // Единый 365 дней
-
-drawCells (); // Генерация поля
-drawTicketTypesForm (); // Генерация типов билетов
-generateTable (); // Составить номограмму и нарисовать ее
-
-
-// Все возможные билеты с ид
 function generateTickets () {
-	// Формат: 0Название,	1ид,	2стоимость,	3дней действия,	4группа билетов для отображения, 5количество поездок, 6checked
+	// Формат: 0Название,	1ид,	2стоимость,	3дней действия,	4группа билетов для отображения, 5количество поездок, 6checked, 7видимость, 8массив с полем
 
-	// Единый1п
-	tickets.push (['Единый 1 поездка', 'ed-1-trip', 55, 5, 'Единый на число поездок', 1, false]);
-	// Единый2п
-	tickets.push (['Единый 2 поездки', 'ed-2-trip', 110, 5, 'Единый на число поездок', 2, false]);
-	// Единый60п
-	tickets.push (['Единый 60 поездок', 'ed-60-trip', 1900, 45, 'Единый на число поездок', 60, true]);
-	// Единый1д
-	tickets.push (['Единый 1 сутки', 'ed-1-day', 230, 1, 'Единый на время', 999999, true]);
-	// Единый3д
-	tickets.push (['Единый 3 суток', 'ed-3-day', 438, 3, 'Единый на время', 999999, true]);
-	// Единый30д
-	tickets.push (['Единый 30 дней', 'ed-30-day', 2170, 30, 'Единый на время', 999999, true]);
-	// Единый90д
-	tickets.push (['Единый 90 дней', 'ed-90-day', 5430, 90, 'Единый на время', 999999, true]);
-	// Единый365д
-	tickets.push (['Единый 365 дней', 'ed-365-day', 19500, 365, 'Единый на время', 999999, true]);
-	// ЕдиныйМесяц
-	tickets.push (['Единый на календарный масяц', 'ed-1-month', 2770, 30, 'Единый на время', 999999, false]);
-	// ТройкаМетро
-	tickets.push (['Тройка (в метро)', 'troika-metro', 38, 1800, 'Карта Тройка', 1, false]);
-	// ТройкаТАТ
-	tickets.push (['Тройка (на ТАТ)', 'troika-tat', 38, 1800, 'Карта Тройка', 1, false]);
-	// Тройка90минут
-	tickets.push (['Тройка (пересадка 90 минут)', 'troika-90', 59, 1800, 'Карта Тройка', 1, false]);
-	// Банковская карта
-	tickets.push (['Банковская карта', 'bankcard', 42, 1800, '', 1, false]);
-	// ТАТ 1
-	tickets.push (['ТАТ 1 поездка', 'tat-1-trip', 45, 5, 'Билет ТАТ', 1, false]);
-	// ТАТ 30д
-	tickets.push (['ТАТ 30 дней', 'tat-30-day', 1140, 30, 'Билет ТАТ', 999999, false]);
+	// ОФИЦИАЛЬНЫЕ БИЛЕТЫ
+		// Единый1п
+		tickets.push (['Единый 1 поездка', 'ed-1-trip', 55, 5, 'Единый на число поездок', 1, 'unchecked', 'visible', [] ]);
+		// Единый2п
+		tickets.push (['Единый 2 поездки', 'ed-2-trip', 110, 5, 'Единый на число поездок', 2, 'unchecked', 'visible', [] ]);
+		// Единый60п
+		tickets.push (['Единый 60 поездок', 'ed-60-trip', 1900, 45, 'Единый на число поездок', 60, 'checked', 'visible', [] ]);
+
+		// Единый1д
+		tickets.push (['Единый 1 сутки', 'ed-1-day', 230, 1, 'Единый на время', 999999, 'checked', 'visible', [] ]);
+		// Единый3д
+		tickets.push (['Единый 3 суток', 'ed-3-day', 438, 3, 'Единый на время', 999999, 'checked', 'visible', [] ]);
+		// Единый30д
+		tickets.push (['Единый 30 дней', 'ed-30-day', 2170, 30, 'Единый на время', 999999, 'checked', 'visible', [] ]);
+		// Единый90д
+		tickets.push (['Единый 90 дней', 'ed-90-day', 5430, 90, 'Единый на время', 999999, 'checked', 'visible', [] ]);
+		// Единый365д
+		tickets.push (['Единый 365 дней', 'ed-365-day', 19500, 365, 'Единый на время', 999999, 'checked', 'visible', [] ]);
+		// ЕдиныйМесяц
+		tickets.push (['Единый на календарный масяц', 'ed-1-month', 2770, 30, 'Единый на время', 999999, 'unchecked', 'visible', [] ]);
+
+		// ТройкаМетро
+		tickets.push (['Карта Тройка (метро)', 'troika-metro', 38, 1800, 'Карта Тройка', 1, 'checked', 'visible', [] ]);
+		// ТройкаТАТ
+		tickets.push (['Карта Тройка (ТАТ)', 'troika-tat', 38, 1800, 'Карта Тройка', 1, 'checked', 'visible', [] ]);
+
+		// Тройка90минут
+		tickets.push (['Тройка (пересадка 90 минут)', 'troika-90', 59, 1800, 'Карта Тройка', 1, 'unchecked', 'visible', [] ]);
+
+		// Банковская карта
+		tickets.push (['Банковская карта', 'bankcard', 42, 1800, '', 1, 'unchecked', 'visible', [] ]);
+
+		// ТАТ 1
+		tickets.push (['ТАТ 1 поездка', 'tat-1-trip', 45, 5, 'Билет ТАТ', 1, 'unchecked', 'visible', [] ]);
+		// ТАТ 30д
+		tickets.push (['ТАТ 30 дней', 'tat-30-day', 1140, 30, 'Билет ТАТ', 999999, 'checked', 'visible', [] ]);
+
+
+	// СОЧЕТАНИЯ БИЛЕТОВ
+		// Тройка Метро + ТАТ
+		tickets.push (['Карта Тройка (метро + ТАТ)', 'troika', 38, 1800, 'Сочетания билетов', 1, 'checked', 'visible', [] ]);
+
+		// ТАТ 30 дней + Тройка-метро
+		tickets.push (['ТАТ 30 дней + Тройка (метро)', 'tat-30-day-troika', '', 30, 'Сочетания билетов', 999999, 'checked', 'visible', [] ]);
+
+	// АКЦИИ
+		// Акция Мир до 12.2019
+		tickets.push (['Банковская карта Мир (до 31.12.2019)', 'bankcard-mir-2019', 27, 1800, 'Акция Мир', 1, 'checked', 'visible', [] ]);
+		// Акция Мир до 12.2019
+		tickets.push (['Карта Мир (метро) + Тройка (ТАТ)', 'bankcard-mir-2019-troika', '27+38', 1800, 'Акция Мир', 1, 'checked', 'visible', [] ]);
+
+
 }
 
-// Генерация поля
-function drawCells () {
-	drawTableContainer ('table-container', 37, 37);
-	drawTable ('table', 72, 72);
-}
 
-// Нарисовать двухмерную таблицу непосредственно с номограммой
-function drawTable (id, x, y) {
-	let parent = document.getElementById (id);
-	let html ='';
 
-	/* Начало таблицы */
-	html += '<table><tbody>'
 
-	/* Строки */
-	for (let i = 0; i < y; i++) {
-		html += '<tr>';
 
-		/* Ячейки */ 
-		for (let j = 0; j < x; j++) {
-			html += ('<td id="' + j + '-' + i + '"></td>');
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// ПОЛЯ ВСЕХ БИЛЕТОВ И ИХ СОЧЕТАНИЙ
+	
+	// ОФИЦИАЛЬНЫЕ БИЛЕТЫ
+
+		// Единый 60 поездок
+		buildEd60Trip ('ed-60-trip');
+
+		function buildEd60Trip (id) {
+			
+			generateMatrix (getTicketPar (id, 8), 71, 71);
+
+			let numberTrip = getTicketPar (id, 5); // Количество поездок
+			let duration = getTicketPar (id, 3) / 30; // Срок действия билета, в месяцах
+			let priceTicket = getTicketPar (id, 2); // Стоимость билета
+			let minTrips = numberTrip / duration; // Минимальное количество поездок, чтобы не сгорело
+			let priceTrip = priceTicket / numberTrip; // Стоимость одной поездки
+
+			for (let tat = 0; tat < getTicketPar (id, 8).length; tat++) {
+				for (let metro = 0; metro < getTicketPar (id, 8)[0].length; metro++) {
+					if ((tat + metro) < minTrips) {
+						getTicketPar (id, 8)[tat][metro] = priceTrip * minTrips;
+					} else {
+						getTicketPar (id, 8)[tat][metro] = priceTrip * (tat + metro);
+					}
+				}
+			}
 		}
 
-		html += '</tr>';
-	}
 
-	// Закрываем таблицу
-	html += '</tbody></table>';
+		// Единые на время
+		buildEdUnlim ('ed-1-day');
+		buildEdUnlim ('ed-3-day');
+		buildEdUnlim ('ed-30-day');
+		buildEdUnlim ('ed-90-day');
+		buildEdUnlim ('ed-365-day');
 
-	// Вставляем в дом
-	parent.insertAdjacentHTML('afterbegin', html);
-}
+		function buildEdUnlim (id) {
+			generateMatrix (getTicketPar (id, 8), 71, 71); // Пустая матрица (значения 99999)
 
-// Нарисовать обертку таблицы с нумерацией ячеек и названиями
-function drawTableContainer (id, x, y) {
-	let parent = document.getElementById (id);
-	let html ='';
+			let duration = getTicketPar (id, 3) / 30; // Срок действия билета, в месяцах
+			let priceTicket = getTicketPar (id, 2); // Стоимость билета
 
-	/* Начало таблицы */
-	html += '<table><tbody>'
-
-	// Строка 0
-	html += '<tr><td rowspan="38" id="tat-trip-label"><div>&#8592; Поездки на <strong>ТАТ</strong> в течение месяца</div></td><td colspan="37" id="metro-trip-label">Поездки на <strong>метро</strong> в течение месяца &#8594;</td></tr>';
-
-
-	// Строка 1
-	html += '<tr>';
-	for (let i=0; i<x; i++) {
-		if (i == 0) {
-			html += ('<td></td>');
-		} else {
-			html += ('<td scope="col">' + (2*i-2) + '</td>');
+			for (let tat = 0; tat < getTicketPar (id, 8).length; tat++) {
+				for (let metro = 0; metro < getTicketPar (id, 8)[0].length; metro++) {
+					getTicketPar (id, 8)[tat][metro] = priceTicket / duration;
+				}
+			}
 		}
+
+
+		// Карта Тройка на метро
+		buildTroikaMetro ('troika-metro');
+
+		function buildTroikaMetro (id) {
+			generateMatrix (getTicketPar (id, 8), 71, 71);
+			let priceTicket = getTicketPar (id, 2); // Стоимость билета
+
+			for (let tat = 0; tat < 1; tat++) { // Без ТАТ
+				for (let metro = 0; metro < getTicketPar (id, 8)[0].length; metro++) {
+					getTicketPar (id, 8)[tat][metro] = priceTicket * metro;
+				}
+			}
+		}
+
+
+		// Карта Тройка на ТАТ
+		buildTroikaTat ('troika-tat');
+
+		function buildTroikaTat (id) {
+			generateMatrix (getTicketPar (id, 8), 71, 71);
+			let priceTicket = getTicketPar (id, 2); // Стоимость билета
+
+			for (let tat = 0; tat < getTicketPar (id, 8).length; tat++) { 
+				for (let metro = 0; metro < 1; metro++) { // Без Метро
+					getTicketPar (id, 8)[tat][metro] = priceTicket * tat;
+				}
+			}
+		}
+
+
+		// ТАТ 30 дней
+		buildTat30Day ('tat-30-day');
+
+		function buildTat30Day (id) {
+			generateMatrix (getTicketPar (id, 8), 71, 71); // Пустая матрица (значения 99999)
+
+			let duration = getTicketPar (id, 3) / 30; // Срок действия билета, в месяцах
+			let priceTicket = getTicketPar (id, 2); // Стоимость билета
+
+			for (let tat = 0; tat < getTicketPar (id, 8).length; tat++) {
+				for (let metro = 0; metro < 1; metro++) { // Без метро
+					getTicketPar (id, 8)[tat][metro] = priceTicket / duration;
+				}
+			}
+		}
+
+
+
+
+
+
+
+
+
+	// СОЧЕТАНИЯ БИЛЕТОВ
+
+		// Карта Тройка на Метро + ТАТ
+		buildTroika ('troika', 'troika-metro', 'troika-tat');
+
+		function buildTroika (id, idMetro, idTat) {
+			generateMatrix (getTicketPar (id, 8), 71, 71);
+
+			for (let tat = 0; tat < getTicketPar (id, 8).length; tat++) { 
+				for (let metro = 0; metro < getTicketPar (id, 8)[0].length; metro++) { // Без Метро
+					getTicketPar (id, 8)[tat][metro] = getTicketPar (idMetro, 8)[0][metro] + getTicketPar (idTat, 8)[tat][0];
+				}
+			}
+		}
+
+
+		// ТАТ 30 дней + Тройка метро
+		buildTat30DayTroika ('tat-30-day-troika', 'troika-metro', 'tat-30-day');
+
+		function buildTat30DayTroika (id, idMetro, idTat) {
+			generateMatrix (getTicketPar (id, 8), 71, 71);
+
+			for (let tat = 0; tat < getTicketPar (id, 8).length; tat++) { 
+				for (let metro = 0; metro < getTicketPar (id, 8)[0].length; metro++) { // Без Метро
+					getTicketPar (id, 8)[tat][metro] = getTicketPar (idMetro, 8)[0][metro] + getTicketPar (idTat, 8)[tat][0];
+				}
+			}
+		}
+
+
+
+	// АКЦИИ
+
+		// Карта Мир (до 31.12.2019)
+		buildBankcardMir2019 ('bankcard-mir-2019');
+	
+		function buildBankcardMir2019 (id) {
+			generateMatrix (getTicketPar (id, 8), 71, 71);
+			let priceTicket = getTicketPar (id, 2); // Стоимость билета
+
+			for (let tat = 0; tat < 1; tat++) { // Без ТАТ
+				for (let metro = 0; metro < getTicketPar (id, 8)[0].length; metro++) {
+					getTicketPar (id, 8)[tat][metro] = priceTicket * metro;
+				}
+			}
+		}
+
+
+		// Карта Мир + Тройка
+		buildBankcardMir2019Troika ('bankcard-mir-2019-troika', 'bankcard-mir-2019', 'troika-tat');
+
+		function buildBankcardMir2019Troika (id, idMir, idTat) {
+			generateMatrix (getTicketPar (id, 8), 71, 71);
+
+			for (let tat = 0; tat < getTicketPar (id, 8).length; tat++) {
+				for (let metro = 0; metro < getTicketPar (id, 8)[0].length; metro++) {
+					getTicketPar (id, 8)[tat][metro] = getTicketPar (idTat, 8)[tat][0] + getTicketPar (idMir, 8) [0][metro];
+				}
+			}
+		}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// ИНТЕРФЕЙС
+
+	// Генерация поля
+	function drawCells () {
+		drawTableContainer ('table-container', 37, 37);
+		drawTable ('table', 72, 72);
 	}
-	html += '</tr>';
 
-	// Строка 2
-	html += '<tr><td scope="row">0</td><td id="table" colspan="36" rowspan="36"></td>';
+		// Нарисовать обертку таблицы с нумерацией ячеек и названиями
+		function drawTableContainer (id, x, y) {
+			let parent = document.getElementById (id);
+			let html ='';
 
-	// Остальные строки
-	for (let i = 2; i < y; i++) {
-		html += '<tr><td scope="row">' + (2*i-2) + '</td>';
-	}
+			/* Начало таблицы */
+			html += '<table><tbody>'
 
-	// Закрываем таблицу
-	html += '</tbody></table>';
+			// Строка 0
+			html += '<tr><td rowspan="38" id="tat-trip-label"><div>&#8592; Поездки на <strong>ТАТ</strong> в течение месяца</div></td><td colspan="37" id="metro-trip-label">Поездки на <strong>метро</strong> в течение месяца &#8594;</td></tr>';
 
-	// Вставляем в дом
-	parent.insertAdjacentHTML('afterbegin', html);
+			// Строка 1
+			html += '<tr>';
+			for (let i=0; i<x; i++) {
+				if (i == 0) {
+					html += ('<td></td>');
+				} else {
+					html += ('<td scope="col">' + (2*i-2) + '</td>');
+				}
+			}
+			html += '</tr>';
 
-}
+			// Строка 2
+			html += '<tr><td scope="row">0</td><td id="table" colspan="36" rowspan="36"></td>';
 
-// Генерация списка возможных билетов
-function drawTicketTypesForm () {
-	generateTickets ();
+			// Остальные строки
+			for (let i = 2; i < y; i++) {
+				html += '<tr><td scope="row">' + (2*i-2) + '</td>';
+			}
 
-	let parent = document.getElementById ('ticket-types');
-	let html ='';
-	let checked = '';
+			// Закрываем таблицу
+			html += '</tbody></table>';
 
-	// Каждый билет
-	for (let i = 0; i < tickets.length; i++) {
+			// Вставляем в дом
+			parent.insertAdjacentHTML('afterbegin', html);
 
-		if (i == 0) {
+		}
+
+		// Нарисовать двухмерную таблицу непосредственно с номограммой
+		function drawTable (id, x, y) {
+			let parent = document.getElementById (id);
+			let html ='';
+
+			/* Начало таблицы */
+			html += '<table><tbody>'
+
+			/* Строки */
+			for (let i = 0; i < y; i++) {
+				html += '<tr>';
+
+				/* Ячейки */ 
+				for (let j = 0; j < x; j++) {
+					html += ('<td id="' + j + '-' + i + '"></td>');
+				}
+
+				html += '</tr>';
+			}
+
+			// Закрываем таблицу
+			html += '</tbody></table>';
+
+			// Вставляем в дом
+			parent.insertAdjacentHTML('afterbegin', html);
+		}
+
+
+
+
+
+	// Генерация списка возможных билетов
+	function drawTicketTypesForm () {
+
+		let parent = document.getElementById ('ticket-types');
+		let html ='';
+		let checked = '';
+
+		// Каждый билет
+		for (let i = 0; i < tickets.length; i++) {
+
+			if (i == 0) {
+				html +=
+				'<div class="ticket-group">'
+			} else if (tickets [i][4] != tickets [i-1][4]) {
+				html +=
+				'</div><div class="ticket-group">';
+			}
+
+			if (getTicketPar (tickets[i][1], 6) == 'checked') {
+				checked = 'checked';
+			} else {
+				checked = ''
+			}
+			
 			html +=
-			'<div class="ticket-group">'
-		} else if (tickets [i][4] != tickets [i-1][4]) {
-			html +=
-			'</div><div class="ticket-group">';
+			'<div><input type="checkbox"' + checked + ' id="' 
+			+ tickets[i][1]
+			+ '" name="'
+			+ tickets[i][1]
+			+'" value="'
+			+ tickets[i][1]
+			+ '" disabled><label for="'
+			+ tickets[i][1]
+			+ '">'
+			+ tickets[i][0]
+			+ ' <span class="price">'
+			+ tickets[i][2]
+			+ '&nbsp;&#8381;</span>'
+			+ '</label></div>';
+
+			if (i == (tickets.length - 1)) {
+				html +=
+				'</div>';
+			}
 		}
 
-		if (getTicketPar (tickets[i][1], 6) == true) {
-			checked = 'checked';
-		} else {
-			checked = ''
-		}
-		
-
-		html +=
-		'<div><input type="checkbox"' + checked + ' id="' 
-		+ tickets[i][1]
-		+ '" name="'
-		+ tickets[i][1]
-		+'" value="'
-		+ tickets[i][1]
-		+ '" disabled><label for="'
-		+ tickets[i][1]
-		+ '">'
-		+ tickets[i][0]
-		+ ' <span class="price">'
-		+ tickets[i][2]
-		+ '&nbsp;&#8381;</span>'
-		+ '</label></div>';
-
-		if (i == (tickets.length - 1)) {
-			html +=
-			'</div>';
-		}
+		// Вставляем в дом
+		parent.insertAdjacentHTML('afterbegin', html);
 	}
 
-	// Вставляем в дом
-	parent.insertAdjacentHTML('afterbegin', html);
 
-}
+	// Всплывающая подсказка в таблице
+	function getTooltipText (metro, tat, ticket, price) {
+
+	}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// СЛУЖЕБНЫЕ ФУНКЦИИ
 
 // Создание пустого двухмерного массива нужного размера
 function generateMatrix (array, maxX, maxY) {
@@ -186,7 +442,7 @@ function generateMatrix (array, maxX, maxY) {
 	}
 }
 
-
+// Получение параметра билета по ид
 function getTicketPar (ticketId, colNumber) {
 	for (let i = 0; i < tickets.length; i++) {
 		if (tickets [i][1] == ticketId) {
@@ -198,6 +454,32 @@ function getTicketPar (ticketId, colNumber) {
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// ИТОГОВЫЙ ГРАФИК
+
 // Создание и рисование номограммы
 function generateTable () {
 	buildTable ();
@@ -205,30 +487,26 @@ function generateTable () {
 }
 
 // Расчет итоговой таблицы
+let table = []; // Итоговая номограмма со стоимостями
+
 function buildTable () {
-	buildMatrixTicketEd60Trip ();
-
-	buildMatrixTicketEdUnlim ('ed-1-day', matrixTicketEd1Day);
-	buildMatrixTicketEdUnlim ('ed-3-day', matrixTicketEd3Day);
-	buildMatrixTicketEdUnlim ('ed-30-day', matrixTicketEd30Day);
-	buildMatrixTicketEdUnlim ('ed-90-day', matrixTicketEd90Day);
-	buildMatrixTicketEdUnlim ('ed-365-day', matrixTicketEd365Day);
 	
-
 	generateMatrix (table, 71, 71);
+
+	let array = [];
 
 	for (let tat = 0; tat < table.length; tat++) {
 		for (let metro = 0; metro < table[0].length; metro++) {
-			table [tat][metro] = Math.min (
-				matrixTicketEd60Trip[tat][metro],
 
-				matrixTicketEd1Day[tat][metro],
-				matrixTicketEd3Day[tat][metro],
-				matrixTicketEd30Day[tat][metro],
-				matrixTicketEd90Day[tat][metro],
-				matrixTicketEd365Day[tat][metro],
+			array = [];
 
-				);
+			for (let i=0; i < tickets.length; i++) {
+				if (tickets [i][6] == 'checked') {
+					array.push (tickets[i][8][tat][metro]);
+				}
+			}
+
+			table [tat][metro] = Math.min (...array);
 		}
 	}
 }
@@ -237,65 +515,53 @@ function buildTable () {
 function drawTableContent () {
 	for (let tat = 0; tat < table.length; tat++) {
 		for (let metro = 0; metro < table[0].length; metro++) {
+			
 			document.getElementById(metro + '-' + tat).removeAttribute('class');
-			if (table [tat][metro] == matrixTicketEd60Trip[tat][metro]) { // Условие для Единого60поездок
-				document.getElementById(metro + '-' + tat).classList.add ('ed-60-trip');
-			} else if (table [tat][metro] == matrixTicketEd1Day[tat][metro]) {
-				document.getElementById(metro + '-' + tat).classList.add ('ed-1-day');
-			} else if (table [tat][metro] == matrixTicketEd3Day[tat][metro]) {
-				document.getElementById(metro + '-' + tat).classList.add ('ed-3-day');
-			} else if (table [tat][metro] == matrixTicketEd30Day[tat][metro]) {
-				document.getElementById(metro + '-' + tat).classList.add ('ed-30-day');
-			} else if (table [tat][metro] == matrixTicketEd90Day[tat][metro]) {
-				document.getElementById(metro + '-' + tat).classList.add ('ed-90-day');
-			} else if (table [tat][metro] == matrixTicketEd365Day[tat][metro]) {
-				document.getElementById(metro + '-' + tat).classList.add ('ed-365-day');
-			}
 
+			for (let i=0; i < tickets.length; i++) {
+				if (tickets [i][6] == 'checked') {
+					if (table [tat][metro] == tickets[i][8][tat][metro]) {
+						document.getElementById(metro + '-' + tat).classList.add (tickets[i][1]);
+						break;
+					}
+				}
+			}
 
 			document.getElementById(metro + '-' + tat).title = table [tat][metro].toFixed() + ' ₽';
 		}
 	}
-}
 
-// Всплывающая подсказка в таблице
-function getTooltipText (metro, tat, ticket, price) {
-
+	document.getElementById('0-0').className = '';
 }
 
 
 
-// Единый 60 поездок
-function buildMatrixTicketEd60Trip () {
-	generateMatrix (matrixTicketEd60Trip, 71, 71); // Пустая матрица (значения 99999)
 
-	let numberTrip = getTicketPar ('ed-60-trip', 5); // Количество поездок
-	let duration = getTicketPar ('ed-60-trip', 3) / 30; // Срок действия билета, в месяцах
-	let priceTicket = getTicketPar ('ed-60-trip', 2); // Стоимость билета
-	let minTrips = numberTrip / duration; // Минимальное количество поездок, чтобы не сгорело
-	let priceTrip = priceTicket / numberTrip; // Стоимость одной поездки
 
-	for (let tat = 0; tat < matrixTicketEd60Trip.length; tat++) {
-		for (let metro = 0; metro < matrixTicketEd60Trip[0].length; metro++) {
-			if ((tat + metro) < minTrips) {
-				matrixTicketEd60Trip[tat][metro] = priceTrip * minTrips;
-			} else {
-				matrixTicketEd60Trip[tat][metro] = priceTrip * (tat + metro);
-			}
-		}
-	}
-}
 
-// Единые на время
-function buildMatrixTicketEdUnlim (id, matrixTicket) {
-	generateMatrix (matrixTicket, 71, 71); // Пустая матрица (значения 99999)
 
-	let duration = getTicketPar (id, 3) / 30; // Срок действия билета, в месяцах
-	let priceTicket = getTicketPar (id, 2); // Стоимость билета
 
-	for (let tat = 0; tat < matrixTicket.length; tat++) {
-		for (let metro = 0; metro < matrixTicket[0].length; metro++) {
-			matrixTicket[tat][metro] = priceTicket / duration;
-		}
-	}
-}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// Выполнение при загрузке
+
+drawCells (); // Генерация поля
+drawTicketTypesForm (); // Генерация типов билетов
+generateTable (); // Составить номограмму и нарисовать ее

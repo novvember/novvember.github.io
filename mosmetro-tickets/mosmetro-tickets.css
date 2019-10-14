@@ -26,29 +26,50 @@ span.price {
 	font-weight: bold;
 }
 
-label[for*="60-trip"], td.ed-60-trip {
-	background-color: #e55c60;
+label[for="ed-60-trip"],
+td.ed-60-trip {
+	background-color: #c0504d;
 }
 
-label[for*="ed-30-day"], td.ed-30-day {
-	background-color: #e57377;
+label[for="ed-30-day"],
+td.ed-30-day {
+	background-color: #cc5652;
 }
 
-label[for*="90-day"], td.ed-90-day {
-	background-color: #e58a8d;
+label[for="ed-90-day"],
+td.ed-90-day {
+	background-color: #d95b57;
 }
 
-label[for*="365-day"], td.ed-365-day {
-	background-color: #e5a1a3;
+label[for="ed-365-day"],
+td.ed-365-day {
+	background-color: #e5605c;
 }
 
-label[for*="troika"], td.troika {
-	background-color: #73d4e5;
+label[for="troika-metro"],
+label[for="troika-tat"],
+/*label[for="troika"],*/
+td.troika-metro,
+td.troika-tat,
+td.troika {
+	background-color: #4bacc6;
 }
 
-label[for*="tat-30-day"] {
-	background-color: #18aaf2;
+label[for="tat-30-day"],
+td.tat-30-day,
+td.tat-30-day-troika {
+	background-color: #1f497d;
+	color: AliceBlue;
 }
+
+label[for="bankcard-mir-2019"],
+td.bankcard-mir-2019,
+td.bankcard-mir-2019-troika  {
+	background-color: YellowGreen;
+}
+
+
+
 
 
 
