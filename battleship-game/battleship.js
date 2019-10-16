@@ -24,6 +24,30 @@ let shipsSetOk = false;
 let currentClick = []; // Хранит id нажатого элемента
 let currentTurn = ''; // Кто сейчас ходит
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 // Начать игру
 function newGameButton () {
 
@@ -126,6 +150,31 @@ function newGameButton () {
 		}
 	}
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 // Расставить корабли в случайном порядке
 function generateShips (person, needMarginToDraw) {
 	
@@ -163,46 +212,45 @@ function generateShips (person, needMarginToDraw) {
 	}
 }
 
-// Создание одного корабля
-function generateOneShip (person, shipLength) {
+	// Создание одного корабля
+	function generateOneShip (person, shipLength) {
 
-	let maskShips;
-	if (person == 'player') {maskShips = maskPlayerFieldShips}
-		else if (person == 'enemy') {maskShips = maskEnemyFieldShips};
-	
-	let everythingOk = true;
-
-	do {
-		// Очищаем временное поле
-		generateClearMask (maskNewShip, (xLength + 1), (yLength + 1));
-
-		// Генерируем случайный корабль во временную маску
-		addRandomShipToMask (shipLength, maskNewShip);
-
-		everythingOk = true;
-
-		// Проверяем помещается ли корабль в поле
-		everythingOk = checkShipIsInside (maskNewShip);
-
-		// Проверяем на пересечения с другими кораблями
-		if (everythingOk == true) {
-			everythingOk = checkShipNotCrossingOtherShips (maskNewShip, maskShips);
-		}
+		let maskShips;
+		if (person == 'player') {maskShips = maskPlayerFieldShips}
+			else if (person == 'enemy') {maskShips = maskEnemyFieldShips};
 		
+		let everythingOk = true;
 
-	} while (everythingOk == false);
+		do {
+			// Очищаем временное поле
+			generateClearMask (maskNewShip, (xLength + 1), (yLength + 1));
 
-	// Добавляем корабль в массив
-	for (let i = 0; i < maskShips.length; i++) {
-		for (let j = 0; j < maskShips.length; j++) {
-			if (maskShips [i][j] == maskNewShip [i][j]) {
-				maskShips [i][j] = maskNewShip [i][j];
-			} else {
-				maskShips [i][j] += maskNewShip [i][j];
+			// Генерируем случайный корабль во временную маску
+			addRandomShipToMask (shipLength, maskNewShip);
+
+			everythingOk = true;
+
+			// Проверяем помещается ли корабль в поле
+			everythingOk = checkShipIsInside (maskNewShip);
+
+			// Проверяем на пересечения с другими кораблями
+			if (everythingOk == true) {
+				everythingOk = checkShipNotCrossingOtherShips (maskNewShip, maskShips);
+			}
+			
+		} while (everythingOk == false);
+
+		// Добавляем корабль в массив
+		for (let i = 0; i < maskShips.length; i++) {
+			for (let j = 0; j < maskShips.length; j++) {
+				if (maskShips [i][j] == maskNewShip [i][j]) {
+					maskShips [i][j] = maskNewShip [i][j];
+				} else {
+					maskShips [i][j] += maskNewShip [i][j];
+				}
 			}
 		}
 	}
-}
 
 	function addRandomShipToMask (shipLength, mask) {
 		let startX = 0;
@@ -263,6 +311,30 @@ function generateOneShip (person, shipLength) {
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 // Создание пустого двухмерного массива нужного размера
 function generateClearMask (array, maxX, maxY) {
 	for (let i = 0; i <= maxY; i++) {
@@ -278,6 +350,7 @@ function generateRandomNumber (min, max) {
 	let rand = min + Math.random() * (max + 1 - min);
   	return Math.floor(rand);
 }
+
 
 // Добавить в матрицу клетки 0,5 вокруг корабля (по первой клетке)
 function generateCellMargin (field, x, y, value) {
@@ -314,6 +387,28 @@ function drawShips (person, needMarginToDraw) {
 		}
 	}
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 function saveShipsButton () {
 
@@ -363,9 +458,26 @@ function changeVisibility (id, param) {
 }
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 // Обработчик нажатий на поле врага
 document.getElementById('enemyField').addEventListener('click', e => getClick(e));
 
+// Проверка клика, является ли выстрелом
 function getClick (e) {
 	if (currentTurn != 'player') return;
 
@@ -412,21 +524,123 @@ function checkXYNotRepeat (person, x, y) {
 	return true;
 }
 
+// Отметить результат выстрела
 function drawShot (person, x, y) {
 	let ships;
+	let shots;
 	if (person == 'player') {
 		ships = maskEnemyFieldShips;
 		person = 'enemy';
+		shots = maskPlayerShots;
 	} else if (person == 'enemy') {
 		ships = maskPlayerFieldShips;
 		person = 'player';
-	};
-
-	if (ships [y][x] < 1) {
-		document.getElementById(person + x + '-' + y).classList.add ('miss');
-	} else {
-		document.getElementById(person + x + '-' + y).classList.add ('hit');
-		document.getElementById(person + x + '-' + y).classList.add ('ship');
+		shots = maskEnemyShots;
 	}
 
+	// Если промах
+	if (ships [y][x] < 1) {
+		// Рисуем точку
+		document.getElementById(person + x + '-' + y).classList.add ('miss');
+		shots [y][x] = 1; // Отмечаем выстрел
+		ships [y][x] = 0.7; 
+	
+	} else {
+
+		// Если ранил
+		document.getElementById(person + x + '-' + y).classList.add ('hit');
+		document.getElementById(person + x + '-' + y).classList.add ('ship');
+		shots [y][x] = 1;
+
+		// Если еще и убил
+		if (checkShipKilled (ships, shots, x, y)) {
+			drawMarginOfKilledShip (ships, x, y, person, shots);
+		}
+	}
+	
 }
+
+
+// Возвращает координаты первой клетки корабля (левый верхний угол)
+function getFirstCellOfShip (mask, x, y) {
+
+	let xi = x;
+	let yi = y;
+
+	do {
+		x=xi;
+		y=yi;
+
+		xi = getPreviousCellOfShip (mask, x, y) [0];
+		yi = getPreviousCellOfShip (mask, x, y) [1];
+	} while ((xi != x) || (yi != y) );
+
+	return [xi, yi];
+}
+
+// Проверяет убит ли корабль по координате выстрела
+function checkShipKilled (maskShips, maskShots, x, y) {
+
+	// Начало коробля
+	let x0 = getFirstCellOfShip (maskShips, x, y) [0];
+	let y0 = getFirstCellOfShip (maskShips, x, y) [1];
+
+	do {
+		x = x0;
+		y = y0;
+
+		if (maskShots [y][x] < 1) {
+			return false;
+		}
+
+		x0 = getNextCellOfShip (maskShips, x, y) [0];
+		y0 = getNextCellOfShip (maskShips, x, y) [1];
+	} while ( (x != x0) || (y != y0) );
+
+	return true;
+}
+
+// Возвращает координаты следующей клетки коробля (вправо-вниз)
+function getNextCellOfShip (mask, x, y) {
+	if (mask[y+1][x] >= 1) {
+		y = y + 1;
+	} else if (mask[y][x+1] >= 1) {
+		x = x + 1;
+	}
+	return [x, y];
+}
+
+// Возвращает координаты предыдущей клетки коробля (влево-вверх)
+function getPreviousCellOfShip (mask, x, y) {
+	if (mask[y-1][x] >= 1) {
+		y = y - 1;
+	} else if (mask[y][x-1] >= 1) {
+		x = x - 1;
+	}
+	return [x, y];
+}
+
+function drawMarginOfKilledShip (maskShips, x, y, person, maskShots) {
+
+	// Начало коробля
+	let x0 = getFirstCellOfShip (maskShips, x, y) [0];
+	let y0 = getFirstCellOfShip (maskShips, x, y) [1];
+
+	do {
+		x = x0;
+		y = y0;
+
+		for (let i = -1; i <= 1; i++) {
+			for (let j = -1; j <= 1; j++) {
+				if ((maskShips[y+i][x+j] <= 0.5) && checkXYIsInside (x+j, y+i)) {
+					document.getElementById(person + (x+j) + '-' + (y+i)).classList.add ('margin');
+					maskShots [y+i][x+j] = 0.5;
+				}
+			}
+		}
+
+		x0 = getNextCellOfShip (maskShips, x, y) [0];
+		y0 = getNextCellOfShip (maskShips, x, y) [1];
+	} while ( (x != x0) || (y != y0) );
+}
+

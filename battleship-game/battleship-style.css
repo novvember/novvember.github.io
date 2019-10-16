@@ -61,7 +61,7 @@ td.hit {
 
 td.miss {
 	background-image: url(dot-black.svg);
-	background-size: 6px;
+	background-size: 5px;
 	background-repeat: no-repeat;
 	background-position: center;
 }
