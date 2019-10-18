@@ -16,6 +16,32 @@ table {
 	border-collapse: collapse;
 }
 
+table caption {
+	margin-bottom: 0.5em;
+}
+
+table caption span {
+	border: 1px dashed black;
+	padding: 0 0.4em;
+	border-radius: 1em;
+}
+
+#playerField table caption span {
+	border-color: #90CAF9;
+}
+
+#playerField table caption span.active {
+	background-color: #90CAF9;
+}
+
+#enemyField table caption span {
+	border-color: #EF9A9A;
+}
+
+#enemyField table caption span.active {
+	background-color: #EF9A9A;
+}
+
 td {
 	width: 20px;
 	height: 20px;
@@ -29,7 +55,7 @@ td {
 }
 
 td:hover {
-	background-color: gold;
+	background-color: NavajoWhite;
 }
 
 #filler1 td, #filler2 td {
@@ -88,7 +114,7 @@ button img {
 	vertical-align: top;
 }
 
-#playerInfo > div{
+#playerInfo > div.info-need-action{
 	display: none;
 }
 
@@ -107,4 +133,21 @@ button img {
 
 img.arrow {
 	height: 2.5em;
+}
+
+#playerMessage, #enemyMessage {
+	visibility: hidden;
+}
+
+#playerMessage img, #enemyMessage img {
+	height: 1.5em;
+	vertical-align: middle;
+}
+
+#gameinfo p.message span.player {
+	color: #2472b3;
+}
+
+#gameinfo p.message span.enemy {
+	color: #b32424;
 }
