@@ -1,75 +1,97 @@
 <!DOCTYPE html>
 <html lang="ru-ru">
 <head>
-	<!-- Global site tag (gtag.js) - Google Analytics -->
-		<script async src="https://www.googletagmanager.com/gtag/js?id=UA-40939271-3"></script>
-		<script>
-  			window.dataLayer = window.dataLayer || [];
-  			function gtag(){dataLayer.push(arguments);}
-  			gtag('js', new Date());
-  			gtag('config', 'UA-40939271-3');
-		</script>
-
+	<title>Игра Морской бой - Novvember</title>
 	<meta charset="utf-8">
-	<meta name="author" content="Novvember">
-	<title>Novvember - Homepage</title>
 	<link href="https://fonts.googleapis.com/css?family=Merriweather&display=swap" rel="stylesheet">
-	<link rel="stylesheet" type="text/css" href="styles/style.css">
-	<link rel="icon" href="img/favicon.png" type="image/x-icon">
+	<link rel="icon" href="../img/favicon.png" type="image/x-icon">
+	<link rel="stylesheet" type="text/css" href="../styles/style.css">
+	<link rel="stylesheet" type="text/css" href="battleship-style.css">
 </head>
 <body>
 
 <nav>
 	<ul>
-		<li><span class="home" title="Главная страница"></span></li>
-		<li><a href="/roulette-game/">Игра Рулетка</a></li>
-		<li><a href="/blackjack-game/">Игра Блэкджек</a></li>
-		<li><a href="/battleship-game/">Игра Морской бой</a> <sup><em>(делаю)</em></sup></li>
-		<li>Кинопоиск: фильтр сеансов <sup><em>(в далеких планах)</em></sup></li>
-		<li><a href="/mosmetro-tickets/">Стоимость билетов на транспорт в Москве</a> <sup><em>(делаю)</em></sup></li>
-		<li>Игра Жизнь <sup><em>(в планах)</em></sup></li>
+		<li><a href="../"><span class="home" title="Главная страница"></span></a></li>
 	</ul>
 </nav>
 
 <main>
-	<h1><img src="img/novvember-avatar.png"> novvember</h1>
-	<p>Инженер-технолог из мира ковки/штамповки/прокатки промышленных изделий из стали учит HTML, CSS и JavaScript.</p>
-	<dl>
-		<dt class="code"><span class="highlighter">Стоимость билетов на транспорт в Москве<span></dt>
-		<dd>Большой график-номограмма, позволяющая судить о выгодности того или иного билета общественного транспорта Москвы в зависимости от количества поездок. Раньше я такое делал в Экселе, попробую часть этого перенести для вычисления на JavaScript и настроить какое-нибудь взаимодействия пользователя с этим всем.</dd>
-		<dd class="date">октябрь 2019 — ...</dd>
+	<h1>Игра Морской бой</h1>
+			
+	<p>Классическая русская версия игры «Морской бой» в тетради в клеточку, но с противником-компьютером.</p>
+	
+	<div id="battleship-game">
+		<section id="gamestart">
+			<img src="ship-sailing.gif"><br>
+			<button type="button" id="newGameButton" onclick="newGameButton()">Новая игра <img src="click.svg"></button>
+		</section>
 
-		<dt class="code"><span class="highlighter">Игра Морской бой<span></dt>
-		<dd>Решил не откладывать и начать потихоньку делать <a href="/battleship-game/">игру Морской бой</a> (в ней впервые тут есть какой-никакой интерфейс). Хотя первоначально хотел делать такое, только когда пройду соответствующие темы (в основном взаимодействие со страницей и пользователя с ней).</dd>
-		<dd class="date">октябрь 2019 — ...</dd>
+		<section id="playground">
+			<div id="playerField"></div><div id="filler1"></div><div id="enemyField"></div><div id="filler2"></div><div id="margin"></div>
+		</section>
 
-		<dt class="study"><span class="highlighter">Mozilla Developer Network<span></dt>
-		<dd>Сейчас изучаю <a href="https://developer.mozilla.org/ru/docs/Learn">основы веб-разработки на Mozilla Developer Network</a>, а также делаю этот сайт с нуля.</dd>
-		<dd class="date">сентябрь 2019 — ...</dd>
+		<section id="gameinfo">
+			<div id="playerInfo">
+				<div id="buidShipsDiv" class="info-need-action">
+					<p>
+						<img class="arrow" src="arrow-up.svg"><br>
+						Для начала разместите корабли в своем поле
+					</p>
+					<div><button id="generateShipsButton" onclick="generateShips ('player')">Расставить автоматически</button></div>
+					<div><button id="buildOwnShipsButton" disabled title="Пока не реализовано">Расставить самому</button></div>
+					<p>
+						<button id="saveShipsButton" onclick="saveShipsButton()">Сохранить</button>
+						<em id="saveShipsButtonText"></em>
+					</p>
+					
+				</div>
 
-		<dt class="study">GeekBrains</dt>
-		<dd>Там же прошел миникурс <a href="https://geekbrains.ru/chapters/5087">«Основы программирования. Видеокурс»</a> (JavaScript + HTML/CSS), сделал на их основе первую версию этого сайта, учебные примеры тут же, а также уже свои игры <a href="/roulette-game/">Рулетка</a> и <a href="/blackjack-game/">Блэкджек</a> (сам в них и поиграл).</dd>
-		<dd class="date">сентябрь 2019</dd>
+				<div id="playerMessage">
+					<div>Ходит противник <img src="waiting-anchor.svg"></div>
+					<p class="message"></p>
+				</div>
 
-		<dt class="study">GeekBrains</dt>
-		<dd>Попробовал поступить на <a href="https://geekbrains.ru/posts/gu_free_frontend_course">бесплатный курс по обучению Frontend-разработчиков</a> — не прошел, но <em>имею свое мнение на этот счет</em>.</dd>
-		<dd class="date">сентябрь 2019</dd>
-	</dl>
+			</div>
+
+			<div id="enemyInfo">
+				<div id="enemyMessage">
+					<div>Ваш ход. Стреляйте!</div>
+					<p class="message"></p>
+				</div>
+			</div>
+		</section>
+
+	</div>
+
+	<div class="under-construction">
+		<p>Игра еще не готова, но делается.</p>
+		<ul>
+			<li class="done">Начальный экран с плавающим кораблем.</li>
+			<li class="done">Поле игры в виде листа тетради с разметкой.</li>
+			<li class="done">Генерация расстановки всех кораблей с проверкой условий непересечения.</li>
+			<li>Создание пользователем своей расстановки кораблей с проверкой правильности расстановки. Пока не понимаю, как это должно выглядеть и как реализовать.</li>
+			<li class="done">Общий метод получение кликов пользователя. Неочевидный момент с .addEventListener. Не думаю, что реализовал правильно.</li>
+			<li class="done">Поочередные ходы пользователя и компьютера.</li>
+			<li class="done">Проверка на "убил" или "ранил"</li>
+			<li>Проверка на выигрыш</li>
+			<li class="done">Создание "задержек" в 1 секунду, чтобы появлялось и делалось всё не моментально. Очень неочевидно сделано через  setTimeout, сложный момент</li>
+			<li class="done">Создание дополнительного инетрфейса со служебными сообщениями под полем игры с диалогами игроков</li>
+			<li class="done">Подсветка имени игрока, у кого сейчас ход</li>
+			<li>Дополнительное поле с кораблями противника и отображением убитых и оставшихся</li>
+			<li>Устранение бага с возможностью нескольких нажатий за раз</li>
+			<li>Оптимизация кода</li>
+		</ul>
+		<p>
+			<button onclick="drawShips ('enemy')">Показать корабли противника</button>
+		</p>
+	</div>
+
+	
+
+	
 </main>
 
-<footer>
-	<address>
-	<ul>
-		<li><a href="https://github.com/novvember" class="github">GitHub</a></li>
-		<li>Stackoverflow</li>
-		<li><a href="mailto:n.demitsuri+github@gmail.com" class="email">E-mail</a></li>
-		<li><a href="https://t.me/n_d_d">Telegram</a></li>
-		<li>LinkedIn</li>
-		<li>Мой круг</li>
-	</ul>	
-	</address>
-</footer>
-
+<script src="battleship.js"></script>
 </body>
-
 </html>
