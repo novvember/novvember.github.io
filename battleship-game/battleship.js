@@ -618,11 +618,16 @@ function drawShot (person, x, y) {
 
 	// Реплика о выстреле
 	addLineToMessage ((person + 'Message'), currentTurn, '— ' + symbolsCol[x-1] + ' ' + symbolsRow [y-1] + '!');
+
+	// Подкрашиваем выбранную клетку
+	document.getElementById(person + x + '-' + y).classList.add ('active');
 	
 	// Отмечаем выстрел на карте выстрелов
 	shots [y][x] = 1;
 
 	setTimeout (function () {
+
+		document.getElementById(person + x + '-' + y).classList.remove ('active');
 
 		// Если промах
 		if (ships [y][x] < 1) {
@@ -678,7 +683,7 @@ function drawShot (person, x, y) {
 			if (currentTurn == 'enemy') currentEnemyMode = ['random'];
 
 			if (checkWin(ships, shots)) {
-				alert (currentTurn + ' победил!')
+				alert ('Ну вот и всё')
 				currentTurn = '';
 			} else {
 				if (currentTurn == 'enemy') {

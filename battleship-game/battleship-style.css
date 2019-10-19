@@ -54,9 +54,15 @@ td {
 	font-style: italic;
 }
 
-td:hover {
+td[id^="enemy"]:not([class]):hover {
 	background-color: NavajoWhite;
 }
+
+td.active {
+	border: 1px dashed Crimson;
+}
+
+
 
 #filler1 td, #filler2 td {
 	border-left-style: none;
@@ -112,6 +118,10 @@ button img {
 	width: 240px;
 	display: inline-block;
 	vertical-align: top;
+}
+
+#enemyInfo {
+	margin-left: 20px;
 }
 
 #playerInfo > div.info-need-action{
