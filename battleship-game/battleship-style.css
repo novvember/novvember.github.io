@@ -6,6 +6,10 @@
 	min-height: 500px;
 }
 
+#battleship-game.win {
+	background: url(confetti.svg);
+}
+
 #playground div {
 	display: inline-block;
 }

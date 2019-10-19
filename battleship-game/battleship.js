@@ -34,6 +34,88 @@ let currentEnemyMode = ['random']; // Режим хода компьютера
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// СЛУЖЕБНЫЕ ФУНКЦИИ
+
+// Создание пустого двухмерного массива нужного размера
+function generateClearMask (array, maxX, maxY) {
+	for (let i = 0; i <= maxY; i++) {
+		array [i] = [];
+		for (let j = 0; j <= maxX; j++) {
+			array [i][j] = 0;
+		}
+	}
+}
+
+
+
+// Случайное целое число
+function generateRandomNumber (min, max) {
+	let rand = min + Math.random() * (max + 1 - min);
+  	return Math.floor(rand);
+}
+
+
+
+function hide (id) {
+	document.getElementById(id).style.display = 'none';
+}
+
+
+
+function showText (id, msg) {
+	//document.getElementById(id).style.display = '';
+	document.getElementById(id).innerHTML = msg;
+}
+
+
+
+function showElement (id, style) {
+	document.getElementById(id).style.display = style;
+}
+
+
+
+function changeVisibility (id, param) {
+	document.getElementById(id).style.visibility = param;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 // НАЧАЛО ИГРЫ И РАЗМЕТКА
 
 // Начать игру
@@ -150,11 +232,6 @@ function newGameButton () {
 			}
 		}
 	}
-
-
-
-
-
 
 
 
@@ -375,69 +452,7 @@ function generateShips (person, needMarginToDraw) {
 
 
 
-
-
-
-
-
-// СЛУЖЕБНЫЕ ФУНКЦИИ
-
-// Создание пустого двухмерного массива нужного размера
-function generateClearMask (array, maxX, maxY) {
-	for (let i = 0; i <= maxY; i++) {
-		array [i] = [];
-		for (let j = 0; j <= maxX; j++) {
-			array [i][j] = 0;
-		}
-	}
-}
-
-// Случайное целое число
-function generateRandomNumber (min, max) {
-	let rand = min + Math.random() * (max + 1 - min);
-  	return Math.floor(rand);
-}
-
-function hide (id) {
-	document.getElementById(id).style.display = 'none';
-}
-
-function showText (id, msg) {
-	//document.getElementById(id).style.display = '';
-	document.getElementById(id).innerHTML = msg;
-}
-
-function showElement (id, style) {
-	document.getElementById(id).style.display = style;
-}
-
-function changeVisibility (id, param) {
-	document.getElementById(id).style.visibility = param;
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// ИНТЕРФЕЙС И КНОПКИ РАССТАНОВКИ КОРАБЛЕЙ
+// ЭКРАН РАССТАНОВКИ КОРАБЛЕЙ
 
 
 function saveShipsButton () {
@@ -490,6 +505,12 @@ function saveShipsButton () {
 
 
 
+
+
+// ПОКАЗ СООБЩЕНИЙ СНИЗУ ПОЛЯ
+
+
+// Сброс и переключение отображения на нужную сторону
 function showGameMessages (personPlayer, personEnemy) {
 
 	// Очистка декорации строки с именем
@@ -513,6 +534,9 @@ function showGameMessages (personPlayer, personEnemy) {
 
 }
 
+
+
+// Добавить реплику в сообщение
 function addLineToMessage (divMessage, person, text) {
 	document.querySelector('#' + divMessage + ' p.message').insertAdjacentHTML('beforeend', 
 		'<span class="' + person + '">' + text + '<span><br>'
@@ -539,15 +563,15 @@ function addLineToMessage (divMessage, person, text) {
 
 
 
-// ОБРАБОТКА НАЖАТИЙ ПРИ ИГРЕ
+// ИГРОВОЙ ПРОЦЕСС
 
 
-// Обработчик нажатий на поле врага
+// Обработчик нажатий пользователя на поле врага
 document.getElementById('enemyField').addEventListener('click', e => getUserClick(e));
 
 
 
-// Проверка клика, является ли выстрелом
+// Проверка клика пользователя, является ли выстрелом
 function getUserClick (e) {
 	if (currentTurn != 'player') return;
 
@@ -564,15 +588,16 @@ function getUserClick (e) {
 }
 
 
-
+// Получение координат клика из ИД ячейки
 function getXYFromId (id) {
 	let x = parseInt( id.slice (5, id.indexOf ('-') ) );
 	let y = parseInt( id.slice (id.indexOf ('-') + 1) );
 	return [x, y];
 }
 
-function checkClick (person, x, y) {
 
+// Общая проверка клика
+function checkClick (person, x, y) {
 	if (checkXYIsInside (x,y) && checkXYNotRepeat (person, x,y)) {
 		return true;
 	} else {
@@ -580,6 +605,7 @@ function checkClick (person, x, y) {
 	}
 }
 
+// Проверка координат на вхождение в поле
 function checkXYIsInside (x, y) {
 	if ((x>=1) && (x<=10) && (y>=1) && (y<= 10)) {
 		return true;
@@ -589,7 +615,7 @@ function checkXYIsInside (x, y) {
 }
 
 
-
+// Проверка координат на старые клики
 function checkXYNotRepeat (person, x, y) {
 	let shots;
 	if (person == 'player') {shots = maskPlayerShots}
@@ -602,7 +628,7 @@ function checkXYNotRepeat (person, x, y) {
 
 
 
-// Отметить результат выстрела
+// Реакция на клик + смена хода
 function drawShot (person, x, y) {
 	let ships;
 	let shots;
@@ -683,8 +709,9 @@ function drawShot (person, x, y) {
 			if (currentTurn == 'enemy') currentEnemyMode = ['random'];
 
 			if (checkWin(ships, shots)) {
-				alert ('Ну вот и всё')
 				currentTurn = '';
+				showWin ();
+				
 			} else {
 				if (currentTurn == 'enemy') {
 					setTimeout(getEnemyClick, standardTimeout);
@@ -695,6 +722,10 @@ function drawShot (person, x, y) {
 	}, standardTimeout)
 	
 }
+
+
+
+
 
 
 
@@ -714,6 +745,10 @@ function getFirstCellOfShip (mask, x, y) {
 
 	return [xi, yi];
 }
+
+
+
+
 
 
 
@@ -741,6 +776,9 @@ function checkShipKilled (maskShips, maskShots, x, y) {
 
 
 
+
+
+
 // Возвращает координаты следующей клетки коробля (вправо-вниз)
 function getNextCellOfShip (mask, x, y) {
 	if (mask[y+1][x] >= 1) {
@@ -753,6 +791,9 @@ function getNextCellOfShip (mask, x, y) {
 
 
 
+
+
+
 // Возвращает координаты предыдущей клетки коробля (влево-вверх)
 function getPreviousCellOfShip (mask, x, y) {
 	if (mask[y-1][x] >= 1) {
@@ -762,6 +803,9 @@ function getPreviousCellOfShip (mask, x, y) {
 	}
 	return [x, y];
 }
+
+
+
 
 
 // Рисует пустые клетки при убийстве корабля
@@ -788,6 +832,10 @@ function drawMarginOfKilledShip (maskShips, x, y, person, maskShots) {
 		y0 = getNextCellOfShip (maskShips, x, y) [1];
 	} while ( (x != x0) || (y != y0) );
 }
+
+
+
+
 
 
 
@@ -823,6 +871,9 @@ function changeTurn (player) {
 		setTimeout(getEnemyClick, standardTimeout);
 	}
 }
+
+
+
 
 // Клик компьютера
 function getEnemyClick () {
@@ -903,6 +954,10 @@ function getEnemyClick () {
 }
 
 
+
+
+
+
 // Проверка на победу (кончились все корабли)
 function checkWin (maskShips, maskShots) {
 	for (let i = 1; i < maskShips[0].length; i++) {
@@ -914,4 +969,9 @@ function checkWin (maskShips, maskShots) {
 	}
 
 	return true;
+}
+
+
+function showWin () {
+	document.getElementById('battleship-game').classList.add ('win');
 }
