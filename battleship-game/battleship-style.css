@@ -6,8 +6,18 @@
 	min-height: 500px;
 }
 
-#battleship-game.win {
+#battleship-game.lose {
+	filter: grayscale(100%);
+}
+
+#win {
+	display: none;
 	background: url(confetti.svg);
+	min-width: 750px;
+	min-height: 500px;
+	z-index: 10000;
+	position: absolute;
+	margin: 0;
 }
 
 #playground div {
@@ -63,7 +73,7 @@ td[id^="enemy"]:not([class]):hover {
 }
 
 td.active {
-	border: 1px dashed Crimson;
+	border: 2px dashed FireBrick;
 }
 
 
@@ -145,8 +155,19 @@ button img {
 	border: 2px dotted white;
 }
 
+#lose-message {
+	filter: invert();
+	border-color: black;
+	display: none;
+}
+
+#win-message {
+	display: none;
+}
+
+
 img.arrow {
-	height: 2.5em;
+	height: 3em;
 }
 
 #playerMessage, #enemyMessage {

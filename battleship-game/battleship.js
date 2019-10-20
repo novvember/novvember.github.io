@@ -10,20 +10,21 @@ let symbolsCol = ['а', 'б', 'в', 'г', 'д', 'е', 'ж', 'з', 'и', 'к', '�
 let symbolsRow = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29];
 
 let maskPlayerFieldShips = []; // Хранит корабли
-generateClearMask (maskPlayerFieldShips, (xLength + 1), (yLength + 1));
 let maskEnemyFieldShips = [];
-generateClearMask (maskEnemyFieldShips, (xLength + 1), (yLength + 1));
-let maskPlayerShots =[]; // Хранит выстрелы
-generateClearMask (maskPlayerShots, (xLength + 1), (yLength + 1));
-let maskEnemyShots =[];
-generateClearMask (maskEnemyShots, (xLength + 1), (yLength + 1));
+let maskPlayerShots = []; // Хранит выстрелы
+let maskEnemyShots = [];
 let maskNewShip = []; // Временно хранит создаваемый корабль
-generateClearMask (maskNewShip, (xLength + 1), (yLength + 1));
 
 let standardTimeout = 1000;
 let shipsSetOk = false;
 
-let currentTurn = ''; // Кто сейчас ходит
+let listenClick = false; // Режим кликов пользователя
+
+let currentPlayer = ''; // Кто сейчас ходит
+let currentEnemy = ''; // Кто сейчас враг
+let currentShips; // Корабли, по которым бьем
+let currentShots; // Выстрелы
+
 let currentEnemyMode = ['random']; // Режим хода компьютера
 
 
@@ -120,6 +121,29 @@ function changeVisibility (id, param) {
 
 // Начать игру
 function newGameButton () {
+
+	// Установка переменных в начальное положение
+	generateClearMask (maskPlayerFieldShips, (xLength + 1), (yLength + 1));
+	generateClearMask (maskEnemyFieldShips, (xLength + 1), (yLength + 1));
+	generateClearMask (maskPlayerShots, (xLength + 1), (yLength + 1));
+	generateClearMask (maskEnemyShots, (xLength + 1), (yLength + 1));
+	generateClearMask (maskNewShip, (xLength + 1), (yLength + 1));
+	shipsSetOk = false;
+	listenClick = false;
+	currentEnemyMode = ['random'];
+
+	// Сброс поздравительной анимации
+	document.getElementById('battleship-game').classList.remove ('lose');
+	document.getElementById('win-message').style.display = 'none';
+	document.getElementById('lose-message').style.display = 'none';
+
+	// Очистка содержания страницы
+	document.getElementById('playerField').innerHTML = '';
+	document.getElementById('filler1').innerHTML = '';
+	document.getElementById('enemyField').innerHTML = '';
+	document.getElementById('filler2').innerHTML = '';
+	document.getElementById('margin').innerHTML = '';
+
 
 	// Строим поле
 	drawCells (); // Поле из клеточек
@@ -254,7 +278,7 @@ function newGameButton () {
 // ГЕНЕРАЦИЯ КОРАБЛЕЙ
 
 // Расставить корабли в случайном порядке
-function generateShips (person, needMarginToDraw) {
+function generateShips (person, TrueIfNeedMarginToDraw) {
 	
 	// Очищаем поле кораблей
 	let personShips;
@@ -286,7 +310,7 @@ function generateShips (person, needMarginToDraw) {
 	}
 
 	if (person == 'player') {
-		drawShips (person, needMarginToDraw);
+		drawShips (person, TrueIfNeedMarginToDraw);
 	}
 }
 
@@ -412,20 +436,19 @@ function generateShips (person, needMarginToDraw) {
 	}
 
 	// Нарисовать корабли из матрицы в нужное поле
-	function drawShips (person, needMarginToDraw) {
+	function drawShips (person, TrueIfNeedMarginToDraw) {
 		let maskShips;
 		if (person == 'player') {maskShips = maskPlayerFieldShips}
 			else if (person == 'enemy') {maskShips = maskEnemyFieldShips};
 
 		for (let i = 1; i <= yLength; i++) {
 			for (let j = 1; j <= xLength; j++) {
-				// document.getElementById(person + j + '-' + i).removeAttribute('class');
 				document.getElementById(person + j + '-' + i).classList.remove ('ship');
 				document.getElementById(person + j + '-' + i).classList.remove ('margin');
 
 				if (maskShips [i][j] >= 1) {
 					document.getElementById(person + j + '-' + i).classList.add ('ship');
-				} else if ((maskShips [i][j] == 0.5) && (needMarginToDraw == true)) {
+				} else if ((maskShips [i][j] == 0.5) && (TrueIfNeedMarginToDraw == true)) {
 					document.getElementById(person + j + '-' + i).classList.add ('margin');
 				}
 			}
@@ -452,7 +475,7 @@ function generateShips (person, needMarginToDraw) {
 
 
 
-// ЭКРАН РАССТАНОВКИ КОРАБЛЕЙ
+// ОКНО РАССТАНОВКИ КОРАБЛЕЙ
 
 
 function saveShipsButton () {
@@ -480,11 +503,19 @@ function saveShipsButton () {
 		setTimeout (hide, standardTimeout, 'buidShipsDiv');
 
 		// Запустить игру
-		currentTurn = 'player';
 		generateShips ('enemy');
+		changeTurn ('player');
 
 		// Отрисовка интерфейса первого хода
 		setTimeout (showGameMessages, standardTimeout, 'player', 'enemy');
+
+		// Восстановление окна для будущих игр
+		setTimeout (function() {
+			changeVisibility ('generateShipsButton', 'visible');
+			changeVisibility ('buildOwnShipsButton', 'visible');
+			showElement ('saveShipsButton', 'inline-block');
+			document.getElementById('saveShipsButtonText').innerHTML = '';
+		}, standardTimeout)
 	}
 }
 
@@ -511,34 +542,40 @@ function saveShipsButton () {
 
 
 // Сброс и переключение отображения на нужную сторону
-function showGameMessages (personPlayer, personEnemy) {
+function showGameMessages () {
 
-	// Очистка декорации строки с именем
-	document.querySelector('#playerField table caption span').classList.remove ('active');
-	document.querySelector('#enemyField table caption span').classList.remove ('active');
-
-	// Очистка содержания реплик
-	document.querySelector('#playerMessage p.message').innerHTML = '';
-	document.querySelector('#enemyMessage p.message').innerHTML = '';
-
-	// Скрытие всех диалогов
-	changeVisibility ('playerMessage', 'hidden');
-	changeVisibility ('enemyMessage', 'hidden');
-
+	// Очистка всех полей диалога
+	clearMessages (); 
 
 	// Подсветка имени игрока с ходом
-	document.querySelector('#' + personPlayer + 'Field table caption span').classList.add ('active');
+	document.querySelector('#' + currentPlayer + 'Field table caption span').classList.add ('active');
 
 	// Показываем нижний блок
-	changeVisibility (personEnemy + 'Message', 'visible');
+	changeVisibility (currentEnemy + 'Message', 'visible');
 
 }
 
 
 
+	function clearMessages () {
+		// Очистка декорации строки с именем
+		document.querySelector('#playerField table caption span').classList.remove ('active');
+		document.querySelector('#enemyField table caption span').classList.remove ('active');
+
+		// Очистка содержания реплик
+		document.querySelector('#playerMessage p.message').innerHTML = '';
+		document.querySelector('#enemyMessage p.message').innerHTML = '';
+
+		// Скрытие всех диалогов
+		changeVisibility ('playerMessage', 'hidden');
+		changeVisibility ('enemyMessage', 'hidden');
+	}
+
+
+
 // Добавить реплику в сообщение
-function addLineToMessage (divMessage, person, text) {
-	document.querySelector('#' + divMessage + ' p.message').insertAdjacentHTML('beforeend', 
+function addLineToMessage (location, person, text) {
+	document.querySelector('#' + location + 'Message p.message').insertAdjacentHTML('beforeend', 
 		'<span class="' + person + '">' + text + '<span><br>'
 		);
 }
@@ -563,7 +600,7 @@ function addLineToMessage (divMessage, person, text) {
 
 
 
-// ИГРОВОЙ ПРОЦЕСС
+// НАЖАТИЕ ПОЛЬЗОВАТЕЛЯ
 
 
 // Обработчик нажатий пользователя на поле врага
@@ -573,154 +610,370 @@ document.getElementById('enemyField').addEventListener('click', e => getUserClic
 
 // Проверка клика пользователя, является ли выстрелом
 function getUserClick (e) {
-	if (currentTurn != 'player') return;
+	if (listenClick != true) return;
 
 	// Получить координаты клика
 	let x = getXYFromId (e.target.id) [0];
 	let y = getXYFromId (e.target.id) [1];
 
 	// Проверка клика на координаты
-	if (checkClick(currentTurn, x, y)) {
+	if (checkClick(currentPlayer, x, y)) {
 		
-		// Запустить отрисовку клетки выстрела
-		drawShot (currentTurn, x, y);
+	// Запустить отрисовку клетки выстрела
+	drawShot (x, y);
 	}
 }
 
 
-// Получение координат клика из ИД ячейки
-function getXYFromId (id) {
-	let x = parseInt( id.slice (5, id.indexOf ('-') ) );
-	let y = parseInt( id.slice (id.indexOf ('-') + 1) );
-	return [x, y];
-}
-
-
-// Общая проверка клика
-function checkClick (person, x, y) {
-	if (checkXYIsInside (x,y) && checkXYNotRepeat (person, x,y)) {
-		return true;
-	} else {
-		return false;
-	}
-}
-
-// Проверка координат на вхождение в поле
-function checkXYIsInside (x, y) {
-	if ((x>=1) && (x<=10) && (y>=1) && (y<= 10)) {
-		return true;
-	} else {
-		return false;
-	}
-}
-
-
-// Проверка координат на старые клики
-function checkXYNotRepeat (person, x, y) {
-	let shots;
-	if (person == 'player') {shots = maskPlayerShots}
-		else if (person == 'enemy') {shots = maskEnemyShots};
-
-	if (shots [y][x] != 0) return false;
-
-	return true;
-}
-
-
-
-// Реакция на клик + смена хода
-function drawShot (person, x, y) {
-	let ships;
-	let shots;
-	if (person == 'player') {
-		ships = maskEnemyFieldShips;
-		person = 'enemy';
-		shots = maskPlayerShots;
-	} else if (person == 'enemy') {
-		ships = maskPlayerFieldShips;
-		person = 'player';
-		shots = maskEnemyShots;
+	// Получение координат клика из ИД ячейки
+	function getXYFromId (id) {
+		let x = parseInt( id.slice (5, id.indexOf ('-') ) );
+		let y = parseInt( id.slice (id.indexOf ('-') + 1) );
+		return [x, y];
 	}
 
-	// Реплика о выстреле
-	addLineToMessage ((person + 'Message'), currentTurn, '— ' + symbolsCol[x-1] + ' ' + symbolsRow [y-1] + '!');
 
-	// Подкрашиваем выбранную клетку
-	document.getElementById(person + x + '-' + y).classList.add ('active');
-	
-	// Отмечаем выстрел на карте выстрелов
-	shots [y][x] = 1;
-
-	setTimeout (function () {
-
-		document.getElementById(person + x + '-' + y).classList.remove ('active');
-
-		// Если промах
-		if (ships [y][x] < 1) {
-			// Рисуем точку
-			document.getElementById(person + x + '-' + y).classList.add ('miss');
-			
-			ships [y][x] = 0.7; // Отмечаем выстрел на карте кораблей
-
-			// Ответная реплика
-			addLineToMessage ((person + 'Message'), person, '— ' + 'Мимо.<br>');
-
-			// Смена хода
-			setTimeout(changeTurn, standardTimeout);
-		
-		} else if (!checkShipKilled (ships, shots, x, y)) {
-
-			// Если ранил
-			document.getElementById(person + x + '-' + y).classList.add ('hit');
-			document.getElementById(person + x + '-' + y).classList.add ('ship');
-
-			// Изменить режим компьютера
-			if (currentTurn == 'enemy') {
-				if (currentEnemyMode[0] == 'random') {
-					currentEnemyMode = ['guess', x, y];
-				} else {
-					currentEnemyMode [0] = 'trace';
-					currentEnemyMode.push (x);
-					currentEnemyMode.push (y);
-				}
-			}
-
-			// Ответная реплика
-			addLineToMessage ((person + 'Message'), person, '— ' + 'Попал!<br>');
-
-			if (currentTurn == 'enemy') {
-				setTimeout(getEnemyClick, standardTimeout);
-			}
-
+	// Общая проверка клика
+	function checkClick (person, x, y) {
+		if (checkXYIsInside (x,y) && checkXYNotRepeat (person, x,y)) {
+			return true;
 		} else {
+			return false;
+		}
+	}
 
-			// Если убил
+	// Проверка координат на вхождение в поле
+	function checkXYIsInside (x, y) {
+		if ((x>=1) && (x<=10) && (y>=1) && (y<= 10)) {
+			return true;
+		} else {
+			return false;
+		}
+	}
 
-			document.getElementById(person + x + '-' + y).classList.add ('hit');
-			document.getElementById(person + x + '-' + y).classList.add ('ship');
 
-			// Рамка вокруг корабля
-			drawMarginOfKilledShip (ships, x, y, person, shots);
+	// Проверка координат на старые клики
+	function checkXYNotRepeat (person, x, y) {
+		let shots;
+		if (person == 'player') {shots = maskPlayerShots}
+			else if (person == 'enemy') {shots = maskEnemyShots};
 
-			// Ответная реплика
-			addLineToMessage ((person + 'Message'), person, '— ' + 'Убил!<br>');
+		if (shots [y][x] != 0) return false;
 
-			// Сбросить режим компьютера
-			if (currentTurn == 'enemy') currentEnemyMode = ['random'];
+		return true;
+	}
 
-			if (checkWin(ships, shots)) {
-				currentTurn = '';
-				showWin ();
-				
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// НАЖАТИЕ КОМПЬЮТЕРА
+
+
+// Клик компьютера
+function getEnemyClick () {
+
+	let x = 0;
+	let y = 0;
+	let xy = [];
+
+	do {
+
+		if (currentEnemyMode [0] == 'random') {
+			xy = generateXYRandom()
+			x = xy [0];
+			y = xy [1];
+
+		} else if (currentEnemyMode [0] == 'guess') {
+			xy = generateXYGuess();
+			x = xy [0];
+			y = xy [1];
+
+		} else if (currentEnemyMode [0] == 'trace') {
+			xy = generateXYTrace();
+			x = xy [0];
+			y = xy [1];
+		}
+
+	} while (!checkClick(currentPlayer, x, y));
+	
+	// Запустить отрисовку клетки выстрела
+	drawShot (x, y);
+}
+
+	// Режим хода компьютера - рандомный
+	function generateXYRandom () {
+		// Рандомные координаты
+		let x = generateRandomNumber (1, 10);
+		let y = generateRandomNumber (1, 10);
+
+		return [x, y];
+	}
+
+	// Режим хода компьютера - угадывание направления по 1 открытой клетке
+	function generateXYGuess () {
+
+		let x = 0;
+		let y = 0;
+
+		if (generateRandomNumber (0, 1) == 0) {
+			x = currentEnemyMode [1];
+		} else {
+			x = currentEnemyMode [1] - 1 + 2*generateRandomNumber (0, 1);
+		}
+		
+		if (x == currentEnemyMode [1]) {
+			y = currentEnemyMode [2] - 1 + 2*generateRandomNumber (0, 1);
+		} else {
+			y = currentEnemyMode [2];
+		}
+
+		return [x, y];
+	}
+
+	// Режим хода компьютера - добивание корабля, если открыто его две клетки (2 направления)
+	function generateXYTrace () {
+		let n = [0, 0]; // Длина вскрытого корабля для поиска и временные открытые его клетки
+		let x = 0;
+		let y = 0;
+
+		// Длина вскрытого корабля
+		n[0] = (currentEnemyMode.length - 1) / 2;
+
+		if (currentEnemyMode[1] == currentEnemyMode [3]) { // Если совпадают координаты по X
+			n[1] = [];
+
+			for (let i = 0; i < n[0]; i++) {
+				n[1].push(currentEnemyMode[2 + 2*i]);
+			}
+
+			x = currentEnemyMode[1];
+
+			y = generateRandomNumber (0, 1);
+			if (y == 0) {
+				y = Math.min (...n[1]) - 1;
 			} else {
-				if (currentTurn == 'enemy') {
-					setTimeout(getEnemyClick, standardTimeout);
-				}
+				y = Math.max (...n[1]) + 1;
+			}
+
+		} else { // Если совпадают координаты по Y
+			n[1] = [];
+
+			for (let i = 0; i < n[0]; i++) {
+				n[1].push(currentEnemyMode[1 + 2*i]);
+			}
+
+			y = currentEnemyMode[2];
+
+			x = generateRandomNumber (0, 1);
+			if (x == 0) {
+				x = Math.min (...n[1]) - 1;
+			} else {
+				x = Math.max (...n[1]) + 1;
 			}
 		}
 
-	}, standardTimeout)
+		return [x, y];
+	}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// ИГРОВОЙ ПРОЦЕСС
+
+
+
+// Реакция на клик
+function drawShot (x, y) {
+
+	// Прекращаем слушать нажатия пользователя
+	listenClick = false;
+
+	// Выделяем выбранную клетку
+	document.getElementById(currentEnemy + x + '-' + y).classList.add ('active');
+
+	// Реплика о выстреле
+	addLineToMessage (currentEnemy, currentPlayer, '— ' + symbolsCol[x-1] + ' ' + symbolsRow [y-1] + '!');
 	
+	// Отмечаем выстрел на карте выстрелов
+	currentShots [y][x] = 1;
+
+	// Отвечаем на выстрел
+	setTimeout (reactToShot, standardTimeout, x, y);
+}
+
+// Ответ на выстрел
+function reactToShot (x, y) {
+
+	// Очищаем выбранную клетку
+	document.getElementById(currentEnemy + x + '-' + y).classList.remove ('active');
+
+	// Если промах
+	if (currentShips [y][x] < 1) {
+		
+		// Рисуем точку
+		document.getElementById(currentEnemy + x + '-' + y).classList.add ('miss');
+		
+		// Отмечаем выстрел на карте кораблей
+		currentShips [y][x] = 0.7; 
+
+		// Ответная реплика
+		addLineToMessage (currentEnemy, currentEnemy, '— Мимо.<br>');
+
+		// Смена хода
+		setTimeout(changeTurn, standardTimeout);
+	
+
+	// Если ранил
+	} else if (!checkShipKilled (currentShips, currentShots, x, y)) {
+
+		// Раскрашиваем клетку
+		document.getElementById(currentEnemy + x + '-' + y).classList.add ('hit');
+		document.getElementById(currentEnemy + x + '-' + y).classList.add ('ship');
+
+		// Изменить режим компьютера
+		if (currentPlayer == 'enemy') {
+			if (currentEnemyMode[0] == 'random') {
+				currentEnemyMode = ['guess', x, y];
+			} else {
+				currentEnemyMode [0] = 'trace';
+				currentEnemyMode.push (x);
+				currentEnemyMode.push (y);
+			}
+		}
+
+		// Ответная реплика
+		addLineToMessage (currentEnemy, currentEnemy, '— Попал!<br>');
+
+		if (currentPlayer == 'enemy') {
+			setTimeout(getEnemyClick, standardTimeout); // Ход компьютера
+		} else {
+			listenClick = true; // Ход пользователя
+		}
+
+	// Если убил
+	} else {
+
+		// Раскрашиваем клетку
+		document.getElementById(currentEnemy + x + '-' + y).classList.add ('hit');
+		document.getElementById(currentEnemy + x + '-' + y).classList.add ('ship');
+
+		// Рамка вокруг убитого корабля
+		drawMarginOfKilledShip (currentShips, x, y, currentEnemy, currentShots);
+
+		// Ответная реплика
+		addLineToMessage (currentEnemy, currentEnemy, '— Убил!<br>');
+
+		// Сбросить режим компьютера c преследования на рандом
+		if (currentPlayer == 'enemy') currentEnemyMode = ['random'];
+
+		// Проверка на окончание игры
+		if (checkWin(currentShips, currentShots)) {
+			setTimeout(showWin, standardTimeout, currentPlayer);
+		} else {
+			if (currentPlayer == 'enemy') {
+				setTimeout(getEnemyClick, standardTimeout); // Ход компьютера
+			} else {
+				listenClick = true; // Ход пользователя
+			}
+		}
+	}
+
+}
+
+
+
+
+// Смена хода
+function changeTurn (player) {
+	
+	// Подготовка к смене, если указано, на кого менять
+	if (player != undefined && player == 'player') {
+		currentPlayer = 'enemy';
+	} else if (player != undefined && player == 'enemy') {
+		currentPlayer = 'player';
+	}
+
+	if (currentPlayer == 'enemy') {
+
+		currentPlayer = 'player';
+		currentEnemy = 'enemy';
+		currentShips = maskEnemyFieldShips;
+		currentShots = maskPlayerShots;
+
+		listenClick = true;
+	} else {
+
+		currentPlayer = 'enemy';
+		currentEnemy = 'player';
+		currentShips = maskPlayerFieldShips;
+		currentShots = maskEnemyShots;
+
+		listenClick = false;
+	}
+
+	// показ интерфейса
+	showGameMessages();
+
+
+	// Запуск хода компьютера
+	if (currentPlayer == 'enemy') {
+		setTimeout(getEnemyClick, standardTimeout);
+	}
 }
 
 
@@ -728,6 +981,20 @@ function drawShot (person, x, y) {
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+// СЛУЖЕБНЫЕ ФУНКЦИИ ОБРАБОТКИ КЛЕТОК КОРАБЛЕЙ
 
 // Возвращает координаты первой клетки корабля (левый верхний угол)
 function getFirstCellOfShip (mask, x, y) {
@@ -748,34 +1015,27 @@ function getFirstCellOfShip (mask, x, y) {
 
 
 
-
-
-
-
 // Проверяет убит ли корабль по координате выстрела
-function checkShipKilled (maskShips, maskShots, x, y) {
+function checkShipKilled (ships, shots, x, y) {
 
 	// Начало коробля
-	let x0 = getFirstCellOfShip (maskShips, x, y) [0];
-	let y0 = getFirstCellOfShip (maskShips, x, y) [1];
+	let x0 = getFirstCellOfShip (ships, x, y) [0];
+	let y0 = getFirstCellOfShip (ships, x, y) [1];
 
 	do {
 		x = x0;
 		y = y0;
 
-		if (maskShots [y][x] < 1) {
+		if (shots [y][x] < 1) {
 			return false;
 		}
 
-		x0 = getNextCellOfShip (maskShips, x, y) [0];
-		y0 = getNextCellOfShip (maskShips, x, y) [1];
+		x0 = getNextCellOfShip (ships, x, y) [0];
+		y0 = getNextCellOfShip (ships, x, y) [1];
 	} while ( (x != x0) || (y != y0) );
 
 	return true;
 }
-
-
-
 
 
 
@@ -790,10 +1050,6 @@ function getNextCellOfShip (mask, x, y) {
 }
 
 
-
-
-
-
 // Возвращает координаты предыдущей клетки коробля (влево-вверх)
 function getPreviousCellOfShip (mask, x, y) {
 	if (mask[y-1][x] >= 1) {
@@ -803,9 +1059,6 @@ function getPreviousCellOfShip (mask, x, y) {
 	}
 	return [x, y];
 }
-
-
-
 
 
 // Рисует пустые клетки при убийстве корабля
@@ -839,124 +1092,27 @@ function drawMarginOfKilledShip (maskShips, x, y, person, maskShots) {
 
 
 
-function changeTurn (player) {
-	
-	let personEnemy ='';
-
-	// Смена игрока
-	if (currentTurn == 'player') {
-		currentTurn = 'enemy';
-	} else {
-		currentTurn = 'player';
-	}
-
-	// Принудительный ход на нужного игрока, если явно указано
-	if (player != undefined) {
-		currentTurn = player;
-	}
-
-	// Назначаем противника
-	if (currentTurn == 'player') {
-		personEnemy = 'enemy';
-	} else {
-		personEnemy = 'player';
-	}
-
-	// показ интерфейса
-	showGameMessages(currentTurn, personEnemy);
-
-
-	// Запуск хода компьютера
-	if (currentTurn == 'enemy') {
-		setTimeout(getEnemyClick, standardTimeout);
-	}
-}
-
-
-
-
-// Клик компьютера
-function getEnemyClick () {
-
-	let x = 0;
-	let y = 0;
-
-	let n = [0, 0]; // Длина вскрытого корабля для поиска
-
-	do {
-
-		if (currentEnemyMode [0] == 'random') {
-			// Рандомные координаты
-			x = generateRandomNumber (1, 10);
-			y = generateRandomNumber (1, 10);
-
-		} else if (currentEnemyMode [0] == 'guess') {
-
-			// Поиск только что подбитого корабля (4 направления)
-			x = generateRandomNumber (0, 1);
-
-			if (x == 0) {
-				x = currentEnemyMode [1];
-			} else {
-				x = currentEnemyMode [1] - 1 + 2*generateRandomNumber (0, 1);
-			}
-			
-			if (x == currentEnemyMode [1]) {
-				y = currentEnemyMode [2] - 1 + 2*generateRandomNumber (0, 1);
-			} else {
-				y = currentEnemyMode [2];
-			}
-
-		} else if (currentEnemyMode [0] == 'trace') {
-			// Поиск уже не раз подбитого корабля (2 направления)
-			
-			// Длина вскрытого корабля
-			n[0] = (currentEnemyMode.length - 1) / 2;
-
-			if (currentEnemyMode[1] == currentEnemyMode [3]) {
-				n[1] = [];
-
-				for (let i = 0; i < n[0]; i++) {
-					n[1].push(currentEnemyMode[2 + 2*i]);
-				}
-
-				x = currentEnemyMode[1];
-
-				y = generateRandomNumber (0, 1);
-				if (y == 0) {
-					y = Math.min (...n[1]) - 1;
-				} else {
-					y = Math.max (...n[1]) + 1;
-				}
-			} else {
-				n[1] = [];
-
-				for (let i = 0; i < n[0]; i++) {
-					n[1].push(currentEnemyMode[1 + 2*i]);
-				}
-
-				y = currentEnemyMode[2];
-
-				x = generateRandomNumber (0, 1);
-				if (x == 0) {
-					x = Math.min (...n[1]) - 1;
-				} else {
-					x = Math.max (...n[1]) + 1;
-				}
-			}
-		}
-
-	} while (!checkClick(currentTurn, x, y));
-	
-	// Запустить отрисовку клетки выстрела
-	drawShot (currentTurn, x, y);
-	
-}
 
 
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// ОКОНЧАНИЕ ИГРЫ
 
 // Проверка на победу (кончились все корабли)
 function checkWin (maskShips, maskShots) {
@@ -972,6 +1128,53 @@ function checkWin (maskShips, maskShots) {
 }
 
 
-function showWin () {
-	document.getElementById('battleship-game').classList.add ('win');
+// Действия при победе
+function showWin (winner) {
+	
+	// Очистка диалогов и элементов хода
+	clearMessages ();
+
+	// Сообщение о победе
+	if (winner == 'player') {
+		document.getElementById('win-message').style.display = 'block';
+	} else {
+		document.getElementById('lose-message').style.display = 'block';
+		drawShips ('enemy');
+	}
+
+	setTimeout (showWinAnimation, standardTimeout, winner);
+}
+
+// Поздравительная анимация
+function showWinAnimation (winner) {
+	if (winner == 'player') {
+		document.getElementById('win').style.display = 'block';
+	} else {
+		document.getElementById('battleship-game').classList.add ('lose');
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// Сброс всего перед началом новой игры
+function resetAll () {
+
 }
