@@ -1,4 +1,4 @@
-
+let month = 30; // Длина расчетного месяца 30 дней
 
 // СПИСОК БИЛЕТОВ С ПАРАМЕТРАМИ
 let tickets = []; // Информация по параметрам всех билетов
@@ -8,13 +8,16 @@ function generateTickets () {
 	// Формат: 0Название,	1ид,	2стоимость,	3дней действия,	4группа билетов для отображения, 5количество поездок, 6checked, 7видимость, 8массив с полем
 
 	// ОФИЦИАЛЬНЫЕ БИЛЕТЫ
-		// Единый1п
-		tickets.push (['Единый 1 поездка', 'ed-1-trip', 55, 5, 'Единый на число поездок', 1, 'unchecked', 'visible', [] ]);
-		// Единый2п
-		tickets.push (['Единый 2 поездки', 'ed-2-trip', 110, 5, 'Единый на число поездок', 2, 'unchecked', 'visible', [] ]);
-		// Единый60п
-		tickets.push (['Единый 60 поездок', 'ed-60-trip', 1900, 45, 'Единый на число поездок', 60, 'checked', 'visible', [] ]);
 
+		// Единые на количество поездок
+		// Единый1п
+		tickets.push (['Единый 1 поездка', 'ed-1-trip', 57, 5, 'Единый на число поездок', 1, 'checked', 'visible', [] ]);
+		// Единый2п
+		tickets.push (['Единый 2 поездки', 'ed-2-trip', 114, 5, 'Единый на число поездок', 2, 'checked', 'visible', [] ]);
+		// Единый60п
+		tickets.push (['Единый 60 поездок', 'ed-60-trip', 1970, 45, 'Единый на число поездок', 60, 'checked', 'visible', [] ]);
+
+		// Безлимитные единые
 		// Единый1д
 		tickets.push (['Единый 1 сутки', 'ed-1-day', 230, 1, 'Единый на время', 999999, 'checked', 'visible', [] ]);
 		// Единый3д
@@ -25,39 +28,31 @@ function generateTickets () {
 		tickets.push (['Единый 90 дней', 'ed-90-day', 5430, 90, 'Единый на время', 999999, 'checked', 'visible', [] ]);
 		// Единый365д
 		tickets.push (['Единый 365 дней', 'ed-365-day', 19500, 365, 'Единый на время', 999999, 'checked', 'visible', [] ]);
+		
 		// ЕдиныйМесяц
-		tickets.push (['Единый на календарный масяц', 'ed-1-month', 2770, 30, 'Единый на время', 999999, 'unchecked', 'visible', [] ]);
+		tickets.push (['Единый на календарный месяц', 'ed-1-month', 2900, 30, 'Единый на время', 999999, 'unchecked', 'visible', [] ]);
 
 		// ТройкаМетро
-		tickets.push (['Карта Тройка (метро)', 'troika-metro', 38, 1800, 'Карта Тройка', 1, 'checked', 'visible', [] ]);
+		tickets.push (['Карта Тройка (метро)', 'troika-metro', 40, 1800, 'Карта Тройка', 1, 'checked', 'visible', [] ]);
 		// ТройкаТАТ
-		tickets.push (['Карта Тройка (ТАТ)', 'troika-tat', 38, 1800, 'Карта Тройка', 1, 'checked', 'visible', [] ]);
+		tickets.push (['Карта Тройка (ТАТ)', 'troika-tat', 40, 1800, 'Карта Тройка', 1, 'checked', 'visible', [] ]);
 
 		// Тройка90минут
-		tickets.push (['Тройка (пересадка 90 минут)', 'troika-90', 59, 1800, 'Карта Тройка', 1, 'unchecked', 'visible', [] ]);
+		tickets.push (['Тройка (пересадка 90 минут)', 'troika-90', 62, 1800, 'Карта Тройка', 1, 'unchecked', 'visible', [] ]);
 
 		// Банковская карта
-		tickets.push (['Банковская карта', 'bankcard', 42, 1800, '', 1, 'unchecked', 'visible', [] ]);
+		tickets.push (['Банковская карта', 'bankcard', 44, 1800, '', 1, 'unchecked', 'visible', [] ]);
 
-		// ТАТ 1
-		tickets.push (['ТАТ 1 поездка', 'tat-1-trip', 45, 5, 'Билет ТАТ', 1, 'unchecked', 'visible', [] ]);
 		// ТАТ 30д
-		tickets.push (['ТАТ 30 дней', 'tat-30-day', 1140, 30, 'Билет ТАТ', 999999, 'checked', 'visible', [] ]);
+		tickets.push (['ТАТ 30 дней', 'tat-30-day', 1180, 30, 'Билет ТАТ', 999999, 'checked', 'visible', [] ]);
 
 
 	// СОЧЕТАНИЯ БИЛЕТОВ
 		// Тройка Метро + ТАТ
-		tickets.push (['Карта Тройка (метро + ТАТ)', 'troika', 38, 1800, 'Сочетания билетов', 1, 'checked', 'visible', [] ]);
+		tickets.push (['Карта Тройка (метро + ТАТ)', 'troika', 40, 1800, 'Сочетания билетов', 1, 'checked', 'visible', [] ]);
 
 		// ТАТ 30 дней + Тройка-метро
 		tickets.push (['ТАТ 30 дней + Тройка (метро)', 'tat-30-day-troika', '', 30, 'Сочетания билетов', 999999, 'checked', 'visible', [] ]);
-
-	// АКЦИИ
-		// Акция Мир до 12.2019
-		tickets.push (['Банковская карта Мир (до 31.12.2019)', 'bankcard-mir-2019', 27, 1800, 'Акция Мир', 1, 'checked', 'visible', [] ]);
-		// Акция Мир до 12.2019
-		tickets.push (['Карта Мир (метро) + Тройка (ТАТ)', 'bankcard-mir-2019-troika', '27+38', 1800, 'Акция Мир', 1, 'checked', 'visible', [] ]);
-
 
 }
 
@@ -92,28 +87,107 @@ function generateTickets () {
 	// ОФИЦИАЛЬНЫЕ БИЛЕТЫ
 
 		// Единый 60 поездок
+		/*
 		buildEd60Trip ('ed-60-trip');
 
 		function buildEd60Trip (id) {
 			
 			generateMatrix (getTicketPar (id, 8), 71, 71);
 
-			let numberTrip = getTicketPar (id, 5); // Количество поездок
-			let duration = getTicketPar (id, 3) / 30; // Срок действия билета, в месяцах
-			let priceTicket = getTicketPar (id, 2); // Стоимость билета
-			let minTrips = numberTrip / duration; // Минимальное количество поездок, чтобы не сгорело
-			let priceTrip = priceTicket / numberTrip; // Стоимость одной поездки
+			let numberOfTrips = getTicketPar (id, 5); // Количество поездок
+			let durationOfTicket = getTicketPar (id, 3) / month; // Срок действия билета, в месяцах
+			let priceOfTicket = getTicketPar (id, 2); // Стоимость билета
+			let minNumberOfTrips = numberOfTrips / durationOfTicket; // Минимальное количество поездок, чтобы не сгорело
+			let pricePerTrip = priceOfTicket / numberOfTrips; // Стоимость одной поездки
 
 			for (let tat = 0; tat < getTicketPar (id, 8).length; tat++) {
 				for (let metro = 0; metro < getTicketPar (id, 8)[0].length; metro++) {
-					if ((tat + metro) < minTrips) {
-						getTicketPar (id, 8)[tat][metro] = priceTrip * minTrips;
+					if ((tat + metro) < minNumberOfTrips) {
+						getTicketPar (id, 8)[tat][metro] = pricePerTrip * minNumberOfTrips;
 					} else {
-						getTicketPar (id, 8)[tat][metro] = priceTrip * (tat + metro);
+						getTicketPar (id, 8)[tat][metro] = pricePerTrip * (tat + metro);
 					}
 				}
 			}
 		}
+*/
+
+
+		buildEdNTrip ('ed-60-trip');
+		buildEdNTrip ('ed-1-trip');
+		buildEdNTrip ('ed-2-trip');
+
+
+		function buildEdNTrip (id) {
+
+			generateMatrix (getTicketPar (id, 8), 71, 71);
+
+			let numberOfTrips = getTicketPar (id, 5); // Количество поездок
+			let durationOfTicket = getTicketPar (id, 3); // Срок действия билета, в днях
+			let priceOfTicket = getTicketPar (id, 2); // Стоимость билета
+			let pricePerTrip = priceOfTicket / numberOfTrips; // Стоимость одной поездки
+
+			let tripTimes = [1]; // Время поездок
+			let ticketTimes = []; // Время покупок билетов
+			let n = 0; // Счетчик поездок
+			let ticketQuantity; // Количество билетов
+			let tripPeriod; // Период между поездками
+
+
+
+			for (let tat = 0; tat < getTicketPar (id, 8).length; tat++) {
+				for (let metro = 0; metro < getTicketPar (id, 8)[0].length; metro++) {
+
+					// Сброс
+					tripTimes = [1];
+					ticketTimes = [1];
+					n = 1;
+					ticketQuantity = 0;
+					tripPeriod = month / (tat + metro);
+
+					// Время поездок
+					for (i = 1; i < (tat + metro); i++) {
+						tripTimes.push (tripTimes [tripTimes.length - 1] + tripPeriod );
+					}
+
+					// Время покупки билетов
+					for (i = 1; i < tripTimes.length; i++) {
+
+						// Если билет кончился по поездкам или по времени
+						if (n >= numberOfTrips || (Math.floor (tripTimes[i]) - ticketTimes [tripTimes.length - 1]) >= durationOfTicket) {
+							ticketTimes.push (Math.floor (tripTimes[i]));
+							n = 1;
+
+						// Если билет еще не кончился и еще можно сделать поездку
+						} else {
+							n++;
+						}
+					}
+
+					// Сколько целых билетов
+					ticketQuantity = ticketTimes.length - 1;
+
+					// Дробная часть последнего билета
+					// Если поездки не сгорят, то считаем по поездкам
+					if (Math.ceil( ((ticketTimes [ticketTimes.length - 1] + durationOfTicket) - tripTimes [tripTimes.length - n]) / tripPeriod ) >= numberOfTrips) {
+						ticketQuantity += n / numberOfTrips;
+
+					// Если поездки сгорят, то считаем по длительности билета
+					} else {
+						ticketQuantity += (month - ticketTimes [ticketTimes.length - 1] + 1) / durationOfTicket;
+					}
+					
+					// Общая стоимость составит
+					getTicketPar (id, 8)[tat][metro] = ticketQuantity * priceOfTicket;
+				}
+			}
+		}
+
+
+
+
+
+
 
 
 		// Единые на время
@@ -126,7 +200,7 @@ function generateTickets () {
 		function buildEdUnlim (id) {
 			generateMatrix (getTicketPar (id, 8), 71, 71); // Пустая матрица (значения 99999)
 
-			let duration = getTicketPar (id, 3) / 30; // Срок действия билета, в месяцах
+			let duration = getTicketPar (id, 3) / month; // Срок действия билета, в месяцах
 			let priceTicket = getTicketPar (id, 2); // Стоимость билета
 
 			for (let tat = 0; tat < getTicketPar (id, 8).length; tat++) {
@@ -173,7 +247,7 @@ function generateTickets () {
 		function buildTat30Day (id) {
 			generateMatrix (getTicketPar (id, 8), 71, 71); // Пустая матрица (значения 99999)
 
-			let duration = getTicketPar (id, 3) / 30; // Срок действия билета, в месяцах
+			let duration = getTicketPar (id, 3) / month; // Срок действия билета, в месяцах
 			let priceTicket = getTicketPar (id, 2); // Стоимость билета
 
 			for (let tat = 0; tat < getTicketPar (id, 8).length; tat++) {
@@ -216,38 +290,6 @@ function generateTickets () {
 			for (let tat = 0; tat < getTicketPar (id, 8).length; tat++) { 
 				for (let metro = 0; metro < getTicketPar (id, 8)[0].length; metro++) { // Без Метро
 					getTicketPar (id, 8)[tat][metro] = getTicketPar (idMetro, 8)[0][metro] + getTicketPar (idTat, 8)[tat][0];
-				}
-			}
-		}
-
-
-
-	// АКЦИИ
-
-		// Карта Мир (до 31.12.2019)
-		buildBankcardMir2019 ('bankcard-mir-2019');
-	
-		function buildBankcardMir2019 (id) {
-			generateMatrix (getTicketPar (id, 8), 71, 71);
-			let priceTicket = getTicketPar (id, 2); // Стоимость билета
-
-			for (let tat = 0; tat < 1; tat++) { // Без ТАТ
-				for (let metro = 0; metro < getTicketPar (id, 8)[0].length; metro++) {
-					getTicketPar (id, 8)[tat][metro] = priceTicket * metro;
-				}
-			}
-		}
-
-
-		// Карта Мир + Тройка
-		buildBankcardMir2019Troika ('bankcard-mir-2019-troika', 'bankcard-mir-2019', 'troika-tat');
-
-		function buildBankcardMir2019Troika (id, idMir, idTat) {
-			generateMatrix (getTicketPar (id, 8), 71, 71);
-
-			for (let tat = 0; tat < getTicketPar (id, 8).length; tat++) {
-				for (let metro = 0; metro < getTicketPar (id, 8)[0].length; metro++) {
-					getTicketPar (id, 8)[tat][metro] = getTicketPar (idTat, 8)[tat][0] + getTicketPar (idMir, 8) [0][metro];
 				}
 			}
 		}
