@@ -4,85 +4,21 @@ section {
 	vertical-align: top;
 }
 
+/* Основная область с графиком */
 
-section.table {
+section.main {
 	width: 550px;
 }
 
-section.aside {
-	width: 200px;
-}
 
-section.aside form {
-	font-size: smaller;
-}
-
-div.ticket-group {
-	margin-bottom: 1em;
-	background-color: white;
-}
-
-span.price {
-	font-weight: bold;
-}
-
-label[for="ed-60-trip"],
-td.ed-60-trip {
-	background-color: #c0504d;
-}
-
-label[for="ed-30-day"],
-td.ed-30-day {
-	background-color: #cc5652;
-}
-
-label[for="ed-90-day"],
-td.ed-90-day {
-	background-color: #d95b57;
-}
-
-label[for="ed-365-day"],
-td.ed-365-day {
-	background-color: #e5605c;
-}
-
-label[for="troika-metro"],
-label[for="troika-tat"],
-/*label[for="troika"],*/
-td.troika-metro,
-td.troika-tat,
-td.troika {
-	background-color: #4bacc6;
-}
-
-label[for="tat-30-day"],
-td.tat-30-day,
-td.tat-30-day-troika {
-	background-color: #1f497d;
-	color: AliceBlue;
-}
-
-
-
-
-
-
-
-/* Разметка поля*/
 table {
 	border-collapse: collapse;
 	box-sizing: border-box;
 	/*border: 1px dotted grey;*/
 }
 
-td {
-	padding: 0;
-	margin: 0;
-	text-align: center;
-	font-size: 1px;
-	/*border: 1px dotted grey;*/
-}
 
+/* Контейнер графика с номерками и заголовками */ 
 #tat-trip-label div{
 	transform: rotate(-90deg);
 	transform-origin: left top 0;
@@ -94,7 +30,7 @@ td {
 
 #tat-trip-label {
 	vertical-align: top;
-	padding-top: 265px;
+	padding-top: 265px !important;
 }
 
 
@@ -104,44 +40,170 @@ td {
 
 #metro-trip-label {
 	text-align: left;
-	padding-left: 14px;
+	padding-left: 14px !important;
 }
 
-#table-container td {
+#graph-container td {
 	width: 14px;
 	height: 14px;
 	box-sizing: border-box;
+	padding: 0;
+	margin: 0;
 }
 
-#table-container td[scope="col"] {
+#graph-container td[scope="col"] {
 	text-align: left;
 	border-bottom: 1px solid grey;
 	font-size: 9px;
 }
 
-#table-container td[scope="row"] {
+#graph-container td[scope="row"] {
 	vertical-align: top;
+	text-align: center;
 	border-right: 1px solid grey;
 	font-size: 9px;
 }
 
-#table td {
+
+
+
+
+
+
+/* График */ 
+#graph td {
 	width: 7px;
 	height: 7px;
+	font-size: 1px;
 }
 
-#table td:hover {
+#graph td:hover,
+#graph td.active {
 	background-image: url(dot.svg);
 	background-size: 5px;
 	background-repeat: no-repeat;
-	background-position: center;*/
+	background-position: center;
 }
 
-#table, #table table {
+#graph, #graph table {
 	width: 504px;
 	height: 504px;
 }
 
-#table {
+#graph {
 	vertical-align: top;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Боковое меню с билетами */
+
+section.aside {
+	width: 200px;
+}
+
+section.aside form {
+	font-size: x-small;
+}
+
+div.ticket-header {
+	margin-bottom: 1em;
+	font-size: larger;
+}
+
+div.ticket-group {
+	margin-bottom: 1em;
+}
+
+#ticket-types table {
+	width: 100%;
+}
+
+#ticket-types td {
+	padding: 1px 0;
+}
+
+#ticket-types td.input {
+	width: 20px;
+}
+
+#ticket-types td.price {
+	width: 65px;
+	text-align: right;
+	background-color: white;
+	color: black;
+}
+
+#ticket-types td.difference {
+	width: 30px;
+	background-color: white;
+	text-shadow: 0px 0px 3px red;
+	font-size: smaller;
+	color: black;
+}
+
+.price {
+	font-weight: bold;
+}
+
+
+
+
+
+
+
+
+
+
+/* Раскраска разных билетов */
+
+label[for="ed-60-trip"],
+.ed-60-trip {
+	background-color: #c0504d;
+}
+
+label[for="ed-30-day"],
+.ed-30-day {
+	background-color: #cc5652;
+}
+
+label[for="ed-90-day"],
+.ed-90-day {
+	background-color: #d95b57;
+}
+
+label[for="ed-365-day"],
+.ed-365-day {
+	background-color: #e5605c;
+}
+
+label[for="troika"],
+.troika {
+	background-color: #4bacc6;
+}
+
+label[for="tat-30-day"],
+.tat-30-day,
+.tat-30-day-troika {
+	background-color: #1f497d;
+	color: AliceBlue;
+}
+
+label[for="tat-30-day-ed-60-trip"],
+.tat-30-day-ed-60-trip {
+	background-color: #730d73;
+	color: AliceBlue;
+}
+
