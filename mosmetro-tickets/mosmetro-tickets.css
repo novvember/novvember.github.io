@@ -115,16 +115,16 @@ section.aside {
 }
 
 section.aside form {
-	font-size: x-small;
+	font-size: small;
 }
 
 div.ticket-header {
 	margin-bottom: 1em;
-	font-size: larger;
 }
 
 div.ticket-group {
 	margin-bottom: 1em;
+	font-size: x-small;
 }
 
 #ticket-types table {
@@ -147,15 +147,21 @@ div.ticket-group {
 }
 
 #ticket-types td.difference {
-	width: 30px;
+	width: 35px;
 	background-color: white;
-	text-shadow: 0px 0px 3px red;
 	font-size: smaller;
 	color: black;
 }
 
 .price {
 	font-weight: bold;
+}
+
+#ticket-types td.difference.active {
+	background-image: url(left-arrow.svg);
+	background-size: calc(100% - 5px);
+	background-repeat: no-repeat;
+	background-position: 5px 50%;
 }
 
 

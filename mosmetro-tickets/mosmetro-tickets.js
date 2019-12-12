@@ -19,18 +19,18 @@ function generateTicketsParams () {
 
 		// Безлимитные единые
 		// Единый1д
-		ticketsParams.push (['Единый 1 сутки', 'ed-1-day', 230, 1, 'Единый на время', 999999, 'checked', 'visible', [] ]);
+		ticketsParams.push (['Единый 1 сутки', 'ed-1-day', 230, 1, 'Единый на время', 999, 'checked', 'visible', [] ]);
 		// Единый3д
-		ticketsParams.push (['Единый 3 суток', 'ed-3-day', 438, 3, 'Единый на время', 999999, 'checked', 'visible', [] ]);
+		ticketsParams.push (['Единый 3 суток', 'ed-3-day', 438, 3, 'Единый на время', 999, 'checked', 'visible', [] ]);
 		// Единый30д
-		ticketsParams.push (['Единый 30 дней', 'ed-30-day', 2170, 30, 'Единый на время', 999999, 'checked', 'visible', [] ]);
+		ticketsParams.push (['Единый 30 дней', 'ed-30-day', 2170, 30, 'Единый на время', 999, 'checked', 'visible', [] ]);
 		// Единый90д
-		ticketsParams.push (['Единый 90 дней', 'ed-90-day', 5430, 90, 'Единый на время', 999999, 'checked', 'visible', [] ]);
+		ticketsParams.push (['Единый 90 дней', 'ed-90-day', 5430, 90, 'Единый на время', 999, 'checked', 'visible', [] ]);
 		// Единый365д
-		ticketsParams.push (['Единый 365 дней', 'ed-365-day', 19500, 365, 'Единый на время', 999999, 'checked', 'visible', [] ]);
+		ticketsParams.push (['Единый 365 дней', 'ed-365-day', 19500, 365, 'Единый на время', 999, 'checked', 'visible', [] ]);
 		
 		// ЕдиныйМесяц
-		ticketsParams.push (['Единый на календарный месяц', 'ed-1-month', 2900, 30, 'Единый на время', 999999, 'checked', 'visible', [] ]);
+		ticketsParams.push (['Единый на календарный месяц', 'ed-1-month', 2900, 30, 'Единый на время', 999, 'checked', 'visible', [] ]);
 
 		// Тройка Электронный кошелек
 		ticketsParams.push (['Карта Тройка', 'troika', 40, 1800, 'Карта Тройка', 1, 'checked', 'visible', [] ]);
@@ -42,16 +42,16 @@ function generateTicketsParams () {
 		ticketsParams.push (['Банковская карта', 'bankcard', 44, 1800, 'Банковская карта', 1, 'checked', 'visible', [] ]);
 
 		// ТАТ 30д
-		ticketsParams.push (['ТАТ 30 дней', 'tat-30-day', 1180, 30, 'Билет ТАТ', 999999, 'checked', 'visible', [] ]);
+		ticketsParams.push (['ТАТ 30 дней', 'tat-30-day', 1180, 30, 'Билет ТАТ', 999, 'checked', 'visible', [] ]);
 
 
 	// СОЧЕТАНИЯ БИЛЕТОВ
 
 		// ТАТ 30 дней + Тройка-метро
-		ticketsParams.push (['ТАТ 30 дней + Карта Тройка (метро)', 'tat-30-day-troika', '-', 30, 'Сочетания билетов', 999999, 'checked', 'visible', [] ]);
+		ticketsParams.push (['ТАТ 30 дней + Карта Тройка (метро)', 'tat-30-day-troika', '-', 30, 'Сочетания билетов', 999, 'checked', 'visible', [] ]);
 
 		// ТАТ 30 дней + Единый 60 поездок
-		ticketsParams.push (['ТАТ 30 дней + Единый 60 поездок', 'tat-30-day-ed-60-trip', '-', 30, 'Сочетания билетов', 999999, 'checked', 'visible', [] ]);
+		ticketsParams.push (['ТАТ 30 дней + Единый 60 поездок', 'tat-30-day-ed-60-trip', '-', 30, 'Сочетания билетов', 999, 'checked', 'visible', [] ]);
 }
 
 
@@ -126,7 +126,7 @@ function generateTicketsParams () {
 					for (i = 1; i < tripTimes.length; i++) {
 
 						// Если билет кончился по поездкам или по времени
-						if (n >= numberOfTrips || (Math.floor (tripTimes[i]) - ticketTimes [tripTimes.length - 1]) >= durationOfTicket) {
+						if (n >= numberOfTrips || (Math.floor (tripTimes[i]) - ticketTimes [ticketTimes.length - 1]) >= durationOfTicket) {
 							ticketTimes.push (Math.floor (tripTimes[i]));
 							n = 1;
 
@@ -146,7 +146,12 @@ function generateTicketsParams () {
 
 					// Если поездки сгорят, то считаем по длительности билета
 					} else {
-						ticketQuantity += (month - ticketTimes [ticketTimes.length - 1] + 1) / durationOfTicket;
+
+						if ( (month - ticketTimes [ticketTimes.length - 1] + 1) > durationOfTicket) {
+							ticketQuantity += 1;
+						} else {
+							ticketQuantity += (month - ticketTimes [ticketTimes.length - 1] + 1) / durationOfTicket;
+						}
 					}
 					
 					// Общая стоимость составит
@@ -157,8 +162,11 @@ function generateTicketsParams () {
 
 
 		// Единые на время
-		buildEdUnlim ('ed-1-day');
-		buildEdUnlim ('ed-3-day');
+		/*buildEdUnlim ('ed-1-day');
+		buildEdUnlim ('ed-3-day');*/
+		buildEdNTrip ('ed-1-day');
+		buildEdNTrip ('ed-3-day');
+
 		buildEdUnlim ('ed-30-day');
 		buildEdUnlim ('ed-90-day');
 		buildEdUnlim ('ed-365-day');
@@ -188,7 +196,7 @@ function generateTicketsParams () {
 
 			for (let tat = 0; tat < getTicketParam (id, 8).length; tat++) {
 				for (let metro = 0; metro < getTicketParam (id, 8)[0].length; metro++) {
-					getTicketParam (id, 8)[tat][metro] = priceTicket / duration;
+					getTicketParam (id, 8)[tat][metro] = (Math.floor(metro/70) +1)* priceTicket / duration;
 				}
 			}
 
@@ -369,7 +377,7 @@ function generateTicketsParams () {
 		for (let i = 0; i < ticketsParams.length; i++) {
 
 			if (i == 0) {
-				html += '<div class="ticket-header"><em>Выберете количество поездок на графике для расчета по каждому билету.</em></div>'
+				html += '<div class="ticket-header"><em>Выберите количество поездок на графике для расчета по каждому билету.</em></div>'
 				+ '<div class="ticket-group">'
 			} else if (ticketsParams [i][4] != ticketsParams [i-1][4]) {
 				html +=
@@ -514,6 +522,10 @@ function buildGraph () {
 
 			array = [];
 
+			if (metro == 0 && tat == 0) {
+				array.push (0);
+			}
+
 			for (let i=0; i < ticketsParams.length; i++) {
 				if (ticketsParams [i][6] == 'checked') {
 					array.push (ticketsParams[i][8][tat][metro]);
@@ -610,7 +622,6 @@ function getUserHover (e) {
 	drawSelectorLines (metro, tat)
 
 	showCalculation (metro, tat); // Показываем цифры в таблице справа
-
 }
 
 	// Получение координат клетки из ИД ячейки
@@ -626,16 +637,56 @@ function getUserHover (e) {
 		let difference = 0;
 
 		// Количество поездок
-		document.querySelector('#ticket-types div.ticket-header').innerHTML = 'В течение месяца:<br><strong>' + metro + '</strong> поездок на метро.<br><strong>' + tat + '</strong> поездок на ТАТ.';
+		showTripNumber (metro, tat);
 
 		// Стоимость по каждому билету
 		for (let i = 0; i < ticketsParams.length; i++) {
-			if (ticketsParams [i][6] == 'checked' && ticketsParams [i][8][tat][metro] < 50000) {
-				document.querySelector('#ticket-types tr.' + ticketsParams [i][1] + ' td.price').innerHTML = ticketsParams [i][8][tat][metro].toFixed() + ' &#8381;/мес.';
-				difference = (100 * (ticketsParams [i][8][tat][metro] - graph[tat][metro]) / graph[tat][metro]).toFixed();
-				document.querySelector('#ticket-types tr.' + ticketsParams [i][1] + ' td.difference').innerHTML = '+' + difference + '%';
+			clearCalculation (i);
+
+			if (ticketsParams [i][6] == 'checked' && ticketsParams [i][8][tat][metro] < 50000 && !(metro == 0 && tat == 0)) {
+				showPricePerMonth (ticketsParams [i][1], ticketsParams [i][8][tat][metro].toFixed());
+				
+				
+				showDifference (ticketsParams [i][1], metro, tat);
 			}
 		}
+	}
+
+	function showTripNumber (metro, tat) {
+		document.querySelector('#ticket-types div.ticket-header').innerHTML = 'В течение месяца:<br><strong>' + metro + '</strong> поездок на метро.<br><strong>' + tat + '</strong> поездок на ТАТ.';
+	}
+
+	function showPricePerMonth (id, price) {
+		document.querySelector('#ticket-types tr.' + id + ' td.price').innerHTML = price + ' &#8381;/мес.';
+	}
+
+	function showDifference (id, metro, tat) {
+		let differenceNumber = (100 * (getTicketParam (id, 8) [tat][metro] - graph[tat][metro]) / graph[tat][metro]).toFixed();
+		let differenceText = '';
+
+		if (Math.round(differenceNumber / 1000) == 0) {
+			differenceText = differenceNumber;
+		} else {
+			differenceText = Math.round(differenceNumber / 1000) + 'k';
+		}
+
+		if (differenceText == 0) {
+			document.querySelector('#ticket-types tr.' + id + ' td.difference').classList.add ('active');
+		} else {
+			document.querySelector('#ticket-types tr.' + id + ' td.difference').innerHTML = '+' + differenceText + '%';
+		}
+	}
+
+	function addDifferenceClass (id, name) {
+		document.querySelector('#ticket-types tr.' + id + ' td.difference').classList.add (name);
+	}
+
+
+	function clearCalculation (i) {
+		document.querySelector('#ticket-types tr.' + ticketsParams [i][1] + ' td.price').innerHTML = '';
+		document.querySelector('#ticket-types tr.' + ticketsParams [i][1] + ' td.difference').innerHTML = '';
+
+		document.querySelector('#ticket-types tr.' + ticketsParams [i][1] + ' td.difference').classList.remove ('active');
 	}
 
 
