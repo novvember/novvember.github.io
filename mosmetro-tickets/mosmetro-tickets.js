@@ -5,53 +5,53 @@ let ticketsParams = []; // Информация по параметрам все
 generateTicketsParams ();
 
 function generateTicketsParams () {
-	// Формат: 0Название,	1ид,	2стоимость,	3дней действия,	4группа билетов для отображения, 5количество поездок, 6checked, 7видимость, 8массив с полем
+	// Формат: 0Название,	1ид,	2стоимость,	3дней действия,	4группа билетов для отображения, 5количество поездок, 6checked, 7видимость, 8массив с полем, 9disabledToClick
 
 	// ОФИЦИАЛЬНЫЕ БИЛЕТЫ
 
 		// Единые на количество поездок
 		// Единый1п
-		ticketsParams.push (['Единый 1 поездка', 'ed-1-trip', 57, 5, 'Единый на число поездок', 1, 'checked', 'visible', [] ]);
+		ticketsParams.push (['Единый 1 поездка', 'ed-1-trip', 57, 5, 'Единый на число поездок', 1, 'checked', 'visible', [], 'enabled' ]);
 		// Единый2п
-		ticketsParams.push (['Единый 2 поездки', 'ed-2-trip', 114, 5, 'Единый на число поездок', 2, 'checked', 'visible', [] ]);
+		ticketsParams.push (['Единый 2 поездки', 'ed-2-trip', 114, 5, 'Единый на число поездок', 2, 'checked', 'visible', [], 'enabled' ]);
 		// Единый60п
-		ticketsParams.push (['Единый 60 поездок', 'ed-60-trip', 1970, 45, 'Единый на число поездок', 60, 'checked', 'visible', [] ]);
+		ticketsParams.push (['Единый 60 поездок', 'ed-60-trip', 1970, 45, 'Единый на число поездок', 60, 'checked', 'visible', [], 'enabled' ]);
 
 		// Безлимитные единые
 		// Единый1д
-		ticketsParams.push (['Единый 1 сутки', 'ed-1-day', 230, 1, 'Единый на время', 999, 'checked', 'visible', [] ]);
+		ticketsParams.push (['Единый 1 сутки', 'ed-1-day', 230, 1, 'Единый на время', 999, 'checked', 'visible', [], 'enabled' ]);
 		// Единый3д
-		ticketsParams.push (['Единый 3 суток', 'ed-3-day', 438, 3, 'Единый на время', 999, 'checked', 'visible', [] ]);
+		ticketsParams.push (['Единый 3 суток', 'ed-3-day', 438, 3, 'Единый на время', 999, 'checked', 'visible', [], 'enabled' ]);
 		// Единый30д
-		ticketsParams.push (['Единый 30 дней', 'ed-30-day', 2170, 30, 'Единый на время', 999, 'checked', 'visible', [] ]);
+		ticketsParams.push (['Единый 30 дней', 'ed-30-day', 2170, 30, 'Единый на время', 999, 'checked', 'visible', [], 'enabled' ]);
 		// Единый90д
-		ticketsParams.push (['Единый 90 дней', 'ed-90-day', 5430, 90, 'Единый на время', 999, 'checked', 'visible', [] ]);
+		ticketsParams.push (['Единый 90 дней', 'ed-90-day', 5430, 90, 'Единый на время', 999, 'checked', 'visible', [], 'enabled' ]);
 		// Единый365д
-		ticketsParams.push (['Единый 365 дней', 'ed-365-day', 19500, 365, 'Единый на время', 999, 'checked', 'visible', [] ]);
+		ticketsParams.push (['Единый 365 дней', 'ed-365-day', 19500, 365, 'Единый на время', 999, 'checked', 'visible', [], 'enabled' ]);
 		
 		// ЕдиныйМесяц
-		ticketsParams.push (['Единый на календарный месяц', 'ed-1-month', 2900, 30, 'Единый на время', 999, 'checked', 'visible', [] ]);
+		ticketsParams.push (['Единый на календарный месяц', 'ed-1-month', 2900, 30, 'Единый на время', 999, 'checked', 'visible', [], 'enabled' ]);
 
 		// Тройка Электронный кошелек
-		ticketsParams.push (['Карта Тройка', 'troika', 40, 1800, 'Карта Тройка', 1, 'checked', 'visible', [] ]);
+		ticketsParams.push (['Карта Тройка', 'troika', 40, 1800, 'Карта Тройка', 1, 'checked', 'visible', [], 'enabled' ]);
 
 		// Тройка90минут
-		ticketsParams.push (['Карта Тройка (пересадка 90 минут)', 'troika-90', 62, 1800, 'Карта Тройка', 1, 'unchecked', 'visible', [] ]);
+		ticketsParams.push (['Карта Тройка (пересадка 90 минут)', 'troika-90', 62, 1800, 'Карта Тройка', 1, 'unchecked', 'visible', [], 'disabled' ]);
 
 		// Банковская карта
-		ticketsParams.push (['Банковская карта', 'bankcard', 44, 1800, 'Банковская карта', 1, 'checked', 'visible', [] ]);
+		ticketsParams.push (['Банковская карта', 'bankcard', 44, 1800, 'Банковская карта', 1, 'checked', 'visible', [], 'enabled' ]);
 
 		// ТАТ 30д
-		ticketsParams.push (['ТАТ 30 дней', 'tat-30-day', 1180, 30, 'Билет ТАТ', 999, 'checked', 'visible', [] ]);
+		ticketsParams.push (['ТАТ 30 дней', 'tat-30-day', 1180, 30, 'Билет ТАТ', 999, 'checked', 'visible', [], 'enabled' ]);
 
 
 	// СОЧЕТАНИЯ БИЛЕТОВ
 
 		// ТАТ 30 дней + Тройка-метро
-		ticketsParams.push (['ТАТ 30 дней + Карта Тройка (метро)', 'tat-30-day-troika', '-', 30, 'Сочетания билетов', 999, 'checked', 'visible', [] ]);
+		ticketsParams.push (['ТАТ 30 дней + Карта Тройка (метро)', 'tat-30-day-troika', '-', 30, 'Сочетания билетов', 999, 'checked', 'visible', [], 'enabled' ]);
 
 		// ТАТ 30 дней + Единый 60 поездок
-		ticketsParams.push (['ТАТ 30 дней + Единый 60 поездок', 'tat-30-day-ed-60-trip', '-', 30, 'Сочетания билетов', 999, 'checked', 'visible', [] ]);
+		ticketsParams.push (['ТАТ 30 дней + Единый 60 поездок', 'tat-30-day-ed-60-trip', '-', 30, 'Сочетания билетов', 999, 'checked', 'visible', [], 'enabled' ]);
 }
 
 
@@ -396,8 +396,13 @@ function generateTicketsParams () {
 			+ '" name="'
 			+ ticketsParams[i][1]
 			+'" value="'
-			+ ticketsParams[i][1]
-			+ '" disabled></td><td class="label"><label for="'
+			+ ticketsParams[i][1] + '"';
+
+			if (ticketsParams[i][9] == 'disabled') {
+				html += ' disabled';
+			}
+
+			html += '></td><td class="label"><label for="'
 			+ ticketsParams[i][1]
 			+ '">'
 			+ ticketsParams[i][0]
@@ -473,6 +478,14 @@ function getTicketParam (ticketId, colNumber) {
 	}
 }
 
+function changeTicketParam (ticketId, colNumber, value) {
+	for (let i = 0; i < ticketsParams.length; i++) {
+		if (ticketsParams [i][1] == ticketId) {
+			ticketsParams [i][colNumber] = value;
+		}
+	}
+}
+
 
 
 
@@ -504,6 +517,15 @@ function getTicketParam (ticketId, colNumber) {
 
 // Создание и рисование номограммы
 function generateGraph () {
+	checkInputs ();
+	checkInputDepends ();
+
+	/*for (let i=0; i < ticketsParams.length; i++) {
+		clearCalculation (i);
+	}
+
+	clearSelectorLines ();*/
+
 	buildGraph ();
 	drawGraphContent ();
 }
@@ -557,6 +579,29 @@ function drawGraphContent () {
 	}
 
 	document.getElementById('0-0').className = '';
+}
+
+
+function checkInputs () {
+	for (let i=0; i < ticketsParams.length; i++) {
+		if (document.getElementById(ticketsParams[i][1]).checked == true) {
+			ticketsParams[i][6] = 'checked';
+		} else {
+			ticketsParams[i][6] = 'unchecked';
+		}
+	}
+}
+
+function checkInputDepends () {
+	if (getTicketParam('tat-30-day', 6) == 'unchecked' || getTicketParam('troika', 6) == 'unchecked') {
+		changeTicketParam('tat-30-day-troika', 6, 'unchecked');
+		document.getElementById('tat-30-day-troika').checked = false;
+	}
+
+	if (getTicketParam('tat-30-day', 6) == 'unchecked' || getTicketParam('ed-60-trip', 6) == 'unchecked') {
+		changeTicketParam('tat-30-day-ed-60-trip', 6, 'unchecked');
+		document.getElementById('tat-30-day-ed-60-trip').checked = false;
+	}
 }
 
 

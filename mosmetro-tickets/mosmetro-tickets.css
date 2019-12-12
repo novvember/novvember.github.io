@@ -71,6 +71,10 @@ table {
 
 
 /* График */ 
+#graph {
+	background-color: Gainsboro;
+}
+
 #graph td {
 	width: 7px;
 	height: 7px;
@@ -209,7 +213,7 @@ label[for="tat-30-day"],
 
 label[for="tat-30-day-ed-60-trip"],
 .tat-30-day-ed-60-trip {
-	background-color: #730d73;
+	background-color: #8a5082;
 	color: AliceBlue;
 }
 
