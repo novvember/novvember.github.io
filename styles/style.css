@@ -51,7 +51,7 @@ p {
 }
 
 .menu__item {
-  margin-left: -1.3em;
+  text-indent: -1.3em;
 }
 
 .menu__item::before, .menu__item::after {
@@ -72,11 +72,11 @@ p {
 	margin-left: .3em;
 }
 
-.menu__item:hover:before {
+.menu__item:hover::before {
 	background-image: url(../img/tag-opened.svg);
 }
 
-.menu__item:hover:after {
+.menu__item:hover::after {
 	background-image: url(../img/tag-closed.svg);
 }
 
@@ -128,13 +128,16 @@ p {
 
 .timeline__heading {
   margin: 0;
-  margin-left: -1.3em;
   font-size: 1em;
   font-weight: bold;
 }
 
-.timeline__heading:before {
-	content: '';
+.timeline__heading_with-icon {
+  text-indent: -1.3em; /* отступ первой строки */
+}
+
+.timeline__heading_with-icon::before {
+  content: '';
 	display: inline-block;
 	height: 1em;
 	width: 1em;
@@ -144,18 +147,17 @@ p {
 	vertical-align: -.1em;
 }
 
-.timeline__heading_type_code:before {
+.timeline__heading_icon_code::before {
 	background-image: url('../img/code.svg');
 }
 
-.timeline__heading_type_study:before {
+.timeline__heading_icon_study::before {
 	background-image: url('../img/study.svg');
 }
 
 .timeline__highlighter {
   background-color: gold;
 	padding: 0 .3em;
-  margin-left: -.3em;
 }
 
 .timeline__date {
@@ -175,7 +177,6 @@ p {
   list-style-type: none;
   display: flex;
   justify-content: center;
-  /* color: #696969; */
   font-style: normal;
   height: 1em;
 }
