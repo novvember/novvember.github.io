@@ -1,121 +1,9 @@
-/* Общее */
-html {
-	font-family: 'Merriweather', serif;
-	/*font-size: 16px;*/
-}
-
-html * {max-height:1000000px;} /* Отключает увеличение текста на мобильных */
-
-body {
-	padding: 0 10%;
-	max-width: 750px;
-	margin: 0 auto;
-}
-
-/* Меню */
-nav {
-	color: black;
-	margin-bottom: 5rem;
-}
-
-nav ul {
-	list-style-type: none;
-	padding: 0;
-}
-
-nav li {
-	padding-right: 1.3em;
-	padding-left: 1.3em;
-	margin-left: -1.3em;
-}
-
-nav li:hover {
-	padding-right: 0em;
-	padding-left: 0em;
-}
-
-nav li:hover:before, nav li:hover:after {
-	content: '';
-	display: inline-block;
-	height: 1em;
-	width: 1em;
-	background-repeat: no-repeat;
-	background-size: cover;
-	vertical-align: -0.1em;
-}
-
-nav li:hover:before {
-	margin-right: 0.3em;
-	background-image: url('../img/tag-opened.svg');
-}
-
-nav li:hover:after {
-	margin-left: 0.3em;
-	background-image: url('../img/tag-closed.svg');
-}
-
-nav span.home:before {
-	content: '';
-	display: inline-block;
-	height: 1em;
-	width: 1em;
-	margin-right: 0em;
-	background-image: url('../img/home.svg');
-	background-repeat: no-repeat;
-	background-size: cover;
-}
+/* ВРЕМЕННО ДЛЯ РАЗРАБОТКИ */
+/* * {border: 1px solid pink;} */
 
 
+/* Общие правила */
 
-
-/* Заголовок */ 
-h1 {
-	text-align: center;
-}
-
-h1 img {
-	width: 2ex;
-	height: 2ex;
-	border-radius: 50%;
-	vertical-align: middle;
-}
-
-
-/* Хронология */
-dt {
-	font-weight: bold;
-	margin-top: 0.5rem;
-}
-
-dt[class]:before {
-	content: '';
-	display: inline-block;
-	height: 1em;
-	width: 1em;
-	margin-right: 0.3em;
-	background-repeat: no-repeat;
-	background-size: cover;
-	vertical-align: -0.1em;
-}
-
-dt.code:before {
-	background-image: url('../img/code.svg');
-}
-
-dt.study:before {
-	background-image: url('../img/study.svg');
-}
-
-.highlighter {
-	background-color: gold;
-	padding: 0 0.3em;
-}
-
-.date {
-	font-style: italic;
-}
-
-/* Ссылки */
 a {
 	color: inherit;
 	text-decoration: underline;
@@ -126,69 +14,193 @@ a:hover {
 	color: dimgrey;
 }
 
-/* Футер */
-footer {
-	color: #696969;
-	margin-top: 10rem;
-	text-align: center;
+p {
+  margin: 0;
 }
 
-footer address {
-	font-style: normal;
+
+/* Общий контейнер страницы */
+
+.page {
+	font-family: 'Merriweather', serif;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 0 25px;
+	/*font-size: 16px;*/
 }
 
-footer ul,
-footer ol {
+.page__header {
+  margin-bottom: 5rem;
+}
+
+.page__footer {
+  margin-top: 5rem;
+}
+
+
+/* Шапка с ссылками на проекты */
+
+.menu {
+  padding: 2em 0;
+}
+
+.menu__links {
 	list-style-type: none;
 	padding: 0;
+  margin: 0;
 }
 
-footer li {
-	display: inline-block;
-	margin-right: 0.5em;
+.menu__item {
+  margin-left: -1.3em;
 }
 
-footer address a:before {
+.menu__item::before, .menu__item::after {
 	content: '';
 	display: inline-block;
 	height: 1em;
 	width: 1em;
-	margin-right: 0.2em;
 	background-repeat: no-repeat;
 	background-size: cover;
-	vertical-align: -0.1em;
+	vertical-align: -.1em;
 }
 
-footer address a[href*="github.com"]:before {
-	background-image: url('../img/github.svg');
+.menu__item::before {
+	margin-right: .3em;
 }
 
-footer address a[href*="mailto:"]:before {
-	background-image: url('../img/email.svg');
+.menu__item::after {
+	margin-left: .3em;
 }
 
-footer address a[href*="t.me"]:before {
-	background-image: url('../img/telegram.svg');
+.menu__item:hover:before {
+	background-image: url(../img/tag-opened.svg);
+}
+
+.menu__item:hover:after {
+	background-image: url(../img/tag-closed.svg);
+}
+
+.menu__homepage-link {
+  display: inline-block;
+  width: 1em;
+  height: 1em;
+  background-image: url(../img/home.svg);
+	background-repeat: no-repeat;
+	background-size: contain;
+  background-position: center;
 }
 
 
-/* Служебное сообщение*/
-div.under-construction {
-	margin: 2em;
-	padding: 0.5em 1em;
-	font-size: small;
-	color: DimGrey;
-	background-image: url(../img/subtle_dots.png);
+/* Заголовок */
+
+.description__title {
+	text-align: center;
+  margin: 0;
 }
 
-div.under-construction ul {
-	padding-left: 1.5em;
+.description__avatar {
+	width: 2ex;
+	height: 2ex;
+	border-radius: 50%;
+	vertical-align: middle;
 }
 
-div.under-construction li {
-	list-style-image: url(../img/checkbox-empty.svg);
+.description__subtitle {
+  margin: 1em 0;
 }
 
-div.under-construction li.done {
-	list-style-image: url(../img/checkbox-done.svg);
+
+/* Хронология */
+
+.timeline__list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.timeline__list-item {
+  margin-top: 1em;
+}
+
+.timeline__list-item:first-of-type {
+  margin-top: 0;
+}
+
+.timeline__heading {
+  margin: 0;
+  margin-left: -1.3em;
+  font-size: 1em;
+  font-weight: bold;
+}
+
+.timeline__heading:before {
+	content: '';
+	display: inline-block;
+	height: 1em;
+	width: 1em;
+	margin-right: .3em;
+	background-repeat: no-repeat;
+	background-size: cover;
+	vertical-align: -.1em;
+}
+
+.timeline__heading_type_code:before {
+	background-image: url('../img/code.svg');
+}
+
+.timeline__heading_type_study:before {
+	background-image: url('../img/study.svg');
+}
+
+.timeline__highlighter {
+  background-color: gold;
+	padding: 0 .3em;
+  margin-left: -.3em;
+}
+
+.timeline__date {
+	font-style: italic;
+}
+
+
+/* Футер с ссылками на соцсети*/
+
+.footer {
+  padding-bottom: 2em;
+}
+
+.social-list__items {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  display: flex;
+  justify-content: center;
+  /* color: #696969; */
+  font-style: normal;
+  height: 1em;
+}
+
+.social-list__item {
+  margin-right: 1em;
+}
+
+.social-list__link {
+  display: inline-block;
+  height: 1em;
+  width: 1em;
+  background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+}
+
+.social-list__link[href*="github.com"] {
+  background-image: url(../img/github.svg);
+}
+
+.social-list__link[href*="mailto:"] {
+	background-image: url(../img/email.svg);
+}
+
+.social-list__link[href*="t.me"] {
+	background-image: url(../img/telegram.svg);
 }

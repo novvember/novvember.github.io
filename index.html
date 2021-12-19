@@ -1,79 +1,154 @@
 <!DOCTYPE html>
-<html lang="ru-ru">
+<html lang="ru">
 <head>
-	<!-- Global site tag (gtag.js) - Google Analytics -->
-		<script async src="https://www.googletagmanager.com/gtag/js?id=UA-40939271-3"></script>
-		<script>
-  			window.dataLayer = window.dataLayer || [];
-  			function gtag(){dataLayer.push(arguments);}
-  			gtag('js', new Date());
-  			gtag('config', 'UA-40939271-3');
-		</script>
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-40939271-3"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'UA-40939271-3');
+    </script>
 
-	<meta charset="utf-8">
-	<meta name="author" content="Novvember">
-	<title>Novvember - Homepage</title>
-	<link href="https://fonts.googleapis.com/css?family=Merriweather&display=swap" rel="stylesheet">
-	<link rel="stylesheet" type="text/css" href="styles/style.css">
-	<link rel="icon" href="img/favicon.png" type="image/x-icon">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/css?family=Merriweather&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./styles/normalize.css">
+  <link rel="stylesheet" href="./styles/style.css">
+  <link rel="icon" href="img/favicon.png" type="image/x-icon">
+  <title>Novvember — Homepage</title>
+  <meta name="author" content="Novvember">
+  <meta name="description" content="Домашнаяя страница пользователя Novvember на Github">
+  <meta name="keywords" content="novvember, веб-разработка, frontend">
 </head>
+
 <body>
+  <div class="page">
 
-<nav>
-	<ul>
-		<li><span class="home" title="Главная страница"></span></li>
-		<li><a href="/roulette-game/">Игра Рулетка</a></li>
-		<li><a href="/blackjack-game/">Игра Блэкджек</a></li>
-		<li><a href="/battleship-game/">Игра Морской бой</a></li>
-		<li><a href="/mosmetro-tickets/">Калькулятор стоимости билетов на транспорт Москвы</a></li>
-		<li>Кинопоиск: фильтр сеансов <sup><em>(в далеких планах)</em></sup></li>
-		<li>Игра Жизнь <sup><em>(в планах)</em></sup></li>
-	</ul>
-</nav>
+    <!-- Шапка с ссылками на проекты -->
+    <header class="header page__header">
+      <nav class="menu">
+        <ul class="menu__links">
+          <li class="menu__item">
+            <a class="menu__homepage-link" href="#" title="Главная страница"></a>
+          </li>
+          <li class="menu__item"><a href="./roulette-game/">Игра Рулетка</a></li>
+          <li class="menu__item"><a href="./blackjack-game/">Игра Блэкджек</a></li>
+          <li class="menu__item"><a href="./battleship-game/">Игра Морской бой</a></li>
+          <li class="menu__item"><a href="./mosmetro-tickets/">Калькулятор стоимости билетов на транспорт Москвы</a></li>
+          <li class="menu__item">Кинопоиск: фильтр сеансов <sup><em>(в далеких планах)</em></sup></li>
+          <li class="menu__item">Игра Жизнь <sup><em>(в планах)</em></sup></li>
+        </ul>
+      </nav>
+    </header>
 
-<main>
-	<h1><img src="img/novvember-avatar.png"> novvember</h1>
-	<p>Инженер-технолог из мира ковки/штамповки/прокатки промышленных изделий из стали учит HTML, CSS и JavaScript.</p>
-	<dl>
-		<dt class="study"><span class="highlighter">Яндекс.Практикум</span></dt>
-		<dd>Выбрал обучение в Яндекс.Практикуме по специальности <a href="https://practicum.yandex.ru/web/">«Веб-разработчик»</a> и длительностью в 10 месяцев.
-		<dd class="date">ноябрь 2021 — сейчас</dd>
 
-		<dt class="code"><span class="highlighter">Калькулятор стоимости билетов на транспорт Москвы</span></dt>
-		<dd><a href="/mosmetro-tickets/">Большой график-калькулятор</a>, позволяющая судить о выгодности того или иного билета общественного транспорта Москвы в зависимости от количества поездок. Раньше я такое делал в Экселе, попробую часть этого перенести для вычисления на JavaScript и настроить какое-нибудь взаимодействия пользователя с этим всем.</dd>
-		<dd class="date">октябрь 2019 — декабрь 2019</dd>
+    <main class="content">
 
-		<dt class="code">Игра Морской бой</dt>
-		<dd>Решил не откладывать и начать потихоньку делать <a href="/battleship-game/">игру Морской бой</a> (в ней впервые тут есть какой-никакой интерфейс). Хотя первоначально хотел делать такое, только когда пройду соответствующие темы (в основном взаимодействие со страницей и пользователя с ней).</dd>
-		<dd class="date">октябрь 2019</dd>
+      <!-- Заголовок -->
+      <section class="description">
+        <h1 class="description__title">
+          <img class="description__avatar" src="./img/novvember-avatar.png" alt="Изображение пользователя novvember"> novvember</h1>
+        <p class="description__subtitle">
+          Инженер-технолог из мира ковки/штамповки/прокатки промышленных металлических деталей
+           учит, как делать сайты: HTML, CSS и JavaScript.
+        </p>
+      </section>
 
-		<dt class="study"><span class="highlighter">Mozilla Developer Network<span></dt>
-		<dd>Начал изучить <a href="https://developer.mozilla.org/ru/docs/Learn">основы веб-разработки на Mozilla Developer Network</a>, а также делать этот сайт с нуля. К сожалению, забросил отчасти из-за отсутсвия мотивации, отчасти от некоторых непонятных моментов, не дававших покоя :(</dd>
-		<dd class="date">сентябрь 2019 — декабрь 2019</dd>
+      <!-- Раздел с хронологией -->
+      <section class="timeline">
+        <ul class="timeline__list">
+          <li class="timeline__list-item">
+            <h2 class="timeline__heading timeline__heading_type_study"><span class="timeline__highlighter">Яндекс.Практикум</span></h2>
+            <p class="timeline__description">
+              Выбрал обучение в Яндекс.Практикуме по специальности
+              <a href="https://practicum.yandex.ru/web/">«Веб-разработчик»</a>
+              и длительностью в 10 месяцев.
+            </p>
+            <p class="timeline__date">
+              ноябрь 2021 — сейчас
+            </p>
+          </li>
 
-		<dt class="study">GeekBrains</dt>
-		<dd>Там же прошел миникурс <a href="https://geekbrains.ru/chapters/5087">«Основы программирования. Видеокурс»</a> (JavaScript + HTML/CSS), сделал на их основе первую версию этого сайта, учебные примеры тут же, а также уже свои игры <a href="/roulette-game/">Рулетка</a> и <a href="/blackjack-game/">Блэкджек</a> (сам в них и поиграл).</dd>
-		<dd class="date">сентябрь 2019</dd>
+          <li class="timeline__list-item">
+            <h2 class="timeline__heading timeline__heading_type_code"><span class="timeline__highlighter">Калькулятор стоимости билетов на транспорт Москвы</span></h2>
+            <p class="timeline__description">
+              <a href="/mosmetro-tickets/">Большой график-калькулятор</a>,
+              позволяющая судить о выгодности того или
+              иного билета общественного транспорта Москвы в зависимости от количества
+              поездок. Раньше я такое делал в Экселе, попробую часть этого перенести
+              для вычисления на JavaScript и настроить какое-нибудь взаимодействия
+              пользователя с этим всем.
+            </p>
+            <p class="timeline__date">
+              октябрь 2019 — декабрь 2019
+            </p>
+          </li>
 
-		<dt class="study">GeekBrains</dt>
-		<dd>Попробовал поступить на <a href="https://geekbrains.ru/posts/gu_free_frontend_course">бесплатный курс по обучению Frontend-разработчиков</a> — не прошел, но <em>имею свое мнение на этот счет</em>.</dd>
-		<dd class="date">сентябрь 2019</dd>
-	</dl>
-</main>
+          <li class="timeline__list-item">
+            <h2 class="timeline__heading timeline__heading_type_code">Игра Морской бой</h2>
+            <p class="timeline__description">
+              Решил не откладывать и начать потихоньку делать
+              <a href="/battleship-game/">игру Морской бой</a> (в ней впервые
+              тут есть какой-никакой интерфейс). Хотя первоначально хотел делать
+              такое, только когда пройду соответствующие темы (в основном
+              взаимодействие со страницей и пользователя с ней).
+            </p>
+            <p class="timeline__date">
+              октябрь 2019
+            </p>
+          </li>
 
-<footer>
-	<address>
-		<ul>
-			<li><a href="https://github.com/novvember" title="Github: novvember"></a></li>
-			<li><a href="mailto:n.demitsuri+github@gmail.com" title="E-mail: n.demitsuri@gmail.com"></a></li>
-			<li><a href="https://t.me/n_d_d" title="Telegram: n_d_d"></a></li>
-			<li title="LinkedIn"></li>
-			<li title="Мой круг"></li>
-			<li title="Stackoverflow"></li>
-		</ul>	
-	</address>
-</footer>
+          <li class="timeline__list-item">
+            <h2 class="timeline__heading timeline__heading_type_study"><span class="timeline__highlighter">Mozilla Developer Network</span></h2>
+            <p class="timeline__description">
+              Начал изучить <a href="https://developer.mozilla.org/ru/docs/Learn">основы
+                веб-разработки на Mozilla Developer Network</a>, а также делать этот
+                сайт с нуля. К сожалению, забросил отчасти из-за отсутсвия мотивации,
+                отчасти от некоторых непонятных моментов, не дававших покоя :(
+            </p>
+            <p class="timeline__date">
+              сентябрь 2019 — декабрь 2019
+            </p>
+          </li>
 
+          <li class="timeline__list-item">
+            <h2 class="timeline__heading  timeline__heading_type_study">GeekBrains</h2>
+            <p class="timeline__description">
+              Там же прошел миникурс <a href="https://geekbrains.ru/chapters/5087">«Основы программирования. Видеокурс»</a> (JavaScript + HTML/CSS), сделал на их основе первую версию этого сайта, учебные примеры тут же, а также уже свои игры <a href="/roulette-game/">Рулетка</a> и <a href="/blackjack-game/">Блэкджек</a> (сам в них и поиграл).
+            </p>
+            <p class="timeline__date">
+              сентябрь 2019
+            </p>
+          </li>
+
+          <li class="timeline__list-item">
+            <h2 class="timeline__heading  timeline__heading_type_study">GeekBrains</h2>
+            <p class="timeline__description">
+              Попробовал поступить на <a href="https://geekbrains.ru/posts/gu_free_frontend_course">
+                бесплатный курс по обучению Frontend-разработчиков</a> — не прошел,
+                но <em>имею свое мнение на этот счет</em>.
+            </p>
+            <p class="timeline__date">
+              сентябрь 2019
+            </p>
+          </li>
+        </ul>
+      </section>
+    </main>
+
+    <!-- Футер с ссылками на соцсети -->
+    <footer class="footer page__footer">
+      <address class="social-list">
+        <ul class="social-list__items">
+          <li class="social-list__item"><a class="social-list__link" href="https://github.com/novvember" title="Github: novvember"></a></li>
+          <li class="social-list__item"><a class="social-list__link" href="mailto:n.demitsuri+github@gmail.com" title="E-mail: n.demitsuri@gmail.com"></a></li>
+          <li class="social-list__item"><a class="social-list__link" href="https://t.me/n_d_d" title="Telegram: n_d_d"></a></li>
+        </ul>
+      </address>
+    </footer>
+
+  </div>
 </body>
 
 </html>
