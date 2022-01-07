@@ -6,7 +6,8 @@
 
 a {
 	color: inherit;
-	text-decoration: underline;
+	text-decoration: underline grey;
+  transition: color .5s;
 }
 
 a:hover {
