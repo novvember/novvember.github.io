@@ -1,18 +1,14 @@
-/* ВРЕМЕННО ДЛЯ РАЗРАБОТКИ */
-/* * {border: 1px solid pink;} */
-
-
 /* Общие правила */
 
 a {
 	color: inherit;
 	text-decoration: underline grey;
-  transition: color .5s;
+  transition: opacity .5s;
 }
 
 a:hover {
 	text-decoration: none;
-	color: dimgrey;
+	opacity: .5;
 }
 
 p {
