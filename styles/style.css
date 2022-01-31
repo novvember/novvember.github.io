@@ -126,6 +126,10 @@ p {
   column-gap: 48px;
 }
 
+.column__title {
+  margin: 0 0 1em;
+}
+
 .column__list {
   margin: 0;
   padding: 0;
@@ -171,7 +175,6 @@ p {
 
 .column__highlighter {
   background-color: gold;
-	padding: 0 .3em;
 }
 
 .column__date {
