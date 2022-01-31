@@ -2,13 +2,13 @@
 
 a {
 	color: inherit;
-	text-decoration: underline grey;
-  transition: opacity .5s;
+	text-decoration: underline grey 1px;
+  transition: opacity .2s;
 }
 
 a:hover {
 	text-decoration: none;
-	opacity: .5;
+	opacity: .7;
 }
 
 p {
@@ -22,8 +22,8 @@ p {
 	font-family: 'Merriweather', serif;
   max-width: 1000px;
   margin: 0 auto;
-  padding: 0 48px;
-  /* Шрифт для всей страницы */
+  padding: 0 3rem;
+  /* Оптимизация шрифта для всей страницы */
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   -webkit-text-size-adjust: 100%;
@@ -32,7 +32,12 @@ p {
   text-rendering: optimizeLegibility;
 }
 
+/* Рассотяние между секциями */
 .page__header {
+  margin-bottom: 5rem;
+}
+
+.page__description {
   margin-bottom: 5rem;
 }
 
@@ -44,7 +49,7 @@ p {
 /* Шапка с ссылками на проекты */
 
 .menu {
-  padding: 2em 0;
+  padding: 2rem 0;
 }
 
 .menu__links {
@@ -54,33 +59,29 @@ p {
 }
 
 .menu__item {
-  text-indent: -1.3em;
+  position: relative;
+  width: fit-content;
 }
 
-.menu__item::before, .menu__item::after {
-	content: '';
-	display: inline-block;
-	height: 1em;
-	width: 1em;
-	background-repeat: no-repeat;
+.menu__item:hover::before, .menu__item:hover::after {
+  content: '';
+  position: absolute;
+  display: block;
+  top: .1em;
+  height: 1em;
+  width: 1em;
+  background-repeat: no-repeat;
 	background-size: cover;
-	vertical-align: -.1em;
-}
-
-.menu__item::before {
-	margin-right: .3em;
-}
-
-.menu__item::after {
-	margin-left: .3em;
 }
 
 .menu__item:hover::before {
-	background-image: url(../img/tag-opened.svg);
+	left: -1.3em;
+  background-image: url(../img/tag-opened.svg);
 }
 
 .menu__item:hover::after {
-	background-image: url(../img/tag-closed.svg);
+	right: -1.3em;
+  background-image: url(../img/tag-closed.svg);
 }
 
 .menu__homepage-link {
@@ -94,83 +95,96 @@ p {
 }
 
 
-/* Заголовок */
+/* Заголовок ПРИВЕТ! */
 
 .description {
   max-width: 600px;
-  margin: 0 auto;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .description__title {
 	text-align: center;
   margin: 0;
-}
-
-.description__avatar {
-	width: 2ex;
-	height: 2ex;
-	border-radius: 50%;
-	vertical-align: middle;
+  margin-bottom: 1rem;
 }
 
 .description__subtitle {
-  margin: 1em 0;
+  margin: 0;
+  text-align: center;
+}
+
+.description__avatar {
+  display: inline-block; /* Не дает разбивать строку между аватаром и ником*/
+}
+
+.description__avatar::before {
+  content: '';
+  display: inline-block;
+  width: 1.5em;
+  height: 1.5em;
+  margin-right: .3em;
+  border-radius: 50%;
+	vertical-align: middle;
+  background-image: url(../img/novvember-avatar.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 
-/* Хронология */
+
+
+/* Лента - Раздел с колонками */
 
 .columns {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-  column-gap: 48px;
+  gap: 3rem;
 }
 
 .column__title {
-  margin: 0 0 1em;
+  margin: 0 0 1rem;
 }
 
 .column__list {
   margin: 0;
   padding: 0;
   list-style: none;
-}
-
-.column__list-item {
-  margin-top: 1em;
-}
-
-.column__list-item:first-of-type {
-  margin-top: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
 }
 
 .column__heading {
   margin: 0;
-  font-size: 1em;
+  font-size: 1rem;
   font-weight: bold;
 }
 
-.column__heading_with-icon {
-  text-indent: -1.3em; /* отступ первой строки */
+
+.column__icon-element {
+  position: relative;
 }
 
-.column__heading_with-icon::before {
+.column__icon-element::before {
   content: '';
-	display: inline-block;
-	height: 1em;
-	width: 1em;
-	margin-right: .3em;
-	background-repeat: no-repeat;
-	background-size: cover;
-	vertical-align: -.1em;
+  display: block;
+  position: absolute;
+  left: -1.3em;
+  top: .1em;
+  height: 1em;
+  width: 1em;
+  background-repeat: no-repeat;
+	background-size: contain;
 }
 
-.column__heading_icon_code::before {
-	background-image: url('../img/code.svg');
+.column__icon-element_icon_study::before {
+  background-image: url('../img/study.svg');
 }
 
-.column__heading_icon_study::before {
-	background-image: url('../img/study.svg');
+.column__icon-element_icon_code::before {
+  background-image: url('../img/code.svg');
 }
 
 .column__highlighter {
@@ -195,7 +209,7 @@ p {
   display: flex;
   justify-content: center;
   font-style: normal;
-  height: 1em;
+  height: 1rem;
 }
 
 .social-list__item {
@@ -209,6 +223,11 @@ p {
   background-repeat: no-repeat;
 	background-size: cover;
 	background-position: center;
+  opacity: .7;
+}
+
+.social-list__link:hover {
+  opacity: 1;
 }
 
 .social-list__link[href*="github.com"] {
