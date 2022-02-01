@@ -141,7 +141,7 @@ p {
   background-image: url(../img/novvember-avatar.png);
   background-position: center;
   background-repeat: no-repeat;
-  background-size: 100%;
+  background-size: 102%;
   transition: background-size 5s ease-out;
 }
 
@@ -197,16 +197,16 @@ p {
   background-image: url('../img/code.svg');
 }
 
-
-.card__highlighter {
-  background-color: gold;
+.column__icon-element_icon_in-progress::before {
+  background-image: url('../img/icon__in-progress.gif');
 }
+
 
 
 /* Card - Карточка каждого проекта */
 
 .card__link {
-  /* opacity: 1; */
+  text-decoration: none;
 }
 
 .card__link:hover {
@@ -253,8 +253,12 @@ p {
 	background-image: url(../img/icon__codepen-link.svg);
 }
 
+.card__highlighter {
+  background-color: gold;
+}
+
 .card__date {
-	font-style: italic;
+  color: darkgrey;
 }
 
 
