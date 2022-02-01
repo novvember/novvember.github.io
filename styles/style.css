@@ -15,6 +15,10 @@ p {
   margin: 0;
 }
 
+.highlighter {
+  background-color: gold;
+}
+
 
 /* Page - Общий контейнер страницы */
 
@@ -253,7 +257,7 @@ p {
 	background-image: url(../img/icon__codepen-link.svg);
 }
 
-.card__highlighter {
+.highlighter {
   background-color: gold;
 }
 
