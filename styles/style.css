@@ -2,7 +2,7 @@
 
 a {
 	color: inherit;
-	text-decoration: underline grey 1px;
+	text-decoration: underline silver 1px;
   transition: opacity .2s;
 }
 
@@ -16,7 +16,7 @@ p {
 }
 
 
-/* Общий контейнер страницы */
+/* Page - Общий контейнер страницы */
 
 .page {
 	font-family: 'Merriweather', serif;
@@ -32,21 +32,27 @@ p {
   text-rendering: optimizeLegibility;
 }
 
-/* Рассотяние между секциями */
+    /* Рассотяние между секциями */
 .page__header {
   margin-bottom: 5rem;
 }
 
 .page__description {
-  margin-bottom: 5rem;
+  margin-bottom: 3rem;
 }
 
 .page__footer {
   margin-top: 5rem;
 }
 
+@media (max-width: 768px) {
+  .page {
+    padding: 0 2rem;
+  }
+}
 
-/* Шапка с ссылками на проекты */
+
+/* Header с ссылками на проекты */
 
 .menu {
   padding: 2rem 0;
@@ -98,44 +104,55 @@ p {
 /* Заголовок ПРИВЕТ! */
 
 .description {
-  max-width: 600px;
-  margin-left: auto;
-  margin-right: auto;
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-top: 1px dotted grey;
+  border-bottom: 1px dotted grey;
 }
 
 .description__title {
 	text-align: center;
   margin: 0;
   margin-bottom: 1rem;
+  max-width: 700px;
 }
 
 .description__subtitle {
   margin: 0;
   text-align: center;
+  max-width: 600px;
 }
 
-.description__avatar {
+.description__add-avatar {
   display: inline-block; /* Не дает разбивать строку между аватаром и ником*/
 }
 
-.description__avatar::before {
+.description__add-avatar::before {
   content: '';
   display: inline-block;
-  width: 1.5em;
-  height: 1.5em;
+  width: 1.2em;
+  height: 1.2em;
   margin-right: .3em;
   border-radius: 50%;
 	vertical-align: middle;
   background-image: url(../img/novvember-avatar.png);
   background-position: center;
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size: 100%;
+  transition: background-size 5s ease-out;
+}
+
+.description:hover .description__add-avatar::before {
+  background-size: 200%;
 }
 
 
 
 
-/* Лента - Раздел с колонками */
+/* Columns, column - Раздел с колонками */
 
 .columns {
   display: grid;
@@ -153,15 +170,8 @@ p {
   list-style: none;
   display: flex;
   flex-direction: column;
-  gap: 1rem;
+  gap: 2rem;
 }
-
-.column__heading {
-  margin: 0;
-  font-size: 1rem;
-  font-weight: bold;
-}
-
 
 .column__icon-element {
   position: relative;
@@ -187,16 +197,68 @@ p {
   background-image: url('../img/code.svg');
 }
 
-.column__highlighter {
+
+.card__highlighter {
   background-color: gold;
 }
 
-.column__date {
+
+/* Card - Карточка каждого проекта */
+
+.card__link {
+  /* opacity: 1; */
+}
+
+.card__link:hover {
+  opacity: 1;
+}
+
+.card__image {
+  width: 100%;
+  height: 4rem;
+  object-fit: cover;
+  filter: grayscale();
+}
+
+.card:hover .card__image {
+  transition: all 1s ease-out;
+  filter: none;
+  height: 5rem;
+  margin-top: -1rem;
+}
+
+.card__title {
+  margin: 0;
+  font-size: 1rem;
+  font-weight: bold;
+}
+
+.card__link:hover .card__title::after {
+  content: '';
+  display: inline-block;
+  width: .8em;
+  height: .8em;
+  margin-left: .3em;
+  background-image: url(../img/icon__external-link.svg);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.card__link[href*="github"]:hover .card__title::after {
+	background-image: url(../img/icon__github-link.svg);
+}
+
+.card__link[href*="codepen.io"]:hover .card__title::after {
+	background-image: url(../img/icon__codepen-link.svg);
+}
+
+.card__date {
 	font-style: italic;
 }
 
 
-/* Футер с ссылками на соцсети*/
+/* Footer с ссылками на соцсети*/
 
 .footer {
   padding-bottom: 2em;
