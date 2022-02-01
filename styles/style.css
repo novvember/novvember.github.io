@@ -141,11 +141,11 @@ p {
   height: 1.2em;
   margin-right: .3em;
   border-radius: 50%;
-	vertical-align: middle;
+	vertical-align: -.25em;
   background-image: url(../img/novvember-avatar.png);
   background-position: center;
   background-repeat: no-repeat;
-  background-size: 102%;
+  background-size: 101%;
   transition: background-size 5s ease-out;
 }
 
@@ -153,7 +153,9 @@ p {
   background-size: 200%;
 }
 
-
+.description__add-avatar:hover {
+  transform: rotate(-1deg);
+}
 
 
 /* Columns, column - Раздел с колонками */
