@@ -5,7 +5,7 @@
 	<meta charset="utf-8">
 	<link href="https://fonts.googleapis.com/css?family=Merriweather&display=swap" rel="stylesheet">
 	<link rel="icon" href="../img/favicon.png" type="image/x-icon">
-	<link rel="stylesheet" type="text/css" href="../styles/style-2019.css">
+	<link rel="stylesheet" type="text/css" href="style-2019.css">
 	<style type="text/css">
 		.bets, .roulette {
 			display: inline-block;
@@ -24,29 +24,29 @@
 
 <main>
 	<h1>Игра Рулетка</h1>
-			
+
 	<p>Пришли в казино с тысячей, а тут рулетка.</p>
 
 	<p>Настоящая рулетка с 36 цифровыми ячейками и одним «зеро». Можно ставить на конкретное число (так выигрыш больше), а можно, например, на черное (так проще угадать).</p>
 
 	<p><em>Делайте ваши ставки!</em></p>
 	<h2 id="balance">Деньги: 1000 &#8381;</h2>
-	
+
 	<div class="bets">
 		<h2>Ставки</h2>
 		<form>
 			<section>
 				<h3>Ставка на группу<br>(выигрыш 1:1)</h3>
 				<div>
-					<input type="number" id="betRed" placeholder="Красное" min="0" max="10000"> / 
+					<input type="number" id="betRed" placeholder="Красное" min="0" max="10000"> /
 					<input type="number" id="betBlack" placeholder="Чёрное" min="0" max="10000">
 					<br>
-				
-					<input type="number" id="betEven" placeholder="Чётное" min="0" max="10000"> / 
+
+					<input type="number" id="betEven" placeholder="Чётное" min="0" max="10000"> /
 					<input type="number" id="betOdd" placeholder="Нечётное" min="0" max="10000">
 					<br>
-				
-					<input type="number" id="betSmall" placeholder="(1-18)" min="0" max="10000"> / 
+
+					<input type="number" id="betSmall" placeholder="(1-18)" min="0" max="10000"> /
 					<input type="number" id="betBig" placeholder="(19-36)" min="0" max="10000">
 				</div>
 			</section>
@@ -58,7 +58,7 @@
 					<input type="number" id="betNumber" placeholder="Ставка" min="0" max="10000">
 				</div>
 			</section>
-			
+
 			<div>
 				<br>
 				<button type="button" onclick="makeBets()" id="makeBetsButton">Сделать ставки</button>
@@ -67,7 +67,7 @@
 			</div>
 		</form>
 	</div>
-	
+
 	<div class="roulette">
 		<h2>Рулетка</h2>
 		<button type="button" onclick="goRoulette();" id="goRouletteButton" disabled>Бросить шарик</button>
