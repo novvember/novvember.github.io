@@ -38,7 +38,7 @@ p {
 
     /* Рассотяние между секциями */
 .page__header {
-  margin-bottom: 5rem;
+  margin-bottom: 3rem;
 }
 
 .page__description {
@@ -59,7 +59,7 @@ p {
 /* Header с ссылками на проекты */
 
 .menu {
-  padding: 2rem 0;
+  padding-top: 2rem;
 }
 
 .menu__links {
