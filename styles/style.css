@@ -46,7 +46,7 @@ p {
 }
 
 .page__footer {
-  margin-top: 5rem;
+  margin-top: 3rem;
 }
 
 @media (max-width: 768px) {
@@ -271,7 +271,15 @@ p {
 /* Footer с ссылками на соцсети*/
 
 .footer {
-  padding-bottom: 2em;
+  padding-bottom: 2rem;
+  padding-top: 2rem;
+  border-top: 1px dotted grey;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1em;
+  font-size: small;
+  color: darkgray;
 }
 
 .social-list__items {
@@ -279,39 +287,46 @@ p {
   padding: 0;
   list-style-type: none;
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
   font-style: normal;
-  height: 1rem;
-}
+  /* color: darkgray; */
 
-.social-list__item {
-  margin-right: 1em;
-}
-
-.social-list__link {
-  display: inline-block;
-  height: 1em;
-  width: 1em;
-  background-repeat: no-repeat;
-	background-size: cover;
-	background-position: center;
-  opacity: .7;
+  column-gap: 2em;
+  row-gap: 1em;
 }
 
 .social-list__link:hover {
+  color: black;
+  opacity: 1;
+
+}
+
+.social-list__link::before {
+  content: '';
+  display: inline-block;
+  height: 1em;
+  width: 1em;
+  margin-right: .3em;
+  background-repeat: no-repeat;
+	background-size: cover;
+	background-position: bottom;
+  opacity: .6;
+}
+
+.social-list__link:hover::before {
   opacity: 1;
 }
 
-.social-list__link[href*="github.com"] {
+.social-list__link[href*="github.com"]::before {
   background-image: url(../img/github.svg);
 }
 
-.social-list__link[href*="mailto:"] {
+.social-list__link[href*="mailto:"]::before {
 	background-image: url(../img/email.svg);
 }
 
-.social-list__link[href*="t.me"] {
+.social-list__link[href*="t.me"]::before {
 	background-image: url(../img/telegram.svg);
 }
-
 
