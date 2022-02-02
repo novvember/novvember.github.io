@@ -68,32 +68,6 @@ p {
   margin: 0;
 }
 
-.menu__item {
-  position: relative;
-  width: fit-content;
-}
-
-.menu__item:hover::before, .menu__item:hover::after {
-  /* color: brown; */
-  font-weight: bold;
-  text-align: center;
-  position: absolute;
-  display: block;
-  top: 0;
-  height: 1em;
-  width: 1em;
-}
-
-.menu__item:hover::before {
-  content: '<';
-	left: -1em;
-}
-
-.menu__item:hover::after {
-  content: '>';
-	right: -1em;
-}
-
 .menu__homepage-link {
   display: inline-block;
   width: 1em;
@@ -103,6 +77,34 @@ p {
 	background-size: contain;
   background-position: center;
 }
+
+.menu__item {
+  position: relative;
+  width: fit-content;
+}
+
+.menu__item:hover::before, .menu__item:hover::after {
+  /* color: brown; */
+  display: inline;
+  height: 1em;
+  width: 1em;
+  font-weight: bold;
+  text-align: center;
+}
+
+.menu__item:hover::before {
+  content: '< ';
+  position: absolute;
+	left: -1em;
+  top: 0;
+}
+
+.menu__item:hover::after {
+  content: ' >';
+  vertical-align: top;
+}
+
+
 
 
 /* Заголовок ПРИВЕТ! */
