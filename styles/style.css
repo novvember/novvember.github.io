@@ -80,7 +80,6 @@ p {
 
 .menu__item {
   position: relative;
-  width: fit-content;
 }
 
 .menu__item:hover::before, .menu__item:hover::after {
@@ -89,13 +88,13 @@ p {
   height: 1em;
   width: 1em;
   font-weight: bold;
-  text-align: center;
 }
 
 .menu__item:hover::before {
-  content: '< ';
+  content: '<';
+  text-align: right;
   position: absolute;
-	left: -1em;
+	left: -1.25em;
   top: 0;
 }
 
@@ -273,50 +272,65 @@ p {
 /* Footer с ссылками на соцсети*/
 
 .footer {
+  /* Поля */
   padding-bottom: 2rem;
   padding-top: 2rem;
   border-top: 1px dotted grey;
+  /* Выравнивание внутри */
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 1em;
+  /* Текст внутри */
   font-size: small;
   color: darkgray;
 }
 
+  /* Ссылки в футере немного другие */
+.footer__link {
+  color: inherit;
+  transition: color .3s;
+}
+
+.footer__link:hover {
+  color: black;
+  opacity: 1;
+}
+
+
 .social-list__items {
+  /* Сброс */
   margin: 0;
   padding: 0;
   list-style-type: none;
+  font-style: normal;
+  /* Выравнивание внутри */
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  font-style: normal;
-  /* color: darkgray; */
-
   column-gap: 2em;
   row-gap: 1em;
 }
-
-.social-list__link:hover {
-  color: black;
-  opacity: 1;
-
-}
-
+  /* Иконки соцсетей перед ссылкой */
 .social-list__link::before {
   content: '';
+  /* Расположение */
   display: inline-block;
   height: 1em;
   width: 1em;
+  vertical-align: -10%;
   margin-right: .3em;
+  /* Параметры иконки */
   background-repeat: no-repeat;
 	background-size: cover;
-	background-position: bottom;
+	background-position: center;
+  /* При наведении */
   opacity: .6;
+  transition: opacity .3s;
 }
 
 .social-list__link:hover::before {
+  /* При наведении */
   opacity: 1;
 }
 
@@ -331,4 +345,3 @@ p {
 .social-list__link[href*="t.me"]::before {
 	background-image: url(../img/telegram.svg);
 }
-
