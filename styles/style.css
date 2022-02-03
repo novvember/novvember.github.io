@@ -297,6 +297,10 @@ p {
   opacity: 1;
 }
 
+.footer__text {
+  text-align: center;
+}
+
 
 .social-list__items {
   /* Сброс */
