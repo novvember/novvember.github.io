@@ -349,3 +349,11 @@ p {
 .social-list__link[href*="t.me"]::before {
 	background-image: url(../img/telegram.svg);
 }
+
+.social-list__link[href*="stackoverflow.com"]::before {
+	background-image: url(../img/icon__stackoverflow.svg);
+}
+
+.social-list__link[href*="habr.com"]::before {
+	background-image: url(../img/icon__habr.svg);
+}
