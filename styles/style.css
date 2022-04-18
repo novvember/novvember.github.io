@@ -361,3 +361,7 @@ p {
 .social-list__link[href*="habr.com"]::before {
 	background-image: url(../img/icon__habr.svg);
 }
+
+.social-list__link[href*="codewars.com"]::before {
+	background-image: url(../img/icon__codewars.svg);
+}
