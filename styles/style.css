@@ -154,10 +154,6 @@ p {
   background-size: 200%;
 }
 
-.description__add-avatar:hover {
-  transform: rotate(-1deg);
-}
-
 
 /* Columns, column - Раздел с колонками */
 
