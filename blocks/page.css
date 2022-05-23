@@ -1,0 +1,74 @@
+.page {
+    /* Шрифт для всей страницы */
+    font-family: 'Merriweather', serif;
+    line-height: 1.3;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%;
+    -moz-text-size-adjust: 100%;
+    text-rendering: optimizeLegibility;
+    /* Позиционирование */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+.page__content {
+  width: 100%;
+  max-width: calc(1100px + 2 * 3em);
+  padding-inline: 1em;
+  box-sizing: border-box;
+}
+
+@media (min-width: 425px) {
+  .page__content {
+    padding-inline: 2em;
+  }
+}
+
+@media (min-width: 768px) {
+  .page__content {
+    padding-inline: 3em;
+  }
+}
+
+.page__content_width_full {
+  max-width: none;
+}
+
+
+/* Рассотяние между секциями */
+.page__header {
+  margin-bottom: 3em;
+}
+
+.page__description {
+  margin-bottom: 3em;
+}
+
+.page__footer {
+  margin-top: 3em;
+}
+
+
+/* Общие правила */
+a {
+	color: inherit;
+	text-decoration: underline silver 1px;
+  transition: opacity .2s, text-decoration-color .2s;
+}
+
+a:hover {
+	text-decoration-color: inherit;
+	opacity: .7;
+}
+
+p {
+  margin: 0;
+}
+
+.highlighter {
+  background-color: gold;
+}

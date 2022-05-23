@@ -24,8 +24,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link href="https://fonts.googleapis.com/css?family=Merriweather&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="./styles/normalize.css">
-  <link rel="stylesheet" href="./styles/style.css">
+  <link rel="stylesheet" href="./pages/index.css">
   <link rel="icon" href="img/favicon.png">
   <title>Novvember — Homepage</title>
   <meta name="author" content="Novvember">
@@ -33,29 +32,67 @@
   <meta name="keywords" content="novvember, веб-разработка, frontend">
 </head>
 
-<body>
-  <div class="page">
+<body class="page">
 
     <!-- Шапка с ссылками на проекты -->
-    <header class="header page__header">
+    <header class="header page__header page__content">
+
+
+
+
       <nav class="menu">
-        <ul class="menu__links">
+        <h2 class="menu__title">Ссылки на меня</h2>
+        <ul class="menu__list">
           <li class="menu__item">
-            <a class="menu__homepage-link menu__link" href="#" title="Главная страница"></a>
+            <a class="menu__link"
+              href="mailto:n.demitsuri+github@gmail.com">n.demitsuri@gmail.com</a>
           </li>
-          <li class="menu__item"><a class="menu__link" href="./battleship-game/">Игра Морской бой</a></li>
-          <li class="menu__item"><a class="menu__link" href="./mosmetro-tickets/">Калькулятор стоимости билетов на&nbsp;транспорт Москвы</a>
+          <li class="menu__item">
+            <a class="menu__link" href="https://t.me/n_d_d" title="Пользователь @n_d_d">Telegram</a>
+          </li>
+          <li class="menu__item">
+            <a class="menu__link" href="https://github.com/novvember">Github</a>
+          </li>
+          <li class="menu__item">
+            <a class="menu__link" href="https://ru.stackoverflow.com/users/352251/novvember">Stack Overflow на русском</a>
+          </li>
+          <li class="menu__item">
+            <a class="menu__link" href="https://www.codewars.com/users/novvember">Codewars</a>
+          </li>
+
+          <!-- Дополнительные ссылки
+          <li class="menu__item">
+            <a class="menu__link" href="https://career.habr.com/novvember">Резюме на Хабр.Карьере</a>
+          </li>
+          <li class="menu__item">
+            <a class="menu__link" href="...">Резюме на HeadHunter</a>
+          </li>
+        -->
+
+        </ul>
+      </nav>
+
+      <nav class="menu">
+        <h2 class="menu__title">Мои работы, которые нравятся самому</h2>
+        <ul class="menu__list">
+          <li class="menu__item">
+            <a class="menu__link" href="./battleship-game/">Игра Морской бой</a> (очень давно)
+          </li>
+          <li class="menu__item">
+            <a class="menu__link" href="./mosmetro-tickets/">Калькулятор стоимости проезда на&nbsp;Московском транспорте</a>
           </li>
         </ul>
       </nav>
+
+
+
     </header>
 
 
-    <main class="content">
-
+    <main class="main">
 
       <!-- Заголовок страницы-->
-      <section class="description page__description">
+      <section class="description page__description page__content page__content_width_full">
         <h1 class="description__title"><span class="highlighter">Привет! Я — Дмитрий <span
               class="description__add-avatar">novvember</span></span></h1>
         <p class="description__subtitle">
@@ -64,7 +101,7 @@
       </section>
 
       <!-- Лента - Раздел с колонками -->
-      <div class="columns">
+      <div class="columns page__content">
 
 
         <!-- Учусь -->
@@ -398,49 +435,14 @@
     </main>
 
     <!-- Футер с ссылками на соцсети -->
-    <footer class="footer page__footer">
+    <footer class="footer page__footer page__content">
       <p class="footer__text">
         Этот сайт, конечно, тоже сделал&nbsp;я.
       </p>
-
-      <address class="social-list">
-        <ul class="social-list__items">
-          <li class="social-list__item">
-            <a class="social-list__link footer__link"
-              href="mailto:n.demitsuri+github@gmail.com">n.demitsuri@gmail.com</a>
-          </li>
-          <li class="social-list__item">
-            <a class="social-list__link footer__link" href="https://t.me/n_d_d" title="Пользователь @n_d_d">Telegram</a>
-          </li>
-          <li class="social-list__item">
-            <a class="social-list__link footer__link" href="https://github.com/novvember">Github</a>
-          </li>
-          <li class="social-list__item">
-            <a class="social-list__link footer__link" href="https://ru.stackoverflow.com/users/352251/novvember">Stack Overflow на русском</a>
-          </li>
-          <li class="social-list__item">
-            <a class="social-list__link footer__link" href="https://www.codewars.com/users/novvember">Codewars</a>
-          </li>
-
-
-
-          <!-- Дополнительные ссылки
-          <li class="social-list__item">
-            <a class="social-list__link footer__link" href="https://career.habr.com/novvember">Резюме на Хабр.Карьере</a>
-          </li>
-          <li class="social-list__item">
-            <a class="social-list__link footer__link" href="...">Резюме на HeadHunter</a>
-          </li>
-        -->
-
-        </ul>
-      </address>
-
       <p class="footer__text">
         2019&ndash;2022
       </p>
     </footer>
-  </div>
 </body>
 
 </html>
