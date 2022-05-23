@@ -51,7 +51,7 @@ p {
 
 @media (max-width: 768px) {
   .page {
-    /* padding: 0 2rem; */
+    padding: 0 1rem;
   }
 }
 
@@ -177,19 +177,25 @@ p {
 }
 
 .column__icon-element {
-  position: relative;
+  /* position: relative; */
+}
+
+@media (min-width: 768px) {
+  .column__icon-element {
+    text-indent: -1.3em;
+  }
 }
 
 .column__icon-element::before {
   content: '';
-  display: block;
-  position: absolute;
-  left: -1.3em;
-  top: .1em;
+  display: inline-block;
   height: 1em;
   width: 1em;
+  margin-right: .3em;
   background-repeat: no-repeat;
 	background-size: contain;
+  background-position: center;
+  vertical-align:bottom;
 }
 
 .column__icon-element_icon_study::before {
