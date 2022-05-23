@@ -57,6 +57,9 @@
 .intro__title {
 	text-align: center;
   margin: 0;
+}
+
+.intro__title-text {
   background-color: gold;
 }
 
@@ -66,7 +69,7 @@
 }
 
 .intro__subtitle-text {
-  background-color: rgba(255, 255, 255, .7);
+  background-color: rgba(255, 255, 255, .5);
 }
 
 

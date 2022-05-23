@@ -22,13 +22,13 @@
   box-sizing: border-box;
 }
 
-@media (min-width: 425px) {
+@media (min-width: 426px) {
   .page__content {
     padding-inline: 2em;
   }
 }
 
-@media (min-width: 768px) {
+@media (min-width: 769px) {
   .page__content {
     padding-inline: 3em;
   }
