@@ -1,54 +1,3 @@
-
-
-/* Заголовок ПРИВЕТ! */
-
-.description {
-  padding-top: 3rem;
-  padding-bottom: 3rem;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  border-top: 1px dotted grey;
-  border-bottom: 1px dotted grey;
-}
-
-.description__title {
-	text-align: center;
-  margin: 0;
-  margin-bottom: 1rem;
-  max-width: 700px;
-}
-
-.description__subtitle {
-  margin: 0;
-  text-align: center;
-  max-width: 600px;
-}
-
-.description__add-avatar {
-  display: inline-block; /* Не дает разбивать строку между аватаром и ником*/
-}
-
-.description__add-avatar::before {
-  content: '';
-  display: inline-block;
-  width: 1.2em;
-  height: 1.2em;
-  margin-right: .3em;
-  border-radius: 50%;
-	vertical-align: -.25em;
-  background-image: url(../img/novvember-avatar.png);
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: 101%;
-  transition: background-size 5s ease-out;
-}
-
-.description:hover .description__add-avatar::before {
-  background-size: 200%;
-}
-
-
 /* Columns, column - Раздел с колонками */
 
 .columns {
@@ -70,9 +19,6 @@
   gap: 3rem;
 }
 
-.column__icon-element {
-  /* position: relative; */
-}
 
 @media (min-width: 768px) {
   .column__icon-element {
