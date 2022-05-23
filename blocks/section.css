@@ -1,0 +1,103 @@
+/* Заголовок */
+.section__title {
+  /* font-size: 1.2em;
+  font-weight: normal; */
+  margin: 0;
+  margin-top: 1.5em;
+  margin-bottom: .5em;
+}
+
+/* Список */
+.section__list {
+  /* Сброс */
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  font-style: normal;
+  /* Выравнивание внутри */
+  display: flex;
+  flex-wrap: wrap;
+  column-gap: 2em;
+  row-gap: .5em;
+}
+
+.section__list_direction_column {
+  flex-direction: column;
+}
+
+
+.section__list_direction_column li::before {
+  background-image: url(../img/icon__arrow-right.svg);
+  content: '';
+  /* Расположение */
+  display: inline-block;
+  height: 1em;
+  width: 1em;
+  vertical-align: -10%;
+  margin-right: .3em;
+  /* Параметры иконки */
+  background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+  /* При наведении */
+  opacity: .6;
+  transition: opacity .2s;
+}
+
+@media (min-width: 768px) {
+  .section__list_direction_column li {
+    text-indent: -1.3em;
+  }
+}
+
+
+/* Иконки перед ссылкой */
+.section__link::before {
+  content: '';
+  /* Расположение */
+  display: inline-block;
+  height: 1em;
+  width: 1em;
+  vertical-align: -10%;
+  margin-right: .3em;
+  /* Параметры иконки */
+  background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+  /* При наведении */
+  opacity: .6;
+  transition: opacity .2s;
+}
+
+.section__link:hover::before {
+  /* При наведении */
+  opacity: 1;
+}
+
+.section__link[href*="github.com"]::before {
+  background-image: url(../img/github.svg);
+}
+
+.section__link[href*="mailto:"]::before {
+	background-image: url(../img/email.svg);
+}
+
+.section__link[href*="t.me"]::before {
+	background-image: url(../img/telegram.svg);
+}
+
+.section__link[href*="stackoverflow.com"]::before {
+	background-image: url(../img/icon__stackoverflow.svg);
+}
+
+.section__link[href*="habr.com"]::before {
+	background-image: url(../img/icon__habr.svg);
+}
+
+.section__link[href*="codewars.com"]::before {
+	background-image: url(../img/icon__codewars.svg);
+}
+
+.section__link_type_project::before {
+	background-image: url(../img/code.svg);
+}

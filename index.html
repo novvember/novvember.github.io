@@ -1,98 +1,74 @@
 <!DOCTYPE html>
 <html lang="ru">
+  <head>
+    <!-- Yandex.Metrika counter -->
+    <script type="text/javascript">
+      (function (m, e, t, r, i, k, a) {
+        m[i] = m[i] || function () { (m[i].a = m[i].a || []).push(arguments) };
+        m[i].l = 1 * new Date(); k = e.createElement(t), a = e.getElementsByTagName(t)[0], k.async = 1, k.src = r, a.parentNode.insertBefore(k, a)
+      })
+        (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
 
-<head>
-  <!-- Yandex.Metrika counter -->
-  <script type="text/javascript">
-    (function (m, e, t, r, i, k, a) {
-      m[i] = m[i] || function () { (m[i].a = m[i].a || []).push(arguments) };
-      m[i].l = 1 * new Date(); k = e.createElement(t), a = e.getElementsByTagName(t)[0], k.async = 1, k.src = r, a.parentNode.insertBefore(k, a)
-    })
-      (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
+      ym(87393040, "init", {
+        clickmap: true,
+        trackLinks: true,
+        accurateTrackBounce: true
+      });
+    </script>
+    <noscript>
+      <div><img src="https://mc.yandex.ru/watch/87393040" style="position:absolute; left:-9999px;" alt="" /></div>
+    </noscript>
+    <!-- /Yandex.Metrika counter -->
 
-    ym(87393040, "init", {
-      clickmap: true,
-      trackLinks: true,
-      accurateTrackBounce: true
-    });
-  </script>
-  <noscript>
-    <div><img src="https://mc.yandex.ru/watch/87393040" style="position:absolute; left:-9999px;" alt="" /></div>
-  </noscript>
-  <!-- /Yandex.Metrika counter -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css?family=Merriweather&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./pages/index.css">
+    <link rel="icon" href="img/favicon.png">
+    <title>Novvember — Homepage</title>
+    <meta name="author" content="Novvember">
+    <meta name="description" content="Домашнаяя страница пользователя Novvember на Github">
+    <meta name="keywords" content="novvember, веб-разработка, frontend">
+  </head>
 
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link href="https://fonts.googleapis.com/css?family=Merriweather&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="./pages/index.css">
-  <link rel="icon" href="img/favicon.png">
-  <title>Novvember — Homepage</title>
-  <meta name="author" content="Novvember">
-  <meta name="description" content="Домашнаяя страница пользователя Novvember на Github">
-  <meta name="keywords" content="novvember, веб-разработка, frontend">
-</head>
+  <body class="page">
 
-<body class="page">
+    <!-- Ссылки на меня -->
+    <nav class="section page__section page__content">
+      <h2 class="section__title">Ссылки на&nbsp;меня</h2>
+      <ul class="section__list">
+        <li class="section__item">
+          <a class="section__link"
+            href="mailto:n.demitsuri+github@gmail.com">n.demitsuri@gmail.com</a>
+        </li>
+        <li class="section__item">
+          <a class="section__link" href="https://t.me/n_d_d" title="Пользователь @n_d_d">Telegram</a>
+        </li>
+        <li class="section__item">
+          <a class="section__link" href="https://github.com/novvember">Github</a>
+        </li>
+        <li class="section__item">
+          <a class="section__link" href="https://ru.stackoverflow.com/users/352251/novvember">Stack Overflow на&nbsp;русском</a>
+        </li>
+        <li class="section__item">
+          <a class="section__link" href="https://www.codewars.com/users/novvember">Codewars</a>
+        </li>
 
-    <!-- Шапка с ссылками на проекты -->
-    <header class="header page__header page__content">
-
-
-
-
-      <nav class="menu">
-        <h2 class="menu__title">Ссылки на&nbsp;меня</h2>
-        <ul class="menu__list">
-          <li class="menu__item">
-            <a class="menu__link"
-              href="mailto:n.demitsuri+github@gmail.com">n.demitsuri@gmail.com</a>
-          </li>
-          <li class="menu__item">
-            <a class="menu__link" href="https://t.me/n_d_d" title="Пользователь @n_d_d">Telegram</a>
-          </li>
-          <li class="menu__item">
-            <a class="menu__link" href="https://github.com/novvember">Github</a>
-          </li>
-          <li class="menu__item">
-            <a class="menu__link" href="https://ru.stackoverflow.com/users/352251/novvember">Stack Overflow на&nbsp;русском</a>
-          </li>
-          <li class="menu__item">
-            <a class="menu__link" href="https://www.codewars.com/users/novvember">Codewars</a>
-          </li>
-
-          <!-- Дополнительные ссылки
-          <li class="menu__item">
-            <a class="menu__link" href="https://career.habr.com/novvember">Резюме на Хабр.Карьере</a>
-          </li>
-          <li class="menu__item">
-            <a class="menu__link" href="...">Резюме на HeadHunter</a>
-          </li>
-        -->
-
-        </ul>
-      </nav>
-
-      <nav class="menu">
-        <h2 class="menu__title">Мои работы, которые нравятся самому</h2>
-        <ul class="menu__list">
-          <li class="menu__item">
-            <a class="menu__link" href="./battleship-game/">Игра Морской бой</a> (очень давно)
-          </li>
-          <li class="menu__item">
-            <a class="menu__link" href="./mosmetro-tickets/">Калькулятор стоимости проезда на&nbsp;Московском транспорте</a>
-          </li>
-        </ul>
-      </nav>
-
-
-
-    </header>
-
+        <!-- Дополнительные ссылки
+        <li class="section__item">
+          <a class="section__link" href="https://career.habr.com/novvember">Резюме на Хабр.Карьере</a>
+        </li>
+        <li class="section__item">
+          <a class="section__link" href="...">Резюме на HeadHunter</a>
+        </li>
+      -->
+      </ul>
+    </nav>
 
     <main class="main">
 
       <!-- Заголовок страницы-->
-      <section class="intro page__intro page__content page__content_width_full">
+      <section class="intro page__content page__content_width_full">
         <div class="intro__content page__content">
           <span class="intro__logo">novvember</span>
           <h1 class="intro__title"><span class="intro__title-text">Привет! Я&nbsp;&mdash; Дмитрий</span></h1>
@@ -102,11 +78,24 @@
             </span>
           </p>
         </div>
+      </section>
 
 
-
-
-
+      <!-- Важное -->
+      <section class="section page__content page__section">
+        <h2 class="section__title">Актуальное</h2>
+        <ul class="section__list section__list_direction_column">
+          <li class="section__item"><span class="highlighter">Ищу работу</span>
+          </li>
+          <li class="section__item">Учусь в Яндекс.Практикуме на веб-разработчика
+          </li>
+          <li class="section__item">Читаю <a href="http://learn.javascript.ru">learn.javascript.ru</a>
+          </li>
+          <li class="section__item">В Яндекс.Практикуме сейчас делаю: <a class="section__link section__link_type_project" href="/mesto/">Mesto</a>
+          </li>
+          <li class="section__item">Сам сейчас делаю: <a class="section__link section__link_type_project" href="/mosmetro-tickets/">Калькулятор стоимости проезда на Московском транспорте</a>
+          </li>
+        </ul>
       </section>
 
       <!-- Лента - Раздел с колонками -->

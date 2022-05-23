@@ -40,11 +40,7 @@
 
 
 /* Рассотяние между секциями */
-.page__header {
-  margin-bottom: 3em;
-}
-
-.page__intro {
+.page__section {
   margin-bottom: 3em;
 }
 
@@ -57,12 +53,11 @@
 a {
 	color: inherit;
 	text-decoration: underline silver 1px;
-  transition: opacity .2s, text-decoration-color .2s;
+  transition: text-decoration-color .2s;
 }
 
 a:hover {
 	text-decoration-color: inherit;
-	opacity: .7;
 }
 
 p {
