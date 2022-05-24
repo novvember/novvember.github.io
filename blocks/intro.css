@@ -70,5 +70,25 @@
   background-color: rgba(255, 255, 255, .5);
 }
 
+.intro__menu-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-wrap: wrap;
+  column-gap: 2em;
+  row-gap: .5em;
+  justify-content: center;
+}
+
+.intro__menu-item {
+  background-color: rgba(255, 255, 255, .5);
+  padding: 0 .3em;
+}
+
+.intro__menu-link {
+  text-decoration-style: dashed;
+}
+
 
 
