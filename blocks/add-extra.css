@@ -1,0 +1,13 @@
+.add-extra::after {
+  content: '. . .';
+  display: inline-block;
+  vertical-align: super;
+  font-size: .6em;
+  margin-left: .3em;
+  color: darkgray;
+  transition: color .2s;
+}
+
+.add-extra:hover::after {
+  color: inherit;
+}
