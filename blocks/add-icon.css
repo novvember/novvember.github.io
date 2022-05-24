@@ -12,6 +12,7 @@
 	background-position: center;
 }
 
+
 /* Ссылки */
 .add-icon_type_link::before {
   opacity: .6;
@@ -52,10 +53,6 @@
 
 
 /* Пункты списка, заголовки */
-.add-icon_type_block::before {
-
-}
-
 @media (min-width: 768px) {
   .add-icon_type_block {
     text-indent: -1.3em;
@@ -77,6 +74,3 @@
 .add-icon_type_block_in-progress::before {
   background-image: url(../img/icon__in-progress.gif);
 }
-
-
-

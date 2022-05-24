@@ -1,0 +1,17 @@
+.footer {
+  /* Поля */
+  padding-bottom: 2rem;
+  padding-top: 2rem;
+  /* Выравнивание внутри */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1em;
+  /* Текст внутри */
+  /* font-size: small; */
+  color: darkgray;
+}
+
+.footer__text {
+  text-align: center;
+}
