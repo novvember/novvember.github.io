@@ -1,10 +1,10 @@
 .add-extra::after {
   content: attr(data-content);
   display: inline-block;
-  vertical-align: super;
-  font-size: .6em;
+  vertical-align: 35%;
+  font-size: .7em;
   margin-left: .3em;
-  color: darkgray;
+  color: dimgray;
   transition: color .2s;
   font-family: sans-serif;
 }

@@ -69,10 +69,14 @@ const codewarsId = codewarsLink.href.split('/').reverse()[0];
 setExtraInfo(getCodewarsHonor, codewarsId, codewarsLink);
 
 
+// Количество карточек для пунктов меню
+function getCardsNumber(sectionId) {
+  return document.querySelector(`#${sectionId} ul`).children.length;
+}
 
+const menuLinks = document.querySelectorAll('.intro__menu-link');
 
-
-
-
-
-
+menuLinks.forEach(link => {
+  const id = link.hash.slice(1);
+  setExtraInfo(getCardsNumber, id, link);
+});
