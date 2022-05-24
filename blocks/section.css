@@ -2,6 +2,15 @@
 .section__title {
   margin: 0;
   margin-bottom: .5em;
+  width: fit-content;
+  border-radius: .2em;
+  padding-right: .3em;
+
+  position: sticky;
+  top: .3em;
+  background-color: rgba(255, 255, 255, .1);
+  backdrop-filter: blur(.05em);
+  z-index: 2;
 }
 
 /* Список */

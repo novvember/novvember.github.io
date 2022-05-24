@@ -59,7 +59,6 @@ async function getCodewarsHonor(userId) {
       return new Error(res.status);
     })
     .then(res => {
-      console.log(res);
       return res.honor;
     })
 }
