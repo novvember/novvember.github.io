@@ -22,8 +22,8 @@
 
 .card__title {
   margin: 0;
-  font-size: 1rem;
-  font-weight: bold;
+  /* font-size: 1.2em; */
+  font-weight: normal;
 }
 
 .card__link:hover .card__title::after {

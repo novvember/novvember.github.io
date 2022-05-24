@@ -1,7 +1,7 @@
 .page {
   /* Шрифт для всей страницы */
   font-family: 'Merriweather', serif;
-  line-height: 1.3;
+  line-height: 1.2;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   -webkit-text-size-adjust: 100%;
