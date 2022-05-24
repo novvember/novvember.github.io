@@ -56,12 +56,27 @@
 
 }
 
-.add-icon_type_block_arrow-right::before {
-  background-image: url(../img/icon__arrow-right.svg);
-}
-
 @media (min-width: 768px) {
   .add-icon_type_block {
     text-indent: -1.3em;
   }
 }
+
+.add-icon_type_block_arrow-right::before {
+  background-image: url(../img/icon__arrow-right.svg);
+}
+
+.add-icon_type_block_study::before {
+  background-image: url(../img/study.svg);
+}
+
+.add-icon_type_block_code::before {
+  background-image: url(../img/code.svg);
+}
+
+.add-icon_type_block_in-progress::before {
+  background-image: url(../img/icon__in-progress.gif);
+}
+
+
+

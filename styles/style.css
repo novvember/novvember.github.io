@@ -1,6 +1,6 @@
 
 
-
+/*
 @media (min-width: 768px) {
   .column__icon-element {
     text-indent: -1.3em;
@@ -29,7 +29,7 @@
 
 .column__icon-element_icon_in-progress::before {
   background-image: url('../img/icon__in-progress.gif');
-}
+} */
 
 
 
