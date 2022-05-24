@@ -1,11 +1,12 @@
 .add-extra::after {
-  content: '. . .';
+  content: attr(data-content);
   display: inline-block;
   vertical-align: super;
   font-size: .6em;
   margin-left: .3em;
   color: darkgray;
   transition: color .2s;
+  font-family: sans-serif;
 }
 
 .add-extra:hover::after {
