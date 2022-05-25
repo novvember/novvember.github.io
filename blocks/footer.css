@@ -8,8 +8,7 @@
   align-items: center;
   gap: 1em;
   /* Текст внутри */
-  /* font-size: small; */
-  color: darkgray;
+  color: dimgray;
 }
 
 .footer__text {

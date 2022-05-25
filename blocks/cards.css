@@ -1,8 +1,16 @@
 .cards {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  gap: 3em;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  column-gap: 2em;
+  row-gap: 2em;
   margin: 0;
   padding: 0;
   list-style: none;
+}
+
+@media (min-width: 769px) {
+  .cards {
+    column-gap: 3em;;
+  }
+
 }
