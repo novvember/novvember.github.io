@@ -57,17 +57,12 @@
 
 
 .card_important {
-  margin: -.5em;
-  padding: .5em;
-  border-radius: .7em;
-  overflow: hidden;
-  outline: 1px solid #eee;
+  border-radius: .2em;
+  outline: 4px solid gold;
+  outline-offset: .5em;
 }
 
 .card_important .add-icon {
   text-indent: 0;
 }
 
-.card_important .card__title span {
-  background-color: gold;
-}
