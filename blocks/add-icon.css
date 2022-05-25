@@ -61,6 +61,7 @@
 
 .add-icon_type_block_arrow-right::before {
   background-image: url(../img/icon__arrow-right.svg);
+  opacity: .7;
 }
 
 .add-icon_type_block_new::before {
