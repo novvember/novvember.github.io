@@ -1,20 +1,8 @@
-/**
- * Получает и устанавливает допинформацию для ссылок
- * @param {function} func - Функция, которая получает информацию
- * @param {*} userId - Параметр пользователя для передачи функции
- * @param {*} element - Элемент, в который нужно добавить ниформацию
- */
-async function setExtraInfo(func, userId, element) {
-  const dataProperty = 'content';
-  element.dataset[dataProperty] = '...';
+import ExtraInfo from '../components/ExtraInfo.js';
 
-  try {
-    const data = await func(userId);
-    element.dataset[dataProperty] = data;
-  } catch (error) {
-    console.log(error);
-  }
-}
+/**
+ * Получение доп информации из профиля пользователя
+ */
 
 // Github
 async function getGithubRepsNumber(userId) {
@@ -25,14 +13,13 @@ async function getGithubRepsNumber(userId) {
     })
     .then(res => {
       return res.public_repos;
-    })
+    });
 }
 
 const githubLink = document.querySelector('.add-extra_type_github');
 const githubId = githubLink.href.split('/').reverse()[0];
-
-setExtraInfo(getGithubRepsNumber, githubId, githubLink);
-
+const githubExtra = new ExtraInfo(githubLink, githubId, getGithubRepsNumber);
+githubExtra.set();
 
 // Stackoverflow
 async function getStackoverflowReputation(userId) {
@@ -48,8 +35,8 @@ async function getStackoverflowReputation(userId) {
 
 const stackoverflowLink = document.querySelector('.add-extra_type_stackoverflow');
 const stackoverflowId = stackoverflowLink.href.split('/').reverse()[0];
-
-setExtraInfo(getStackoverflowReputation, stackoverflowId, stackoverflowLink);
+const stackoverflowExtra = new ExtraInfo(stackoverflowLink, stackoverflowId, getStackoverflowReputation);
+stackoverflowExtra.set();
 
 // Codewars
 async function getCodewarsHonor(userId) {
@@ -65,9 +52,8 @@ async function getCodewarsHonor(userId) {
 
 const codewarsLink = document.querySelector('.add-extra_type_codewars');
 const codewarsId = codewarsLink.href.split('/').reverse()[0];
-
-setExtraInfo(getCodewarsHonor, codewarsId, codewarsLink);
-
+const codewarsExtra = new ExtraInfo(codewarsLink, codewarsId, getCodewarsHonor);
+codewarsExtra.set();
 
 // Количество карточек для пунктов меню
 function getCardsNumber(sectionId) {
@@ -78,5 +64,6 @@ const menuLinks = document.querySelectorAll('.intro__menu-link');
 
 menuLinks.forEach(link => {
   const id = link.hash.slice(1);
-  setExtraInfo(getCardsNumber, id, link);
+  const extra = new ExtraInfo(link, id, getCardsNumber);
+  extra.set();
 });
