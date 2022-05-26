@@ -71,7 +71,8 @@
   padding: var(--bid-size-padding);
   border-radius: .5em;
   overflow: hidden;
-  background-color: #eee;
+  background-color: #f2f3f4;
+  outline: 1px solid #ddd;
 }
 
 .card_important .add-icon {
