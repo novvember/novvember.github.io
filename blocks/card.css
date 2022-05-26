@@ -1,6 +1,7 @@
 .card {
   position: relative;
   --image-height: 10rem;
+  --bid-size-padding: .5em;
 }
 
 .card__image {
@@ -14,12 +15,12 @@
   transition: all .3s;
 }
 
-.card__image:hover {
-  height: calc(100% + 1em);
-  width: calc(100% + 1em);
-  top: -.5em;
-  left: -.5em;
-  border-radius: .7em;
+.card .card__image:hover {
+  height: calc(100% + 2 * var(--bid-size-padding));
+  width: calc(100% + 2 * var(--bid-size-padding));
+  top: calc(-1 * var(--bid-size-padding));
+  left: calc(-1 * var(--bid-size-padding));
+  border-radius: .5em;
 }
 
 .card__link {
@@ -66,12 +67,19 @@
 
 
 .card_important {
-  border-radius: .2em;
-  outline: 4px solid gold;
-  outline-offset: .5em;
+  margin: calc(-1 * var(--bid-size-padding));
+  padding: var(--bid-size-padding);
+  border-radius: .5em;
+  overflow: hidden;
+  background-color: #eee;
 }
 
 .card_important .add-icon {
   text-indent: 0;
 }
 
+.card_important .card__image {
+  width: calc(100% - 2 * var(--bid-size-padding));
+  left: var(--bid-size-padding);
+  top: var(--bid-size-padding);
+}
