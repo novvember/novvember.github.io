@@ -1,4 +1,24 @@
+import initialCards from '../utils/initialCards.js';
+
 import ExtraInfo from '../components/ExtraInfo.js';
+import Section from '../components/Section.js';
+import Card from '../components/Card.js';
+
+/**
+ * Генерация карточек
+ */
+
+const doneList = document.querySelector('#done .cards');
+
+const doneSection = new Section(
+  initialCards.filter(card => card.sectionId === 'done'),
+  doneList,
+  function (data) {
+    const card = new Card(data, '.template__card');
+    return card.render();
+});
+// doneSection.renderItems();
+
 
 /**
  * Получение доп информации из профиля пользователя
