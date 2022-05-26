@@ -8,7 +8,7 @@
 }
 
 .card:hover .card__image {
-  opacity: .9;
+  opacity: .95;
 }
 
 .card__image_size_l {
@@ -53,15 +53,23 @@
   width: fit-content;
 }
 
-
+/* card_important */
 .card_important {
   margin: -.5em;
   padding: .5em;
   border-radius: .5em;
-  box-shadow: 0 0 .9em rgba(0, 0, 0, .05);
+  box-shadow: 0 0 .9em rgba(0, 0, 0, .1);
+  transition: box-shadow .2s;
+}
+
+.card_important:hover {
+  box-shadow: 0 0 .9em rgba(0, 0, 0, .2);
+}
+
+.card_important .card__title span {
+  background-color: gold;
 }
 
 .card_important .add-icon {
   text-indent: 0;
 }
-
