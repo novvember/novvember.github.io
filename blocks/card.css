@@ -1,6 +1,6 @@
 .card {
   position: relative;
-  --image-height: 6rem;
+  --image-height: 10rem;
 }
 
 .card__image {
@@ -10,18 +10,27 @@
   width: 100%;
   height: var(--image-height);
   object-fit: cover;
-  z-index: -1;
+  border-radius: .3em;
+  transition: all .3s;
+}
+
+.card__image:hover {
+  height: calc(100% + 1em);
+  width: calc(100% + 1em);
+  top: -.5em;
+  left: -.5em;
+  border-radius: .7em;
 }
 
 .card__link {
   display: block;
-  padding-top: var(--image-height);
+  margin-top: var(--image-height);
 }
 
 .card__title {
   margin: 0;
   font-weight: normal;
-  margin-top: .3em;
+  padding-top: .3em;
   margin-bottom: .3em;
 }
 
