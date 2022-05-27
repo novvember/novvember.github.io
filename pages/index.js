@@ -1,4 +1,4 @@
-import initialCards from '../utils/initialCards.js';
+import {doneCards, studyCards, todoCards} from '../utils/initialCards.js';
 
 import ExtraInfo from '../components/ExtraInfo.js';
 import Section from '../components/Section.js';
@@ -11,7 +11,7 @@ import Card from '../components/Card.js';
 const doneList = document.querySelector('#done .cards');
 
 const doneSection = new Section(
-  initialCards.filter(card => card.sectionId === 'done'),
+  doneCards,
   doneList,
   function (data) {
     const card = new Card(data, '.template__card');

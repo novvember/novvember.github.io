@@ -6,7 +6,7 @@ export default class Card {
     this._date = cardData.date;
     this._link = cardData.link;
     this._image = cardData.image;
-    this._sectionId = cardData.sectionId;
+
     this._isInProgress = cardData.isInProgress;
     this._hasBigImage = cardData.hasBigImage;
     this._isImportant = cardData.isImportant;
@@ -40,13 +40,13 @@ export default class Card {
     const title = this._element.querySelector('.card__title');
     if (this._isInProgress) title.classList.add('add-icon', 'add-icon_type_block', 'add-icon_type_block_in-progress');
     const titleText = title.querySelector('span');
-    titleText.textContent = this._title;
+    titleText.innerHTML = this._title;
 
     const text = this._element.querySelector('.card__text');
-    text.textContent = this._text;
+    text.innerHTML = this._text;
 
     const date = this._element.querySelector('.card__date');
-    date.textContent = this._date;
+    date.innerHTML = this._date;
 
     return this._element;
   }

@@ -8,7 +8,7 @@ export default class Section {
 
   renderItems() {
     this._itemsData.forEach(itemData => {
-      this._containerElement.prepend( this._handleRenderItem(itemData) );
+      this._containerElement.append( this._handleRenderItem(itemData) );
     });
   }
 }
