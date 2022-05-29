@@ -5,11 +5,19 @@
   90% {opacity: 1;}
 }
 
+@keyframes move-slowly {
+  0% {background-position: 0 0px;}
+  100% {background-position: 0 256px;}
+}
+
 .intro {
   display: flex;
   flex-direction: column;
   align-items: center;
   background-image: url(../img/curtain-pattern.svg);
+  background-image: url(../img/pattern.png);
+  background-size: 174px 256px;
+  animation: move-slowly 40s infinite linear;
 }
 
 .intro__content {
