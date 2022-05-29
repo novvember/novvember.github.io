@@ -17,7 +17,19 @@ const doneSection = new Section(
     const card = new Card(data, '.template__card');
     return card.render();
 });
-// doneSection.renderItems();
+doneSection.renderItems();
+
+
+const studyList = document.querySelector('#study .cards');
+
+const studySection = new Section(
+  studyCards,
+  studyList,
+  function (data) {
+    const card = new Card(data, '.template__card');
+    return card.render();
+});
+studySection.renderItems();
 
 
 /**
