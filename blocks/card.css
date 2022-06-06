@@ -14,6 +14,7 @@
 .card__image_size_l {
   height: auto;
   aspect-ratio: 4 / 3;
+  object-position: top center;
 }
 
 .card__title {
