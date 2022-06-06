@@ -39,10 +39,6 @@
 	background-image: url(../img/icon__stackoverflow.svg);
 }
 
-.add-icon_type_link[href*="habr.com"]::before {
-	background-image: url(../img/icon__habr.svg);
-}
-
 .add-icon_type_link[href*="codewars.com"]::before {
 	background-image: url(../img/icon__codewars.svg);
 }

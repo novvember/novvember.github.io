@@ -7,10 +7,6 @@
   transition: opacity .2s;
 }
 
-.card:hover .card__image {
-  opacity: .95;
-}
-
 .card__image_size_l {
   height: auto;
   aspect-ratio: 4 / 3;
