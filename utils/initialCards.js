@@ -1,5 +1,16 @@
 export const doneCards = [
   {
+    title: 'Yet Another Sorting Visualization',
+    text: 'Визуализация основных алгоритмов сортировки. Проект был предложен комендой Практикума, занимающейся решением задач в&nbsp;Codewars. Интересно было попробовать и&nbsp;написать свое маленькое приложение, с&nbsp;градиентами и&nbsp;Реактом.',
+    date: 'июнь 2022 — сейчас',
+    link: '/yet-another-sorting-visualization/',
+    image: './img/card__sorting.png',
+
+    isInProgress: true,
+    hasBigImage: true,
+    isImportant: true,
+  },
+  {
     title: 'Лендинг фестиваля Любимовка',
     text: 'Еще один лендинг в&nbsp;рамках &laquo;Практики реальных проектов&raquo; от&nbsp;Практикума&nbsp;&mdash; в&nbsp;дополнение к&nbsp;обязательной учебной программе. Командой из&nbsp;4&nbsp;человек разрабатываем лендинг для театрального фестиваля. Моя роль: тим-лид + разработка части блоков.',
     date: 'июнь 2022 — сейчас',
