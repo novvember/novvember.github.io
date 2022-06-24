@@ -52,7 +52,7 @@ export const doneCards = [
 
     isInProgress: false,
     hasBigImage: true,
-    isImportant: true,
+    isImportant: false,
   },
   {
     title: 'Mesto',
