@@ -20,7 +20,7 @@
   font-weight: normal;
 }
 
-.card__link:hover .card__title::after {
+.card__link .card__title::after {
   content: '';
   display: inline-block;
   width: .8em;
