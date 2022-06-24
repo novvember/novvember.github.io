@@ -12,12 +12,12 @@ export const doneCards = [
   },
   {
     title: 'Лендинг фестиваля Любимовка',
-    text: 'Еще один лендинг в&nbsp;рамках &laquo;Практики реальных проектов&raquo; от&nbsp;Практикума&nbsp;&mdash; в&nbsp;дополнение к&nbsp;обязательной учебной программе. Командой из&nbsp;4&nbsp;человек разрабатываем лендинг для театрального фестиваля. Моя роль: тим-лид + разработка части блоков.',
-    date: 'июнь 2022 — сейчас',
+    text: 'Еще один лендинг в&nbsp;рамках &laquo;Практики реальных проектов&raquo; от&nbsp;Практикума&nbsp;&mdash; в&nbsp;дополнение к&nbsp;обязательной учебной программе. Командой из&nbsp;5&nbsp;человек разработали лендинг для театрального фестиваля на HTML + CSS + JS (+ Swiper.js). Моя роль: тим-лид + разработка большей части блоков.',
+    date: 'июнь 2022',
     link: '/lubimovka-landing/',
     image: './img/card__lubimovka.png',
 
-    isInProgress: true,
+    isInProgress: false,
     hasBigImage: true,
     isImportant: true,
   },
