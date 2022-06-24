@@ -136,6 +136,17 @@ export const doneCards = [
 
 export const studyCards = [
   {
+    title: 'Документация по React.js',
+    text: 'Официальная документация с&nbsp;примерами, туториалом и&nbsp;разбором особенностей работы с&nbsp;React.js',
+    date: 'июнь 2022 — сейчас',
+    link: 'https://reactjs.org/docs/getting-started.html',
+    image: './img/card__react.png',
+
+    isInProgress: true,
+    hasBigImage: false,
+    isImportant: false,
+  },
+  {
     title: 'Видеокурс &laquo;ООП в&nbsp;JavaScript&raquo;',
     text: 'Видеокурс по&nbsp;совету наставника в&nbsp;Практикуме. На&nbsp;деле достаточно базовый и&nbsp;ничего нового мне не&nbsp;дал.',
     date: 'апрель 2022',
