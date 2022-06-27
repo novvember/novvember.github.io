@@ -1,4 +1,15 @@
 export const doneCards = [
+    {
+    title: 'Mesto (версия с авторизацией и регистрацией)',
+    text: 'Продолжение большого учебного проекта в&nbsp;Практикуме: добавляется новая функциональность, связанная с бэкендом.',
+    date: 'июнь 2022 — сейчас',
+    link: '/mesto-react/',
+    image: './img/card__mesto.png',
+
+    isInProgress: true,
+    hasBigImage: true,
+    isImportant: true,
+  },
   {
     title: 'Yet Another Sorting Visualization',
     text: 'Визуализация основных алгоритмов сортировки. Проект был предложен комендой Практикума, занимающейся решением задач в&nbsp;Codewars. Интересно было попробовать и&nbsp;написать свое маленькое приложение, с&nbsp;градиентами и&nbsp;Реактом.',
@@ -24,13 +35,13 @@ export const doneCards = [
   {
     title: 'Mesto (версия на React.js)',
     text: 'Продолжение большого учебного проекта в&nbsp;Практикуме: с&nbsp;начала изучения React.js сервис переписан, будет добавлена новая функциальность.',
-    date: 'май 2022 — сейчас',
+    date: 'май — июнь 2022',
     link: '/mesto-react/',
     image: './img/card__mesto.png',
 
-    isInProgress: true,
+    isInProgress: false,
     hasBigImage: true,
-    isImportant: true,
+    isImportant: false,
   },
   {
     title: 'Калькулятор стоимости проезда на&nbsp;Московском транспорте 2.0',
