@@ -3,7 +3,7 @@ export const doneCards = [
     title: 'Mesto (версия с авторизацией и регистрацией)',
     text: 'Продолжение большого учебного проекта в&nbsp;Практикуме: добавляется новая функциональность, связанная с бэкендом.',
     date: 'июнь 2022 — сейчас',
-    link: '/mesto-react/',
+    link: '/react-mesto-auth/',
     image: './img/card__mesto.png',
 
     isInProgress: true,
