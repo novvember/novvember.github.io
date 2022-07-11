@@ -147,15 +147,26 @@ export const doneCards = [
 
 export const studyCards = [
   {
+    title: 'Курс Learn React Router 6',
+    text: 'Видео-курс от&nbsp;freeCodeCamp по&nbsp;использованию основных возможностей библиотеки React Router&nbsp;6.',
+    date: 'июль 2022',
+    link: 'https://www.freecodecamp.org/news/learn-react-router-6/',
+    image: './img/card__reactrouter6.png',
+
+    isInProgress: false,
+    hasBigImage: false,
+    isImportant: false,
+  },
+  {
     title: 'Документация по React.js',
-    text: 'Официальная документация с&nbsp;примерами, туториалом и&nbsp;разбором особенностей работы с&nbsp;React.js',
+    text: 'Официальная документация с&nbsp;примерами, туториалом и&nbsp;разбором особенностей работы с&nbsp;React.js.',
     date: 'июнь 2022 — сейчас',
     link: 'https://reactjs.org/docs/getting-started.html',
     image: './img/card__react.png',
 
     isInProgress: true,
     hasBigImage: false,
-    isImportant: false,
+    isImportant: true,
   },
   {
     title: 'Видеокурс &laquo;ООП в&nbsp;JavaScript&raquo;',
