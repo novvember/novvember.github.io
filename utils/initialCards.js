@@ -159,12 +159,12 @@ export const studyCards = [
   },
   {
     title: 'Документация по React.js',
-    text: 'Официальная документация с&nbsp;примерами, туториалом и&nbsp;разбором особенностей работы с&nbsp;React.js.',
-    date: 'июнь 2022 — сейчас',
+    text: 'Официальная документация с&nbsp;примерами, туториалом и&nbsp;разбором особенностей работы и внутреннего устройства React.js.',
+    date: 'июнь&nbsp;&mdash; июль 2022',
     link: 'https://reactjs.org/docs/getting-started.html',
     image: './img/card__react.png',
 
-    isInProgress: true,
+    isInProgress: false,
     hasBigImage: false,
     isImportant: true,
   },
