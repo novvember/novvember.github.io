@@ -1,14 +1,25 @@
 export const doneCards = [
-    {
-    title: 'Mesto (версия с авторизацией и регистрацией)',
-    text: 'Продолжение большого учебного проекта в&nbsp;Практикуме: добавляется новая функциональность, связанная с бэкендом.',
-    date: 'июнь 2022 — сейчас',
-    link: '/react-mesto-auth/',
+  {
+    title: 'Mesto (версия с бекэндом)',
+    text: 'Продолжение большого учебного проекта в&nbsp;Практикуме: добавляется новая функциональность, связанная с бэкендом на express.js и MongoDB.',
+    date: 'июль 2022&nbsp;&mdash; сейчас',
+    link: 'https://github.com/novvember/express-mesto-gha',
     image: './img/card__mesto.png',
 
     isInProgress: true,
     hasBigImage: true,
-    isImportant: true,
+    isImportant: false,
+  },
+  {
+    title: 'Mesto (версия с авторизацией и регистрацией)',
+    text: 'Продолжение большого учебного проекта в&nbsp;Практикуме: добавляется новая функциональность, связанная с запросами к API сервера.',
+    date: 'июнь&nbsp;&mdash; июль 2022',
+    link: '/react-mesto-auth/',
+    image: './img/card__mesto.png',
+
+    isInProgress: false,
+    hasBigImage: true,
+    isImportant: false,
   },
   {
     title: 'Yet Another Sorting Visualization',
@@ -146,6 +157,17 @@ export const doneCards = [
 
 
 export const studyCards = [
+  {
+    title: 'Открытый лекторий от Академии Яндекса',
+    text: 'Большая серия бесплатных онлайн-лекций от экспертов Яндекса по разработке интерфейсов, а также решение бизнес-кейсов. Программа расчитана на студентов и начинающих специалистов.',
+    date: 'июль 2022&nbsp;&mdash; сейчас',
+    link: 'https://academy.yandex.ru/lp/open-lectures',
+    image: './img/card__open-lectures-yandex.png',
+
+    isInProgress: true,
+    hasBigImage: false,
+    isImportant: false,
+  },
   {
     title: 'Курс Learn React Router 6',
     text: 'Видео-курс от&nbsp;freeCodeCamp по&nbsp;использованию основных возможностей библиотеки React Router&nbsp;6.',
