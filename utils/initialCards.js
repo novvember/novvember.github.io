@@ -226,11 +226,11 @@ export const studyCards = [
   {
     title: 'Учебник learn.javascript.ru',
     text: 'Не&nbsp;зря такой всем известный и&nbsp;максимально упоминаемый учебник по&nbsp;JavaScript: очень интересно и&nbsp;подробно расписано, многие темы именно там хорошо понял.',
-    date: 'февраль 2022 — сейчас',
+    date: 'февраль — июль 2022',
     link: 'https://learn.javascript.ru/',
     image: './img/card__learn-javascript-ru.png',
 
-    isInProgress: true,
+    isInProgress: false,
     hasBigImage: false,
     isImportant: true,
   },
