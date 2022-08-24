@@ -1,12 +1,23 @@
 export const doneCards = [
+    {
+    title: 'Mesto (версия с фронтендом и бекэндом)',
+    text: 'Итоговая часть большого учебного проекта в&nbsp;Практикуме: объеденины части фронтенда и бэекенда на одном сервере в Яндекс.Облаке',
+    date: 'август 2022',
+    link: 'https://mesto.novvember.nomoredomains.sbs',
+    image: './img/card__mesto.png',
+
+    isInProgress: false,
+    hasBigImage: true,
+    isImportant: true,
+  },
   {
-    title: 'Mesto (версия с бекэндом)',
+    title: 'Mesto (версия для сервера)',
     text: 'Продолжение большого учебного проекта в&nbsp;Практикуме: добавляется новая функциональность, связанная с бэкендом на express.js и MongoDB.',
-    date: 'июль 2022&nbsp;&mdash; сейчас',
+    date: 'июль 2022',
     link: 'https://github.com/novvember/express-mesto-gha',
     image: './img/card__mesto.png',
 
-    isInProgress: true,
+    isInProgress: false,
     hasBigImage: true,
     isImportant: false,
   },
