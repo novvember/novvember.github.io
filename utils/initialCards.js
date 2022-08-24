@@ -1,7 +1,7 @@
 export const doneCards = [
     {
-    title: 'Mesto (версия с фронтендом и бекэндом)',
-    text: 'Итоговая часть большого учебного проекта в&nbsp;Практикуме: объеденины части фронтенда и бэекенда на одном сервере в Яндекс.Облаке',
+    title: 'Mesto (версия с&nbsp;фронтендом и&nbsp;бекэндом)',
+    text: 'Итоговая часть большого учебного проекта в&nbsp;Практикуме: объеденины части фронтенда и&nbsp;бэекенда на&nbsp;одном сервере в&nbsp;Яндекс.Облаке.',
     date: 'август 2022',
     link: 'https://mesto.novvember.nomoredomains.sbs',
     image: './img/card__mesto.png',
@@ -22,8 +22,8 @@ export const doneCards = [
     isImportant: false,
   },
   {
-    title: 'Mesto (версия с авторизацией и регистрацией)',
-    text: 'Продолжение большого учебного проекта в&nbsp;Практикуме: добавляется новая функциональность, связанная с запросами к API сервера.',
+    title: 'Mesto (версия с&nbsp;авторизацией и&nbsp;регистрацией)',
+    text: 'Продолжение большого учебного проекта в&nbsp;Практикуме: добавляется новая функциональность, связанная с&nbsp;запросами к&nbsp;API сервера.',
     date: 'июнь&nbsp;&mdash; июль 2022',
     link: '/react-mesto-auth/',
     image: './img/card__mesto.png',
@@ -45,7 +45,7 @@ export const doneCards = [
   },
   {
     title: 'Лендинг фестиваля Любимовка',
-    text: 'Еще один лендинг в&nbsp;рамках &laquo;Практики реальных проектов&raquo; от&nbsp;Практикума&nbsp;&mdash; в&nbsp;дополнение к&nbsp;обязательной учебной программе. Командой из&nbsp;5&nbsp;человек разработали лендинг для театрального фестиваля на HTML + CSS + JS (+ Swiper.js). Моя роль: тим-лид + разработка большей части блоков.',
+    text: 'Еще один лендинг в&nbsp;рамках &laquo;Практики реальных проектов&raquo; от&nbsp;Практикума&nbsp;&mdash; в&nbsp;дополнение к&nbsp;обязательной учебной программе. Командой из&nbsp;5&nbsp;человек разработали лендинг для театрального фестиваля на&nbsp;HTML + CSS + JS (+ Swiper.js). Моя роль: тим-лид + разработка большей части блоков.',
     date: 'июнь 2022',
     link: '/lubimovka-landing/',
     image: './img/card__lubimovka.png',
@@ -55,7 +55,7 @@ export const doneCards = [
     isImportant: true,
   },
   {
-    title: 'Mesto (версия на React.js)',
+    title: 'Mesto (версия на&nbsp;React.js)',
     text: 'Продолжение большого учебного проекта в&nbsp;Практикуме: с&nbsp;начала изучения React.js сервис переписан, будет добавлена новая функциальность.',
     date: 'май — июнь 2022',
     link: '/mesto-react/',
@@ -122,7 +122,7 @@ export const doneCards = [
   },
   {
     title: 'Научиться учиться',
-    text: 'Одностроничный сайт&nbsp;&mdash; первая самостоятельная работа по&nbsp;спринтам&nbsp;1-2 в Яндекс.Практикуме (то&nbsp;есть примерно за&nbsp;первый месяц обучения). Верстка с&nbsp;применением флексбокса, позиционирования, небольшой анимации и&nbsp;БЭМ, но&nbsp;пока без адаптивной верстки.',
+    text: 'Одностроничный сайт&nbsp;&mdash; первая самостоятельная работа по&nbsp;спринтам 1-2&nbsp;в Яндекс.Практикуме (то&nbsp;есть примерно за&nbsp;первый месяц обучения). Верстка с&nbsp;применением флексбокса, позиционирования, небольшой анимации и&nbsp;БЭМ, но&nbsp;пока без адаптивной верстки.',
     date: 'январь 2022',
     link: '/how-to-learn/',
     image: './img/card__how-to-learn.png',
@@ -169,8 +169,19 @@ export const doneCards = [
 
 export const studyCards = [
   {
-    title: 'Подготовка к алгоритмическому собеседованию',
-    text: 'Курс от Яндекс.Практикума, совмещающий базовую информацию об алгоритмах и структурах данных, а также рекомендации по прохождению алгоритмических собеседований при приеме на работу.',
+    title: 'Адитья Бхаргава &laquo;Грокаем алгоритмы&raquo;',
+    text: 'Научно-популярная книжка с&nbsp;введением в&nbsp;&laquo;Алгоритмы и&nbsp;структуры данных&raquo;. Больше популярная, чем научная, но&nbsp;всё равно интересно.',
+    date: 'август 2022',
+    link: 'https://www.piter.com/collection/best/product/grokaem-algoritmy-illyustrirovannoe-posobie-dlya-programmistov-i-lyubopytstvuyuschih-2',
+    image: './img/card__grokking.gif',
+
+    isInProgress: false,
+    hasBigImage: false,
+    isImportant: false,
+  },
+  {
+    title: 'Подготовка к&nbsp;алгоритмическому собеседованию',
+    text: 'Курс от&nbsp;Яндекс.Практикума, совмещающий базовую информацию об&nbsp;алгоритмах и&nbsp;структурах данных, а&nbsp;также рекомендации по&nbsp;прохождению алгоритмических собеседований при приеме на&nbsp;работу.',
     date: 'июль 2022&nbsp;&mdash; сейчас',
     link: 'https://practicum.yandex.ru/algorithms-interview/',
     image: './img/card__algorithms-interview.png',
@@ -180,8 +191,8 @@ export const studyCards = [
     isImportant: false,
   },
   {
-    title: 'Открытый лекторий от Академии Яндекса',
-    text: 'Большая серия бесплатных онлайн-лекций от экспертов Яндекса по разработке интерфейсов, а также решение бизнес-кейсов. Программа расчитана на студентов и начинающих специалистов.',
+    title: 'Открытый лекторий от&nbsp;Академии Яндекса',
+    text: 'Большая серия бесплатных онлайн-лекций от&nbsp;экспертов Яндекса по&nbsp;разработке интерфейсов, а&nbsp;также решение бизнес-кейсов. Программа расчитана на&nbsp;студентов и&nbsp;начинающих специалистов.',
     date: 'июль 2022&nbsp;&mdash; сейчас',
     link: 'https://academy.yandex.ru/lp/open-lectures',
     image: './img/card__open-lectures-yandex.png',
@@ -191,7 +202,7 @@ export const studyCards = [
     isImportant: false,
   },
   {
-    title: 'Курс Learn React Router 6',
+    title: 'Курс Learn React Router&nbsp;6',
     text: 'Видео-курс от&nbsp;freeCodeCamp по&nbsp;использованию основных возможностей библиотеки React Router&nbsp;6.',
     date: 'июль 2022',
     link: 'https://www.freecodecamp.org/news/learn-react-router-6/',
@@ -202,8 +213,8 @@ export const studyCards = [
     isImportant: false,
   },
   {
-    title: 'Документация по React.js',
-    text: 'Официальная документация с&nbsp;примерами, туториалом и&nbsp;разбором особенностей работы и внутреннего устройства React.js.',
+    title: 'Документация по&nbsp;React.js',
+    text: 'Официальная документация с&nbsp;примерами, туториалом и&nbsp;разбором особенностей работы и&nbsp;внутреннего устройства React.js.',
     date: 'июнь&nbsp;&mdash; июль 2022',
     link: 'https://reactjs.org/docs/getting-started.html',
     image: './img/card__react.png',
@@ -225,7 +236,7 @@ export const studyCards = [
   },
   {
     title: 'Codewars',
-    text: 'Набор задач на&nbsp;JavaScript в&nbsp;игровой форме. Простые задачи хочется решить красиво. Сложные&nbsp;&mdash; просто решить (иногда весь день уходит). Очень сложные&nbsp;&mdash; научиться понимать, как такое решать. Стараюсь не забрасывать и регулярно заходить и делать.',
+    text: 'Набор задач на&nbsp;JavaScript в&nbsp;игровой форме. Простые задачи хочется решить красиво. Сложные&nbsp;&mdash; просто решить (иногда весь день уходит). Очень сложные&nbsp;&mdash; научиться понимать, как такое решать. Стараюсь не&nbsp;забрасывать и&nbsp;регулярно заходить и&nbsp;делать.',
     date: 'с марта 2022',
     link: 'https://www.codewars.com/users/novvember',
     image: './img/card__codewars.png',
@@ -247,7 +258,7 @@ export const studyCards = [
   },
   {
     title: 'Курс по&nbsp;основам командной строки',
-    text: 'Курс от Hexlet по базовой работе с bash в командной строке UNIX-системах.',
+    text: 'Курс от&nbsp;Hexlet по&nbsp;базовой работе с&nbsp;bash в&nbsp;командной строке UNIX-системах.',
     date: 'февраль 2022',
     link: 'https://ru.hexlet.io/courses/cli-basics',
     image: './img/card__hexlet-cli-basics.webp',
