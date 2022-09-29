@@ -1,0 +1,29 @@
+.checkbox {
+  cursor: pointer;
+  transition: opacity 0.3s;
+}
+
+.checkbox:hover {
+  opacity: 0.8;
+}
+
+/* Скрытие системного чекбокса */
+.checkbox__system-checkbox {
+  position: absolute;
+  height: 1px;
+  width: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+}
+
+/* Надпись */
+.checkbox__label {
+  text-decoration: underline 1px dashed silver;
+  text-underline-offset: 0.2em;
+  padding-block: 0.5em;
+  transition: text-decoration-color 0.3s;
+}
+
+.checkbox__label:hover {
+  text-decoration-color: inherit;
+}

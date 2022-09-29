@@ -2,34 +2,36 @@ import './Timeline.css';
 import { doneCards, studyCards, todoCards } from '../../utils/cardsData';
 import { useState } from 'react';
 import Cards from '../Cards/Cards';
+import Filter from '../Filter/Filter';
 
 function Timeline() {
-  const [onlyImportant, setOnlyImportant] = useState(false);
+  const [filterValues, setFilterValues] = useState({ onlyImportant: false });
 
-  function handleInputChange(event) {
-    setOnlyImportant((state) => !state);
+  function handleFilterChange(event) {
+    const input = event.target;
+    const name = input.name;
+    const value = input.type === 'checkbox' ? input.checked : input.value;
+    setFilterValues((state) => ({ ...state, [name]: value }));
   }
 
   return (
     <main className="timeline">
-      <div className="timeline__filter">
-        <input
-          type="checkbox"
-          checked={onlyImportant}
-          onChange={handleInputChange}
-        />
-      </div>
-      <Cards title="Сделал" cards={doneCards} onlyImportant={onlyImportant} />
+      <Filter values={filterValues} onChange={handleFilterChange} />
+      <Cards
+        title="Сделал"
+        cards={doneCards}
+        onlyImportant={filterValues.onlyImportant}
+      />
       <Cards
         title="Учусь"
         cards={studyCards}
-        onlyImportant={onlyImportant}
+        onlyImportant={filterValues.onlyImportant}
         type="base"
       />
       <Cards
         title="Хочу сделать"
         cards={todoCards}
-        onlyImportant={onlyImportant}
+        // onlyImportant={filterValues.onlyImportant}
         type="no-image"
       />
     </main>
