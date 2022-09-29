@@ -1,7 +1,7 @@
 import Card from '../Card/Card';
 import './Cards.css';
 
-function Cards({ title, cards, onlyImportant = false, isBaseType = false }) {
+function Cards({ title, cards, onlyImportant = false, type }) {
   return (
     <section className="cards">
       <h2 className="cards__title">{title}</h2>
@@ -22,7 +22,7 @@ function Cards({ title, cards, onlyImportant = false, isBaseType = false }) {
                 time={card.date}
                 isActive={card.isInProgress}
                 isImportant={card.isImportant}
-                isBaseType={isBaseType}
+                type={type}
               />
             );
           })}

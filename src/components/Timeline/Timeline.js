@@ -1,5 +1,5 @@
 import './Timeline.css';
-import { doneCards, studyCards } from '../../utils/cardsData';
+import { doneCards, studyCards, todoCards } from '../../utils/cardsData';
 import { useState } from 'react';
 import Cards from '../Cards/Cards';
 
@@ -24,7 +24,13 @@ function Timeline() {
         title="Учусь"
         cards={studyCards}
         onlyImportant={onlyImportant}
-        isBaseType
+        type="base"
+      />
+      <Cards
+        title="Хочу сделать"
+        cards={todoCards}
+        onlyImportant={onlyImportant}
+        type="no-image"
       />
     </main>
   );
