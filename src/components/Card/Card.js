@@ -1,9 +1,18 @@
+import classNames from 'classnames';
 import './Card.css';
 
-function Card({ title, text, image, time, link }) {
+function Card({
+  title,
+  text,
+  image,
+  time,
+  link,
+  isImportant = false,
+  isActive = false,
+}) {
   return (
-    <li className="card">
-      <a href="555" className="card__link">
+    <li className={classNames('card', { card_important: isImportant })}>
+      <a href={link} className="card__link">
         <div className="card__image-container">
           <img
             className="card__image"
@@ -13,12 +22,18 @@ function Card({ title, text, image, time, link }) {
             alt=""
           />
         </div>
-        <h2 className="card__title">
-          <span>{title}</span>
-        </h2>
       </a>
-      <p className="card__text">{text}</p>
-      <p className="card__date">{time}</p>
+      <div className="card__description">
+        <a href={link} className="card__link">
+          <h2 className="card__title">{title}</h2>
+        </a>
+        <p className="card__text">{text}</p>
+        <p
+          className={classNames('card__date', { card__date_active: isActive })}
+        >
+          {time}
+        </p>
+      </div>
     </li>
   );
 }

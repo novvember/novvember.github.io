@@ -23,7 +23,7 @@ html {
   font-family: 'Inter', Helvetica, Arial, sans-serif;
   /* Цветовая схема */
   --surface: #fff;
-  --on-surface: #000;
+  --on-surface: #1d1d1d;
   /* Цвета страницы по умолчанию */
   background-color: var(--surface);
   color: var(--on-surface);
