@@ -1,26 +1,26 @@
-import Card from '../Card/Card';
 import './Timeline.css';
-import { doneCards } from '../../utils/cardsData';
+import { doneCards, studyCards } from '../../utils/cardsData';
+import { useState } from 'react';
+import Cards from '../Cards/Cards';
 
 function Timeline() {
+  const [onlyImportant, setOnlyImportant] = useState(false);
+
+  function handleInputChange(event) {
+    setOnlyImportant((state) => !state);
+  }
+
   return (
     <main className="timeline">
-      <div className="timeline__filter">filter</div>
-      <ul className="timeline__cards">
-        {doneCards.map((card, pos) => {
-          return (
-            <Card
-              key={pos}
-              title={card.title}
-              text={card.text}
-              image={card.image}
-              time={card.date}
-              isActive={card.isInProgress}
-              isImportant={card.isImportant}
-            />
-          );
-        })}
-      </ul>
+      <div className="timeline__filter">
+        <input
+          type="checkbox"
+          checked={onlyImportant}
+          onChange={handleInputChange}
+        />
+      </div>
+      <Cards title="Сделал" cards={doneCards} onlyImportant={onlyImportant} />
+      <Cards title="Учусь" cards={studyCards} onlyImportant={onlyImportant} />
     </main>
   );
 }

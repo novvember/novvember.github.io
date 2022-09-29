@@ -25,7 +25,7 @@ function Card({
       </a>
       <div className="card__description">
         <a href={link} className="card__link">
-          <h2 className="card__title">{title}</h2>
+          <h3 className="card__title">{title}</h3>
         </a>
         <p className="card__text">{text}</p>
         <p

@@ -2,10 +2,6 @@
   position: relative;
 }
 
-.card_important {
-  min-height: 500px;
-}
-
 /* Ссылки */
 .card__link {
   text-decoration: none;
@@ -42,7 +38,7 @@
 .card__image-container {
   position: relative;
   height: auto;
-  aspect-ratio: 4 / 3;
+  aspect-ratio: 1;
 }
 
 .card__image {
@@ -69,10 +65,12 @@
   outline-offset: -1px;
   border-radius: 5px;
   transition: transform 0.3s;
+  /* background-color: lightgray;
+  opacity: 0.5; */
 }
 
 .card:hover .card__image {
-  transform: rotate(-1deg);
+  transform: rotate(-0.5deg);
 }
 
 .card:hover .card__image-container::before {
@@ -84,21 +82,16 @@
   transition: transform 0.6s;
 }
 
-.card_important .card__image-container {
-  height: 100%;
-  aspect-ratio: auto;
+.card_important .card__image {
+  transform: rotate(0deg);
 }
 
-.card_important:hover .card__image {
-  transform: rotate(0);
+.card_important .card__image-container::before {
+  transform: rotate(3deg);
 }
 
-.card_important:hover .card__image-container::before {
-  transform: rotate(2deg);
-}
-
-.card_important:hover .card__image-container::after {
-  transform: rotate(4deg);
+.card_important .card__image-container::after {
+  transform: rotate(6deg);
   transition: transform 0.6s;
 }
 
@@ -146,26 +139,6 @@
   background-size: cover;
 }
 
-.card_important .card__description {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  padding: 10px;
-  background-color: rgba(255, 255, 255, 0.7);
-  backdrop-filter: blur(2px);
-  transition: backdrop-filter 0.3s;
-}
-
-.card_important:hover .card__description {
-  backdrop-filter: blur(7px);
-}
-
-.card_important .card__text {
-  overflow: hidden;
-  max-height: 0;
-  transition: max-height 0.3s;
-}
-
-.card_important:hover .card__text {
-  max-height: 250px;
+.card_important .card__title {
+  /* background-color: aliceblue; */
 }
