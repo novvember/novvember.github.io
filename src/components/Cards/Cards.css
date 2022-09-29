@@ -23,11 +23,11 @@
   margin: 0;
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-  gap: 32px;
+  gap: 48px;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 1024px) {
   .cards__cards {
-    gap: 48px;
+    gap: 64px;
   }
 }

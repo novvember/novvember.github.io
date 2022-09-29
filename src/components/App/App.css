@@ -29,14 +29,6 @@ html {
   color: var(--on-surface);
 }
 
-/* Фокус интерактивных элементов по умолчанию */
-a:focus,
-button:focus,
-input:focus {
-  outline-offset: 5px;
-  outline-color: var(--primary);
-}
-
 /* Родительский элемент всех компонентов */
 .content {
   width: 100%;
@@ -45,6 +37,7 @@ input:focus {
   margin: 0 auto;
   box-sizing: border-box;
   padding-inline: 10px;
+  overflow: hidden;
 }
 
 @media (min-width: 768px) {
