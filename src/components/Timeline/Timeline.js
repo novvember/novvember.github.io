@@ -20,7 +20,12 @@ function Timeline() {
         />
       </div>
       <Cards title="Сделал" cards={doneCards} onlyImportant={onlyImportant} />
-      <Cards title="Учусь" cards={studyCards} onlyImportant={onlyImportant} />
+      <Cards
+        title="Учусь"
+        cards={studyCards}
+        onlyImportant={onlyImportant}
+        isBaseType
+      />
     </main>
   );
 }

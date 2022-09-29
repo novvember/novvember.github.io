@@ -1,7 +1,3 @@
-.card {
-  position: relative;
-}
-
 /* Ссылки */
 .card__link {
   text-decoration: none;
@@ -41,11 +37,16 @@
   aspect-ratio: 1;
 }
 
+.card_type_base .card__image-container {
+  aspect-ratio: 2 /1;
+}
+
 .card__image {
   display: block;
   width: 100%;
   height: 100%;
   outline: 0.5px solid gainsboro;
+  background-color: #e9e9e9;
   border-radius: 5px;
   object-fit: cover;
   object-position: top center;
@@ -82,15 +83,11 @@
   transition: transform 0.6s;
 }
 
-.card_important .card__image {
-  transform: rotate(0deg);
-}
-
-.card_important .card__image-container::before {
+.card__image-container::before {
   transform: rotate(3deg);
 }
 
-.card_important .card__image-container::after {
+.card__image-container::after {
   transform: rotate(6deg);
   transition: transform 0.6s;
 }
@@ -98,8 +95,21 @@
 .card_important .card__image-container::before,
 .card_important .card__image-container::after {
   outline: none;
-  background-color: lightgray;
-  opacity: 0.5;
+  background-color: grey;
+  opacity: 0.4;
+}
+
+.card_type_base:hover .card__image {
+  transform: rotate(0deg);
+}
+
+.card_type_base:hover .card__image-container::before {
+  transform: rotate(3deg);
+}
+
+.card_type_base:hover .card__image-container::after {
+  transform: rotate(6deg);
+  transition: transform 0.6s;
 }
 
 /* Текст */
@@ -137,8 +147,4 @@
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-}
-
-.card_important .card__title {
-  /* background-color: aliceblue; */
 }

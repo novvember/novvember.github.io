@@ -9,9 +9,16 @@ function Card({
   link,
   isImportant = false,
   isActive = false,
+  isBaseType = false,
 }) {
   return (
-    <li className={classNames('card', { card_important: isImportant })}>
+    <li
+      className={classNames(
+        'card',
+        { card_important: isImportant },
+        { card_type_base: isBaseType },
+      )}
+    >
       <a href={link} className="card__link">
         <div className="card__image-container">
           <img
