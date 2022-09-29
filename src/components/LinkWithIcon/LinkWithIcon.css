@@ -1,0 +1,53 @@
+.link-with-icon::before {
+  content: '';
+  /* Расположение */
+  display: inline-block;
+  height: 1em;
+  width: 1em;
+  vertical-align: -10%;
+  margin-right: 0.3em;
+  /* Параметры иконки */
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  opacity: 0.6;
+  transition: opacity 0.3s;
+}
+
+.link-with-icon:hover::before {
+  opacity: 1;
+}
+
+.link-with-icon[href*='github.com']::before {
+  background-image: url(../../images/icons/icon__github.svg);
+}
+
+.link-with-icon[href*='mailto:']::before {
+  background-image: url(../../images/icons/icon__email.svg);
+}
+
+.link-with-icon[href*='t.me']::before {
+  background-image: url(../../images/icons/icon__telegram.svg);
+}
+
+.link-with-icon[href*='stackoverflow.com']::before {
+  background-image: url(../../images/icons/icon__stackoverflow.svg);
+}
+
+.link-with-icon[href*='codewars.com']::before {
+  background-image: url(../../images/icons/icon__codewars.svg);
+}
+
+.link-with-icon_with-info::after {
+  content: attr(data-content);
+  display: inline-block;
+  vertical-align: 35%;
+  font-size: 0.7em;
+  margin-left: 0.3em;
+  color: dimgray;
+  transition: color 0.2s;
+}
+
+.link-with-icon_with-info:hover::after {
+  color: inherit;
+}
