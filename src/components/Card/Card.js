@@ -34,7 +34,7 @@ function Card({
         <a href={link} className="card__link">
           <h3 className="card__title">{title}</h3>
         </a>
-        <p className="card__text">{text}</p>
+        <p className="card__text" dangerouslySetInnerHTML={{ __html: text }} />
         <p
           className={classNames('card__date', { card__date_active: isActive })}
         >

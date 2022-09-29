@@ -58,3 +58,14 @@ input:focus {
     padding-inline: 32px;
   }
 }
+
+/* Общие правила */
+a {
+  color: inherit;
+  text-decoration: underline silver 1px;
+  transition: text-decoration-color 0.2s;
+}
+
+a:hover {
+  text-decoration-color: inherit;
+}
