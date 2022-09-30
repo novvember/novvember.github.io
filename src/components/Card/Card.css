@@ -9,6 +9,7 @@
   display: inline-block;
   width: 0.7em;
   aspect-ratio: 1;
+  opacity: 0.5;
   margin-left: 0.3em;
   background-size: contain;
   background-repeat: no-repeat;
@@ -20,8 +21,8 @@
   background-image: url(../../images/icons/icon__external-link.svg);
 }
 
-.card__link[href*='github']:hover + .card__description .card__title::after,
-.card__link[href*='github']:hover .card__title::after {
+.card__link[href*='github.com']:hover + .card__description .card__title::after,
+.card__link[href*='github.com']:hover .card__title::after {
   background-image: url(../../images/icons/icon__github-link.svg);
 }
 
