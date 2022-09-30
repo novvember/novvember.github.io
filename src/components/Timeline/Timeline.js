@@ -15,7 +15,7 @@ function Timeline() {
   }
 
   return (
-    <main className="timeline">
+    <main className="timeline section">
       <Filter values={filterValues} onChange={handleFilterChange} />
       <Cards
         title="Сделал"

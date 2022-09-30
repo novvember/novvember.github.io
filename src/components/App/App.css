@@ -29,26 +29,26 @@ html {
   color: var(--on-surface);
 }
 
-/* Родительский элемент всех компонентов */
-.content {
+.section {
   width: 100%;
   max-width: 1100px;
   min-width: 320px;
   margin: 0 auto;
   box-sizing: border-box;
-  padding-inline: 10px;
+  padding-inline: 16px;
   overflow: hidden;
 }
 
 @media (min-width: 768px) {
-  .content {
-    padding-inline: 16px;
+  .section {
+    padding-inline: 32px;
+    overflow: visible;
   }
 }
 
 @media (min-width: 1024px) {
-  .content {
-    padding-inline: 32px;
+  .section {
+    padding-inline: 64px;
   }
 }
 

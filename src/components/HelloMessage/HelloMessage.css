@@ -1,4 +1,26 @@
 .hello-message__title {
+  margin: 0;
   font-family: 'Merriweather', serif;
-  font-size: 74px;
+  font-size: 32px;
+}
+
+@media (min-width: 768px) {
+  .hello-message__title {
+    font-size: 64px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .hello-message__title {
+    font-size: 74px;
+  }
+}
+
+.hello-message {
+  background: url(../../images/noise.gif);
+  background-size: 500px auto;
+  background-color: dimgray;
+  color: white;
+  min-height: 70vh;
+  font-size: 32px;
 }

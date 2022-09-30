@@ -3,7 +3,7 @@ import { useEffect, useState } from 'react';
 import './LinkWithIcon.css';
 
 function LinkWithIcon({ href, children, getInfo = false }) {
-  const [info, setInfo] = useState('...');
+  const [info, setInfo] = useState('. . .');
 
   useEffect(() => {
     async function setNewInfo() {

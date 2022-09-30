@@ -2,7 +2,7 @@ import './Footer.css';
 
 function Footer() {
   return (
-    <footer className="footer">
+    <footer className="footer section">
       <p className="footer__text">Этот сайт тоже сделал я.</p>
       <p className="footer__text">
         <a href="#">Контакты наверху</a>
