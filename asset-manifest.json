@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/static/css/main.b6876e90.css",
+    "main.css": "/static/css/main.62558007.css",
     "main.js": "/static/js/main.dfd25967.js",
     "static/media/card__mesto.png": "/static/media/card__mesto.733c62d5f83e1b3d8f6d.png",
     "static/media/card__itmo.png": "/static/media/card__itmo.0440f6cfa90d5bd9d979.png",
@@ -73,22 +73,22 @@
     "static/media/card__thedotisblack.png": "/static/media/card__thedotisblack.ba40ac26effc6f53b8f2.png",
     "static/media/card__checkbox_style_apple.png": "/static/media/card__checkbox_style_apple.7913f80edafb8ab67823.png",
     "static/media/card__react.png": "/static/media/card__react.a0b7b0866d042acfc4f5.png",
-    "static/media/icon__codewars.svg": "/static/media/icon__codewars.89fb91eacea6deaf6171.svg",
+    "static/media/icon__codewars_light.svg": "/static/media/icon__codewars_light.bd999478c5bb57afc398.svg",
     "static/media/card__hexlet-cli-basics.webp": "/static/media/card__hexlet-cli-basics.5e912b6469025ca811f6.webp",
+    "static/media/icon__github_light.svg": "/static/media/icon__github_light.3553ac37ef1a5b448e13.svg",
     "static/media/icon__github-link.svg": "/static/media/icon__github-link.b28915129689b6a07099.svg",
-    "static/media/icon__github.svg": "/static/media/icon__github.b28915129689b6a07099.svg",
     "index.html": "/index.html",
     "static/media/icon__codepen-link.svg": "/static/media/icon__codepen-link.db8bc71f8574b7dda7a1.svg",
-    "static/media/icon__telegram.svg": "/static/media/icon__telegram.07cc44643fd12c8a8c51.svg",
+    "static/media/icon__telegram_light.svg": "/static/media/icon__telegram_light.766e2d29c5dfbcdf9b1a.svg",
     "static/media/icon__external-link.svg": "/static/media/icon__external-link.5377c22456416489d635.svg",
-    "static/media/icon__stackoverflow.svg": "/static/media/icon__stackoverflow.a6de365888e5587a1bff.svg",
+    "static/media/icon__stackoverflow_light.svg": "/static/media/icon__stackoverflow_light.88988784b58fb58eacd2.svg",
     "static/media/icon__active.svg": "/static/media/icon__active.802fce501fbca9ff7146.svg",
-    "static/media/icon__email.svg": "/static/media/icon__email.d70862c0ce03bfecc536.svg",
-    "main.b6876e90.css.map": "/static/css/main.b6876e90.css.map",
+    "static/media/icon__email_light.svg": "/static/media/icon__email_light.4e827618edfdb1d297c6.svg",
+    "main.62558007.css.map": "/static/css/main.62558007.css.map",
     "main.dfd25967.js.map": "/static/js/main.dfd25967.js.map"
   },
   "entrypoints": [
-    "static/css/main.b6876e90.css",
+    "static/css/main.62558007.css",
     "static/js/main.dfd25967.js"
   ]
 }
