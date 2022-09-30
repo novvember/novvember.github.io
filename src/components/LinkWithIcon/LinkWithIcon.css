@@ -19,23 +19,23 @@
 }
 
 .link-with-icon[href*='github.com']::before {
-  background-image: url(../../images/icons/icon__github.svg);
+  background-image: url(../../images/icons/icon__github_light.svg);
 }
 
 .link-with-icon[href*='mailto:']::before {
-  background-image: url(../../images/icons/icon__email.svg);
+  background-image: url(../../images/icons/icon__email_light.svg);
 }
 
 .link-with-icon[href*='t.me']::before {
-  background-image: url(../../images/icons/icon__telegram.svg);
+  background-image: url(../../images/icons/icon__telegram_light.svg);
 }
 
 .link-with-icon[href*='stackoverflow.com']::before {
-  background-image: url(../../images/icons/icon__stackoverflow.svg);
+  background-image: url(../../images/icons/icon__stackoverflow_light.svg);
 }
 
 .link-with-icon[href*='codewars.com']::before {
-  background-image: url(../../images/icons/icon__codewars.svg);
+  background-image: url(../../images/icons/icon__codewars_light.svg);
 }
 
 .link-with-icon_with-info::after {
@@ -43,11 +43,13 @@
   display: inline-block;
   vertical-align: 35%;
   font-size: 0.7em;
+  font-weight: 300;
   margin-left: 0.3em;
-  color: dimgray;
-  transition: color 0.2s;
+  color: inherit;
+  opacity: 0.7;
+  transition: opacity 0.2s;
 }
 
 .link-with-icon_with-info:hover::after {
-  color: inherit;
+  opacity: 1;
 }

@@ -23,17 +23,20 @@
   margin-bottom: 64px;
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-  gap: 64px;
+  column-gap: 32px;
+  row-gap: 96px;
 }
 
 @media (min-width: 768px) {
   .cards__cards {
-    gap: 48px;
+    column-gap: 48px;
+    row-gap: 96px;
   }
 }
 
 @media (min-width: 1024px) {
   .cards__cards {
-    gap: 64px;
+    column-gap: 64px;
+    row-gap: 96px;
   }
 }
