@@ -3,15 +3,15 @@ import './Filter.css';
 
 function Filter({ values, onChange }) {
   return (
-    <div className="filter">
+    <form className="filter">
       <Checkbox
-        titleOnTrue="Показать всё"
-        titleOnFalse="Показать только важное"
+        titleOnTrue="Только важное!"
+        titleOnFalse="Только важное?"
         name="onlyImportant"
         value={values.onlyImportant}
         onChange={onChange}
       />
-    </div>
+    </form>
   );
 }
 
