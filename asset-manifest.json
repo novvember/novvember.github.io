@@ -1,13 +1,12 @@
 {
   "files": {
-    "main.css": "/static/css/main.1b07074a.css",
+    "main.css": "/static/css/main.fc3e738e.css",
     "main.js": "/static/js/main.dfd25967.js",
     "static/media/card__mesto.png": "/static/media/card__mesto.733c62d5f83e1b3d8f6d.png",
     "static/media/card__itmo.png": "/static/media/card__itmo.0440f6cfa90d5bd9d979.png",
     "static/media/card__how-to-learn.png": "/static/media/card__how-to-learn.960d58f3a3563351442e.png",
     "static/media/card__russian-travel.png": "/static/media/card__russian-travel.8825100fbd4cbe829db7.png",
     "static/media/card__lubimovka.png": "/static/media/card__lubimovka.94c7eba37a530c791e25.png",
-    "static/media/noise.gif": "/static/media/noise.1007367ba9164d7a294d.gif",
     "static/media/card__oop.png": "/static/media/card__oop.a8ff39e06b56bcc68ae8.png",
     "static/media/card__open-lectures-yandex.png": "/static/media/card__open-lectures-yandex.a1d889e943e4a4502692.png",
     "static/media/Inter-italic.var.woff2?v=3.19": "/static/media/Inter-italic.var.30807be7abc48ba8c73c.woff2",
@@ -23,6 +22,7 @@
     "static/media/Merriweather-Light.ttf": "/static/media/Merriweather-Light.43706a2883eb57c79284.ttf",
     "static/media/Inter-BlackItalic.woff?v=3.19": "/static/media/Inter-BlackItalic.ca1e738e4f349f27514d.woff",
     "static/media/Inter-ThinItalic.woff?v=3.19": "/static/media/Inter-ThinItalic.bae95eb2f889c797e435.woff",
+    "static/media/noise.gif": "/static/media/noise.e1a4efcddc13cba3cb28.gif",
     "static/media/Inter-Italic.woff?v=3.19": "/static/media/Inter-Italic.890025e726861dba417f.woff",
     "static/media/Merriweather-BoldItalic.ttf": "/static/media/Merriweather-BoldItalic.16252c125b2ba7eaf70a.ttf",
     "static/media/Inter-Bold.woff?v=3.19": "/static/media/Inter-Bold.93c1301bd9f486c573b3.woff",
@@ -84,11 +84,11 @@
     "static/media/icon__stackoverflow.svg": "/static/media/icon__stackoverflow.a6de365888e5587a1bff.svg",
     "static/media/icon__active.svg": "/static/media/icon__active.802fce501fbca9ff7146.svg",
     "static/media/icon__email.svg": "/static/media/icon__email.d70862c0ce03bfecc536.svg",
-    "main.1b07074a.css.map": "/static/css/main.1b07074a.css.map",
+    "main.fc3e738e.css.map": "/static/css/main.fc3e738e.css.map",
     "main.dfd25967.js.map": "/static/js/main.dfd25967.js.map"
   },
   "entrypoints": [
-    "static/css/main.1b07074a.css",
+    "static/css/main.fc3e738e.css",
     "static/js/main.dfd25967.js"
   ]
 }
