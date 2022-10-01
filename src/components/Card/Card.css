@@ -101,7 +101,7 @@
 }
 
 .card_type_base:hover .card__image {
-  transform: rotate(0deg);
+  transform: none;
 }
 
 .card_type_base:hover .card__image-container::before {
@@ -110,7 +110,6 @@
 
 .card_type_base:hover .card__image-container::after {
   transform: rotate(6deg);
-  transition: transform 0.6s;
 }
 
 /* Текст */
