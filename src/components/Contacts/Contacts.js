@@ -8,7 +8,7 @@ import {
 
 function Contacts() {
   return (
-    <header className="contacts">
+    <header className="contacts" id="contacts">
       <div className="section">
         <ul className="contacts__list">
           <li className="contacts__item">
