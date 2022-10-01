@@ -15,7 +15,7 @@ function HelloMessage() {
           />
           <h1 className="hello-message__name">@novvember</h1>
         </div>
-        <p>
+        <p className="hello-message__subtitle">
           Привет! Я — Дмитрий. Фронтенд-разработчик (сейчас) и инженер-технолог
           (раньше).
         </p>
