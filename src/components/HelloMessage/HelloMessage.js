@@ -1,10 +1,20 @@
 import './HelloMessage.css';
+import avatar from '../../images/avatar.png';
 
 function HelloMessage() {
   return (
     <section className="hello-message">
       <div className="section">
-        <h1 className="hello-message__title">@novvember</h1>
+        <div className="hello-message__title">
+          <img
+            src={avatar}
+            alt="Юзерпик пользователя novvember"
+            className="hello-message__avatar"
+            height="100"
+            width="100"
+          />
+          <h1 className="hello-message__name">@novvember</h1>
+        </div>
         <p>
           Привет! Я — Дмитрий. Фронтенд-разработчик (сейчас) и инженер-технолог
           (раньше).

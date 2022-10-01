@@ -1,17 +1,46 @@
 .hello-message__title {
-  margin: 0;
-  font-family: 'Merriweather', serif;
-  font-size: 32px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  align-items: center;
 }
 
 @media (min-width: 768px) {
   .hello-message__title {
+    flex-direction: row;
+  }
+}
+
+.hello-message__avatar {
+  width: 80px;
+  height: 80px;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 50%;
+  border: 5px solid rgba(255, 255, 255, 0.1);
+}
+
+@media (min-width: 768px) {
+  .hello-message__avatar {
+    width: 100px;
+    height: 100px;
+  }
+}
+
+.hello-message__name {
+  margin: 0;
+  font-family: 'Merriweather', serif;
+  font-size: 40px;
+}
+
+@media (min-width: 768px) {
+  .hello-message__name {
     font-size: 64px;
   }
 }
 
 @media (min-width: 1024px) {
-  .hello-message__title {
+  .hello-message__name {
     font-size: 74px;
   }
 }
