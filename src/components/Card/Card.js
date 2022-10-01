@@ -4,13 +4,22 @@ import './Card.css';
 function Card({
   title,
   text,
-  image,
+  image1x,
+  image2x,
   time,
   link,
   isImportant = false,
   isActive = false,
   type = 'general',
 }) {
+  let image1xUrl;
+  let image2xUrl;
+
+  if (type !== 'no-image') {
+    image1xUrl = require('../../images/cards/' + image1x);
+    image2xUrl = require('../../images/cards/' + image2x);
+  }
+
   return (
     <li
       className={classNames(
@@ -24,10 +33,12 @@ function Card({
           <div className="card__image-container">
             <img
               className="card__image"
-              src={image}
+              src={image1xUrl}
+              srcSet={image1xUrl + ' 1x, ' + image2xUrl + ' 2x'}
               width="250"
               height="100"
               alt=""
+              loading="lazy"
             />
           </div>
         </a>

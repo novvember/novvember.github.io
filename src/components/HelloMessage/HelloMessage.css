@@ -19,7 +19,7 @@
 .hello-message {
   background: url(../../images/noise.gif);
   background-size: 300px auto;
-  background-color: dimgray;
+  background-color: #494949;
   color: white;
   min-height: 70vh;
   font-size: 32px;
