@@ -1,6 +1,6 @@
 import Contacts from '../Contacts/Contacts';
 import Footer from '../Footer/Footer';
-import HelloMessage from '../HelloMessage/HelloMessage';
+import Intro from '../Intro/Intro';
 import Timeline from '../Timeline/Timeline';
 import './App.css';
 
@@ -8,9 +8,9 @@ function App() {
   return (
     <>
       <Contacts />
-      <HelloMessage />
+      <Intro />
       <Timeline />
-      <Footer />
+      <Footer />F
     </>
   );
 }

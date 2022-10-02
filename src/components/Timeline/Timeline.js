@@ -19,21 +19,18 @@ function Timeline() {
       <Filter values={filterValues} onChange={handleFilterChange} />
       <Cards
         title="Сделал"
+        id="done"
         cards={doneCards}
         onlyImportant={filterValues.onlyImportant}
       />
       <Cards
         title="Учусь"
+        id="study"
         cards={studyCards}
         onlyImportant={filterValues.onlyImportant}
         type="base"
       />
-      <Cards
-        title="Хочу сделать"
-        cards={todoCards}
-        // onlyImportant={filterValues.onlyImportant}
-        type="no-image"
-      />
+      <Cards title="Хочу сделать" id="todo" cards={todoCards} type="no-image" />
     </main>
   );
 }

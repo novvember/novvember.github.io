@@ -1,12 +1,12 @@
-.hello-message {
+.intro {
   background: url(../../images/noise.gif);
   background-size: 300px auto;
   background-color: #494949;
   color: white;
-  padding-block: 32px;
+  padding-top: 32px;
 }
 
-.hello-message__title {
+.intro__title {
   display: flex;
   flex-direction: column;
   gap: 16px;
@@ -14,12 +14,12 @@
 }
 
 @media (min-width: 768px) {
-  .hello-message__title {
+  .intro__title {
     flex-direction: row;
   }
 }
 
-.hello-message__avatar {
+.intro__avatar {
   width: 80px;
   height: 80px;
   object-fit: cover;
@@ -29,44 +29,45 @@
 }
 
 @media (min-width: 768px) {
-  .hello-message__avatar {
+  .intro__avatar {
     width: 100px;
     height: 100px;
   }
 }
 
-.hello-message__name {
+.intro__name {
   margin: 0;
   font-family: 'Merriweather', serif;
   font-size: 40px;
 }
 
 @media (min-width: 768px) {
-  .hello-message__name {
+  .intro__name {
     font-size: 64px;
   }
 }
 
 @media (min-width: 1024px) {
-  .hello-message__name {
+  .intro__name {
     font-size: 74px;
   }
 }
 
-.hello-message__subtitle {
+.intro__subtitle {
   font-family: 'Merriweather', serif;
   font-size: 20px;
   line-height: 1.3;
 }
 
 @media (min-width: 768px) {
-  .hello-message__subtitle {
+  .intro__subtitle {
     font-size: 24px;
   }
 }
 
-.hello-message__blocks {
+.intro__blocks {
   display: flex;
   flex-wrap: wrap;
   gap: 32px;
+  margin-bottom: 72px;
 }

@@ -1,9 +1,9 @@
 import Card from '../Card/Card';
 import './Cards.css';
 
-function Cards({ title, cards, onlyImportant = false, type }) {
+function Cards({ title, cards, onlyImportant = false, type, id }) {
   return (
-    <section className="cards">
+    <section className="cards" id={id}>
       <h2 className="cards__title">{title}</h2>
       <ul className="cards__cards">
         {cards
