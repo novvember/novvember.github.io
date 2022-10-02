@@ -1,6 +1,7 @@
 import './HelloMessage.css';
 import avatar from '../../images/avatar.png';
 import Stack from '../Stack/Stack';
+import Resume from '../Resume/Resume';
 
 function HelloMessage() {
   return (
@@ -21,17 +22,12 @@ function HelloMessage() {
           (раньше).
         </p>
 
-        <Stack />
+        <div className="hello-message__blocks">
+          <Stack />
+          <Resume />
+        </div>
 
-        <p className="hello-message__cv">
-          Ищу работу, в Москве или удаленно! Мое резюме: тут (+pdf), на
-          Хэдхантере, на Хабр.Карьере.
-          <p>
-            Закончил Яндекс.Практикум (веб-разработчик) + самостоятельное
-            обучение.
-          </p>
-        </p>
-        <p className="hello-message__nav">Сделал, учусь, хочу сделать</p>
+        {/* <p className="hello-message__nav">Сделал, учусь, хочу сделать</p> */}
       </div>
     </section>
   );

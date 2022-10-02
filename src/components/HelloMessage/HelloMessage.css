@@ -64,3 +64,9 @@
     font-size: 24px;
   }
 }
+
+.hello-message__blocks {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 32px;
+}

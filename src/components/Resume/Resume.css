@@ -1,0 +1,40 @@
+.resume {
+  font-size: 16px;
+  line-height: 1.3;
+  max-width: 600px;
+  background-color: rgba(255, 255, 255, 0.05);
+  border-radius: 5px;
+  padding: 16px;
+  width: 160px;
+  flex-grow: 1;
+  flex-shrink: 1;
+}
+
+@media (min-width: 768px) {
+  .resume {
+    font-size: 16px;
+  }
+}
+
+.resume__title {
+  font-family: 'Merriweather', serif;
+  margin: 0;
+  margin-bottom: 16px;
+}
+
+.resume__title span {
+  background-color: gold;
+  padding-inline: 0.3em;
+  color: black;
+  margin-left: -0.3em;
+  animation: glow 1s infinite;
+}
+
+.resume__text {
+  margin: 0;
+  margin-bottom: 16px;
+}
+
+.resume__text:last-child {
+  margin: 0;
+}
