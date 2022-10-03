@@ -21,6 +21,7 @@ html {
   text-rendering: optimizeLegibility;
   /* Шрифт для всей страницы */
   font-family: 'Inter', Helvetica, Arial, sans-serif;
+  line-height: 1.3;
   /* Цветовая схема */
   --surface: #fff;
   --on-surface: #1d1d1d;
