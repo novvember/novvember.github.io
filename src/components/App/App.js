@@ -10,7 +10,7 @@ function App() {
       <Contacts />
       <Intro />
       <Timeline />
-      <Footer />F
+      <Footer />
     </>
   );
 }
