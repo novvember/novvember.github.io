@@ -1,17 +1,38 @@
+import { useEffect, useState } from 'react';
 import Card from '../Card/Card';
 import './Cards.css';
 
-function Cards({ title, cards, onlyImportant = false, type, id }) {
+function Cards({
+  title,
+  cards,
+  onlyImportant = false,
+  onlyActive = false,
+  type,
+  id,
+}) {
+  const [filteredCards, setFilteredCards] = useState([]);
+
+  useEffect(() => {
+    setFilteredCards(
+      cards
+        .filter((card) => {
+          if (onlyImportant) return card.isImportant;
+          return card;
+        })
+        .filter((card) => {
+          if (onlyActive) return card.isInProgress;
+          return card;
+        }),
+    );
+  }, [cards, onlyActive, onlyImportant]);
+
   return (
     <section className="cards" id={id}>
       <h2 className="cards__title">{title}</h2>
-      <ul className="cards__cards">
-        {cards
-          .filter((card) => {
-            if (onlyImportant) return card.isImportant;
-            return card;
-          })
-          .map((card, pos) => {
+
+      {filteredCards.length ? (
+        <ul className="cards__cards">
+          {filteredCards.map((card, pos) => {
             return (
               <Card
                 key={pos}
@@ -27,7 +48,12 @@ function Cards({ title, cards, onlyImportant = false, type, id }) {
               />
             );
           })}
-      </ul>
+        </ul>
+      ) : (
+        <p className="cards__error">
+          Не нашлось ничего подходящего под условия ¯\_(ツ)_/¯
+        </p>
+      )}
     </section>
   );
 }

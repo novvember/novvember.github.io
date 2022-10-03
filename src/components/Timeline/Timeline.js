@@ -5,7 +5,10 @@ import Cards from '../Cards/Cards';
 import Filter from '../Filter/Filter';
 
 function Timeline() {
-  const [filterValues, setFilterValues] = useState({ onlyImportant: false });
+  const [filterValues, setFilterValues] = useState({
+    onlyImportant: false,
+    onlyActive: false,
+  });
 
   function handleFilterChange(event) {
     const input = event.target;
@@ -22,6 +25,7 @@ function Timeline() {
         id="done"
         cards={doneCards}
         onlyImportant={filterValues.onlyImportant}
+        onlyActive={filterValues.onlyActive}
       />
       <Cards
         title="Учусь"
@@ -29,6 +33,7 @@ function Timeline() {
         cards={studyCards}
         onlyImportant={filterValues.onlyImportant}
         type="base"
+        onlyActive={filterValues.onlyActive}
       />
       <Cards title="Хочу сделать" id="todo" cards={todoCards} type="no-image" />
     </main>

@@ -40,3 +40,10 @@
     row-gap: 96px;
   }
 }
+
+.cards__error {
+  padding: 0;
+  margin: 0;
+  margin-bottom: 64px;
+  opacity: 0.5;
+}
