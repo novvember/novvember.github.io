@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.cede4349.css",
-    "main.js": "/static/js/main.a835cf96.js",
+    "main.css": "/static/css/main.0b241797.css",
+    "main.js": "/static/js/main.01a8b41f.js",
     "static/media/card__mesto-2x.png": "/static/media/card__mesto-2x.5cc11016dbdb48040a08.png",
     "static/media/card__russian-travel-2x.png": "/static/media/card__russian-travel-2x.5f6b9889ea601f24b1c1.png",
     "static/media/card__movies-2x.png": "/static/media/card__movies-2x.3775fba94888d1675db6.png",
@@ -113,11 +113,11 @@
     "static/media/icon__stackoverflow_light.svg": "/static/media/icon__stackoverflow_light.88988784b58fb58eacd2.svg",
     "static/media/icon__active.svg": "/static/media/icon__active.802fce501fbca9ff7146.svg",
     "static/media/icon__email_light.svg": "/static/media/icon__email_light.4e827618edfdb1d297c6.svg",
-    "main.cede4349.css.map": "/static/css/main.cede4349.css.map",
-    "main.a835cf96.js.map": "/static/js/main.a835cf96.js.map"
+    "main.0b241797.css.map": "/static/css/main.0b241797.css.map",
+    "main.01a8b41f.js.map": "/static/js/main.01a8b41f.js.map"
   },
   "entrypoints": [
-    "static/css/main.cede4349.css",
-    "static/js/main.a835cf96.js"
+    "static/css/main.0b241797.css",
+    "static/js/main.01a8b41f.js"
   ]
 }
