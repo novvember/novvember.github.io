@@ -35,14 +35,12 @@ html {
   min-width: 320px;
   margin: 0 auto;
   box-sizing: border-box;
-  padding-inline: 24px;
-  overflow: hidden;
+  padding-inline: 32px;
 }
 
 @media (min-width: 768px) {
   .section {
-    padding-inline: 32px;
-    overflow: visible;
+    padding-inline: 48px;
   }
 }
 
