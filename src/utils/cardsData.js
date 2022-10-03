@@ -211,7 +211,7 @@ export const studyCards = [
     title: 'Документация по React.js',
     text:
       'Официальная документация с примерами, туториалом и разбором особенностей работы и внутреннего устройства React.js.',
-    date: 'июнь&nbsp;&mdash; июль 2022',
+    date: 'июнь — июль 2022',
     link: 'https://reactjs.org/docs/getting-started.html',
     image1x: 'card__react-1x.png',
     image2x: 'card__react-2x.png',
