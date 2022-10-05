@@ -1,9 +1,9 @@
 @keyframes bounce {
   from {
-    transform: translateY(-20%);
+    transform: translate(-50%, -15%);
   }
   to {
-    transform: translateY(20%);
+    transform: translate(-50%, 15%);
   }
 }
 
