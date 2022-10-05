@@ -1,8 +1,14 @@
 import classNames from 'classnames';
 import { useEffect, useState } from 'react';
-import './LinkWithIcon.css';
+import './Link.css';
 
-function LinkWithIcon({ href, children, getInfo = false }) {
+function Link({
+  href,
+  children,
+  getInfo = false,
+  withIcon = false,
+  isLocal = false,
+}) {
   const [info, setInfo] = useState('. . .');
 
   useEffect(() => {
@@ -21,8 +27,10 @@ function LinkWithIcon({ href, children, getInfo = false }) {
 
   return (
     <a
-      className={classNames('link-with-icon', {
-        'link-with-icon_with-info': !!getInfo,
+      className={classNames('link', {
+        'link_with-info': !!getInfo,
+        'link_with-icon': withIcon,
+        link_type_local: isLocal,
       })}
       href={href}
       data-content={info}
@@ -32,4 +40,4 @@ function LinkWithIcon({ href, children, getInfo = false }) {
   );
 }
 
-export default LinkWithIcon;
+export default Link;

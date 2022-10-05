@@ -1,4 +1,4 @@
-import LinkWithIcon from '../LinkWithIcon/LinkWithIcon';
+import Link from '../Link/Link';
 import './Contacts.css';
 import {
   getCodewarsInfo,
@@ -12,36 +12,39 @@ function Contacts() {
       <div className="section">
         <ul className="contacts__list">
           <li className="contacts__item">
-            <LinkWithIcon href="mailto:n.demitsuri@gmail.com">
+            <Link href="mailto:n.demitsuri@gmail.com" withIcon>
               n.demitsuri@gmail.com
-            </LinkWithIcon>
+            </Link>
           </li>
           <li className="contacts__item">
-            <LinkWithIcon href="https://t.me/n_d_d">Telegram</LinkWithIcon>
+            <Link href="https://t.me/n_d_d" withIcon>Telegram</Link>
           </li>
           <li className="contacts__item">
-            <LinkWithIcon
+            <Link
               href="https://github.com/novvember"
               getInfo={getGithubInfo}
+              withIcon
             >
               Github
-            </LinkWithIcon>
+            </Link>
           </li>
           <li className="contacts__item">
-            <LinkWithIcon
+            <Link
               href="https://ru.stackoverflow.com/users/352251"
               getInfo={getStackoverflowInfo}
+              withIcon
             >
               Stack Overflow
-            </LinkWithIcon>
+            </Link>
           </li>
           <li className="contacts__item">
-            <LinkWithIcon
+            <Link
               href="https://www.codewars.com/users/novvember"
               getInfo={getCodewarsInfo}
+              withIcon
             >
               Codewars
-            </LinkWithIcon>
+            </Link>
           </li>
         </ul>
       </div>

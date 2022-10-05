@@ -2,9 +2,8 @@ import './Intro.css';
 import avatar from '../../images/avatar.png';
 import Stack from '../Stack/Stack';
 import Resume from '../Resume/Resume';
-import NavTab from '../NavTab/NavTab';
 
-function Intro() {
+function Intro({ children }) {
   return (
     <section className="intro">
       <div className="section">
@@ -28,7 +27,7 @@ function Intro() {
           <Resume />
         </div>
 
-        <NavTab />
+        {children}
       </div>
     </section>
   );

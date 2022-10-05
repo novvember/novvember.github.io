@@ -1,10 +1,9 @@
 import './Timeline.css';
-import { doneCards, studyCards, todoCards } from '../../utils/cardsData';
 import { useState } from 'react';
 import Cards from '../Cards/Cards';
 import Filter from '../Filter/Filter';
 
-function Timeline() {
+function Timeline({ doneCards, studyCards, todoCards }) {
   const [filterValues, setFilterValues] = useState({
     onlyImportant: false,
     onlyActive: false,

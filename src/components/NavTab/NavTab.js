@@ -1,23 +1,24 @@
+import Link from '../Link/Link';
 import './NavTab.css';
 
-function NavTab() {
+function NavTab({ doneCards, studyCards, todoCards }) {
   return (
     <nav className="navtab">
       <ul className="navtab__list">
         <li className="navtab__list-item">
-          <a href="#done" className="navtab__link">
+          <Link href="#done" getInfo={() => doneCards.length} isLocal>
             Сделал
-          </a>
+          </Link>
         </li>
         <li className="navtab__list-item">
-          <a href="#study" className="navtab__link">
+          <Link href="#study" getInfo={() => studyCards.length} isLocal>
             Учусь
-          </a>
+          </Link>
         </li>
         <li className="navtab__list-item">
-          <a href="#todo" className="navtab__link">
+          <Link href="#todo" getInfo={() => todoCards.length} isLocal>
             Хочу сделать
-          </a>
+          </Link>
         </li>
       </ul>
     </nav>

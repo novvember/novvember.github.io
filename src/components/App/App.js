@@ -2,14 +2,26 @@ import Contacts from '../Contacts/Contacts';
 import Footer from '../Footer/Footer';
 import Intro from '../Intro/Intro';
 import Timeline from '../Timeline/Timeline';
+import NavTab from '../NavTab/NavTab';
 import './App.css';
+import { doneCards, studyCards, todoCards } from '../../utils/cardsData';
 
 function App() {
   return (
     <>
       <Contacts />
-      <Intro />
-      <Timeline />
+      <Intro>
+        <NavTab
+          doneCards={doneCards}
+          studyCards={studyCards}
+          todoCards={todoCards}
+        />
+      </Intro>
+      <Timeline
+        doneCards={doneCards}
+        studyCards={studyCards}
+        todoCards={todoCards}
+      />
       <Footer />
     </>
   );
