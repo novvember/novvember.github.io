@@ -5,7 +5,7 @@ import Filter from '../Filter/Filter';
 
 function Timeline({ doneCards, studyCards, todoCards }) {
   const [filterValues, setFilterValues] = useState({
-    onlyImportant: false,
+    onlyImportant: true,
     onlyActive: false,
   });
 

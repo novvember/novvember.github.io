@@ -3,10 +3,6 @@
   transition: opacity 0.2s;
 }
 
-.checkbox:hover {
-  opacity: 0.8;
-}
-
 /* Скрытие системного чекбокса */
 .checkbox__system-checkbox {
   position: absolute;
