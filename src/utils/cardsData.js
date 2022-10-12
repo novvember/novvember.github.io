@@ -159,6 +159,17 @@ export const doneCards = [
 
 export const studyCards = [
   {
+    title: 'Алгоритмы и структуры данных',
+    text: 'Курс лекций по АиСД от преподавателя ИТМО Павла Маврина',
+    date: 'октябрь 2022 — сейчас',
+    link: 'https://www.youtube.com/c/pavelmavrin/playlists',
+    image1x: 'card__mavrin-1x.png',
+    image2x: 'card__mavrin-2x.png',
+
+    isInProgress: true,
+    isImportant: true,
+  },
+  {
     title: 'Адитья Бхаргава “Грокаем алгоритмы”',
     text:
       'Научно-популярная книжка с введением в «Алгоритмы и структуры данных». Больше популярная, чем научная, но всё равно интересно.',
