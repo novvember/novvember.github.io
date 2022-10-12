@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.8ad4a612.css",
-    "main.js": "/static/js/main.a6a54dec.js",
+    "main.js": "/static/js/main.ed68b494.js",
     "static/media/card__mesto-2x.png": "/static/media/card__mesto-2x.5cc11016dbdb48040a08.png",
     "static/media/card__russian-travel-2x.png": "/static/media/card__russian-travel-2x.5f6b9889ea601f24b1c1.png",
     "static/media/card__movies-2x.png": "/static/media/card__movies-2x.3775fba94888d1675db6.png",
@@ -10,6 +10,7 @@
     "static/media/card__mosmetro-tickets-2-0-2x.png": "/static/media/card__mosmetro-tickets-2-0-2x.d68aa8e36562da89b365.png",
     "static/media/card__battleship-game-2x.png": "/static/media/card__battleship-game-2x.6edfd5e13df0b939c4e4.png",
     "static/media/card__how-to-learn-2x.png": "/static/media/card__how-to-learn-2x.3e85de9b118daf4f286d.png",
+    "static/media/card__mavrin-2x.png": "/static/media/card__mavrin-2x.20a7528efd2b19910b31.png",
     "static/media/card__oop-2x.png": "/static/media/card__oop-2x.d91af018379af2486d49.png",
     "static/media/card__robot-bootcamp-2x.png": "/static/media/card__robot-bootcamp-2x.2c8792843dc1359f3c9b.png",
     "static/media/card__mesto-1x.png": "/static/media/card__mesto-1x.2f4b91a5a1f24dd923a0.png",
@@ -71,6 +72,7 @@
     "static/media/Inter-Light.woff2?v=3.19": "/static/media/Inter-Light.2d5198822ab091ce4305.woff2",
     "static/media/Inter-ExtraLight.woff2?v=3.19": "/static/media/Inter-ExtraLight.72505e6a122c6acd5471.woff2",
     "static/media/Inter-Black.woff2?v=3.19": "/static/media/Inter-Black.15ca31c0a2a68f76d2d1.woff2",
+    "static/media/card__mavrin-1x.png": "/static/media/card__mavrin-1x.ddb3f00f7790bfd7dfe0.png",
     "static/media/card__open-lectures-yandex-2x.png": "/static/media/card__open-lectures-yandex-2x.e9b23ddaaccbce99eb67.png",
     "static/media/Inter-Thin.woff2?v=3.19": "/static/media/Inter-Thin.fff2a096db014f6239d4.woff2",
     "static/media/Inter-Regular.woff2?v=3.19": "/static/media/Inter-Regular.c8ba52b05a9ef10f4758.woff2",
@@ -114,10 +116,10 @@
     "static/media/icon__active.svg": "/static/media/icon__active.802fce501fbca9ff7146.svg",
     "static/media/icon__email_light.svg": "/static/media/icon__email_light.4e827618edfdb1d297c6.svg",
     "main.8ad4a612.css.map": "/static/css/main.8ad4a612.css.map",
-    "main.a6a54dec.js.map": "/static/js/main.a6a54dec.js.map"
+    "main.ed68b494.js.map": "/static/js/main.ed68b494.js.map"
   },
   "entrypoints": [
     "static/css/main.8ad4a612.css",
-    "static/js/main.a6a54dec.js"
+    "static/js/main.ed68b494.js"
   ]
 }
