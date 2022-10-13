@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.8ad4a612.css",
-    "main.js": "/static/js/main.ed68b494.js",
+    "main.js": "/static/js/main.5d8c9cf1.js",
     "static/media/card__mesto-2x.png": "/static/media/card__mesto-2x.5cc11016dbdb48040a08.png",
     "static/media/card__russian-travel-2x.png": "/static/media/card__russian-travel-2x.5f6b9889ea601f24b1c1.png",
     "static/media/card__movies-2x.png": "/static/media/card__movies-2x.3775fba94888d1675db6.png",
@@ -94,12 +94,14 @@
     "static/media/card__react-1x.png": "/static/media/card__react-1x.b834abdc7ec84c018004.png",
     "static/media/card__grokking-1x.gif": "/static/media/card__grokking-1x.2f98a71b9603ec412445.gif",
     "static/media/card__react-2x.png": "/static/media/card__react-2x.929a0e86dd44a9a332b6.png",
+    "static/media/card__typescript-handbook-2x.jpg": "/static/media/card__typescript-handbook-2x.f94ef6f6c39e73e90eff.jpg",
     "static/media/card__pro-git-book-1x.jpg": "/static/media/card__pro-git-book-1x.0fa703448445e8225635.jpg",
     "static/media/card__geekbrains-1x.png": "/static/media/card__geekbrains-1x.bc2ff745faae1a456d46.png",
     "static/media/card__codewars-1x.png": "/static/media/card__codewars-1x.b0d64556b82fcc94da71.png",
     "static/media/card__thedotisblack-2x.png": "/static/media/card__thedotisblack-2x.ba40ac26effc6f53b8f2.png",
     "static/media/card__checkbox_style_apple-2x.png": "/static/media/card__checkbox_style_apple-2x.7913f80edafb8ab67823.png",
     "static/media/card__mdn-1x.png": "/static/media/card__mdn-1x.d50a2642cf53d6b7d06c.png",
+    "static/media/card__typescript-handbook-1x.jpg": "/static/media/card__typescript-handbook-1x.9f4b4d4c873cb92d4e45.jpg",
     "static/media/card__learn-javascript-ru-1x.png": "/static/media/card__learn-javascript-ru-1x.d6989cdad5553b0377ec.png",
     "static/media/card__codewars-2x.png": "/static/media/card__codewars-2x.4c36e44f5d5b8240164c.png",
     "static/media/card__geekbrains-2x.png": "/static/media/card__geekbrains-2x.83ff516afb8e4d27a4c0.png",
@@ -116,10 +118,10 @@
     "static/media/icon__active.svg": "/static/media/icon__active.802fce501fbca9ff7146.svg",
     "static/media/icon__email_light.svg": "/static/media/icon__email_light.4e827618edfdb1d297c6.svg",
     "main.8ad4a612.css.map": "/static/css/main.8ad4a612.css.map",
-    "main.ed68b494.js.map": "/static/js/main.ed68b494.js.map"
+    "main.5d8c9cf1.js.map": "/static/js/main.5d8c9cf1.js.map"
   },
   "entrypoints": [
     "static/css/main.8ad4a612.css",
-    "static/js/main.ed68b494.js"
+    "static/js/main.5d8c9cf1.js"
   ]
 }
