@@ -159,6 +159,18 @@ export const doneCards = [
 
 export const studyCards = [
   {
+    title: 'TypeScript Handbook',
+    text:
+      'Официальное руководство по TypeScript, переведенное на русский язык, а также более полный <a href="https://www.typescriptlang.org/docs/handbook/intro.html">оригинал на английском</a>.',
+    date: 'октябрь 2022 — сейчас',
+    link: 'https://typescript-handbook.ru/',
+    image1x: 'card__typescript-handbook-1x.jpg',
+    image2x: 'card__typescript-handbook-2x.jpg',
+
+    isInProgress: true,
+    isImportant: true,
+  },
+  {
     title: 'Алгоритмы и структуры данных',
     text: 'Курс лекций по АиСД от преподавателя ИТМО Павла Маврина',
     date: 'октябрь 2022 — сейчас',
