@@ -159,6 +159,17 @@ export const doneCards = [
 
 export const studyCards = [
   {
+    title: 'TypeScript как второй язык',
+    text: 'Бесплатный интерактивный курс от Hexlet по основам TypeScript.',
+    date: 'октябрь 2022 — сейчас',
+    link: 'https://ru.code-basics.com/languages/typescript',
+    image1x: 'card__code-basics-ts-1x.png',
+    image2x: 'card__code-basics-ts-2x.png',
+
+    isInProgress: true,
+    isImportant: true,
+  },
+  {
     title: 'TypeScript Handbook',
     text:
       'Официальное руководство по TypeScript, переведенное на русский язык, а также более полный <a href="https://www.typescriptlang.org/docs/handbook/intro.html">оригинал на английском</a>.',
