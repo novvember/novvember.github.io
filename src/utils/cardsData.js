@@ -161,12 +161,12 @@ export const studyCards = [
   {
     title: 'TypeScript как второй язык',
     text: 'Бесплатный интерактивный курс от Hexlet по основам TypeScript.',
-    date: 'октябрь 2022 — сейчас',
+    date: 'октябрь 2022',
     link: 'https://ru.code-basics.com/languages/typescript',
     image1x: 'card__code-basics-ts-1x.png',
     image2x: 'card__code-basics-ts-2x.png',
 
-    isInProgress: true,
+    isInProgress: false,
     isImportant: false,
   },
   {
