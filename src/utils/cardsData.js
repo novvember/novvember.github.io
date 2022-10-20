@@ -167,7 +167,7 @@ export const studyCards = [
     image2x: 'card__code-basics-ts-2x.png',
 
     isInProgress: true,
-    isImportant: true,
+    isImportant: false,
   },
   {
     title: 'TypeScript Handbook',
