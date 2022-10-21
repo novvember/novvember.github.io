@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.8ad4a612.css",
-    "main.js": "/static/js/main.6c75dc3a.js",
+    "main.js": "/static/js/main.69c176a2.js",
     "static/media/card__mesto-2x.png": "/static/media/card__mesto-2x.5cc11016dbdb48040a08.png",
     "static/media/card__russian-travel-2x.png": "/static/media/card__russian-travel-2x.5f6b9889ea601f24b1c1.png",
     "static/media/card__movies-2x.png": "/static/media/card__movies-2x.3775fba94888d1675db6.png",
@@ -81,6 +81,7 @@
     "static/media/card__reactrouter6-2x.png": "/static/media/card__reactrouter6-2x.a4bb9c2a71ae95305c2b.png",
     "static/media/card__mosmetro-tickets-1x.png": "/static/media/card__mosmetro-tickets-1x.bdc9c819cf580537ef40.png",
     "static/media/card__sorting-1x.png": "/static/media/card__sorting-1x.4e801c69cf66dcc41b2f.png",
+    "static/media/card__typescript-build-2x.png": "/static/media/card__typescript-build-2x.8e12f638f77791921116.png",
     "static/media/card__yandex-practicum-1x.png": "/static/media/card__yandex-practicum-1x.62599dcad05136510282.png",
     "static/media/card__book0-2x.jpg": "/static/media/card__book0-2x.30d4e9334bd0c38561f7.jpg",
     "static/media/card__algorithms-interview-1x.png": "/static/media/card__algorithms-interview-1x.4373c94316c4e5cbaa6b.png",
@@ -89,6 +90,7 @@
     "static/media/card__reactrouter6-1x.png": "/static/media/card__reactrouter6-1x.1320bf87bc627039f60d.png",
     "static/media/card__grokking-2x.gif": "/static/media/card__grokking-2x.cba9605745e00eddc4cb.gif",
     "static/media/card__checkbox_style_apple-1x.png": "/static/media/card__checkbox_style_apple-1x.9d65dd5fcc3f64a32011.png",
+    "static/media/card__typescript-build-1x.png": "/static/media/card__typescript-build-1x.81fa150936ff33a66980.png",
     "static/media/card__book0-1x.jpg": "/static/media/card__book0-1x.dd005652e9cf5790a372.jpg",
     "static/media/card__thedotisblack-1x.png": "/static/media/card__thedotisblack-1x.f4a7743fda5c78c4ee4e.png",
     "static/media/card__react-1x.png": "/static/media/card__react-1x.b834abdc7ec84c018004.png",
@@ -118,10 +120,10 @@
     "static/media/icon__active.svg": "/static/media/icon__active.802fce501fbca9ff7146.svg",
     "static/media/icon__email_light.svg": "/static/media/icon__email_light.4e827618edfdb1d297c6.svg",
     "main.8ad4a612.css.map": "/static/css/main.8ad4a612.css.map",
-    "main.6c75dc3a.js.map": "/static/js/main.6c75dc3a.js.map"
+    "main.69c176a2.js.map": "/static/js/main.69c176a2.js.map"
   },
   "entrypoints": [
     "static/css/main.8ad4a612.css",
-    "static/js/main.6c75dc3a.js"
+    "static/js/main.69c176a2.js"
   ]
 }
