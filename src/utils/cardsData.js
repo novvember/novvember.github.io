@@ -161,12 +161,13 @@ export const studyCards = [
   {
     title: 'Build JavaScript applications using TypeScript',
     text: 'Курс от Microsoft по основам TypeScript.',
-    date: 'октябрь 2022 — сейчас',
-    link: 'https://learn.microsoft.com/en-us/training/paths/build-javascript-applications-typescript/',
+    date: 'октябрь 2022',
+    link:
+      'https://learn.microsoft.com/en-us/training/paths/build-javascript-applications-typescript/',
     image1x: 'card__typescript-build-1x.png',
     image2x: 'card__typescript-build-2x.png',
 
-    isInProgress: true,
+    isInProgress: false,
     isImportant: false,
   },
   {
