@@ -1,5 +1,40 @@
 export const doneCards = [
   {
+    title: 'todos',
+    text:
+      'Небольшое ToDo-приложение, позволяющее управлять текущим списком дел. Это тестовое задание для Mindbox.',
+    date: 'октябрь 2022 — сейчас',
+    link: 'https://novvember.tk/mindbox-todos/',
+    image1x: 'card__todos-1x.png',
+    image2x: 'card__todos-2x.png',
+
+    isInProgress: true,
+    isImportant: true,
+  },
+  {
+    title: 'Алгоритмические задачи для Яндекса',
+    text: 'Вступительные тестовые задачи для стажировки в Яндексе.',
+    date: 'октябрь 2022',
+    link: 'https://github.com/novvember/test__yandex-intern-frontent-2022',
+    image1x: 'card__yandex-intern-2022-1x.png',
+    image2x: 'card__yandex-intern-2022-2x.png',
+
+    isInProgress: false,
+    isImportant: false,
+  },
+  {
+    title: 'Алгоритмические задачи для HeadHunter',
+    text:
+      'Вступительные тестовые задачи для поступления в «Школу программистов» Хэдхантера.',
+    date: 'октябрь 2022',
+    link: 'https://github.com/novvember/test__headhunter-school',
+    image1x: 'card__headhunter-school-1x.png',
+    image2x: 'card__headhunter-school-2x.png',
+
+    isInProgress: false,
+    isImportant: false,
+  },
+  {
     title: 'Задание для red_mad_robot',
     text:
       'Тестовое задание для буткемпа по веб-разработке: одностраничное приложение на React с данными по сотрудникам.',
