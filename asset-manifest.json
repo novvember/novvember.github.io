@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.8ad4a612.css",
-    "main.js": "/static/js/main.9d31f81d.js",
+    "main.js": "/static/js/main.4b4e5020.js",
     "static/media/card__mesto-2x.png": "/static/media/card__mesto-2x.5cc11016dbdb48040a08.png",
     "static/media/card__russian-travel-2x.png": "/static/media/card__russian-travel-2x.5f6b9889ea601f24b1c1.png",
     "static/media/card__movies-2x.png": "/static/media/card__movies-2x.3775fba94888d1675db6.png",
@@ -23,6 +23,7 @@
     "static/media/card__movies-1x.png": "/static/media/card__movies-1x.fdc6349f4be9c71a8d47.png",
     "static/media/card__mosmetro-tickets-2-0-1x.png": "/static/media/card__mosmetro-tickets-2-0-1x.38fe4e1b784bf68ab25b.png",
     "static/media/card__sorting-2x.png": "/static/media/card__sorting-2x.c6a9df016b02894121b5.png",
+    "static/media/card__todos-2x.png": "/static/media/card__todos-2x.1f83fdb3c6becee6b89d.png",
     "static/media/Inter-SemiBoldItalic.woff?v=3.19": "/static/media/Inter-SemiBoldItalic.463bdbfb28abad0fa6df.woff",
     "static/media/Inter-BoldItalic.woff?v=3.19": "/static/media/Inter-BoldItalic.b376885042f6c961a541.woff",
     "static/media/Inter-MediumItalic.woff?v=3.19": "/static/media/Inter-MediumItalic.3d0107dd43d0101274d3.woff",
@@ -82,10 +83,9 @@
     "static/media/card__mosmetro-tickets-1x.png": "/static/media/card__mosmetro-tickets-1x.bdc9c819cf580537ef40.png",
     "static/media/card__sorting-1x.png": "/static/media/card__sorting-1x.4e801c69cf66dcc41b2f.png",
     "static/media/card__typescript-build-2x.png": "/static/media/card__typescript-build-2x.8e12f638f77791921116.png",
-    "static/media/card__todos-1x.png": "/static/media/card__todos-1x.6c3f903fa568bd6b3161.png",
     "static/media/card__yandex-practicum-1x.png": "/static/media/card__yandex-practicum-1x.62599dcad05136510282.png",
     "static/media/card__yandex-intern-2022-1x.png": "/static/media/card__yandex-intern-2022-1x.582b74c455f0e205341b.png",
-    "static/media/card__todos-2x.png": "/static/media/card__todos-2x.ce658bf21119ccad9c52.png",
+    "static/media/card__todos-1x.png": "/static/media/card__todos-1x.1a5c2223a231443e27c6.png",
     "static/media/card__book0-2x.jpg": "/static/media/card__book0-2x.30d4e9334bd0c38561f7.jpg",
     "static/media/card__algorithms-interview-1x.png": "/static/media/card__algorithms-interview-1x.4373c94316c4e5cbaa6b.png",
     "static/media/card__yandex-intern-2022-2x.png": "/static/media/card__yandex-intern-2022-2x.7eedeb5b7b1105dc1da9.png",
@@ -126,10 +126,10 @@
     "static/media/icon__active.svg": "/static/media/icon__active.802fce501fbca9ff7146.svg",
     "static/media/icon__email_light.svg": "/static/media/icon__email_light.4e827618edfdb1d297c6.svg",
     "main.8ad4a612.css.map": "/static/css/main.8ad4a612.css.map",
-    "main.9d31f81d.js.map": "/static/js/main.9d31f81d.js.map"
+    "main.4b4e5020.js.map": "/static/js/main.4b4e5020.js.map"
   },
   "entrypoints": [
     "static/css/main.8ad4a612.css",
-    "static/js/main.9d31f81d.js"
+    "static/js/main.4b4e5020.js"
   ]
 }
