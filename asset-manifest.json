@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.8ad4a612.css",
-    "main.js": "/static/js/main.f2471204.js",
+    "main.js": "/static/js/main.f2584944.js",
     "static/media/card__mesto-2x.png": "/static/media/card__mesto-2x.5cc11016dbdb48040a08.png",
     "static/media/card__russian-travel-2x.png": "/static/media/card__russian-travel-2x.5f6b9889ea601f24b1c1.png",
     "static/media/card__movies-2x.png": "/static/media/card__movies-2x.3775fba94888d1675db6.png",
@@ -126,10 +126,10 @@
     "static/media/icon__active.svg": "/static/media/icon__active.802fce501fbca9ff7146.svg",
     "static/media/icon__email_light.svg": "/static/media/icon__email_light.4e827618edfdb1d297c6.svg",
     "main.8ad4a612.css.map": "/static/css/main.8ad4a612.css.map",
-    "main.f2471204.js.map": "/static/js/main.f2471204.js.map"
+    "main.f2584944.js.map": "/static/js/main.f2584944.js.map"
   },
   "entrypoints": [
     "static/css/main.8ad4a612.css",
-    "static/js/main.f2471204.js"
+    "static/js/main.f2584944.js"
   ]
 }
