@@ -5,14 +5,14 @@ function Stack() {
     <div className="stack">
       <h2 className="stack__title">
         Стек: <span>HTML5</span> <span>CSS3</span> <span>БЭМ</span>{' '}
-        <span>JavaScript</span> <span>React.js</span>
+        <span>JavaScript</span> <span>TypeScript</span> <span>React.js</span>
       </h2>
 
       <p className="stack__text">Есть практика работы:</p>
       <ul>
         <li>
-          JavaScript: <span>ES6</span> <span>ООП</span> <span>async/await</span>{' '}
-          <span>Swiper.js</span>
+          JavaScript: <span>TypeScript</span> <span>ES6</span> <span>ООП</span>{' '}
+          <span>async/await</span> <span>Swiper.js</span>
         </li>
         <li>
           React: <span>Create React App</span> <span>React Router</span>{' '}
@@ -24,7 +24,8 @@ function Stack() {
           <span>MongoDB + Mongoose</span>
         </li>
         <li>
-          юнит-тестирование: <span>Jest</span> <span>supertest</span>
+          юнит-тестирование: <span>Jest</span> <span>supertest</span>{' '}
+          <span>React Test Library</span>
         </li>
         <li>
           общие инструменты: <span>Git</span> <span>npm</span> <span>bash</span>{' '}
@@ -34,7 +35,7 @@ function Stack() {
       </ul>
       <p className="stack__text">
         Хочу дополнительно изучить: <span>TypeScript</span>{' '}
-        <span>LESS/SASS</span> <span>Redux</span>{' '}
+        <span>SASS/SCSS</span> <span>Redux</span>{' '}
         <span>React.js (углубленно)</span>
       </p>
     </div>
