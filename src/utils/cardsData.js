@@ -3,12 +3,12 @@ export const doneCards = [
     title: 'todos',
     text:
       'Небольшое ToDo-приложение, позволяющее управлять текущим списком дел. Это тестовое задание для Mindbox.',
-    date: 'октябрь 2022 — сейчас',
+    date: 'октябрь 2022',
     link: 'https://novvember.tk/mindbox-todos/',
     image1x: 'card__todos-1x.png',
     image2x: 'card__todos-2x.png',
 
-    isInProgress: true,
+    isInProgress: false,
     isImportant: true,
   },
   {
