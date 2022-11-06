@@ -194,6 +194,19 @@ export const doneCards = [
 
 export const studyCards = [
   {
+    title: 'Тренировки по алгоритмам от Яндекса',
+    text:
+      'Лекции по базовым алгоритмам (2021 г.), а также интенсив с домашними заданиями и их разбором на семинарах (2022 г.).',
+    date: 'ноябрь 2022',
+    link:
+      'https://www.youtube.com/playlist?list=PL6Wui14DvQPySdPv5NUqV3i8sDbHkCKC5',
+    image1x: 'card__ya-algorithms-1x.png',
+    image2x: 'card__ya-algorithms-2x.png',
+
+    isInProgress: false,
+    isImportant: true,
+  },
+  {
     title: 'Build JavaScript applications using TypeScript',
     text: 'Курс от Microsoft по основам TypeScript.',
     date: 'октябрь 2022',
@@ -274,7 +287,7 @@ export const studyCards = [
     image2x: 'card__open-lectures-yandex-2x.png',
 
     isInProgress: false,
-    isImportant: false,
+    isImportant: true,
   },
   {
     title: 'Learn React Router 6',
