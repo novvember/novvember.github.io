@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.8ad4a612.css",
-    "main.js": "/static/js/main.e13cc994.js",
+    "main.js": "/static/js/main.0abd7832.js",
     "static/media/card__mesto-2x.png": "/static/media/card__mesto-2x.5cc11016dbdb48040a08.png",
     "static/media/card__russian-travel-2x.png": "/static/media/card__russian-travel-2x.5f6b9889ea601f24b1c1.png",
     "static/media/card__movies-2x.png": "/static/media/card__movies-2x.3775fba94888d1675db6.png",
@@ -63,6 +63,7 @@
     "static/media/Inter-LightItalic.woff2?v=3.19": "/static/media/Inter-LightItalic.f86952265d7b0f02c921.woff2",
     "static/media/card__yandex-practicum-2x.png": "/static/media/card__yandex-practicum-2x.cfdd09e34bd180d2389d.png",
     "static/media/Inter-BlackItalic.woff2?v=3.19": "/static/media/Inter-BlackItalic.cb2a7335650c690077fe.woff2",
+    "static/media/card__ya-algorithms-2x.png": "/static/media/card__ya-algorithms-2x.80743b8466c3eb6778b5.png",
     "static/media/Inter-Italic.woff2?v=3.19": "/static/media/Inter-Italic.cb10ffd7684cd9836a05.woff2",
     "static/media/Inter-ThinItalic.woff2?v=3.19": "/static/media/Inter-ThinItalic.bf213704dce6b437ede4.woff2",
     "static/media/Inter-Bold.woff2?v=3.19": "/static/media/Inter-Bold.ec64ea577b0349e055ad.woff2",
@@ -91,6 +92,7 @@
     "static/media/card__yandex-intern-2022-2x.png": "/static/media/card__yandex-intern-2022-2x.7eedeb5b7b1105dc1da9.png",
     "static/media/card__pro-git-book-2x.jpg": "/static/media/card__pro-git-book-2x.e7afa076386d3baf68a3.jpg",
     "static/media/card__open-lectures-yandex-1x.png": "/static/media/card__open-lectures-yandex-1x.ed861079f9b44dbb057e.png",
+    "static/media/card__ya-algorithms-1x.png": "/static/media/card__ya-algorithms-1x.10b6bb5b4f2a98706ce6.png",
     "static/media/card__reactrouter6-1x.png": "/static/media/card__reactrouter6-1x.1320bf87bc627039f60d.png",
     "static/media/card__grokking-2x.gif": "/static/media/card__grokking-2x.cba9605745e00eddc4cb.gif",
     "static/media/card__checkbox_style_apple-1x.png": "/static/media/card__checkbox_style_apple-1x.9d65dd5fcc3f64a32011.png",
@@ -126,10 +128,10 @@
     "static/media/icon__active.svg": "/static/media/icon__active.802fce501fbca9ff7146.svg",
     "static/media/icon__email_light.svg": "/static/media/icon__email_light.4e827618edfdb1d297c6.svg",
     "main.8ad4a612.css.map": "/static/css/main.8ad4a612.css.map",
-    "main.e13cc994.js.map": "/static/js/main.e13cc994.js.map"
+    "main.0abd7832.js.map": "/static/js/main.0abd7832.js.map"
   },
   "entrypoints": [
     "static/css/main.8ad4a612.css",
-    "static/js/main.e13cc994.js"
+    "static/js/main.0abd7832.js"
   ]
 }
