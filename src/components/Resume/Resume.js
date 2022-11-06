@@ -21,6 +21,10 @@ function Resume() {
         </a>
         , <a href="https://career.habr.com/novvember">на Хабр.Карьере</a>.
       </p>
+      <p className="resume__text">
+        LinkedIn:{' '}
+        <a href="https://www.linkedin.com/in/dmitry-kalugin/">здесь</a>
+      </p>
       <p className="resume__text">Мои работы ниже.</p>
     </div>
   );
