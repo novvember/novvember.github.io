@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.8ad4a612.css",
-    "main.js": "/static/js/main.aeecf9e6.js",
+    "main.css": "/static/css/main.d016ffae.css",
+    "main.js": "/static/js/main.c5c3c38e.js",
     "static/media/card__mesto-2x.png": "/static/media/card__mesto-2x.5cc11016dbdb48040a08.png",
     "static/media/card__russian-travel-2x.png": "/static/media/card__russian-travel-2x.5f6b9889ea601f24b1c1.png",
     "static/media/card__movies-2x.png": "/static/media/card__movies-2x.3775fba94888d1675db6.png",
@@ -122,16 +122,17 @@
     "static/media/icon__github_light.svg": "/static/media/icon__github_light.3553ac37ef1a5b448e13.svg",
     "static/media/icon__github-link.svg": "/static/media/icon__github-link.b28915129689b6a07099.svg",
     "static/media/icon__codepen-link.svg": "/static/media/icon__codepen-link.db8bc71f8574b7dda7a1.svg",
+    "static/media/icon__codepen-link_light.svg": "/static/media/icon__codepen-link_light.85124ebedff6b7bd79b4.svg",
     "static/media/icon__telegram_light.svg": "/static/media/icon__telegram_light.766e2d29c5dfbcdf9b1a.svg",
     "static/media/icon__external-link.svg": "/static/media/icon__external-link.5377c22456416489d635.svg",
     "static/media/icon__stackoverflow_light.svg": "/static/media/icon__stackoverflow_light.88988784b58fb58eacd2.svg",
     "static/media/icon__active.svg": "/static/media/icon__active.802fce501fbca9ff7146.svg",
     "static/media/icon__email_light.svg": "/static/media/icon__email_light.4e827618edfdb1d297c6.svg",
-    "main.8ad4a612.css.map": "/static/css/main.8ad4a612.css.map",
-    "main.aeecf9e6.js.map": "/static/js/main.aeecf9e6.js.map"
+    "main.d016ffae.css.map": "/static/css/main.d016ffae.css.map",
+    "main.c5c3c38e.js.map": "/static/js/main.c5c3c38e.js.map"
   },
   "entrypoints": [
-    "static/css/main.8ad4a612.css",
-    "static/js/main.aeecf9e6.js"
+    "static/css/main.d016ffae.css",
+    "static/js/main.c5c3c38e.js"
   ]
 }
