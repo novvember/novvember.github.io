@@ -199,7 +199,7 @@ export const studyCards = [
       'Лекции по базовым алгоритмам (2021 г.), а также интенсив с домашними заданиями и их разбором на семинарах (2022 г.).',
     date: 'ноябрь 2022',
     link:
-      'https://www.youtube.com/playlist?list=PL6Wui14DvQPySdPv5NUqV3i8sDbHkCKC5',
+      'https://github.com/novvember/novvember.github.io/blob/5b6c09513e4c51063ae5400c4c62e1c7b509d9bf/texts/yandex-algorithms-2022.md',
     image1x: 'card__ya-algorithms-1x.png',
     image2x: 'card__ya-algorithms-2x.png',
 
