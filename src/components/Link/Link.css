@@ -38,6 +38,10 @@
   background-image: url(../../images/icons/icon__codewars_light.svg);
 }
 
+.link_with-icon[href*='codepen.io']::before {
+  background-image: url(../../images/icons/icon__codepen-link_light.svg);
+}
+
 .link_with-info::after {
   content: attr(data-content);
   display: inline-block;

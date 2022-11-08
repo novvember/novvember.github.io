@@ -1,6 +1,7 @@
 import Link from '../Link/Link';
 import './Contacts.css';
 import {
+  getCodepenInfo,
   getCodewarsInfo,
   getGithubInfo,
   getStackoverflowInfo,
@@ -17,7 +18,9 @@ function Contacts() {
             </Link>
           </li>
           <li className="contacts__item">
-            <Link href="https://t.me/n_d_d" withIcon>Telegram</Link>
+            <Link href="https://t.me/n_d_d" withIcon>
+              Telegram
+            </Link>
           </li>
           <li className="contacts__item">
             <Link
@@ -44,6 +47,11 @@ function Contacts() {
               withIcon
             >
               Codewars
+            </Link>
+          </li>
+          <li className="contacts__item">
+            <Link href="https://codepen.io/novvember" withIcon>
+              Codepen
             </Link>
           </li>
         </ul>
