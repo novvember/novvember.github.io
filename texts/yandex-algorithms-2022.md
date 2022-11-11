@@ -1,95 +1,81 @@
 # Тренировки по алгоритмам от Яндекса
 
-Интенсив по алгоритмам прошел летом 2022 года в рамках Летних школ Академии Яндекса и состоял из домашних заданий (их нужно было решать на платформе Яндекс.Контест) и онлайн-семинары с разбором задач (примеры показывались на Python).
+Академия Яндекса проводит образовательные онлайн-занятия по алгоритмам. Здесь собраны лекции, задачи и их разбор за разные годы.
 
-Задания сгруппированы по темам и соответстуют лекциям по основам алгоритмов, которые проходили еще в 2021 году.
+1. Тренировки по алгоритмам 1.0 (2021 год)
 
-Здесь собраны все ссылки на материалы в правильном порядке.
+   - Лекции
+   - Задачи и их разбор
 
-Преподаватель: Михаил Густокашин
+2. Тренировки по алгоритмам 2.0 (2021 год)
 
-## Введение. Линейный поиск
+   - Задачи (2 уровням сложности) и их разбор
 
-### Лекции
+3. Интенсив по алгоритмам (2022 год)
+   - Задачи и их разбор
+
+Задачи нужно решать на платформе Яндекс.Контест.
+
+Преподаватель: Михаил Густокашин.
+
+## Лекции
 
 - [x] Лекция 1: «Сложность, тестирование, особые случаи» - [Youtube](https://www.youtube.com/watch?v=QLhqYNsPIVo&list=PL6Wui14DvQPySdPv5NUqV3i8sDbHkCKC5)
 
 - [x] Лекция 2: «Линейный поиск» - [Youtube](https://www.youtube.com/watch?v=SKwB41FrGgU&list=PL6Wui14DvQPySdPv5NUqV3i8sDbHkCKC5&index=2)
 
-### Задачи
-
-- [x] Интенсив по задачкам. Вводный семинар - [Youtube](https://youtu.be/KXZhSizvig4)
-
-- [x] Домашнее задание 1 - [Яндекс.Контест](https://contest.yandex.ru/contest/39359)
-
-- [x] Разбор домашнего задания 1 - [Youtube](https://youtu.be/aJs9TQOadfA)
-
-## Множества. Словари и сортировка подсчетом
-
-### Лекции
-
 - [x] Лекция 3: «Множества» - [Youtube](https://www.youtube.com/watch?v=PUpmV2ieIHA&list=PL6Wui14DvQPySdPv5NUqV3i8sDbHkCKC5&index=3)
 
 - [x] Лекция 4: «Словари и сортировка подсчётом» - [Youtube](https://www.youtube.com/watch?v=Nb5mW1yWVSs&list=PL6Wui14DvQPySdPv5NUqV3i8sDbHkCKC5&index=4)
-
-### Задачи
-
-- [x] Домашнее задание 2 - [Яндекс.Контест](https://contest.yandex.ru/contest/39714)
-
-- [x] Разбор домашнего задания 2 - [Youtube](https://www.youtube.com/watch?v=BjIrSQAMzr0)
-
-## Префиксные суммы. Два указателя. Бинарный поиск
-
-### Лекции
 
 - [x] Лекция 5: «Префиксные суммы и два указателя» - [Youtube](https://www.youtube.com/watch?v=de28y8Dcvkg&list=PL6Wui14DvQPySdPv5NUqV3i8sDbHkCKC5&index=6)
 
 - [x] Лекция 6: «Бинарный поиск» - [Youtube](https://www.youtube.com/watch?v=YENpZexHfuk&list=PL6Wui14DvQPySdPv5NUqV3i8sDbHkCKC5&index=7)
 
-### Задачи
-
-- [x] Домашнее задание 3 - [Яндекс.Контест](https://contest.yandex.ru/contest/40146)
-
-- [x] Разбор домашнего задания 3 - [Youtube](https://youtu.be/J9LUtUbMRpk)
-
-## Сортировка событий. Деревья
-
-### Лекции
-
 - [x] Лекция 7: «Сортировка событий» - [Youtube](https://www.youtube.com/watch?v=hGixDBO-p6Q&list=PL6Wui14DvQPySdPv5NUqV3i8sDbHkCKC5&index=9)
 
 - [x] Лекция 8: «Деревья» - [Youtube](https://www.youtube.com/watch?v=lEJzqHgyels&list=PL6Wui14DvQPySdPv5NUqV3i8sDbHkCKC5&index=10)
 
-### Задачи
+## Интенсив по алгоритмам (2022 год)
 
-- [x] Домашнее задание 4 - [Яндекс.Контест](https://contest.yandex.ru/contest/40183)
+- [x] Интенсив по задачкам. Вводный семинар - [Youtube](https://youtu.be/KXZhSizvig4)
 
-- [x] Разбор домашнего задания 4 - [Youtube](https://youtu.be/coZrFBPnFco)
+- [x] Домашнее задание 1 (лекции 1 и 2) - [Яндекс.Контест](https://contest.yandex.ru/contest/39359)
 
-## Дополнительно
+  - [x] Разбор домашнего задания 1 - [Youtube](https://youtu.be/aJs9TQOadfA)
 
-Кроме этого интенсива, ранее в 2021 году Яндекс тоже проводил похожие мероприятия (лекции как раз оттуда). Можно порешать и эти задачи.
+- [x] Домашнее задание 2 (лекции 3 и 4) - [Яндекс.Контест](https://contest.yandex.ru/contest/39714)
 
-- Домашняя страница тренировок: [yandex.ru/yaintern/algorithm-training](https://yandex.ru/yaintern/algorithm-training)
+  - [x] Разбор домашнего задания 2 - [Youtube](https://www.youtube.com/watch?v=BjIrSQAMzr0)
 
-- Чат в Телеграме для общения и вопросов о тренировках: [t.me/joinchat/Ve7wRegrZtI0NjIy](https://t.me/joinchat/Ve7wRegrZtI0NjIy)
+- [x] Домашнее задание 3 (лекции 5 и 6) - [Яндекс.Контест](https://contest.yandex.ru/contest/40146)
 
-### Тренировки по алгоритмам 2.0 (дивизион B)
+  - [x] Разбор домашнего задания 3 - [Youtube](https://youtu.be/J9LUtUbMRpk)
 
-Базовый уровень сложности. Простые задачки для "настроенных на собеседования".
+- [x] Домашнее задание 4 (лекции 7 и 8) - [Яндекс.Контест](https://contest.yandex.ru/contest/40183)
+
+  - [x] Разбор домашнего задания 4 - [Youtube](https://youtu.be/coZrFBPnFco)
+
+## Тренировки по алгоритмам 2.0 (дивизион B)
+
+Базовый уровень сложности. Ориентированный на задачи на собеседованиях.
 
 - [x] Домашнее задание 1 - [Яндекс.Контест](https://contest.yandex.ru/contest/28730/enter/)
 - [x] Домашнее задание 2 - [Яндекс.Контест](https://contest.yandex.ru/contest/28738/enter/)
-- [ ] Разбор заданий 1 и 2 - [Youtube](https://www.youtube.com/watch?v=WZgl1GW3lMA)
+- [x] Разбор заданий 1 и 2 - [Youtube](https://www.youtube.com/watch?v=WZgl1GW3lMA)
 
-### Тренировки по алгоритмам 2.0 (дивизион A)
+## Тренировки по алгоритмам 2.0 (дивизион A)
 
-Повышенный уровень сложности. Задачи посложнее, "олимпиадного" уровня.
+Повышенный уровень сложности. Ориентированный на олимпиады и спортивное программирование.
 
 - [ ] Домашнее задание 1 - [Яндекс.Контест](https://contest.yandex.ru/contest/28724/enter/)
 - [ ] Домашнее задание 2 - [Яндекс.Контест](https://contest.yandex.ru/contest/28736/enter/)
 - [ ] Разбор заданий 1 и 2 - [Youtube](https://www.youtube.com/watch?v=SP_zryTfMIc)
 
-### Тренировки по алгоритмам 1.0
+## Тренировки по алгоритмам 1.0
 
-Разные задачки вперемешку.
+## Дополнительные ссылки
+
+- Домашняя страница тренировок: [yandex.ru/yaintern/algorithm-training](https://yandex.ru/yaintern/algorithm-training)
+
+- Чат в Телеграме для общения и вопросов о тренировках: [t.me/joinchat/Ve7wRegrZtI0NjIy](https://t.me/joinchat/Ve7wRegrZtI0NjIy)
