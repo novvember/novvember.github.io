@@ -64,25 +64,25 @@
 
 - [x] Домашнее задание 1: [Яндекс.Контест](https://contest.yandex.ru/contest/28730/enter/)
 - [x] Домашнее задание 2: [Яндекс.Контест](https://contest.yandex.ru/contest/28738/enter/)
-- [x] Разбор заданий 1 и 2: [Youtube](https://www.youtube.com/watch?v=WZgl1GW3lMA)
+  - [x] Разбор заданий 1 и 2: [Youtube](https://www.youtube.com/watch?v=WZgl1GW3lMA)
 
-- [ ] Домашнее задание 3: [Яндекс.Контест](https://contest.yandex.ru/contest/28964)
+- [x] Домашнее задание 3: [Яндекс.Контест](https://contest.yandex.ru/contest/28964)
 
 - [ ] Домашнее задание 4: [Яндекс.Контест](https://contest.yandex.ru/contest/28970)
 
-- [ ] Разбор заданий 3 и 4: [Youtube](https://youtu.be/adZYAsm6kow)
+  - [ ] Разбор заданий 3 и 4: [Youtube](https://youtu.be/adZYAsm6kow)
 
 - [ ] Домашнее задание 5: [Яндекс.Контест](https://contest.yandex.ru/contest/29075)
 
 - [ ] Домашнее задание 6: [Яндекс.Контест](https://contest.yandex.ru/contest/29188)
 
-- [ ] Разбор заданий 5 и 6: [Youtube](https://youtu.be/0ExkSKz0Y8U)
+  - [ ] Разбор заданий 5 и 6: [Youtube](https://youtu.be/0ExkSKz0Y8U)
 
 - [ ] Домашнее задание 7: [Яндекс.Контест](https://contest.yandex.ru/contest/29396)
 
 - [ ] Домашнее задание 8: [Яндекс.Контест](https://contest.yandex.ru/contest/29403)
 
-- [ ] Разбор заданий 7 и 8: [Youtube](https://youtu.be/r5mRCMLY_L4)
+  - [ ] Разбор заданий 7 и 8: [Youtube](https://youtu.be/r5mRCMLY_L4)
 
 ## Тренировки по алгоритмам 2.0 (дивизион A)
 
