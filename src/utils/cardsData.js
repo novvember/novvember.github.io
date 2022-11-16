@@ -1,5 +1,17 @@
 export const doneCards = [
   {
+    title: 'Поиск авиабилетов',
+    text:
+      'Миниприложение с интерфейсом поиска авиабилетов. Тестовое задание для «Випсервиса».',
+    date: 'ноябрь 2022',
+    link: 'https://vipservice-avia.novvember.tk/',
+    image1x: 'card__vipservice-avia-1x.png',
+    image2x: 'card__vipservice-avia-2x.png',
+
+    isInProgress: false,
+    isImportant: true,
+  },
+  {
     title: 'todos',
     text:
       'Небольшое ToDo-приложение, позволяющее управлять текущим списком дел. Это тестовое задание для Mindbox.',
@@ -196,14 +208,14 @@ export const studyCards = [
   {
     title: 'Тренировки по алгоритмам от Яндекса',
     text:
-      'Лекции по базовым алгоритмам (2021 г.), а также интенсив с домашними заданиями и их разбором на семинарах (2022 г.).',
-    date: 'ноябрь 2022',
+      'Лекции по базовым алгоритмам, а также интенсивы разных лет с домашними заданиями и их разбором.',
+    date: 'октябрь 2022 — сейчас',
     link:
       'https://github.com/novvember/novvember.github.io/blob/5b6c09513e4c51063ae5400c4c62e1c7b509d9bf/texts/yandex-algorithms-2022.md',
     image1x: 'card__ya-algorithms-1x.png',
     image2x: 'card__ya-algorithms-2x.png',
 
-    isInProgress: false,
+    isInProgress: true,
     isImportant: true,
   },
   {
