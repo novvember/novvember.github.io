@@ -211,7 +211,7 @@ export const studyCards = [
       'Лекции по базовым алгоритмам, а также интенсивы разных лет с домашними заданиями и их разбором.',
     date: 'октябрь 2022 — сейчас',
     link:
-      'https://github.com/novvember/novvember.github.io/blob/5b6c09513e4c51063ae5400c4c62e1c7b509d9bf/texts/yandex-algorithms-2022.md',
+      'https://github.com/novvember/novvember.github.io/blob/master/texts/yandex-algorithms-2022.md',
     image1x: 'card__ya-algorithms-1x.png',
     image2x: 'card__ya-algorithms-2x.png',
 

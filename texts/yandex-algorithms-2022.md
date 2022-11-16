@@ -68,9 +68,9 @@
 
 - [x] Домашнее задание 3: [Яндекс.Контест](https://contest.yandex.ru/contest/28964)
 
-- [ ] Домашнее задание 4: [Яндекс.Контест](https://contest.yandex.ru/contest/28970)
+- [x] Домашнее задание 4: [Яндекс.Контест](https://contest.yandex.ru/contest/28970)
 
-  - [ ] Разбор заданий 3 и 4: [Youtube](https://youtu.be/adZYAsm6kow)
+  - [x] Разбор заданий 3 и 4: [Youtube](https://youtu.be/adZYAsm6kow)
 
 - [ ] Домашнее задание 5: [Яндекс.Контест](https://contest.yandex.ru/contest/29075)
 
