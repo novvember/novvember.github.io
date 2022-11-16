@@ -15,7 +15,7 @@
 
 2. Тренировки по алгоритмам 2.0 (2021 год)
 
-   - Задачи (2 уровням сложности) и их разбор
+   - Задачи (2 уровня сложности) и их разбор
 
 3. Интенсив по алгоритмам (2022 год)
    - Задачи и их разбор
@@ -106,7 +106,7 @@
 
 - Репозитории участников с решением (хэштег `yandex-algorithm-trainings`): https://github.com/topics/yandex-algorithm-trainings
 
-  - Привер репозитория с решениями на JavaScript: https://github.com/zlobnikov/Yandex.Algorithms
+  - Пример репозитория с решениями на JavaScript: https://github.com/zlobnikov/Yandex.Algorithms
 
 - Ссылка с образцами ввода-вывода для всех языков: https://yandex.ru/support/contest/examples-stdin-stdout.html
 
