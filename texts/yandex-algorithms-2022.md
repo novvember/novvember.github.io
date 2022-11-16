@@ -4,6 +4,10 @@
 
 Академия Яндекса проводит образовательные онлайн-занятия по алгоритмам. Здесь собраны лекции, задачи и их разбор за разные годы.
 
+Преподаватель: Михаил Густокашин.
+
+На лекциях и в разборах преподаватель пишет на Python. Сами задачи нужно решать на платформе Яндекс.Контест.
+
 1. Тренировки по алгоритмам 1.0 (2021 год)
 
    - Лекции
@@ -15,10 +19,6 @@
 
 3. Интенсив по алгоритмам (2022 год)
    - Задачи и их разбор
-
-Задачи нужно решать на платформе Яндекс.Контест.
-
-Преподаватель: Михаил Густокашин.
 
 ## Лекции
 
@@ -64,6 +64,7 @@
 
 - [x] Домашнее задание 1: [Яндекс.Контест](https://contest.yandex.ru/contest/28730/enter/)
 - [x] Домашнее задание 2: [Яндекс.Контест](https://contest.yandex.ru/contest/28738/enter/)
+
   - [x] Разбор заданий 1 и 2: [Youtube](https://www.youtube.com/watch?v=WZgl1GW3lMA)
 
 - [x] Домашнее задание 3: [Яндекс.Контест](https://contest.yandex.ru/contest/28964)
@@ -101,13 +102,13 @@
 
 - Домашняя страница тренировок: [yandex.ru/yaintern/algorithm-training](https://yandex.ru/yaintern/algorithm-training)
 
-- Чат в Телеграме для общения и вопросов о тренировках: [t.me/joinchat/Ve7wRegrZtI0NjIy](https://t.me/joinchat/Ve7wRegrZtI0NjIy)
+- Официальный чат в Телеграме для общения и вопросов о тренировках: [t.me/joinchat/Ve7wRegrZtI0NjIy](https://t.me/joinchat/Ve7wRegrZtI0NjIy)
 
-- Репозитории участников с решением: https://github.com/topics/yandex-algorithm-trainings
+- Репозитории участников с решением (хэштег `yandex-algorithm-trainings`): https://github.com/topics/yandex-algorithm-trainings
 
-  - Репозиторий с решениями на JavaScript: https://github.com/zlobnikov/Yandex.Algorithms
+  - Привер репозитория с решениями на JavaScript: https://github.com/zlobnikov/Yandex.Algorithms
 
-- Ссылка с образцами ввода-вывода для всех языков тут: https://yandex.ru/support/contest/examples-stdin-stdout.html
+- Ссылка с образцами ввода-вывода для всех языков: https://yandex.ru/support/contest/examples-stdin-stdout.html
 
-- Телеграм-бот для Тренировок 1.0 и 2.0: @gettestfromcontestbot  
-   Позволяет получить входные/выходные данные тестов для анализа ошибок в решении
+- Телеграм-бот: `@gettestfromcontestbot`
+  Актуален только для тренировок 1.0 и 2.0. Позволяет получить входные/выходные данные тестов Яндекс.Контеста для анализа ошибок в решении.
