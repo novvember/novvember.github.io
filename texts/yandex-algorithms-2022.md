@@ -73,13 +73,13 @@
 
   - [x] Разбор заданий 3 и 4: [Youtube](https://youtu.be/adZYAsm6kow)
 
-- [ ] Домашнее задание 5: [Яндекс.Контест](https://contest.yandex.ru/contest/29075)
+- [x] Домашнее задание 5: [Яндекс.Контест](https://contest.yandex.ru/contest/29075)
 
-- [ ] Домашнее задание 6: [Яндекс.Контест](https://contest.yandex.ru/contest/29188)
+- [x] Домашнее задание 6: [Яндекс.Контест](https://contest.yandex.ru/contest/29188)
 
-  - [ ] Разбор заданий 5 и 6: [Youtube](https://youtu.be/0ExkSKz0Y8U)
+  - [x] Разбор заданий 5 и 6: [Youtube](https://youtu.be/0ExkSKz0Y8U)
 
-- [ ] Домашнее задание 7: [Яндекс.Контест](https://contest.yandex.ru/contest/29396)
+- [x] Домашнее задание 7: [Яндекс.Контест](https://contest.yandex.ru/contest/29396)
 
 - [ ] Домашнее задание 8: [Яндекс.Контест](https://contest.yandex.ru/contest/29403)
 
