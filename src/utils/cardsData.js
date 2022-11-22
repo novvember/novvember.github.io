@@ -208,10 +208,10 @@ export const studyCards = [
   {
     title: 'Тренировки по алгоритмам от Яндекса',
     text:
-      'Лекции по базовым алгоритмам, а также интенсивы разных лет с домашними заданиями и их разбором.',
+      'Лекции по базовым алгоритмам, а также интенсивы разных лет с домашними заданиями и их разбором. Сделал отдельный репозиторий с решениями.',
     date: 'октябрь 2022 — сейчас',
     link:
-      'https://github.com/novvember/novvember.github.io/blob/master/texts/yandex-algorithms-2022.md',
+      'https://github.com/novvember/yandex-algorithm-trainings',
     image1x: 'card__ya-algorithms-1x.png',
     image2x: 'card__ya-algorithms-2x.png',
 
