@@ -281,12 +281,12 @@ export const studyCards = [
     title: 'Подготовка к алгоритмическому собеседованию',
     text:
       'Курс от Яндекс.Практикума, совмещающий базовую информацию об алгоритмах и структурах данных, а также рекомендации по прохождению алгоритмических собеседований при приеме на работу.',
-    date: 'июль 2022 — сейчас',
+    date: 'июль — ноябрь 2022',
     link: 'https://practicum.yandex.ru/algorithms-interview/',
     image1x: 'card__algorithms-interview-1x.png',
     image2x: 'card__algorithms-interview-2x.png',
 
-    isInProgress: true,
+    isInProgress: false,
     isImportant: false,
   },
   {
