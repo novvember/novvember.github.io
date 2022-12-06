@@ -1,5 +1,17 @@
 export const doneCards = [
   {
+    title: 'Визуализатор проездных билетов билетов Москвы 3.0',
+    text:
+      'Снова переписал свой проект с двухмерной визуализацией билетов на московский транспорт. Теперь больше функций и на TypeScript/React.js/Redux.',
+    date: 'ноябрь 2022 — сейчас',
+    link: 'https://novvember.github.io/mosmetro-tickets/',
+    image1x: 'card__mosmetro-tickets-3-0-1x.png',
+    image2x: 'card__mosmetro-tickets-3-0-2x.png',
+
+    isInProgress: true,
+    isImportant: true,
+  },
+  {
     title: 'Поиск авиабилетов',
     text:
       'Миниприложение с интерфейсом поиска авиабилетов. Тестовое задание для «Випсервиса».',
@@ -98,13 +110,13 @@ export const doneCards = [
     title: 'Визуализатор билетов для Московского транспорта 2.0',
     text:
       'Показывает распределение оптимальных по стоимости билетов на интерактивном двухмерном графике. Обновил свою старую работу, которую делал, когда еще совсем ничего не знал. Теперь здесь всё с учетом новых знаний как в верстке и адаптивности, так и с ООП.',
-    date: 'май 2022 — сейчас',
-    link: 'https://novvember.github.io/mosmetro-tickets/',
+    date: 'май 2022',
+    link: 'https://github.com/novvember/mosmetro-tickets/releases/tag/2.x',
     image1x: 'card__mosmetro-tickets-2-0-1x.png',
     image2x: 'card__mosmetro-tickets-2-0-2x.png',
 
-    isInProgress: true,
-    isImportant: true,
+    isInProgress: false,
+    isImportant: false,
   },
   {
     title: 'Лендинг лаборатории ИТМО',
@@ -210,8 +222,7 @@ export const studyCards = [
     text:
       'Лекции по базовым алгоритмам, а также интенсивы разных лет с домашними заданиями и их разбором. Сделал отдельный репозиторий с решениями.',
     date: 'октябрь 2022 — сейчас',
-    link:
-      'https://github.com/novvember/yandex-algorithm-trainings',
+    link: 'https://github.com/novvember/yandex-algorithm-trainings',
     image1x: 'card__ya-algorithms-1x.png',
     image2x: 'card__ya-algorithms-2x.png',
 
@@ -488,9 +499,5 @@ export const todoCards = [
   {
     title: 'Игра Жизнь',
     text: 'Все делают и, кажется, это не сложно, если знать JS.',
-  },
-  {
-    title: 'Визуализатор билетов для Московского транспорта 3.0',
-    text: 'Нужно снова обновить проект (снова думаю, что в последний раз) и переписать его на React.js/Redux.',
   },
 ];
