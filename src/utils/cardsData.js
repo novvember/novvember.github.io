@@ -217,6 +217,30 @@ export const doneCards = [
 ];
 
 export const studyCards = [
+  // {
+  //   title: 'Школа программистов HeadHunter',
+  //   text:
+  //     'Курсы по подготовке фронтенд-разработчиков от hh.ru (4 месяца теории + 3 месяца практики).',
+  //   date: 'ноябрь 2022 — сейчас',
+  //   link: 'https://school.hh.ru',
+  //   image1x: 'card__hh-school-1x.jpg',
+  //   image2x: 'card__hh-school-2x.jpg',
+
+  //   isInProgress: true,
+  //   isImportant: true,
+  // },
+  // {
+  //   title: 'Alfa Campus',
+  //   text:
+  //     'Курсы по фронтенд-разработке от «Альфа-банка» (интенсив на 3 месяца).',
+  //   date: 'ноябрь 2022 — сейчас',
+  //   link: 'https://alfa-campus.ru',
+  //   image1x: 'card__alfa-campus-1x.png',
+  //   image2x: 'card__alfa-campus-2x.png',
+
+  //   isInProgress: true,
+  //   isImportant: true,
+  // },
   {
     title: 'Тренировки по алгоритмам от Яндекса',
     text:
