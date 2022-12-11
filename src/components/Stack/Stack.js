@@ -34,8 +34,7 @@ function Stack() {
         </li>
       </ul>
       <p className="stack__text">
-        Хочу дополнительно изучить: <span>TypeScript</span>{' '}
-        <span>SASS/SCSS</span> <span>Redux</span>{' '}
+        Хочу дополнительно изучить: <span>SASS/SCSS</span> <span>Redux</span>{' '}
         <span>React.js (углубленно)</span>
       </p>
     </div>
