@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.d016ffae.css",
-    "main.js": "/static/js/main.2f4d0fe6.js",
+    "main.js": "/static/js/main.6f651772.js",
     "static/media/card__mesto-2x.png": "/static/media/card__mesto-2x.5cc11016dbdb48040a08.png",
     "static/media/card__russian-travel-2x.png": "/static/media/card__russian-travel-2x.5f6b9889ea601f24b1c1.png",
     "static/media/card__movies-2x.png": "/static/media/card__movies-2x.3775fba94888d1675db6.png",
@@ -85,6 +85,7 @@
     "static/media/card__reactrouter6-2x.png": "/static/media/card__reactrouter6-2x.a4bb9c2a71ae95305c2b.png",
     "static/media/card__ya-algorithms-1x.png": "/static/media/card__ya-algorithms-1x.7bd07576146a72766f5c.png",
     "static/media/card__todos-2x.png": "/static/media/card__todos-2x.907dd5c208ecc84c2d45.png",
+    "static/media/card__hh-school-2x.jpg": "/static/media/card__hh-school-2x.d5d08bd3bb7cb354d54d.jpg",
     "static/media/card__mosmetro-tickets-1x.png": "/static/media/card__mosmetro-tickets-1x.bdc9c819cf580537ef40.png",
     "static/media/card__sorting-1x.png": "/static/media/card__sorting-1x.4e801c69cf66dcc41b2f.png",
     "static/media/card__typescript-build-2x.png": "/static/media/card__typescript-build-2x.8e12f638f77791921116.png",
@@ -98,6 +99,7 @@
     "static/media/card__pro-git-book-2x.jpg": "/static/media/card__pro-git-book-2x.e7afa076386d3baf68a3.jpg",
     "static/media/card__open-lectures-yandex-1x.png": "/static/media/card__open-lectures-yandex-1x.ed861079f9b44dbb057e.png",
     "static/media/card__reactrouter6-1x.png": "/static/media/card__reactrouter6-1x.1320bf87bc627039f60d.png",
+    "static/media/card__hh-school-1x.jpg": "/static/media/card__hh-school-1x.fb8a123454b73bf48559.jpg",
     "static/media/card__grokking-2x.gif": "/static/media/card__grokking-2x.cba9605745e00eddc4cb.gif",
     "static/media/card__checkbox_style_apple-1x.png": "/static/media/card__checkbox_style_apple-1x.9d65dd5fcc3f64a32011.png",
     "static/media/card__ya-algorithms-2x.jfif": "/static/media/card__ya-algorithms-2x.0dad12cda2afd2e0f95b.jfif",
@@ -109,6 +111,7 @@
     "static/media/card__headhunter-school-2x.png": "/static/media/card__headhunter-school-2x.98709e3c7ef7aa882ee9.png",
     "static/media/card__react-2x.png": "/static/media/card__react-2x.929a0e86dd44a9a332b6.png",
     "static/media/card__headhunter-school-1x.png": "/static/media/card__headhunter-school-1x.ffa04bf5a8988dcef209.png",
+    "static/media/card__alfa-campus-1x.png": "/static/media/card__alfa-campus-1x.1516fbe151dec4439be2.png",
     "static/media/card__typescript-handbook-2x.jpg": "/static/media/card__typescript-handbook-2x.f94ef6f6c39e73e90eff.jpg",
     "static/media/card__pro-git-book-1x.jpg": "/static/media/card__pro-git-book-1x.0fa703448445e8225635.jpg",
     "static/media/card__geekbrains-1x.png": "/static/media/card__geekbrains-1x.bc2ff745faae1a456d46.png",
@@ -120,6 +123,7 @@
     "static/media/card__learn-javascript-ru-1x.png": "/static/media/card__learn-javascript-ru-1x.d6989cdad5553b0377ec.png",
     "static/media/card__codewars-2x.png": "/static/media/card__codewars-2x.4c36e44f5d5b8240164c.png",
     "static/media/card__geekbrains-2x.png": "/static/media/card__geekbrains-2x.83ff516afb8e4d27a4c0.png",
+    "static/media/card__alfa-campus-2x.png": "/static/media/card__alfa-campus-2x.d0161cc5cf4efa70c33f.png",
     "static/media/icon__codewars_light.svg": "/static/media/icon__codewars_light.bd999478c5bb57afc398.svg",
     "static/media/card__hexlet-cli-basics-2x.webp": "/static/media/card__hexlet-cli-basics-2x.fbd6956a13d3417cd400.webp",
     "static/media/card__hexlet-cli-basics-1x.webp": "/static/media/card__hexlet-cli-basics-1x.857a637b0ae0d6edecde.webp",
@@ -134,10 +138,10 @@
     "static/media/icon__active.svg": "/static/media/icon__active.802fce501fbca9ff7146.svg",
     "static/media/icon__email_light.svg": "/static/media/icon__email_light.4e827618edfdb1d297c6.svg",
     "main.d016ffae.css.map": "/static/css/main.d016ffae.css.map",
-    "main.2f4d0fe6.js.map": "/static/js/main.2f4d0fe6.js.map"
+    "main.6f651772.js.map": "/static/js/main.6f651772.js.map"
   },
   "entrypoints": [
     "static/css/main.d016ffae.css",
-    "static/js/main.2f4d0fe6.js"
+    "static/js/main.6f651772.js"
   ]
 }
