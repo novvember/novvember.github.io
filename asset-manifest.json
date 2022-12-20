@@ -1,9 +1,10 @@
 {
   "files": {
     "main.css": "/static/css/main.d016ffae.css",
-    "main.js": "/static/js/main.6f651772.js",
+    "main.js": "/static/js/main.da0c1447.js",
     "static/media/card__mesto-2x.png": "/static/media/card__mesto-2x.5cc11016dbdb48040a08.png",
     "static/media/card__russian-travel-2x.png": "/static/media/card__russian-travel-2x.5f6b9889ea601f24b1c1.png",
+    "static/media/card__mosmetro-tickets-3-0-2x.png": "/static/media/card__mosmetro-tickets-3-0-2x.f02720a5f42fcbc55c1d.png",
     "static/media/card__movies-2x.png": "/static/media/card__movies-2x.3775fba94888d1675db6.png",
     "static/media/card__lubimovka-2x.png": "/static/media/card__lubimovka-2x.bdc60f104135605e5d30.png",
     "static/media/card__itmo-2x.png": "/static/media/card__itmo-2x.dce268446560180cb46b.png",
@@ -13,16 +14,15 @@
     "static/media/card__mavrin-2x.png": "/static/media/card__mavrin-2x.20a7528efd2b19910b31.png",
     "static/media/card__oop-2x.png": "/static/media/card__oop-2x.d91af018379af2486d49.png",
     "static/media/card__robot-bootcamp-2x.png": "/static/media/card__robot-bootcamp-2x.2c8792843dc1359f3c9b.png",
-    "static/media/card__mosmetro-tickets-3-0-2x.png": "/static/media/card__mosmetro-tickets-3-0-2x.4037ce50da2fa2cf0d94.png",
     "static/media/card__mesto-1x.png": "/static/media/card__mesto-1x.2f4b91a5a1f24dd923a0.png",
     "static/media/Inter-italic.var.woff2?v=3.19": "/static/media/Inter-italic.var.30807be7abc48ba8c73c.woff2",
+    "static/media/card__mosmetro-tickets-3-0-1x.png": "/static/media/card__mosmetro-tickets-3-0-1x.896ad2de34a8a69523f3.png",
     "static/media/Inter-roman.var.woff2?v=3.19": "/static/media/Inter-roman.var.ba4caefcdf5b36b438db.woff2",
     "static/media/card__russian-travel-1x.png": "/static/media/card__russian-travel-1x.70212112e3086f07e127.png",
     "static/media/card__cs50-lectures-1x.png": "/static/media/card__cs50-lectures-1x.2d5d557a2d1895297cfe.png",
     "static/media/card__lubimovka-1x.png": "/static/media/card__lubimovka-1x.319ce65b7fa871b40b37.png",
     "static/media/card__itmo-1x.png": "/static/media/card__itmo-1x.35bad21a1b743a85bb2c.png",
     "static/media/card__movies-1x.png": "/static/media/card__movies-1x.fdc6349f4be9c71a8d47.png",
-    "static/media/card__mosmetro-tickets-3-0-1x.png": "/static/media/card__mosmetro-tickets-3-0-1x.55f4cf3aad799060b56a.png",
     "static/media/card__mosmetro-tickets-2-0-1x.png": "/static/media/card__mosmetro-tickets-2-0-1x.38fe4e1b784bf68ab25b.png",
     "static/media/card__sorting-2x.png": "/static/media/card__sorting-2x.c6a9df016b02894121b5.png",
     "static/media/Inter-SemiBoldItalic.woff?v=3.19": "/static/media/Inter-SemiBoldItalic.463bdbfb28abad0fa6df.woff",
@@ -138,10 +138,10 @@
     "static/media/icon__active.svg": "/static/media/icon__active.802fce501fbca9ff7146.svg",
     "static/media/icon__email_light.svg": "/static/media/icon__email_light.4e827618edfdb1d297c6.svg",
     "main.d016ffae.css.map": "/static/css/main.d016ffae.css.map",
-    "main.6f651772.js.map": "/static/js/main.6f651772.js.map"
+    "main.da0c1447.js.map": "/static/js/main.da0c1447.js.map"
   },
   "entrypoints": [
     "static/css/main.d016ffae.css",
-    "static/js/main.6f651772.js"
+    "static/js/main.da0c1447.js"
   ]
 }
