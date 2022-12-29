@@ -38,6 +38,10 @@
   background-image: url(../../images/icons/icon__codewars_light.svg);
 }
 
+.link_with-icon[href*='leetcode.com']::before {
+  background-image: url(../../images/icons/icon__leetcode_light.svg);
+}
+
 .link_with-icon[href*='codepen.io']::before {
   background-image: url(../../images/icons/icon__codepen-link_light.svg);
 }

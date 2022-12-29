@@ -12,7 +12,7 @@
   display: flex;
   flex-wrap: wrap;
   column-gap: 16px;
-  row-gap: 0.5em;
+  row-gap: 8px;
 }
 
 .contacts__item {

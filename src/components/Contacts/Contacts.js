@@ -50,6 +50,15 @@ function Contacts() {
             </Link>
           </li>
           <li className="contacts__item">
+            <Link
+              href="https://leetcode.com/novvember/"
+              // getInfo={getCodewarsInfo}
+              withIcon
+            >
+              LeetCode
+            </Link>
+          </li>
+          <li className="contacts__item">
             <Link href="https://codepen.io/novvember" withIcon>
               Codepen
             </Link>
