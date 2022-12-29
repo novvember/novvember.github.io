@@ -3,7 +3,7 @@ import { useState } from 'react';
 import Cards from '../Cards/Cards';
 import Filter from '../Filter/Filter';
 
-function Timeline({ doneCards, studyCards, todoCards }) {
+function Timeline({ doneCards, workCards, studyCards, todoCards }) {
   const [filterValues, setFilterValues] = useState({
     onlyImportant: true,
     onlyActive: false,
@@ -25,6 +25,14 @@ function Timeline({ doneCards, studyCards, todoCards }) {
         cards={doneCards}
         onlyImportant={filterValues.onlyImportant}
         onlyActive={filterValues.onlyActive}
+      />
+      <Cards
+        title="Работаю"
+        id="work"
+        cards={workCards}
+        onlyImportant={filterValues.onlyImportant}
+        onlyActive={filterValues.onlyActive}
+        type="base"
       />
       <Cards
         title="Учусь"

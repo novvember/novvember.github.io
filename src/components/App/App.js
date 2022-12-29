@@ -4,7 +4,7 @@ import Intro from '../Intro/Intro';
 import Timeline from '../Timeline/Timeline';
 import NavTab from '../NavTab/NavTab';
 import './App.css';
-import { doneCards, studyCards, todoCards } from '../../utils/cardsData';
+import { doneCards, studyCards, todoCards, workCards } from '../../utils/cardsData';
 
 function App() {
   return (
@@ -13,12 +13,14 @@ function App() {
       <Intro>
         <NavTab
           doneCards={doneCards}
+          workCards={workCards}
           studyCards={studyCards}
           todoCards={todoCards}
         />
       </Intro>
       <Timeline
         doneCards={doneCards}
+        workCards={workCards}
         studyCards={studyCards}
         todoCards={todoCards}
       />
