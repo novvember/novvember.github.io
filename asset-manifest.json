@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.d016ffae.css",
-    "main.js": "/static/js/main.da0c1447.js",
+    "main.css": "/static/css/main.66b8e643.css",
+    "main.js": "/static/js/main.40f793c7.js",
     "static/media/card__mesto-2x.png": "/static/media/card__mesto-2x.5cc11016dbdb48040a08.png",
     "static/media/card__russian-travel-2x.png": "/static/media/card__russian-travel-2x.5f6b9889ea601f24b1c1.png",
     "static/media/card__mosmetro-tickets-3-0-2x.png": "/static/media/card__mosmetro-tickets-3-0-2x.f02720a5f42fcbc55c1d.png",
@@ -58,6 +58,7 @@
     "static/media/card__how-to-learn-1x.png": "/static/media/card__how-to-learn-1x.2ddff905930996d70464.png",
     "static/media/card__algorithms-interview-2x.png": "/static/media/card__algorithms-interview-2x.753dc74bf566592c0385.png",
     "static/media/card__battleship-game-1x.png": "/static/media/card__battleship-game-1x.514455caee24b3a52077.png",
+    "static/media/card__ya-intern-2x.png": "/static/media/card__ya-intern-2x.f824742665aa420e871a.png",
     "static/media/Inter-MediumItalic.woff2?v=3.19": "/static/media/Inter-MediumItalic.085cb93e613ba3d40d2b.woff2",
     "static/media/Inter-SemiBoldItalic.woff2?v=3.19": "/static/media/Inter-SemiBoldItalic.d9467ee321a8f38aefff.woff2",
     "static/media/Inter-BoldItalic.woff2?v=3.19": "/static/media/Inter-BoldItalic.2d26c56a606662486796.woff2",
@@ -97,6 +98,7 @@
     "static/media/card__algorithms-interview-1x.png": "/static/media/card__algorithms-interview-1x.4373c94316c4e5cbaa6b.png",
     "static/media/card__yandex-intern-2022-2x.png": "/static/media/card__yandex-intern-2022-2x.7eedeb5b7b1105dc1da9.png",
     "static/media/card__pro-git-book-2x.jpg": "/static/media/card__pro-git-book-2x.e7afa076386d3baf68a3.jpg",
+    "static/media/card__ya-intern-1x.png": "/static/media/card__ya-intern-1x.0b71c82e9fac943ab616.png",
     "static/media/card__open-lectures-yandex-1x.png": "/static/media/card__open-lectures-yandex-1x.ed861079f9b44dbb057e.png",
     "static/media/card__reactrouter6-1x.png": "/static/media/card__reactrouter6-1x.1320bf87bc627039f60d.png",
     "static/media/card__hh-school-1x.jpg": "/static/media/card__hh-school-1x.fb8a123454b73bf48559.jpg",
@@ -130,6 +132,7 @@
     "index.html": "/index.html",
     "static/media/icon__github_light.svg": "/static/media/icon__github_light.3553ac37ef1a5b448e13.svg",
     "static/media/icon__github-link.svg": "/static/media/icon__github-link.b28915129689b6a07099.svg",
+    "static/media/icon__leetcode_light.svg": "/static/media/icon__leetcode_light.c820182327853625a87f.svg",
     "static/media/icon__codepen-link.svg": "/static/media/icon__codepen-link.db8bc71f8574b7dda7a1.svg",
     "static/media/icon__codepen-link_light.svg": "/static/media/icon__codepen-link_light.85124ebedff6b7bd79b4.svg",
     "static/media/icon__telegram_light.svg": "/static/media/icon__telegram_light.766e2d29c5dfbcdf9b1a.svg",
@@ -137,11 +140,11 @@
     "static/media/icon__stackoverflow_light.svg": "/static/media/icon__stackoverflow_light.88988784b58fb58eacd2.svg",
     "static/media/icon__active.svg": "/static/media/icon__active.802fce501fbca9ff7146.svg",
     "static/media/icon__email_light.svg": "/static/media/icon__email_light.4e827618edfdb1d297c6.svg",
-    "main.d016ffae.css.map": "/static/css/main.d016ffae.css.map",
-    "main.da0c1447.js.map": "/static/js/main.da0c1447.js.map"
+    "main.66b8e643.css.map": "/static/css/main.66b8e643.css.map",
+    "main.40f793c7.js.map": "/static/js/main.40f793c7.js.map"
   },
   "entrypoints": [
-    "static/css/main.d016ffae.css",
-    "static/js/main.da0c1447.js"
+    "static/css/main.66b8e643.css",
+    "static/js/main.40f793c7.js"
   ]
 }
