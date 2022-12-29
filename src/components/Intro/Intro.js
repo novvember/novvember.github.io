@@ -1,7 +1,7 @@
 import './Intro.css';
 import avatar from '../../images/avatar.png';
 import Stack from '../Stack/Stack';
-import Resume from '../Resume/Resume';
+// import Resume from '../Resume/Resume';
 
 function Intro({ children }) {
   return (
@@ -24,7 +24,7 @@ function Intro({ children }) {
 
         <div className="intro__blocks">
           <Stack />
-          <Resume />
+          {/* <Resume /> */}
         </div>
 
         {children}
