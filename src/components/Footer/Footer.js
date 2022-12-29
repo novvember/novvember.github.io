@@ -1,3 +1,4 @@
+import Link from '../Link/Link';
 import './Footer.css';
 
 function Footer() {
@@ -11,7 +12,7 @@ function Footer() {
         .
       </p>
       <p className="footer__text">
-        <a href="#contacts">Контакты наверху</a>
+        <Link href="#contacts" isLocal>Контакты наверху ↑</Link>
       </p>
       <p className="footer__text">© 2019–2022</p>
     </footer>
