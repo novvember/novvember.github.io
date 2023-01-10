@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.66b8e643.css",
-    "main.js": "/static/js/main.89668295.js",
+    "main.js": "/static/js/main.b7f8b3cf.js",
     "static/media/card__mesto-2x.png": "/static/media/card__mesto-2x.5cc11016dbdb48040a08.png",
     "static/media/card__russian-travel-2x.png": "/static/media/card__russian-travel-2x.5f6b9889ea601f24b1c1.png",
     "static/media/card__mosmetro-tickets-3-0-2x.png": "/static/media/card__mosmetro-tickets-3-0-2x.f02720a5f42fcbc55c1d.png",
@@ -145,10 +145,10 @@
     "static/media/icon__active.svg": "/static/media/icon__active.802fce501fbca9ff7146.svg",
     "static/media/icon__email_light.svg": "/static/media/icon__email_light.4e827618edfdb1d297c6.svg",
     "main.66b8e643.css.map": "/static/css/main.66b8e643.css.map",
-    "main.89668295.js.map": "/static/js/main.89668295.js.map"
+    "main.b7f8b3cf.js.map": "/static/js/main.b7f8b3cf.js.map"
   },
   "entrypoints": [
     "static/css/main.66b8e643.css",
-    "static/js/main.89668295.js"
+    "static/js/main.b7f8b3cf.js"
   ]
 }
