@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.66b8e643.css",
-    "main.js": "/static/js/main.40f793c7.js",
+    "main.js": "/static/js/main.89668295.js",
     "static/media/card__mesto-2x.png": "/static/media/card__mesto-2x.5cc11016dbdb48040a08.png",
     "static/media/card__russian-travel-2x.png": "/static/media/card__russian-travel-2x.5f6b9889ea601f24b1c1.png",
     "static/media/card__mosmetro-tickets-3-0-2x.png": "/static/media/card__mosmetro-tickets-3-0-2x.f02720a5f42fcbc55c1d.png",
@@ -96,6 +96,7 @@
     "static/media/card__vipservice-avia-1x.png": "/static/media/card__vipservice-avia-1x.cc8ed9f140a1a079026c.png",
     "static/media/card__book0-2x.jpg": "/static/media/card__book0-2x.30d4e9334bd0c38561f7.jpg",
     "static/media/card__algorithms-interview-1x.png": "/static/media/card__algorithms-interview-1x.4373c94316c4e5cbaa6b.png",
+    "static/media/card__redux-2x.png": "/static/media/card__redux-2x.b405e1cb6358b2635631.png",
     "static/media/card__yandex-intern-2022-2x.png": "/static/media/card__yandex-intern-2022-2x.7eedeb5b7b1105dc1da9.png",
     "static/media/card__pro-git-book-2x.jpg": "/static/media/card__pro-git-book-2x.e7afa076386d3baf68a3.jpg",
     "static/media/card__ya-intern-1x.png": "/static/media/card__ya-intern-1x.0b71c82e9fac943ab616.png",
@@ -103,6 +104,7 @@
     "static/media/card__reactrouter6-1x.png": "/static/media/card__reactrouter6-1x.1320bf87bc627039f60d.png",
     "static/media/card__hh-school-1x.jpg": "/static/media/card__hh-school-1x.fb8a123454b73bf48559.jpg",
     "static/media/card__grokking-2x.gif": "/static/media/card__grokking-2x.cba9605745e00eddc4cb.gif",
+    "static/media/card__divkit-2x.jpg": "/static/media/card__divkit-2x.875c327cb18c890da609.jpg",
     "static/media/card__checkbox_style_apple-1x.png": "/static/media/card__checkbox_style_apple-1x.9d65dd5fcc3f64a32011.png",
     "static/media/card__ya-algorithms-2x.jfif": "/static/media/card__ya-algorithms-2x.0dad12cda2afd2e0f95b.jfif",
     "static/media/card__typescript-build-1x.png": "/static/media/card__typescript-build-1x.81fa150936ff33a66980.png",
@@ -112,6 +114,7 @@
     "static/media/card__grokking-1x.gif": "/static/media/card__grokking-1x.2f98a71b9603ec412445.gif",
     "static/media/card__headhunter-school-2x.png": "/static/media/card__headhunter-school-2x.98709e3c7ef7aa882ee9.png",
     "static/media/card__react-2x.png": "/static/media/card__react-2x.929a0e86dd44a9a332b6.png",
+    "static/media/card__redux-1x.png": "/static/media/card__redux-1x.ff798216d1f16ae662e7.png",
     "static/media/card__headhunter-school-1x.png": "/static/media/card__headhunter-school-1x.ffa04bf5a8988dcef209.png",
     "static/media/card__alfa-campus-1x.png": "/static/media/card__alfa-campus-1x.1516fbe151dec4439be2.png",
     "static/media/card__typescript-handbook-2x.jpg": "/static/media/card__typescript-handbook-2x.f94ef6f6c39e73e90eff.jpg",
@@ -121,6 +124,7 @@
     "static/media/card__thedotisblack-2x.png": "/static/media/card__thedotisblack-2x.ba40ac26effc6f53b8f2.png",
     "static/media/card__checkbox_style_apple-2x.png": "/static/media/card__checkbox_style_apple-2x.7913f80edafb8ab67823.png",
     "static/media/card__mdn-1x.png": "/static/media/card__mdn-1x.d50a2642cf53d6b7d06c.png",
+    "static/media/card__divkit-1x.jpg": "/static/media/card__divkit-1x.0b443988e1167f95a8be.jpg",
     "static/media/card__typescript-handbook-1x.jpg": "/static/media/card__typescript-handbook-1x.9f4b4d4c873cb92d4e45.jpg",
     "static/media/card__learn-javascript-ru-1x.png": "/static/media/card__learn-javascript-ru-1x.d6989cdad5553b0377ec.png",
     "static/media/card__codewars-2x.png": "/static/media/card__codewars-2x.4c36e44f5d5b8240164c.png",
@@ -141,10 +145,10 @@
     "static/media/icon__active.svg": "/static/media/icon__active.802fce501fbca9ff7146.svg",
     "static/media/icon__email_light.svg": "/static/media/icon__email_light.4e827618edfdb1d297c6.svg",
     "main.66b8e643.css.map": "/static/css/main.66b8e643.css.map",
-    "main.40f793c7.js.map": "/static/js/main.40f793c7.js.map"
+    "main.89668295.js.map": "/static/js/main.89668295.js.map"
   },
   "entrypoints": [
     "static/css/main.66b8e643.css",
-    "static/js/main.40f793c7.js"
+    "static/js/main.89668295.js"
   ]
 }
