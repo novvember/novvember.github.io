@@ -233,6 +233,18 @@ export const workCards = [
 
 export const studyCards = [
   {
+    title: 'Документация DivKit',
+    text:
+      'DivKit — фреймворк от Яндекса для server-driven UI для клиентов на Android, iOS, Web.',
+    date: 'январь 2023',
+    link: 'https://divkit.tech/ru/doc/',
+    image1x: 'card__divkit-1x.jpg',
+    image2x: 'card__divkit-2x.jpg',
+
+    isInProgress: false,
+    isImportant: false,
+  },
+  {
     title: 'Redux Essentials Tutorial',
     text:
       'Официальное руководство по основам и основным паттернам использования Redux/Redux Toolkit + RTK Query.',
