@@ -5,7 +5,8 @@ function Stack() {
     <div className="stack">
       <h2 className="stack__title">
         Стек: <span>HTML5</span> <span>CSS3</span> <span>БЭМ</span>{' '}
-        <span>JavaScript</span> <span>TypeScript</span> <span>React.js</span>
+        <span>JavaScript</span> <span>TypeScript</span> <span>React.js</span>{' '}
+        <span>Redux Toolkit</span>
       </h2>
 
       <p className="stack__text">Есть практика работы:</p>
@@ -34,8 +35,8 @@ function Stack() {
         </li>
       </ul>
       <p className="stack__text">
-        Хочу дополнительно изучить: <span>SASS/SCSS</span> <span>Redux</span>{' '}
-        <span>React.js (углубленно)</span>
+        Хочу дополнительно изучить: <span>SASS/SCSS</span>{' '}
+        <span>React.js + Redux (углубленно)</span>
       </p>
     </div>
   );
