@@ -14,7 +14,7 @@ function Footer() {
       <p className="footer__text">
         <Link href="#contacts" isLocal>Контакты наверху ↑</Link>
       </p>
-      <p className="footer__text">© 2019–2022</p>
+      <p className="footer__text">© 2019–2023</p>
     </footer>
   );
 }
