@@ -233,6 +233,18 @@ export const workCards = [
 
 export const studyCards = [
   {
+    title: 'Redux Essentials Tutorial',
+    text:
+      'Официальное руководство по основам и основным паттернам использования Redux/Redux Toolkit + RTK Query.',
+    date: 'январь 2023',
+    link: 'https://redux.js.org/tutorials/index',
+    image1x: 'card__redux-1x.png',
+    image2x: 'card__redux-2x.png',
+
+    isInProgress: false,
+    isImportant: false,
+  },
+  {
     title: 'Школа программистов HeadHunter',
     text:
       'Курсы по подготовке фронтенд-разработчиков от hh.ru (4 месяца теории + 3 месяца практики).',
