@@ -135,7 +135,7 @@ export const doneCards = [
     text:
       'Сервис, напоминающий Инстаграм: пользователь добавляет фотографии и ставит лайки. Это основной учебный проект в Практикуме по большинству тем во время обучения. Есть <a href="https://github.com/novvember/react-mesto-api-full">разные версии реализации</a>.',
     date: 'февраль — август 2022',
-    link: 'https://mesto.novvember.nomoredomains.sbs',
+    link: 'https://mesto.novvember.tk',
     image1x: 'card__mesto-1x.png',
     image2x: 'card__mesto-2x.png',
 
