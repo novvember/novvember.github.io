@@ -17,7 +17,7 @@ function Stack() {
         </li>
         <li>
           React: <span>Create React App</span> <span>React Router</span>{' '}
-          <span>React Context</span> <span>Ant Design</span>
+          <span>React Context</span> <span>Ant Design</span> <span>Redux Toolkit</span> <span>Redux Saga</span>
         </li>
         <li>
           бэкенд: <span>Node.js</span> <span>Express.js</span>{' '}
