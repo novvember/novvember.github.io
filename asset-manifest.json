@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.66b8e643.css",
-    "main.js": "/static/js/main.4e7e2d97.js",
+    "main.js": "/static/js/main.5bf2cbb1.js",
     "static/media/card__mesto-2x.png": "/static/media/card__mesto-2x.5cc11016dbdb48040a08.png",
     "static/media/card__russian-travel-2x.png": "/static/media/card__russian-travel-2x.5f6b9889ea601f24b1c1.png",
     "static/media/card__mosmetro-tickets-3-0-2x.png": "/static/media/card__mosmetro-tickets-3-0-2x.f02720a5f42fcbc55c1d.png",
@@ -57,6 +57,7 @@
     "static/media/Inter-Regular.woff?v=3.19": "/static/media/Inter-Regular.8c206db99195777c6769.woff",
     "static/media/card__how-to-learn-1x.png": "/static/media/card__how-to-learn-1x.2ddff905930996d70464.png",
     "static/media/card__algorithms-interview-2x.png": "/static/media/card__algorithms-interview-2x.753dc74bf566592c0385.png",
+    "static/media/card__redux-saga-yt-2x.jpg": "/static/media/card__redux-saga-yt-2x.f3914ff9744747f9b6b6.jpg",
     "static/media/card__battleship-game-1x.png": "/static/media/card__battleship-game-1x.514455caee24b3a52077.png",
     "static/media/card__ya-intern-2x.png": "/static/media/card__ya-intern-2x.f824742665aa420e871a.png",
     "static/media/Inter-MediumItalic.woff2?v=3.19": "/static/media/Inter-MediumItalic.085cb93e613ba3d40d2b.woff2",
@@ -96,6 +97,7 @@
     "static/media/card__vipservice-avia-1x.png": "/static/media/card__vipservice-avia-1x.cc8ed9f140a1a079026c.png",
     "static/media/card__book0-2x.jpg": "/static/media/card__book0-2x.30d4e9334bd0c38561f7.jpg",
     "static/media/card__algorithms-interview-1x.png": "/static/media/card__algorithms-interview-1x.4373c94316c4e5cbaa6b.png",
+    "static/media/card__redux-saga-yt-1x.jpg": "/static/media/card__redux-saga-yt-1x.088fada28e474becfb26.jpg",
     "static/media/card__redux-2x.png": "/static/media/card__redux-2x.b405e1cb6358b2635631.png",
     "static/media/card__yandex-intern-2022-2x.png": "/static/media/card__yandex-intern-2022-2x.7eedeb5b7b1105dc1da9.png",
     "static/media/card__pro-git-book-2x.jpg": "/static/media/card__pro-git-book-2x.e7afa076386d3baf68a3.jpg",
@@ -145,10 +147,10 @@
     "static/media/icon__active.svg": "/static/media/icon__active.802fce501fbca9ff7146.svg",
     "static/media/icon__email_light.svg": "/static/media/icon__email_light.4e827618edfdb1d297c6.svg",
     "main.66b8e643.css.map": "/static/css/main.66b8e643.css.map",
-    "main.4e7e2d97.js.map": "/static/js/main.4e7e2d97.js.map"
+    "main.5bf2cbb1.js.map": "/static/js/main.5bf2cbb1.js.map"
   },
   "entrypoints": [
     "static/css/main.66b8e643.css",
-    "static/js/main.4e7e2d97.js"
+    "static/js/main.5bf2cbb1.js"
   ]
 }
