@@ -236,12 +236,12 @@ export const studyCards = [
     title: 'Redux Saga',
     text:
       'Видео-курс по основам Redux Saga от DevMagazine.',
-    date: 'январь 2023 — сейчас',
+    date: 'январь 2023',
     link: 'https://www.youtube.com/playlist?list=PLmfIBo6rTVR6jKRgpblTdzto9v-yWgqk-',
     image1x: 'card__redux-saga-yt-1x.jpg',
     image2x: 'card__redux-saga-yt-2x.jpg',
 
-    isInProgress: true,
+    isInProgress: false,
     isImportant: false,
   },
   {
