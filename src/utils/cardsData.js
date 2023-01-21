@@ -3,12 +3,12 @@ export const doneCards = [
     title: 'Визуализатор проездных билетов билетов Москвы 3.0',
     text:
       'Снова переписал свой проект с двухмерной визуализацией билетов на московский транспорт. Теперь больше функций и на TypeScript/React.js/Redux.',
-    date: 'ноябрь 2022 — сейчас',
+    date: 'ноябрь 2022 — январь 2023',
     link: 'https://novvember.github.io/mosmetro-tickets/',
     image1x: 'card__mosmetro-tickets-3-0-1x.png',
     image2x: 'card__mosmetro-tickets-3-0-2x.png',
 
-    isInProgress: true,
+    isInProgress: false,
     isImportant: true,
   },
   {
@@ -86,12 +86,12 @@ export const doneCards = [
     title: 'Yet Another Sorting Visualization',
     text:
       'Визуализация основных алгоритмов сортировки. Проект был предложен сотрудником Практикума, увлекающимся решением задач в Codewars. Интересно было попробовать и написать свое маленькое приложение, с градиентами и Реактом.',
-    date: 'июнь 2022 — сейчас',
+    date: 'июнь — август 2022',
     link: 'https://novvember.github.io/yet-another-sorting-visualization/',
     image1x: 'card__sorting-1x.png',
     image2x: 'card__sorting-2x.png',
 
-    isInProgress: true,
+    isInProgress: false,
     isImportant: true,
   },
   {
