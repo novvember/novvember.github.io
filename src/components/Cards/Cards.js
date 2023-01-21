@@ -51,7 +51,7 @@ function Cards({
         </ul>
       ) : (
         <p className="cards__error">
-          Не нашлось ничего подходящего под условия ¯\_(ツ)_/¯
+          ¯\_(ツ)_/¯
         </p>
       )}
     </section>
