@@ -233,6 +233,18 @@ export const workCards = [
 
 export const studyCards = [
   {
+    title: 'Классический БЭМ-стек',
+    text:
+      'Обучающие материалы «Быстрый старт» по классическому БЭМ, включая i-bem и BEMHTML.',
+    date: 'январь 2023',
+    link: 'https://ru.bem.info/tutorials/classic/quick-start-static/',
+    image1x: 'card__bem-classic-1x.png',
+    image2x: 'card__bem-classic-2x.png',
+
+    isInProgress: false,
+    isImportant: false,
+  },
+  {
     title: 'Redux Saga',
     text:
       'Видео-курс по основам Redux Saga от DevMagazine.',
