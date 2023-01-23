@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.66b8e643.css",
-    "main.js": "/static/js/main.a775cedc.js",
+    "main.js": "/static/js/main.9f9538ac.js",
     "static/media/card__mesto-2x.png": "/static/media/card__mesto-2x.5cc11016dbdb48040a08.png",
     "static/media/card__russian-travel-2x.png": "/static/media/card__russian-travel-2x.5f6b9889ea601f24b1c1.png",
     "static/media/card__mosmetro-tickets-3-0-2x.png": "/static/media/card__mosmetro-tickets-3-0-2x.f02720a5f42fcbc55c1d.png",
@@ -74,6 +74,7 @@
     "static/media/Inter-Bold.woff2?v=3.19": "/static/media/Inter-Bold.ec64ea577b0349e055ad.woff2",
     "static/media/Inter-ExtraBold.woff2?v=3.19": "/static/media/Inter-ExtraBold.cbe0ae49c52c920fd563.woff2",
     "static/media/Inter-Medium.woff2?v=3.19": "/static/media/Inter-Medium.293fd13dbca5a3e450ef.woff2",
+    "static/media/card__bem-classic-2x.png": "/static/media/card__bem-classic-2x.4015faa1f2a47585b68c.png",
     "static/media/Inter-SemiBold.woff2?v=3.19": "/static/media/Inter-SemiBold.b5f0f109bc88052d4000.woff2",
     "static/media/Inter-Light.woff2?v=3.19": "/static/media/Inter-Light.2d5198822ab091ce4305.woff2",
     "static/media/Inter-ExtraLight.woff2?v=3.19": "/static/media/Inter-ExtraLight.72505e6a122c6acd5471.woff2",
@@ -95,6 +96,7 @@
     "static/media/card__yandex-intern-2022-1x.png": "/static/media/card__yandex-intern-2022-1x.582b74c455f0e205341b.png",
     "static/media/card__todos-1x.png": "/static/media/card__todos-1x.e6de93763cbccb73a050.png",
     "static/media/card__vipservice-avia-1x.png": "/static/media/card__vipservice-avia-1x.cc8ed9f140a1a079026c.png",
+    "static/media/card__bem-classic-1x.png": "/static/media/card__bem-classic-1x.9af0bec8f360f6c6c640.png",
     "static/media/card__book0-2x.jpg": "/static/media/card__book0-2x.30d4e9334bd0c38561f7.jpg",
     "static/media/card__algorithms-interview-1x.png": "/static/media/card__algorithms-interview-1x.4373c94316c4e5cbaa6b.png",
     "static/media/card__redux-saga-yt-1x.jpg": "/static/media/card__redux-saga-yt-1x.088fada28e474becfb26.jpg",
@@ -147,10 +149,10 @@
     "static/media/icon__active.svg": "/static/media/icon__active.802fce501fbca9ff7146.svg",
     "static/media/icon__email_light.svg": "/static/media/icon__email_light.4e827618edfdb1d297c6.svg",
     "main.66b8e643.css.map": "/static/css/main.66b8e643.css.map",
-    "main.a775cedc.js.map": "/static/js/main.a775cedc.js.map"
+    "main.9f9538ac.js.map": "/static/js/main.9f9538ac.js.map"
   },
   "entrypoints": [
     "static/css/main.66b8e643.css",
-    "static/js/main.a775cedc.js"
+    "static/js/main.9f9538ac.js"
   ]
 }
