@@ -217,18 +217,18 @@ export const doneCards = [
 ];
 
 export const workCards = [
-  // {
-  //   title: 'Яндекс',
-  //   text:
-  //     'Стажировка во фронтенд-команде Яндекса, разрабатывающей главную страницу <a href="https://ya.ru/">ya.ru</a>',
-  //   date: 'январь 2023 — сейчас',
-  //   link: 'https://yandex.ru/yaintern/',
-  //   image1x: 'card__ya-intern-1x.png',
-  //   image2x: 'card__ya-intern-2x.png',
+  {
+    title: 'Яндекс',
+    text:
+      'Стажировка во фронтенд-команде Яндекса.',
+    date: 'январь 2023 — сейчас',
+    link: 'https://yandex.ru/yaintern/',
+    image1x: 'card__ya-intern-1x.png',
+    image2x: 'card__ya-intern-2x.png',
 
-  //   isInProgress: true,
-  //   isImportant: true,
-  // },
+    isInProgress: true,
+    isImportant: true,
+  },
 ];
 
 export const studyCards = [
