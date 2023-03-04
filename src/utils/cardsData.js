@@ -307,13 +307,13 @@ export const studyCards = [
   {
     title: 'Тренировки по алгоритмам от Яндекса',
     text:
-      'Лекции по базовым алгоритмам, а также интенсивы разных лет с домашними заданиями и их разбором. Сделал отдельный репозиторий с решениями.',
-    date: 'октябрь 2022 — сейчас',
+      'Лекции по базовым алгоритмам, а также интенсивы разных лет с домашними заданиями и их разбором. Сделал отдельный репозиторий с решениями. Прорешал не всё.',
+    date: 'октябрь — декабрь 2022',
     link: 'https://github.com/novvember/yandex-algorithm-trainings',
     image1x: 'card__ya-algorithms-1x.png',
     image2x: 'card__ya-algorithms-2x.png',
 
-    isInProgress: true,
+    isInProgress: false,
     isImportant: true,
   },
   {
@@ -353,13 +353,13 @@ export const studyCards = [
   },
   {
     title: 'Алгоритмы и структуры данных',
-    text: 'Курс лекций по АиСД от преподавателя ИТМО Павла Маврина',
-    date: 'октябрь 2022 — сейчас',
+    text: 'Курс лекций по АиСД от преподавателя ИТМО Павла Маврина. Прослушал не все, надо вернуться.',
+    date: 'октябрь — ноябрь 2022',
     link: 'https://www.youtube.com/c/pavelmavrin/playlists',
     image1x: 'card__mavrin-1x.png',
     image2x: 'card__mavrin-2x.png',
 
-    isInProgress: true,
+    isInProgress: false,
     isImportant: true,
   },
   {
