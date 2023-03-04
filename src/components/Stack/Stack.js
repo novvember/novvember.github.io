@@ -12,8 +12,14 @@ function Stack() {
       <p className="stack__text">Есть практика работы:</p>
       <ul>
         <li>
+          Верстка: <span>HTML5</span> <span>CSS3</span> <span>БЭМ</span> <span>Stylus</span>
+        </li>
+        <li>
           JavaScript: <span>TypeScript</span> <span>ES6</span> <span>ООП</span>{' '}
           <span>async/await</span> <span>Swiper.js</span>
+        </li>
+        <li>
+          БЭМ: <span>БЭМ-разметка</span> <span>i-bem</span> <span>i-mini-bem</span> <span>bem-view</span> <span>ENB</span>
         </li>
         <li>
           React: <span>Create React App</span> <span>React Router</span>{' '}
@@ -31,7 +37,7 @@ function Stack() {
         <li>
           общие инструменты: <span>Git</span> <span>npm</span> <span>bash</span>{' '}
           <span>Webpack</span> <span>Figma</span> <span>VS Code</span>{' '}
-          <span>Postman</span> <span>ESLint</span>
+          <span>Postman</span>  <span>ESLint</span> <span>Prettier</span> <span>DivKit</span>
         </li>
       </ul>
       <p className="stack__text">
