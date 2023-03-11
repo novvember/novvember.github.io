@@ -1,5 +1,17 @@
 export const doneCards = [
   {
+    title: 'A-Store',
+    text:
+      'Онлайн-магазин мерча для Альфа-Банка. Самостоятельный проект при учебе в Альфа-Кампусе.',
+    date: 'январь — март 2023',
+    link: 'http://a-store.novvember.tk/',
+    image1x: 'card__a-store-1x.png',
+    image2x: 'card__a-store-2x.png',
+
+    isInProgress: false,
+    isImportant: true,
+  },
+  {
     title: 'Визуализатор проездных билетов билетов Москвы 3.0',
     text:
       'Снова переписал свой проект с двухмерной визуализацией билетов на московский транспорт. Теперь больше функций и на TypeScript/React.js/Redux.',
@@ -295,13 +307,13 @@ export const studyCards = [
   {
     title: 'Alfa Campus',
     text:
-      'Курсы по фронтенд-разработке от «Альфа-банка» (интенсив на 3 месяца).',
-    date: 'ноябрь 2022 — сейчас',
+      'Курсы по фронтенд-разработке от «Альфа-банка» (интенсив на несколько месяцев).',
+    date: 'ноябрь 2022 — март 2023',
     link: 'https://alfa-campus.ru',
     image1x: 'card__alfa-campus-1x.png',
     image2x: 'card__alfa-campus-2x.png',
 
-    isInProgress: true,
+    isInProgress: false,
     isImportant: true,
   },
   {
