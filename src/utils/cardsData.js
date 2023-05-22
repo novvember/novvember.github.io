@@ -1,5 +1,17 @@
 export const doneCards = [
   {
+    title: 'Praise Hub',
+    text:
+      'Маленькая социальная сеть, где сотрудники компании могут отправлять друг другу благодарности в игровой форме. Это внутренний проект для HeadHunter в рамках обучения в «Школе программистов», где я полностью сделал дизайн и фронт-часть.',
+    date: 'март 2023 — сейчас',
+    link: 'https://github.com/hhru-school/praise-hub',
+    image1x: 'card__hh-praise-hub-1x.png',
+    image2x: 'card__hh-praise-hub-2x.png',
+
+    isInProgress: true,
+    isImportant: true,
+  },
+  {
     title: 'A-Store',
     text:
       'Онлайн-магазин мерча для Альфа-Банка. Самостоятельный проект при учебе в Альфа-Кампусе.',
@@ -232,13 +244,25 @@ export const workCards = [
   {
     title: 'Яндекс',
     text:
+      'Разработчик интерфейсов.',
+    date: 'март 2023 — сейчас',
+    link: 'https://yandex.ru/yaintern/',
+    image1x: 'card__yandex-1x.png',
+    image2x: 'card__yandex-2x.png',
+
+    isInProgress: true,
+    isImportant: true,
+  },
+  {
+    title: 'Яндекс',
+    text:
       'Стажировка во фронтенд-команде Яндекса.',
-    date: 'январь 2023 — сейчас',
+    date: 'январь — март 2023',
     link: 'https://yandex.ru/yaintern/',
     image1x: 'card__ya-intern-1x.png',
     image2x: 'card__ya-intern-2x.png',
 
-    isInProgress: true,
+    isInProgress: false,
     isImportant: true,
   },
 ];
