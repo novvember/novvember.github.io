@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.66b8e643.css",
-    "main.js": "/static/js/main.61c69db2.js",
+    "main.css": "/static/css/main.ff1d30a8.css",
+    "main.js": "/static/js/main.09885005.js",
     "static/media/card__mesto-2x.png": "/static/media/card__mesto-2x.5cc11016dbdb48040a08.png",
     "static/media/card__russian-travel-2x.png": "/static/media/card__russian-travel-2x.5f6b9889ea601f24b1c1.png",
     "static/media/card__mosmetro-tickets-3-0-2x.png": "/static/media/card__mosmetro-tickets-3-0-2x.f02720a5f42fcbc55c1d.png",
@@ -21,6 +21,7 @@
     "static/media/Inter-roman.var.woff2?v=3.19": "/static/media/Inter-roman.var.ba4caefcdf5b36b438db.woff2",
     "static/media/card__russian-travel-1x.png": "/static/media/card__russian-travel-1x.70212112e3086f07e127.png",
     "static/media/card__cs50-lectures-1x.png": "/static/media/card__cs50-lectures-1x.2d5d557a2d1895297cfe.png",
+    "static/media/card__hh-praise-hub-2x.png": "/static/media/card__hh-praise-hub-2x.8303ddf667211362f73c.png",
     "static/media/card__lubimovka-1x.png": "/static/media/card__lubimovka-1x.319ce65b7fa871b40b37.png",
     "static/media/card__itmo-1x.png": "/static/media/card__itmo-1x.35bad21a1b743a85bb2c.png",
     "static/media/card__movies-1x.png": "/static/media/card__movies-1x.fdc6349f4be9c71a8d47.png",
@@ -91,8 +92,10 @@
     "static/media/card__ya-algorithms-1x.png": "/static/media/card__ya-algorithms-1x.7bd07576146a72766f5c.png",
     "static/media/card__todos-2x.png": "/static/media/card__todos-2x.907dd5c208ecc84c2d45.png",
     "static/media/card__hh-school-2x.jpg": "/static/media/card__hh-school-2x.d5d08bd3bb7cb354d54d.jpg",
+    "static/media/card__hh-praise-hub-1x.png": "/static/media/card__hh-praise-hub-1x.fcb55fbaf484bcedb1a8.png",
     "static/media/card__mosmetro-tickets-1x.png": "/static/media/card__mosmetro-tickets-1x.bdc9c819cf580537ef40.png",
     "static/media/card__sorting-1x.png": "/static/media/card__sorting-1x.4e801c69cf66dcc41b2f.png",
+    "static/media/card__yandex-2x.png": "/static/media/card__yandex-2x.728f93083ffd857b76cc.png",
     "static/media/card__typescript-build-2x.png": "/static/media/card__typescript-build-2x.8e12f638f77791921116.png",
     "static/media/card__yandex-practicum-1x.png": "/static/media/card__yandex-practicum-1x.62599dcad05136510282.png",
     "static/media/card__yandex-intern-2022-1x.png": "/static/media/card__yandex-intern-2022-1x.582b74c455f0e205341b.png",
@@ -118,6 +121,7 @@
     "static/media/card__thedotisblack-1x.png": "/static/media/card__thedotisblack-1x.f4a7743fda5c78c4ee4e.png",
     "static/media/card__react-1x.png": "/static/media/card__react-1x.b834abdc7ec84c018004.png",
     "static/media/card__grokking-1x.gif": "/static/media/card__grokking-1x.2f98a71b9603ec412445.gif",
+    "static/media/card__yandex-1x.png": "/static/media/card__yandex-1x.3eb6a38707c110142e8f.png",
     "static/media/card__headhunter-school-2x.png": "/static/media/card__headhunter-school-2x.98709e3c7ef7aa882ee9.png",
     "static/media/card__react-2x.png": "/static/media/card__react-2x.929a0e86dd44a9a332b6.png",
     "static/media/card__redux-1x.png": "/static/media/card__redux-1x.ff798216d1f16ae662e7.png",
@@ -150,11 +154,11 @@
     "static/media/icon__stackoverflow_light.svg": "/static/media/icon__stackoverflow_light.88988784b58fb58eacd2.svg",
     "static/media/icon__active.svg": "/static/media/icon__active.802fce501fbca9ff7146.svg",
     "static/media/icon__email_light.svg": "/static/media/icon__email_light.4e827618edfdb1d297c6.svg",
-    "main.66b8e643.css.map": "/static/css/main.66b8e643.css.map",
-    "main.61c69db2.js.map": "/static/js/main.61c69db2.js.map"
+    "main.ff1d30a8.css.map": "/static/css/main.ff1d30a8.css.map",
+    "main.09885005.js.map": "/static/js/main.09885005.js.map"
   },
   "entrypoints": [
-    "static/css/main.66b8e643.css",
-    "static/js/main.61c69db2.js"
+    "static/css/main.ff1d30a8.css",
+    "static/js/main.09885005.js"
   ]
 }
