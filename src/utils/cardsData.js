@@ -3,12 +3,12 @@ export const doneCards = [
     title: 'Praise Hub',
     text:
       'Маленькая социальная сеть, где сотрудники компании могут отправлять друг другу благодарности в игровой форме. Это внутренний проект для HeadHunter в рамках обучения в «Школе программистов», где я полностью сделал дизайн и фронт-часть.',
-    date: 'март 2023 — сейчас',
+    date: 'март — июнь 2023',
     link: 'https://github.com/hhru-school/praise-hub',
     image1x: 'card__hh-praise-hub-1x.png',
     image2x: 'card__hh-praise-hub-2x.png',
 
-    isInProgress: true,
+    isInProgress: false,
     isImportant: true,
   },
   {
@@ -269,6 +269,18 @@ export const workCards = [
 
 export const studyCards = [
   {
+    title: 'Открытый лекторий от Академии Яндекса',
+    text:
+      'Курс лекции от Школы разработки интерфейсов Яндекса',
+    date: 'июнь 2023 — сейчас',
+    link: 'https://academy.yandex.ru/lp/open-lectures',
+    image1x: 'card__shri-lectures-2023-1x.png',
+    image2x: 'card__shri-lectures-2023-2x.png',
+
+    isInProgress: true,
+    isImportant: false,
+  },
+  {
     title: 'Классический БЭМ-стек',
     text:
       'Обучающие материалы «Быстрый старт» по классическому БЭМ, включая i-bem и BEMHTML.',
@@ -320,12 +332,12 @@ export const studyCards = [
     title: 'Школа программистов HeadHunter',
     text:
       'Курсы по подготовке фронтенд-разработчиков от hh.ru (4 месяца теории + 3 месяца практики).',
-    date: 'ноябрь 2022 — сейчас',
+    date: 'ноябрь 2022 — июнь 2023',
     link: 'https://school.hh.ru',
     image1x: 'card__hh-school-1x.jpg',
     image2x: 'card__hh-school-2x.jpg',
 
-    isInProgress: true,
+    isInProgress: false,
     isImportant: true,
   },
   {
