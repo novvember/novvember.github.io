@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.ff1d30a8.css",
-    "main.js": "/static/js/main.09885005.js",
+    "main.js": "/static/js/main.cfc70bfa.js",
     "static/media/card__mesto-2x.png": "/static/media/card__mesto-2x.5cc11016dbdb48040a08.png",
     "static/media/card__russian-travel-2x.png": "/static/media/card__russian-travel-2x.5f6b9889ea601f24b1c1.png",
     "static/media/card__mosmetro-tickets-3-0-2x.png": "/static/media/card__mosmetro-tickets-3-0-2x.f02720a5f42fcbc55c1d.png",
@@ -21,10 +21,10 @@
     "static/media/Inter-roman.var.woff2?v=3.19": "/static/media/Inter-roman.var.ba4caefcdf5b36b438db.woff2",
     "static/media/card__russian-travel-1x.png": "/static/media/card__russian-travel-1x.70212112e3086f07e127.png",
     "static/media/card__cs50-lectures-1x.png": "/static/media/card__cs50-lectures-1x.2d5d557a2d1895297cfe.png",
-    "static/media/card__hh-praise-hub-2x.png": "/static/media/card__hh-praise-hub-2x.8303ddf667211362f73c.png",
     "static/media/card__lubimovka-1x.png": "/static/media/card__lubimovka-1x.319ce65b7fa871b40b37.png",
     "static/media/card__itmo-1x.png": "/static/media/card__itmo-1x.35bad21a1b743a85bb2c.png",
     "static/media/card__movies-1x.png": "/static/media/card__movies-1x.fdc6349f4be9c71a8d47.png",
+    "static/media/card__hh-praise-hub-2x.png": "/static/media/card__hh-praise-hub-2x.7acdf7f2f132af02cf27.png",
     "static/media/card__mosmetro-tickets-2-0-1x.png": "/static/media/card__mosmetro-tickets-2-0-1x.38fe4e1b784bf68ab25b.png",
     "static/media/card__sorting-2x.png": "/static/media/card__sorting-2x.c6a9df016b02894121b5.png",
     "static/media/Inter-SemiBoldItalic.woff?v=3.19": "/static/media/Inter-SemiBoldItalic.463bdbfb28abad0fa6df.woff",
@@ -56,6 +56,7 @@
     "static/media/Inter-Black.woff?v=3.19": "/static/media/Inter-Black.c6938660eec019fefd68.woff",
     "static/media/card__a-store-1x.png": "/static/media/card__a-store-1x.f01e7a5bcf21d3e67a1d.png",
     "static/media/Inter-Thin.woff?v=3.19": "/static/media/Inter-Thin.29b9c616a95a912abf73.woff",
+    "static/media/card__shri-lectures-2023-2x.png": "/static/media/card__shri-lectures-2023-2x.36598b1288eda7e58fcd.png",
     "static/media/card__vipservice-avia-2x.png": "/static/media/card__vipservice-avia-2x.c0e5fac8533ff236f675.png",
     "static/media/Inter-Regular.woff?v=3.19": "/static/media/Inter-Regular.8c206db99195777c6769.woff",
     "static/media/card__how-to-learn-1x.png": "/static/media/card__how-to-learn-1x.2ddff905930996d70464.png",
@@ -92,13 +93,14 @@
     "static/media/card__ya-algorithms-1x.png": "/static/media/card__ya-algorithms-1x.7bd07576146a72766f5c.png",
     "static/media/card__todos-2x.png": "/static/media/card__todos-2x.907dd5c208ecc84c2d45.png",
     "static/media/card__hh-school-2x.jpg": "/static/media/card__hh-school-2x.d5d08bd3bb7cb354d54d.jpg",
-    "static/media/card__hh-praise-hub-1x.png": "/static/media/card__hh-praise-hub-1x.fcb55fbaf484bcedb1a8.png",
     "static/media/card__mosmetro-tickets-1x.png": "/static/media/card__mosmetro-tickets-1x.bdc9c819cf580537ef40.png",
     "static/media/card__sorting-1x.png": "/static/media/card__sorting-1x.4e801c69cf66dcc41b2f.png",
     "static/media/card__yandex-2x.png": "/static/media/card__yandex-2x.728f93083ffd857b76cc.png",
     "static/media/card__typescript-build-2x.png": "/static/media/card__typescript-build-2x.8e12f638f77791921116.png",
     "static/media/card__yandex-practicum-1x.png": "/static/media/card__yandex-practicum-1x.62599dcad05136510282.png",
+    "static/media/card__hh-praise-hub-1x.png": "/static/media/card__hh-praise-hub-1x.13d60060ed2a0ca1c34f.png",
     "static/media/card__yandex-intern-2022-1x.png": "/static/media/card__yandex-intern-2022-1x.582b74c455f0e205341b.png",
+    "static/media/card__shri-lectures-2023-1x.png": "/static/media/card__shri-lectures-2023-1x.c9ad4417e856d065229a.png",
     "static/media/card__todos-1x.png": "/static/media/card__todos-1x.e6de93763cbccb73a050.png",
     "static/media/card__vipservice-avia-1x.png": "/static/media/card__vipservice-avia-1x.cc8ed9f140a1a079026c.png",
     "static/media/card__bem-classic-1x.png": "/static/media/card__bem-classic-1x.9af0bec8f360f6c6c640.png",
@@ -155,10 +157,10 @@
     "static/media/icon__active.svg": "/static/media/icon__active.802fce501fbca9ff7146.svg",
     "static/media/icon__email_light.svg": "/static/media/icon__email_light.4e827618edfdb1d297c6.svg",
     "main.ff1d30a8.css.map": "/static/css/main.ff1d30a8.css.map",
-    "main.09885005.js.map": "/static/js/main.09885005.js.map"
+    "main.cfc70bfa.js.map": "/static/js/main.cfc70bfa.js.map"
   },
   "entrypoints": [
     "static/css/main.ff1d30a8.css",
-    "static/js/main.09885005.js"
+    "static/js/main.cfc70bfa.js"
   ]
 }
