@@ -1,10 +1,11 @@
 {
   "files": {
     "main.css": "/static/css/main.ff1d30a8.css",
-    "main.js": "/static/js/main.cfc70bfa.js",
+    "main.js": "/static/js/main.7e22b96d.js",
     "static/media/card__mesto-2x.png": "/static/media/card__mesto-2x.5cc11016dbdb48040a08.png",
     "static/media/card__russian-travel-2x.png": "/static/media/card__russian-travel-2x.5f6b9889ea601f24b1c1.png",
     "static/media/card__mosmetro-tickets-3-0-2x.png": "/static/media/card__mosmetro-tickets-3-0-2x.f02720a5f42fcbc55c1d.png",
+    "static/media/card__amazfit-watchfaces-2024-2x.png": "/static/media/card__amazfit-watchfaces-2024-2x.f53bc25d86bfe895f717.png",
     "static/media/card__movies-2x.png": "/static/media/card__movies-2x.3775fba94888d1675db6.png",
     "static/media/card__lubimovka-2x.png": "/static/media/card__lubimovka-2x.bdc60f104135605e5d30.png",
     "static/media/card__itmo-2x.png": "/static/media/card__itmo-2x.dce268446560180cb46b.png",
@@ -21,6 +22,7 @@
     "static/media/Inter-roman.var.woff2?v=3.19": "/static/media/Inter-roman.var.ba4caefcdf5b36b438db.woff2",
     "static/media/card__russian-travel-1x.png": "/static/media/card__russian-travel-1x.70212112e3086f07e127.png",
     "static/media/card__cs50-lectures-1x.png": "/static/media/card__cs50-lectures-1x.2d5d557a2d1895297cfe.png",
+    "static/media/card__amazfit-watchfaces-2024-1x.png": "/static/media/card__amazfit-watchfaces-2024-1x.f574b8ca672b07e60d8d.png",
     "static/media/card__lubimovka-1x.png": "/static/media/card__lubimovka-1x.319ce65b7fa871b40b37.png",
     "static/media/card__itmo-1x.png": "/static/media/card__itmo-1x.35bad21a1b743a85bb2c.png",
     "static/media/card__movies-1x.png": "/static/media/card__movies-1x.fdc6349f4be9c71a8d47.png",
@@ -157,10 +159,10 @@
     "static/media/icon__active.svg": "/static/media/icon__active.802fce501fbca9ff7146.svg",
     "static/media/icon__email_light.svg": "/static/media/icon__email_light.4e827618edfdb1d297c6.svg",
     "main.ff1d30a8.css.map": "/static/css/main.ff1d30a8.css.map",
-    "main.cfc70bfa.js.map": "/static/js/main.cfc70bfa.js.map"
+    "main.7e22b96d.js.map": "/static/js/main.7e22b96d.js.map"
   },
   "entrypoints": [
     "static/css/main.ff1d30a8.css",
-    "static/js/main.cfc70bfa.js"
+    "static/js/main.7e22b96d.js"
   ]
 }
