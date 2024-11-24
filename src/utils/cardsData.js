@@ -1,5 +1,17 @@
 export const doneCards = [
   {
+    title: 'Циферблаты для часов Amazfit',
+    text:
+      'Оказалось, что красивых циферблатов на мои часы очень мало, а писать их можно на JavaScript. Поэтому теперь интересные дизайны с других платформ или придуманные мной переношу для работы на ZeppOS.',
+    date: 'январь 2024 — сейчас',
+    link: 'https://github.com/novvember/amazfit-watchfaces',
+    image1x: 'card__amazfit-watchfaces-2024-1x.png',
+    image2x: 'card__amazfit-watchfaces-2024-2x.png',
+
+    isInProgress: true,
+    isImportant: true,
+  },
+  {
     title: 'Praise Hub',
     text:
       'Маленькая социальная сеть, где сотрудники компании могут отправлять друг другу благодарности в игровой форме. Это внутренний проект для HeadHunter в рамках обучения в «Школе программистов», где я полностью сделал дизайн и фронт-часть.',
